@@ -1,0 +1,37 @@
+/*============================== Imports ==================================== */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+/*============================== Configurations ==============================*/
+:root {
+    /* COLORS */
+
+
+    /* BACKGROUNDS */
+    --page-background: linear-gradient(#ffd776, #ffb500);
+    --menu-background: #6ac9ff;
+    --field-opened-background: #afd9ff;
+
+    --button-background: #67b6ff;
+
+    /* BORDERS */
+    --input-border: #4468eb;
+
+    /* TEXTS */
+
+
+    /* FONTS */
+    --tittle-font: 'Dancing Script', Arial, Helvetica, cursive;
+    --default-font: 'Inter', Arial, Helvetica, sans-serif;
+}
+
+/*============================== Generic Elements ==============================*/
+
+
+/*============================== Generic Classes ==============================*/
+
+
+/*============================== Page - Top to Bottom ==============================*/
+
+
+/* RESPONSIVE LAYOUTS */
