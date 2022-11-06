@@ -13,88 +13,100 @@
     <link rel="stylesheet" href="assets/css/normalize.css">
 
     <!-- INTERNAL CSS's -->
+    <link rel="stylesheet" href="assets/css/index.css">
 </head>
 <body>
-    <header>
-        <h1>Cursos da Keila</h1>
-        <p>Tenha aulas com uma professora com mais de 30 anos de carreira</p>
+    <!-- COURSES LINKS -->
+    <nav class="nav-courses">
+        <ul>
+            <li> <a class="nav-courses__link" href="#">Canto</a> </li>
+            <li> <a class="nav-courses__link" href="#">Teclado</a> </li>
+            <li> <a class="nav-courses__link" href="#">Piano</a> </li>
+            <li> <a class="nav-courses__link" href="#">Musicalização Infantil</a> </li>
+            <li> <a class="nav-courses__link" href="#">Regente Coral</a> </li>
+        </ul>
+    </nav>
 
-        <h1>VÍDEO INTRODUTORIO SOBRE OS CURSOS, DO YOUTUBE</h1>
+    <div class="page-content--width">
+        <!-- INTRODUCTION -->
+        <header class="introduction">
+            <h1>Cursos da Keila</h1>
+            <p>Tenha aulas com uma professora com mais de 30 anos de carreira</p>
 
-        <section>
-            <div>
-                <img src="assets/images/icons/Book.svg" alt="Livro">
-                <p>Acesso a todos os materiais para acessar as aulas</p>
-            </div>
+            <!-- VÍDEO INTRODUTORIO SOBRE OS CURSOS, DO YOUTUBE -->
 
-            <div>
-                <img src="assets/images/icons/Music Note.svg" alt="Nota de Música">
-                <p>Obtenha arquivos de áudio para exercitar</p>
-            </div>
+            <!-- GENERAL INFORMATION -->
+            <section class="general-information">
+                <div class="general-information__item">
+                    <img src="assets/images/icons/Book.svg" alt="Livro">
+                    <p class="general-information__description">Acesso a todos os materiais para acessar as aulas</p>
+                </div>
 
-            <div>
-                <img src="assets/images/icons/WhatsApp.svg" alt="Logo do WhatsApp">
-                <p>Tire dúvidas pelo WhatsApp diretamente</p>
-            </div>
-        </section>
-    </header>
+                <div class="general-information__item">
+                    <img src="assets/images/icons/Music Note.svg" alt="Nota de Música">
+                    <p class="general-information__description">Obtenha arquivos de áudio para exercitar</p>
+                </div>
 
-    <main>
-        <article>
-            <h2>Veja os Cursos</h2>
-
-            <section>
-                <article>
-                    <h3>Canto</h3>
-                    <p>Aperfeiçoe sua voz melhorando sua corda vocal</p>
-                </article>
-
-                <article>
-                    <h3>Teclado</h3>
-                    <p>Aprenda a tocar teclado a partir de partituras</p>
-                </article>
-
-                <article>
-                    <h3>Piano</h3>
-                    <p>Aprenda a tocar piano ...</p>
-                </article>
-
-                <article>
-                    <h3>Musicalização Infantil</h3>
-                    <p>Aperfeiçoe sua voz melhorando sua corda vocal</p>
-                </article>
-
-                <article>
-                    <h3>Regente Coral</h3>
-                    <p>Aperfeiçoe sua voz melhorando sua corda vocal</p>
-                </article>
+                <div class="general-information__item">
+                    <img src="assets/images/icons/WhatsApp.svg" alt="Logo do WhatsApp">
+                    <p class="general-information__description">Tire dúvidas pelo WhatsApp diretamente</p>
+                </div>
             </section>
+        </header>
 
-            <button>Acessar Curso</button>
-        </article>
+        <main>
+            <article>
+                <h2>Veja os Cursos</h2>
 
-        <section>
-            <h2>Contato</h2>
-            <p>Entre em contato nos enviando uma mensagem por e-mail</p>
+                <section>
+                    <article>
+                        <h3>Canto</h3>
+                        <p>Aperfeiçoe sua voz melhorando sua corda vocal</p>
+                    </article>
 
-            <form>
-                <fieldset>
-                    <legend>Envio de E-mail</legend>
+                    <article>
+                        <h3>Teclado</h3>
+                        <p>Aprenda a tocar teclado a partir de partituras</p>
+                    </article>
 
-                    <label for="fullName">Nome Completo</label>
-                    <input id="fullName" type="text">
-                    
-                    <label for="email">E-mail</label>
-                    <input id="email" type="email">
+                    <article>
+                        <h3>Piano</h3>
+                        <p>Aprenda a tocar piano ...</p>
+                    </article>
 
-                    <label for="message">Mensagem</label>
-                    <textarea id="message" cols="30" rows="10"></textarea>
+                    <article>
+                        <h3>Musicalização Infantil</h3>
+                        <p>Aperfeiçoe sua voz melhorando sua corda vocal</p>
+                    </article>
 
-                    <input type="submit" value="Enviar E-mail">
-                </fieldset>
-            </form>
-        </section>
-    </main>
+                    <article>
+                        <h3>Regente Coral</h3>
+                        <p>Aperfeiçoe sua voz melhorando sua corda vocal</p>
+                    </article>
+                </section>
+                <button>Acessar Curso</button>
+            </article>
+            <section>
+                <h2>Contato</h2>
+                <p>Entre em contato nos enviando uma mensagem por e-mail</p>
+                <form method="get">
+                    <fieldset>
+                        <legend>Envio de E-mail</legend>
+                        <label for="fullName">Nome Completo</label>
+                        <input id="fullName" type="text" placeholder="Digite seu nome completo">
+        
+                        <label for="email">E-mail</label>
+                        <input id="email" type="email" placeholder="seuemail@gmail.com">
+
+                        <label for="message">Mensagem</label>
+                        <textarea id="message" cols="30" rows="10" placeholder="Digite sua mensagem"></textarea>
+
+                        <input type="submit" value="Enviar E-mail">
+                    </fieldset>
+                </form>
+            </section>
+        </main>
+    </div>
 
     <hr>
 
@@ -103,35 +115,35 @@
 
         <ul>
             <li>
-                <a href="#">
+                <a href="https://www.youtube.com/channel/UCpkrQ1bGG7n715m3FE0vimw" target="_blank" rel="external">
                     <img src="assets/images/icons/YouTube.svg" alt="Logo do YouTube">
                     <span>YouTube</span>
                 </a>
             </li>
 
             <li>
-                <a href="#">
+                <a href="https://www.facebook.com/keilagruvira" target="_blank" rel="external">
                     <img src="assets/images/icons/Facebook.svg" alt="Logo do Facebook">
                     <span>Facebook</span>
                 </a>
             </li>
 
             <li>
-                <a href="#">
+                <a href="https://www.instagram.com/gruvirakeila/" target="_blank" rel="external">
                     <img src="assets/images/icons/Instagram.svg" alt="Logo do Instagram">
                     <span>Instagram</span>
                 </a>
             </li>
 
             <li>
-                <a href="#">
+                <a href="https://hotmart.com/pt-br/marketplace/produtos/aula-de-canto-para-iniciantes/G72622402Q?sck=HOTMART_SITE&search=dec6f631-618f-4c8d-9bf5-1d56366930a3" target="_blank" rel="external">
                     <img src="assets/images/icons/HotMart.svg" alt="Logo da HotMart">
                     <span>HotMart</span>
                 </a>
             </li>
-            
+
             <li>
-                <a href="#">
+                <a href="https://wa.me/message/MB4K5IO6PD3MK1" target="_blank" rel="external">
                     <img src="assets/images/icons/WhatsApp.svg" alt="Logo do WhatsApp">
                     <span>WhatsApp</span>
                 </a>

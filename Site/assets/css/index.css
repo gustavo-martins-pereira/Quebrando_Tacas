@@ -26,12 +26,91 @@
 }
 
 /*============================== Generic Elements ==============================*/
+body {
+    background-image: var(--page-background);
 
+    font-size: 16px;
+    font-family: var(--default-font);
+}
+
+/* Tittles */
+h1, h2, h3 {
+    font-family: var(--tittle-font);
+}
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+    }
+
+    h3 {
+        font-size: 2rem;
+    }
+
+/* Removes default link formatting */
+a {
+    color: inherit;
+
+    text-decoration: none;
+}
+
+    /* Links without URL */
+    a[href="#"] {
+        color: red;
+    }
 
 /*============================== Generic Classes ==============================*/
 
 
 /*============================== Page - Top to Bottom ==============================*/
+/* COURSES LINKS */
+.nav-courses {
+    background-color: var(--menu-background);
 
+    text-align: center;
+}
+
+    .nav-courses__link {
+        display: block;
+
+        padding: 2rem;
+    }
+
+/* WIDTH OF THE PAGE CONTENT */
+.page-content--width {
+    width: 80%;
+
+    margin: auto;
+}
+
+/* INTRODUCTION */
+.introduction {
+    text-align: center;
+}
+
+/* GENERAL INFORMATION */
+.general-information {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+    .general-information__item {
+        display: flex;
+    }
+
+        .general-information__item:not(:last-child) {
+            margin-bottom: 1rem;
+        }
+
+        .general-information__description {
+            display: inline-block;
+
+            margin-left: 1rem;
+
+            text-align: justify;
+        }
 
 /* RESPONSIVE LAYOUTS */
