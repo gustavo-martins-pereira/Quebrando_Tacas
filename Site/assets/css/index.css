@@ -33,6 +33,10 @@ body {
     font-family: var(--default-font);
 }
 
+main {
+    margin-bottom: 3rem;
+}
+
 /* Tittles */
 h1, h2, h3 {
     font-family: var(--tittle-font);
@@ -84,6 +88,11 @@ fieldset {
     padding: 1rem 1.5rem;
 
     color: var(--button-text);
+}
+
+/* HR */
+.hr--black {
+    border-color: black;
 }
 
 /* ACESSIBILITY */
@@ -236,5 +245,38 @@ fieldset {
 
         margin: auto;
     }
+
+/* EXTERNAL CONTENT */
+.external-content__title {
+    text-align: center;
+}
+
+.external-content__list {
+    height: 10rem;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    margin: 1rem auto;
+}
+
+    .external-content__item {
+        width: 50%;
+    }
+
+        .external-content__link {
+            display: flex;
+            align-items: center;
+        }
+
+            .external-content__icon {
+                width: 40px;
+                height: 40px;
+            }
+
+            .external-content__text {
+                margin-left: 1rem;
+            }
 
 /* RESPONSIVE LAYOUTS */
