@@ -27,86 +27,97 @@
         </ul>
     </nav>
 
-    <div class="page-content--width">
-        <!-- INTRODUCTION -->
-        <header class="introduction">
-            <h1>Cursos da Keila</h1>
-            <p>Tenha aulas com uma professora com mais de 30 anos de carreira</p>
+    <!-- INTRODUCTION -->
+    <header class="introduction page-content--width">
+        <h1>Cursos da Keila</h1>
+        <p>Tenha aulas com uma professora com mais de 30 anos de carreira</p>
 
-            <!-- VÍDEO INTRODUTORIO SOBRE OS CURSOS, DO YOUTUBE -->
+        <!-- VÍDEO INTRODUTORIO SOBRE OS CURSOS, DO YOUTUBE -->
 
-            <!-- GENERAL INFORMATION -->
-            <section class="general-information">
-                <div class="general-information__item">
-                    <img src="assets/images/icons/Book.svg" alt="Livro">
-                    <p class="general-information__description">Acesso a todos os materiais para acessar as aulas</p>
-                </div>
+        <!-- GENERAL INFORMATION -->
+        <section class="general-information">
+            <div class="general-information__item">
+                <img src="assets/images/icons/Book.svg" alt="Livro">
+                <p class="general-information__description">Acesso a todos os materiais para acessar as aulas</p>
+            </div>
 
-                <div class="general-information__item">
-                    <img src="assets/images/icons/Music Note.svg" alt="Nota de Música">
-                    <p class="general-information__description">Obtenha arquivos de áudio para exercitar</p>
-                </div>
+            <div class="general-information__item">
+                <img src="assets/images/icons/Music Note.svg" alt="Nota de Música">
+                <p class="general-information__description">Obtenha arquivos de áudio para exercitar</p>
+            </div>
 
-                <div class="general-information__item">
-                    <img src="assets/images/icons/WhatsApp.svg" alt="Logo do WhatsApp">
-                    <p class="general-information__description">Tire dúvidas pelo WhatsApp diretamente</p>
-                </div>
+            <div class="general-information__item">
+                <img src="assets/images/icons/WhatsApp.svg" alt="Logo do WhatsApp">
+                <p class="general-information__description">Tire dúvidas pelo WhatsApp diretamente</p>
+            </div>
+        </section>
+    </header>
+
+    <main>
+        <!-- COURSES -->
+        <article class="courses">
+            <h2 class="courses__title">Veja os Cursos</h2>
+
+            <section class="courses__slides">
+                <article class="sing__course--background courses__slide">
+                    <h3>Canto</h3>
+                    <p>Aperfeiçoe sua voz melhorando sua corda vocal</p>
+                </article>
+
+                <article class="courses__slide">
+                    <h3>Teclado</h3>
+                    <p>Aprenda a tocar teclado a partir de partituras</p>
+                </article>
+
+                <article class="courses__slide">
+                    <h3>Piano</h3>
+                    <p>Aprenda a tocar piano ...</p>
+                </article>
+
+                <article class="courses__slide">
+                    <h3>Musicalização Infantil</h3>
+                    <p>Aperfeiçoe sua voz melhorando sua corda vocal</p>
+                </article>
+
+                <!-- <article class="courses__slide">
+                    <h3>Regente Coral</h3>
+                    <p>Aperfeiçoe sua voz melhorando sua corda vocal</p>
+                </article> -->
             </section>
-        </header>
+            
+            <button class="button">Acessar Curso</button>
+        </article>
 
-        <main>
-            <article>
-                <h2>Veja os Cursos</h2>
+        <!-- CONTACT -->
+        <section class="page-content--width">
+            <h2 class="contact-title">Contato</h2>
+            <p class="contact-description">Entre em contato nos enviando uma mensagem por e-mail</p>
 
-                <section>
-                    <article>
-                        <h3>Canto</h3>
-                        <p>Aperfeiçoe sua voz melhorando sua corda vocal</p>
-                    </article>
+            <!-- EMAIL FORM -->
+            <form method="get">
+                <fieldset class="email-form">
+                    <legend class="acessibility--hidden-text">Envio de E-mail</legend>
 
-                    <article>
-                        <h3>Teclado</h3>
-                        <p>Aprenda a tocar teclado a partir de partituras</p>
-                    </article>
+                    <div class="email-form__field">
+                        <label class="email-form__label" for="fullName">Nome Completo</label>
+                        <input class="email-form__input" id="fullName" type="text" placeholder="Digite seu nome completo">
+                    </div>
+    
+                    <div class="email-form__field">
+                        <label class="email-form__label" for="email">E-mail</label>
+                        <input class="email-form__input" id="email" type="email" placeholder="seuemail@gmail.com">
+                    </div>
 
-                    <article>
-                        <h3>Piano</h3>
-                        <p>Aprenda a tocar piano ...</p>
-                    </article>
+                    <div class="email-form__field">
+                        <label class="email-form__label" for="message">Mensagem</label>
+                        <textarea class="email-form__message email-form__input" id="message" cols="30" rows="10"  placeholder="Digite sua mensagem"></textarea>
+                    </div>
 
-                    <article>
-                        <h3>Musicalização Infantil</h3>
-                        <p>Aperfeiçoe sua voz melhorando sua corda vocal</p>
-                    </article>
-
-                    <article>
-                        <h3>Regente Coral</h3>
-                        <p>Aperfeiçoe sua voz melhorando sua corda vocal</p>
-                    </article>
-                </section>
-                <button>Acessar Curso</button>
-            </article>
-            <section>
-                <h2>Contato</h2>
-                <p>Entre em contato nos enviando uma mensagem por e-mail</p>
-                <form method="get">
-                    <fieldset>
-                        <legend>Envio de E-mail</legend>
-                        <label for="fullName">Nome Completo</label>
-                        <input id="fullName" type="text" placeholder="Digite seu nome completo">
-        
-                        <label for="email">E-mail</label>
-                        <input id="email" type="email" placeholder="seuemail@gmail.com">
-
-                        <label for="message">Mensagem</label>
-                        <textarea id="message" cols="30" rows="10" placeholder="Digite sua mensagem"></textarea>
-
-                        <input type="submit" value="Enviar E-mail">
-                    </fieldset>
-                </form>
-            </section>
-        </main>
-    </div>
+                    <input class="email-form__send button" type="submit" value="Enviar E-mail">
+                </fieldset>
+            </form>
+        </section>
+    </main>
 
     <hr>
 

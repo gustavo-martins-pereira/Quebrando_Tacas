@@ -18,7 +18,7 @@
     --input-border: #4468eb;
 
     /* TEXTS */
-
+    --button-text: white;
 
     /* FONTS */
     --tittle-font: 'Dancing Script', Arial, Helvetica, cursive;
@@ -62,8 +62,41 @@ a {
         color: red;
     }
 
-/*============================== Generic Classes ==============================*/
+/* FORMS */
+fieldset {
+    padding: 0;
+}
 
+/*============================== Generic Classes ==============================*/
+/* WIDTH OF THE PAGE CONTENT */
+.page-content--width {
+    width: 80%;
+
+    margin: auto;
+}
+
+/* BUTTON */
+.button {
+    background-color: var(--button-background);
+
+    border: none;
+    border-radius: 5px;
+    padding: 1rem 1.5rem;
+
+    color: var(--button-text);
+}
+
+/* ACESSIBILITY */
+.acessibility--hidden-text {
+    width: 1px;
+    height: 1px;
+    
+    position: absolute;
+
+    color: transparent;
+
+    overflow: hidden;
+}
 
 /*============================== Page - Top to Bottom ==============================*/
 /* COURSES LINKS */
@@ -78,13 +111,6 @@ a {
 
         padding: 2rem;
     }
-
-/* WIDTH OF THE PAGE CONTENT */
-.page-content--width {
-    width: 80%;
-
-    margin: auto;
-}
 
 /* INTRODUCTION */
 .introduction {
@@ -105,6 +131,7 @@ a {
             margin-bottom: 1rem;
         }
 
+
         .general-information__description {
             display: inline-block;
 
@@ -112,5 +139,102 @@ a {
 
             text-align: justify;
         }
+
+/* COURSES */
+.courses {
+    text-align: center;
+
+    width: 100vw;
+
+    margin-bottom: 3rem;
+}
+
+    .courses__title {
+        margin-bottom: .5rem;
+    }
+
+    /*.courses__slides {
+        background-image: url("../images/Sheet\ Music.svg");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+
+        display: flex;
+
+        overflow: scroll;
+    }
+
+        .courses__slide {
+            min-width: 100%;
+            height: 150px;
+        }
+
+        .sing__course--background {
+            background-image: url("../images/Sing\ Course.png");
+            background-repeat: no-repeat;
+            background-position: center;
+        }*/
+
+    .courses__slides {
+        background-color: #ccc;
+        
+        background-image: url("../images/Sheet\ Music.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+
+        height: 200px;
+
+        margin-top: .5rem;
+        margin-bottom: 1rem;
+    }
+
+/* CONTACT */
+.contact-title {
+    text-align: center;
+}
+
+.contact-description {
+    margin: 1rem auto;
+}
+
+/* EMAIL FORM */
+.email-form {
+    display: flex;
+    flex-direction: column;
+}
+
+    .email-form__field {
+        margin-bottom: .5rem;
+    }
+
+        .email-form__label {
+            display: block;
+
+            margin-bottom: .25rem;
+
+            font-size: .8rem;
+        }
+
+        .email-form__input {
+            width: 100%;
+
+            border: 1px solid var(--input-border);
+            border-radius: 5px;
+            padding: .5rem;
+            box-sizing: border-box;
+
+            font-size: .625rem;
+        }
+
+            .email-form__message {
+                resize: none;
+            }
+
+    .email-form__send {
+        width: calc(100% - 40%);
+        max-width: 175px;
+
+        margin: auto;
+    }
 
 /* RESPONSIVE LAYOUTS */
