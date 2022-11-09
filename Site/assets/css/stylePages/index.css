@@ -20,12 +20,52 @@
 }
 
 /*============================== Generic Elements ==============================*/
-
+a {
+    text-decoration: none;
+}
 
 /*============================== Generic Classes ==============================*/
 
 
 /*============================== Page - Top to Bottom ==============================*/
+/* NAVIGATION MENU */
+.navigation-menu {
+    background-color: var(--menu-background);
+}
 
+    .navigation-menu__link {
+        display: block;
+
+        padding: 1.5rem 1rem;
+
+        color: black;
+        text-align: center;
+    }
+
+/* INTRODUCTION */
+.introduction__title {
+    text-align: center;
+}
+
+.introduction__description {
+    text-align: justify;
+}
+
+/* COURSE INFORMMATION */
+.course-information__item {
+    display: flex;
+    align-items: center;
+}
+
+    .course-information__item:not(:last-child) {
+        margin-bottom: 1rem;
+    }
+
+
+    .course-information__description {
+        margin-left: 1rem;
+
+        text-align: justify;
+    }
 
 /* RESPONSIVE LAYOUTS */
