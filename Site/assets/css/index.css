@@ -128,6 +128,7 @@ fieldset {
 
 /* GENERAL INFORMATION */
 .general-information {
+    margin: auto;
     margin-top: 3rem;
     margin-bottom: 3rem;
 }
@@ -137,7 +138,7 @@ fieldset {
     }
 
         .general-information__item:not(:last-child) {
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
         }
 
 
@@ -162,40 +163,77 @@ fieldset {
         margin-bottom: .5rem;
     }
 
-    /*.courses__slides {
-        background-image: url("../images/Sheet\ Music.svg");
-        background-repeat: no-repeat;
-        background-size: 100% 100%;
+    .courses__slides {
+        width: 100%;
+        height: 250px;
+        
+        margin-top: .5rem;
+        margin-bottom: 1rem;
 
-        display: flex;
-
-        overflow: scroll;
+        white-space: nowrap;
+        overflow: auto;
     }
 
         .courses__slide {
-            min-width: 100%;
-            height: 150px;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+            width: 100%;
+            height: 100%;
+            max-height: 200px;
+
+            display: inline-block;
+            
+            box-sizing: border-box;
+
+            color: white;
         }
 
-        .sing__course--background {
-            background-image: url("../images/Sing\ Course.png");
-            background-repeat: no-repeat;
-            background-position: center;
-        }*/
+            .courses__slide:nth-child(1) {
+                background-image: url("../images/Sing\ Course.png");
+                background-position: right;
+            }
 
-    .courses__slides {
-        background-color: #ccc;
-        
-        background-image: url("../images/Sheet\ Music.svg");
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
+            .courses__slide:nth-child(2) {
+                background-image: url("../images/Keyboard\ Course.png");
+            }
 
-        height: 200px;
+            .courses__slide:nth-child(3) {
+                background-image: url("../images/Piano\ Course.png");
+            }
 
-        margin-top: .5rem;
-        margin-bottom: 1rem;
-    }
+            .courses__slide:nth-child(4) {
+                background-image: url("../images/Children\'s\ Musicalization\ Course.png");
+            }
+
+            .courses__slide:nth-child(5) {
+                background-image: url("../images/Choir\ Conductor\ Course.png");
+            }
+
+            .courses__slide--flex {
+                height: 100%;
+                
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+
+                white-space: normal;
+            }
+
+                .courses__slide__title {
+                    font-size: 2.5rem;
+                }
+
+                .courses__slide__description {
+                    width: 75%;
+
+                    margin: auto;
+                    margin-top: inherit;
+                    margin-bottom: inherit;
+
+                    font-size: 1rem;
+                    text-align: center;
+                }
 
 /* CONTACT */
 .contact-title {
@@ -204,6 +242,8 @@ fieldset {
 
 .contact-description {
     margin: 1rem auto;
+
+    text-align: justify;
 }
 
 /* EMAIL FORM */
@@ -248,6 +288,8 @@ fieldset {
 
 /* EXTERNAL CONTENT */
 .external-content__title {
+    padding: 1rem;
+
     text-align: center;
 }
 
@@ -264,6 +306,10 @@ fieldset {
     .external-content__item {
         width: 50%;
     }
+
+        .external-content__item:nth-child(even) .external-content__link {
+            padding-left: 23%;
+        }
 
         .external-content__link {
             display: flex;
