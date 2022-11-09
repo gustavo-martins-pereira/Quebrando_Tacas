@@ -1,6 +1,11 @@
 /*============================== Imports ==================================== */
+/* EXTERNAL */
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+/* INTERNAL */
+@import url("reset.css");
+@import url("normalize.css");
 
 /*============================== Configurations ==============================*/
 :root {
