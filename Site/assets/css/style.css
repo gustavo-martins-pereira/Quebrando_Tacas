@@ -55,6 +55,11 @@ h1, h2, h3, h4, h5, h6 {
         font-size: 2rem;
     }
 
+/* FORMS */
+fieldset {
+    padding: 0;
+}
+
 /*============================== Generic Classes ==============================*/
 /* STANDARD  CONTENT WIDTH */
 .standard--width {
@@ -77,6 +82,18 @@ h1, h2, h3, h4, h5, h6 {
     padding: 1rem 1.5rem;
 
     color: white;
+}
+
+/* ACESSIBILITY */
+.acessibility--hidden-text {
+    width: 1px;
+    height: 1px;
+    
+    position: absolute;
+
+    color: transparent;
+
+    overflow: hidden;
 }
 
 /*============================== Page - Top to Bottom ==============================*/
