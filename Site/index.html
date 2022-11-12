@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html class="js" lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,122 +8,117 @@
     <title>Cursos de Música da Keila</title>
 
     <!-- CSS IMPORTS -->
-    <!-- RESETS CSS -->
-    <link rel="stylesheet" href="assets/css/reset.css">
-    <link rel="stylesheet" href="assets/css/normalize.css">
-
-    <!-- INTERNAL CSS's -->
-    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="stylesheet" href="assets/css/stylePages/index.css">
 </head>
 <body>
-    <!-- COURSES LINKS -->
-    <nav class="nav-courses">
-        <ul>
-            <li> <a class="nav-courses__link" href="#">Canto</a> </li>
-            <li> <a class="nav-courses__link" href="#">Teclado</a> </li>
-            <li> <a class="nav-courses__link" href="#">Piano</a> </li>
-            <li> <a class="nav-courses__link" href="#">Musicalização Infantil</a> </li>
-            <li> <a class="nav-courses__link" href="#">Regente Coral</a> </li>
+    <header>
+        <!-- NAVIGATION MENU -->
+        <ul class="navigation-menu">
+            <li> <a class="navigation-menu__link" href="#">Canto</a> </li>
+            <li> <a class="navigation-menu__link" href="#">Teclado</a> </li>
+            <li> <a class="navigation-menu__link" href="#">Piano</a> </li>
+            <li> <a class="navigation-menu__link" href="#">Musicalização Infantil</a> </li>
+            <li> <a class="navigation-menu__link" href="#">Regente Coral</a> </li>
         </ul>
-    </nav>
 
-    <!-- INTRODUCTION -->
-    <header class="introduction page-content--width">
-        <h1>Cursos da Keila</h1>
-        <p>Tenha aulas com uma professora com mais de 30 anos de carreira</p>
+        <!-- INTRODUCTION -->
+        <section class="standard--width standard--margin-bottom">
+            <h1 class="introduction__title">Cursos da Keila</h1>
+            <p class="introduction__description">Tenha aulas com uma professora com mais de 30 anos de carreira</p>
 
-        <!-- VÍDEO INTRODUTORIO SOBRE OS CURSOS, DO YOUTUBE -->
+            <!-- VÍDEO INTRODUTORIO SOBRE OS CURSOS, DO YOUTUBE -->
+        </section>
 
-        <!-- GENERAL INFORMATION -->
-        <section class="general-information">
-            <div class="general-information__item">
+        <!-- COURSE INFORMMATION -->
+        <section class="standard--width standard--margin-bottom">
+            <div class="course-information__item">
                 <img src="assets/images/icons/Book.svg" alt="Livro">
-                <p class="general-information__description">Acesso a todos os materiais para acessar as aulas</p>
+                <p class="course-information__description">Acesso a todos os materiais para acessar as aulas</p>
             </div>
 
-            <div class="general-information__item">
+            <div class="course-information__item">
                 <img src="assets/images/icons/Music Note.svg" alt="Nota de Música">
-                <p class="general-information__description">Obtenha arquivos de áudio para exercitar</p>
+                <p class="course-information__description">Obtenha arquivos de áudio para exercitar</p>
             </div>
 
-            <div class="general-information__item">
+            <div class="course-information__item">
                 <img src="assets/images/icons/WhatsApp.svg" alt="Logo do WhatsApp">
-                <p class="general-information__description">Tire dúvidas pelo WhatsApp diretamente</p>
+                <p class="course-information__description">Tire dúvidas pelo WhatsApp diretamente</p>
             </div>
         </section>
     </header>
 
     <main>
         <!-- COURSES -->
-        <article class="courses">
+        <article class="courses standard--margin-bottom">
             <h2 class="courses__title">Veja os Cursos</h2>
 
-            <section class="courses__slides">
-                <article class="courses__slide">
-                    <div class="courses__slide--flex">
-                        <h3 class="courses__slide__title">Canto</h3>
-                        <p class="courses__slide__description">Aperfeiçoe sua voz melhorando sua corda vocal</p>
+            <section class="courses__cards">
+                <article class="course">
+                    <div class="course__background">
+                        <h3>Canto</h3>
+                        <p>Aperfeiçoe sua voz melhorando sua corda vocal</p>
                     </div>
                 </article>
 
-                <article class="courses__slide">
-                    <div class="courses__slide--flex">
-                        <h3 class="courses__slide__title">Teclado</h3>
-                        <p class="courses__slide__description">Aprenda a tocar teclado a partir de partituras</p>
+                <article class="course">
+                    <div class="course__background">
+                        <h3>Teclado</h3>
+                        <p>Aprenda a tocar teclado a partir de partituras</p>
                     </div>
                 </article>
 
-                <article class="courses__slide">
-                    <div class="courses__slide--flex">
-                        <h3 class="courses__slide__title">Piano</h3>
-                        <p class="courses__slide__description">Aprenda a tocar piano</p>
+                <article class="course">
+                    <div class="course__background">
+                        <h3>Piano</h3>
+                        <p>Aprenda a tocar piano ...</p>
                     </div>
                 </article>
 
-                <article class="courses__slide">
-                    <div class="courses__slide--flex">
-                        <h3 class="courses__slide__title">Musicalização Infantil</h3>
-                        <p class="courses__slide__description">Aperfeiçoe sua voz melhorando sua corda vocal</p>
+                <article class="course">
+                    <div class="course__background">
+                        <h3>Musicalização Infantil</h3>
+                        <p>Aperfeiçoe sua voz melhorando sua corda vocal</p>
                     </div>
                 </article>
 
-                <article class="courses__slide">
-                    <div class="courses__slide--flex">
-                        <h3 class="courses__slide__title">Regente Coral</h3>
-                        <p class="courses__slide__description">Aperfeiçoe sua voz melhorando sua corda vocal</p>
+                <article class="course">
+                    <div class="course__background">
+                        <h3>Regente Coral</h3>
+                        <p>Aperfeiçoe sua voz melhorando sua corda vocal</p>
                     </div>
                 </article>
             </section>
-            
-            <button class="button">Acessar Curso</button>
+
+            <button class="courses__acess-course button">Acessar Curso</button>
         </article>
 
         <!-- CONTACT -->
-        <section class="page-content--width">
-            <h2 class="contact-title">Contato</h2>
-            <p class="contact-description">Entre em contato nos enviando uma mensagem por e-mail</p>
+        <section class="contact standard--width standard--margin-bottom">
+            <h2 class="contact__title">Contato</h2>
+            <p class="contact__description">Entre em contato nos enviando uma mensagem por e-mail</p>
 
-            <!-- EMAIL FORM -->
-            <form method="get">
-                <fieldset class="email-form">
+            <form>
+                <fieldset>
                     <legend class="acessibility--hidden-text">Envio de E-mail</legend>
 
-                    <div class="email-form__field">
-                        <label class="email-form__label" for="fullName">Nome Completo</label>
-                        <input class="email-form__input" id="fullName" type="text" placeholder="Digite seu nome completo">
-                    </div>
-    
-                    <div class="email-form__field">
-                        <label class="email-form__label" for="email">E-mail</label>
-                        <input class="email-form__input" id="email" type="email" placeholder="seuemail@gmail.com">
+                    <div class="contact__fields">
+                        <div>
+                            <label class="contact__label" for="contact__fullName">Nome Completo</label>
+                            <input class="contact__input" id="contact__fullName" type="text" placeholder="Digite seu nome completo">
+                        </div>
+                        
+                        <div>
+                            <label class="contact__label" for="contact__email">E-mail</label>
+                            <input class="contact__input" id="contact__email" type="email" placeholder="seuemail@gmail.com">
+                        </div>
+                        <div>
+                            <label class="contact__label" for="contact__message">Mensagem</label>
+                            <textarea class="contact__message-input contact__input" id="contact__message" placeholder="Digite sua mensagem" rows="5"></textarea>
+                        </div>
                     </div>
 
-                    <div class="email-form__field">
-                        <label class="email-form__label" for="message">Mensagem</label>
-                        <textarea class="email-form__message email-form__input" id="message" cols="30" rows="10"  placeholder="Digite sua mensagem"></textarea>
-                    </div>
-
-                    <input class="email-form__send button" type="submit" value="Enviar E-mail">
+                    <div class="contact--align-send-button"> <input class="contact__send-button button" type="submit" value="Enviar E-mail"> </div>
                 </fieldset>
             </form>
         </section>
@@ -131,46 +126,51 @@
 
     <hr class="hr--black">
 
-    <!-- EXTERNAL CONTENT -->
-    <footer class="external-content">
-        <h2 class="external-content__title">Visite os Conteúdos Relacionados</h2>
+    <footer class="standard--width">
+        <h2 class="footer__title">Visite os Conteúdos Relacionados</h2>
 
-        <ul class="external-content__list page-content--width">
-            <li class="external-content__item">
-                <a class="external-content__link" href="https://www.youtube.com/channel/UCpkrQ1bGG7n715m3FE0vimw" target="_blank" rel="external">
-                    <img class="external-content__icon" src="assets/images/icons/YouTube.svg" alt="Logo do YouTube">
-                    <span class="external-content__text">YouTube</span>
-                </a>
-            </li>
+        <nav>
+            <ul class="footer__list">
+                <div>
+                    <li class="footer__list__item">
+                        <a class="footer__item__link" href="#">
+                            <img class="footer__link__icon" src="assets/images/icons/YouTube.svg" alt="Logo do YouTube">
+                            <span>YouTube</span>
+                        </a>
+                    </li>
 
-            <li class="external-content__item">
-                <a class="external-content__link" href="https://www.facebook.com/keilagruvira" target="_blank" rel="external">
-                    <img class="external-content__icon" src="assets/images/icons/Facebook.svg" alt="Logo do Facebook">
-                    <span class="external-content__text">Facebook</span>
-                </a>
-            </li>
+                    <li class="footer__list__item">
+                        <a class="footer__item__link" href="#">
+                            <img class="footer__link__icon" src="assets/images/icons/Facebook.svg" alt="Logo do Facebook">
+                            <span>Facebook</span>
+                        </a>
+                    </li>
 
-            <li class="external-content__item">
-                <a class="external-content__link" href="https://www.instagram.com/gruvirakeila/" target="_blank" rel="external">
-                    <img class="external-content__icon" src="assets/images/icons/Instagram.svg" alt="Logo do Instagram">
-                    <span class="external-content__text">Instagram</span>
-                </a>
-            </li>
+                    <li class="footer__list__item">
+                        <a class="footer__item__link" href="#">
+                            <img class="footer__link__icon" src="assets/images/icons/Instagram.svg" alt="Logo do Instagram">
+                            <span>Instagram</span>
+                        </a>
+                    </li>
+                </div>
 
-            <li class="external-content__item">
-                <a class="external-content__link" href="https://hotmart.com/pt-br/marketplace/produtos/aula-de-canto-para-iniciantes/G72622402Q?sck=HOTMART_SITE&search=dec6f631-618f-4c8d-9bf5-1d56366930a3" target="_blank" rel="external">
-                    <img class="external-content__icon" src="assets/images/icons/HotMart.svg" alt="Logo da HotMart">
-                    <span class="external-content__text">HotMart</span>
-                </a>
-            </li>
+                <div>
+                    <li class="footer__list__item">
+                        <a class="footer__item__link" href="#">
+                            <img class="footer__link__icon" src="assets/images/icons/HotMart.svg" alt="Logo da HotMart">
+                            <span>HotMart</span>
+                        </a>
+                    </li>
 
-            <li class="external-content__item">
-                <a class="external-content__link" href="https://wa.me/message/MB4K5IO6PD3MK1" target="_blank" rel="external">
-                    <img class="external-content__icon" src="assets/images/icons/WhatsApp.svg" alt="Logo do WhatsApp">
-                    <span class="external-content__text">WhatsApp</span>
-                </a>
-            </li>
-        </ul>
+                    <li class="footer__list__item">
+                        <a class="footer__item__link" href="#">
+                            <img class="footer__link__icon" src="assets/images/icons/WhatsApp.svg" alt="Logo do WhatsApp">
+                            <span>WhatsApp</span>
+                        </a>
+                    </li>
+                </div>
+            </ul>
+        </nav>
     </footer>
 </body>
 </html>

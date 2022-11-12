@@ -1,0 +1,232 @@
+/*============================== Imports ==================================== */
+@import url("../style.css");
+
+/*============================== Configurations ==============================*/
+:root {
+    /* COLORS */
+
+
+    /* BACKGROUNDS */
+
+
+    /* BORDERS */
+    
+
+    /* TEXTS */
+
+
+    /* FONTS */
+    
+}
+
+/*============================== Generic Elements ==============================*/
+a {
+    text-decoration: none;
+}
+
+hr {
+    border-color: black;
+}
+
+/*============================== Generic Classes ==============================*/
+
+
+/*============================== Page - Top to Bottom ==============================*/
+/* NAVIGATION MENU */
+.js .navigation-menu {
+    background-color: var(--menu-background);
+}
+
+    .js .navigation-menu__link {
+        display: block;
+
+        padding: 1.5rem 1rem;
+
+        color: black;
+        text-align: center;
+    }
+
+/* INTRODUCTION */
+.introduction__title {
+    text-align: center;
+}
+
+.introduction__description {
+    text-align: justify;
+}
+
+/* COURSE INFORMMATION */
+.course-information__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+    .course-information__item:not(:last-child) {
+        margin-bottom: 1rem;
+    }
+
+
+    .course-information__description {
+        margin-left: 1rem;
+
+        text-align: justify;
+    }
+
+/* COURSES */
+.js .courses {
+    text-align: center;
+}
+
+    .courses__title {
+        margin-bottom: 1rem;
+    }
+
+    .js .courses__cards {
+        background-image: url("../../images/Sheet\ Music.svg");
+        background-repeat: no-repeat;
+
+        /* Block height is increased from window width */
+        min-height: calc(200px + 15vw);
+
+        display: flex;
+
+        overflow: auto;
+    }
+
+        .js .course {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            border-radius: 5px;
+            
+            color: white;
+            
+            flex: 1 0 100%;
+        }
+        
+            .js .course__background {
+                background-repeat: no-repeat;
+                background-size: cover;
+                
+                width: 75%;
+                height: 75%;
+                
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                
+                border-radius: 10px;
+                padding: 2rem;
+                box-sizing: border-box;
+            }
+            
+                .js .course:nth-child(1) .course__background {
+                    background-image: url("../../images/Singing\ Course.png");
+                    background-position: center;
+                }
+                
+                .js .course:nth-child(2) .course__background {
+                    background-image: url("../../images/Keyboard\ Course.png");
+                }
+                
+                .js .course:nth-child(3) .course__background {
+                    background-image: url("../../images/Piano\ Course.png");
+                }
+                
+                .js .course:nth-child(4) .course__background {
+                    background-image: url("../../images/Children\'s\ Musicalization\ Course.png");
+                }
+                
+                .js .course:nth-child(5) .course__background {
+                    background-image: url("../../images/Choir\ Conductor\ Course.png");
+                    background-position: 75%;
+                }
+
+    .courses__acess-course {
+        margin-top: .5rem;
+    }
+
+/* CONTACT */
+.contact__title {
+    margin-bottom: 1rem;
+
+    text-align: center;
+}
+
+.contact__description {
+    margin-bottom: 1rem;
+
+    text-align: justify;
+}
+
+.contact__fields {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+    .contact__label {
+        display: block;
+
+        margin-bottom: .5rem;
+
+        font-size: .875rem;
+    }
+
+    .contact__input {
+        width: 100%;
+
+        box-sizing: border-box;
+
+        border: 1px solid var(--input-border);
+        border-radius: 2px;
+        padding: .5rem;
+
+        font-size: .75rem;
+    }
+
+        .contact__message-input {
+            resize: vertical;
+        }
+
+.contact--align-send-button {
+    text-align: center;
+}
+
+    .contact__send-button {
+        margin-top: .5rem;
+
+        padding: 1rem 1.5rem;
+    }
+
+/* FOOTER */
+.footer__title {
+    text-align: center;
+}
+
+.footer__list {
+    margin: .5rem auto 1rem;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+    .footer__list__item:not(:first-child) {
+        margin-top: .5rem;
+    }
+
+    .footer__item__link {
+        display: flex;
+        align-items: center;
+    }
+
+        .footer__link__icon {
+            width: 25px;
+            height: 25px;
+
+            margin-right: .5rem;
+        }
+            
+/* RESPONSIVE LAYOUTS */
