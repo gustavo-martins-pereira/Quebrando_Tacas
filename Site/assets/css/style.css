@@ -67,7 +67,7 @@ fieldset {
 
 /*============================== Generic Classes ==============================*/
 /* STANDARD  CONTENT WIDTH */
-.standard--width {
+.standard--width-mobile {
     width: 80%;
 
     margin: auto;
@@ -110,7 +110,12 @@ fieldset {
 @media screen and (min-width: 48rem) {
     /*============================== Generic Classes ==============================*/
     /* STANDARD  CONTENT WIDTH */
-    .standard--width {
+    /* Reset other widths */
+    .standard--width-mobile {
+        width: auto;
+    }
+
+    .standard--width--tablet {
         width: 50%;
     }
 

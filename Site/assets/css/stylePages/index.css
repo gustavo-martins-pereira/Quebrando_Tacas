@@ -195,13 +195,10 @@ hr {
 .footer__list {
     margin: .5rem auto 1rem;
 
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: .5rem;
 }
-
-    .footer__list__item:not(:first-child) {
-        margin-top: .5rem;
-    }
 
     .footer__item__link {
         display: flex;
@@ -264,5 +261,17 @@ hr {
         }
 
     /* FOOTER */
+    .footer__nav {
+        margin-top: 1.2rem;
+    }
     
+        .footer__list {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+            .footer__link__icon {
+                width: 40px;
+                height: 40px;
+            }
 }
