@@ -24,6 +24,7 @@
 
     /* TEXTS */
     --mobile-font-size: 16px;
+    --tablet-font-size: 20px;
 
     /* FONTS */
     --tittle-font: 'Dancing Script', Arial, Helvetica, cursive;
@@ -31,11 +32,15 @@
 }
 
 /*============================== Generic Elements ==============================*/
+html,
+body {
+    font-size: var(--mobile-font-size);
+}
+
 body {
     background-image: var(--page-background);
 
     font-family: var(--default-font);
-    font-size: var(--mobile-font-size);
 }
 
 /* TITLES */
@@ -100,3 +105,18 @@ fieldset {
 
 
 /* RESPONSIVE LAYOUTS */
+/* TABLET */
+/* 48rem * 16px = 768px */
+@media screen and (min-width: 48rem) {
+    /*============================== Generic Classes ==============================*/
+    /* STANDARD  CONTENT WIDTH */
+    .standard--width {
+        width: 50%;
+    }
+
+    /*============================== Generic Elements ==============================*/
+    html,
+    body {
+        font-size: var(--tablet-font-size);
+    }
+}

@@ -1,24 +1,6 @@
 /*============================== Imports ==================================== */
 @import url("../style.css");
 
-/*============================== Configurations ==============================*/
-:root {
-    /* COLORS */
-
-
-    /* BACKGROUNDS */
-
-
-    /* BORDERS */
-    
-
-    /* TEXTS */
-
-
-    /* FONTS */
-    
-}
-
 /*============================== Generic Elements ==============================*/
 a {
     text-decoration: none;
@@ -66,6 +48,10 @@ hr {
         margin-bottom: 1rem;
     }
 
+    .course-information__icon {
+        width: 30px;
+        height: 30px;
+    }
 
     .course-information__description {
         margin-left: 1rem;
@@ -230,3 +216,53 @@ hr {
         }
             
 /* RESPONSIVE LAYOUTS */
+/* TABLET */
+/* 48rem * 16px = 768px */
+@media screen and (min-width: 48rem) {
+    /*============================== Page - Top to Bottom ==============================*/
+    /* COURSE INFORMMATION */
+    .course-information {
+        display: flex;
+        justify-content: space-between;
+    }
+
+        .course-information__item {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 2rem;
+        }
+        
+            .course-information__item:not(:last-child) {
+                margin-bottom: 0;
+            }
+
+            .course-information__icon {
+                width: 50px;
+                height: 50px;
+            }
+
+            .course-information__description {
+                width: 90%;
+                
+                flex-grow: 4;
+
+                margin-left: 0;
+                
+                text-align: center;
+            }
+
+    /* CONTACT */
+    .contact__fields {
+        display: grid;
+        grid-template-rows: auto;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+        .contact__message-field {
+            grid-column: 1 / -1;
+        }
+
+    /* FOOTER */
+    
+}
