@@ -24,16 +24,20 @@ a {
     text-decoration: none;
 }
 
+hr {
+    border-color: black;
+}
+
 /*============================== Generic Classes ==============================*/
 
 
 /*============================== Page - Top to Bottom ==============================*/
 /* NAVIGATION MENU */
-.navigation-menu {
+.js .navigation-menu {
     background-color: var(--menu-background);
 }
 
-    .navigation-menu__link {
+    .js .navigation-menu__link {
         display: block;
 
         padding: 1.5rem 1rem;
@@ -54,6 +58,7 @@ a {
 /* COURSE INFORMMATION */
 .course-information__item {
     display: flex;
+    justify-content: center;
     align-items: center;
 }
 
@@ -69,7 +74,7 @@ a {
     }
 
 /* COURSES */
-.courses {
+.js .courses {
     text-align: center;
 }
 
@@ -77,7 +82,7 @@ a {
         margin-bottom: 1rem;
     }
 
-    .courses__cards {
+    .js .courses__cards {
         background-image: url("../../images/Sheet\ Music.svg");
         background-repeat: no-repeat;
 
@@ -89,7 +94,7 @@ a {
         overflow: auto;
     }
 
-        .course {
+        .js .course {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -101,7 +106,7 @@ a {
             flex: 1 0 100%;
         }
         
-            .course__background {
+            .js .course__background {
                 background-repeat: no-repeat;
                 background-size: cover;
                 
@@ -117,24 +122,24 @@ a {
                 box-sizing: border-box;
             }
             
-                .course:nth-child(1) .course__background {
+                .js .course:nth-child(1) .course__background {
                     background-image: url("../../images/Singing\ Course.png");
                     background-position: center;
                 }
                 
-                .course:nth-child(2) .course__background {
+                .js .course:nth-child(2) .course__background {
                     background-image: url("../../images/Keyboard\ Course.png");
                 }
                 
-                .course:nth-child(3) .course__background {
+                .js .course:nth-child(3) .course__background {
                     background-image: url("../../images/Piano\ Course.png");
                 }
                 
-                .course:nth-child(4) .course__background {
+                .js .course:nth-child(4) .course__background {
                     background-image: url("../../images/Children\'s\ Musicalization\ Course.png");
                 }
                 
-                .course:nth-child(5) .course__background {
+                .js .course:nth-child(5) .course__background {
                     background-image: url("../../images/Choir\ Conductor\ Course.png");
                     background-position: 75%;
                 }
@@ -195,5 +200,33 @@ a {
 
         padding: 1rem 1.5rem;
     }
+
+/* FOOTER */
+.footer__title {
+    text-align: center;
+}
+
+.footer__list {
+    margin: .5rem auto 1rem;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+    .footer__list__item:not(:first-child) {
+        margin-top: .5rem;
+    }
+
+    .footer__item__link {
+        display: flex;
+        align-items: center;
+    }
+
+        .footer__link__icon {
+            width: 25px;
+            height: 25px;
+
+            margin-right: .5rem;
+        }
             
 /* RESPONSIVE LAYOUTS */
