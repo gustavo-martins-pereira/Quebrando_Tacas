@@ -275,3 +275,47 @@ hr {
                 height: 40px;
             }
 }
+
+/* DESKTOP */
+/* 64rem * 16px = 1024px */
+@media screen and (min-width: 64rem) {
+    /*============================== Page - Top to Bottom ==============================*/
+    /* NAVIGATION MENU */
+    .navigation-menu {
+        display: flex;
+        justify-content: flex-end;
+        gap: 3rem;
+    }
+
+    /* INTRODUCTION */
+    .introduction__description {
+        text-align: center;
+    }
+
+    /* COURSE INFORMMATION */
+    .course-information__icon {
+        width: 75px;
+        height: 75px;
+    }
+
+    /* COURSES */
+    .js .courses__cards {
+        min-height: calc(200px + 25vw);
+    }
+
+        .js .course__background {
+            width: 50%;
+            height: 60%;
+
+            justify-content: space-around;
+        }
+
+    /* CONTACT */
+    .contact__input {
+        padding: 1rem;
+    }
+
+        .contact__message-input {
+            height: 300px;
+        }
+}
