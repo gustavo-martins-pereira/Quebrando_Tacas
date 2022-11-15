@@ -1,11 +1,17 @@
+// GLOBAL VARIABLES
+// Opening and Closing Menu
 let menuIsActive = false;
 
+// Access Course Button
+let coursesLink = [
+    "Canto",
+    "Teclado",
+    "Piano",
+    "Musicalização Infantil",
+    "Regente Coral"
+];
+
 (function() {
-    let $body = document.querySelector("html");
-
-    $body.classList.remove("no-js");
-    $body.classList.add("js");
-
     // Opening and Closing Menu
     let $menuHamburguerButton = document.querySelector(".menu__hamburguer-icon");
     $menuHamburguerButton.addEventListener("click", function() {
@@ -29,4 +35,11 @@ let menuIsActive = false;
             $navigationMenu.style.height = 0;
         }
     });
+
+    // Access Course Button
+    let $carouselBullets = document.querySelectorAll(".swiper-pagination-bullet");
+
+    let $accessCourseButton = document.querySelector(".courses__acess-course");
+
+    
 })();

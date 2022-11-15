@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html class="no-js" lang="pt-br">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,8 +9,13 @@
     <title>Cursos de Música da Keila</title>
 
     <!-- CSS IMPORTS -->
+    <!-- INTERNAL -->
     <link rel="stylesheet" href="assets/css/stylePages/index.css">
+
+    <!-- EXTERNAL -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
 </head>
+
 <body>
     <header>
         <div class="menu">
@@ -57,44 +63,56 @@
         <article class="courses standard--margin-bottom">
             <h2 class="courses__title">Veja os Cursos</h2>
 
-            <section class="courses__cards">
-                <article class="course">
-                    <div class="course__background">
-                        <h3>Canto</h3>
-                        <p>Aperfeiçoe sua voz melhorando sua corda vocal</p>
-                    </div>
-                </article>
+            <!-- Slider main container -->
+            <div class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <section class="swiper-slide">
+                        <div class="swiper-slide__background swiper-slide__background--sing">
+                            <h3>Canto</h3>
+                            <p>Aperfeiçoe sua voz melhorando sua corda vocal</p>
+                        </div>
+                    </section>
+            
+                    <section class="swiper-slide">
+                        <div class="swiper-slide__background swiper-slide__background--keyboard">
+                            <h3>Teclado</h3>
+                            <p>Aprenda a tocar teclado a partir de partituras</p>
+                        </div>
+                    </section>
 
-                <article class="course">
-                    <div class="course__background">
-                        <h3>Teclado</h3>
-                        <p>Aprenda a tocar teclado a partir de partituras</p>
-                    </div>
-                </article>
+                    <section class="swiper-slide">
+                        <div class="swiper-slide__background swiper-slide__background--piano">
+                            <h3>Piano</h3>
+                            <p>Aprenda a tocar piano ...</p>
+                        </div>
+                    </section>
 
-                <article class="course">
-                    <div class="course__background">
-                        <h3>Piano</h3>
-                        <p>Aprenda a tocar piano ...</p>
-                    </div>
-                </article>
+                    <section class="swiper-slide">
+                        <div class="swiper-slide__background swiper-slide__background--children">
+                            <h3>Musicalização Infantil</h3>
+                            <p>Aperfeiçoe sua voz melhorando sua corda vocal</p>
+                        </div>
+                    </section>
 
-                <article class="course">
-                    <div class="course__background">
-                        <h3>Musicalização Infantil</h3>
-                        <p>Aperfeiçoe sua voz melhorando sua corda vocal</p>
-                    </div>
-                </article>
+                    <section class="swiper-slide">
+                        <div class="swiper-slide__background swiper-slide__background--choir">
+                            <h3>Regente Coral</h3>
+                            <p>Aperfeiçoe sua voz melhorando sua corda vocal</p>
+                        </div>
+                    </section>
+                </div>
 
-                <article class="course">
-                    <div class="course__background">
-                        <h3>Regente Coral</h3>
-                        <p>Aperfeiçoe sua voz melhorando sua corda vocal</p>
-                    </div>
-                </article>
-            </section>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+            
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
 
-            <button class="courses__acess-course button">Acessar Curso</button>
+            <a href="#" class="courses__acess-course button">Acessar Curso</a>
         </article>
 
         <!-- CONTACT -->
@@ -111,11 +129,12 @@
                             <label class="contact__label" for="contact__fullName">Nome Completo</label>
                             <input class="contact__input" id="contact__fullName" type="text" placeholder="Digite seu nome completo">
                         </div>
-                        
+
                         <div>
                             <label class="contact__label" for="contact__email">E-mail</label>
                             <input class="contact__input" id="contact__email" type="email" placeholder="seuemail@gmail.com">
                         </div>
+
                         <div class="contact__message-field">
                             <label class="contact__label" for="contact__message">Mensagem</label>
                             <textarea class="contact__message-input contact__input" id="contact__message" placeholder="Digite sua mensagem" rows="5"></textarea>
@@ -174,6 +193,13 @@
         </nav>
     </footer>
 
+    <!-- JAVASCRIPT IMPORTS -->
+    <!-- EXTERNAL -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    
+    <!-- INTERNAL -->
+    <script src="assets/js/swaper.js"></script>
     <script src="assets/js/index.js"></script>
 </body>
+
 </html>

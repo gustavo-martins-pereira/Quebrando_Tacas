@@ -15,22 +15,13 @@ hr {
 
 /*============================== Page - Top to Bottom ==============================*/
 /* NAVIGATION MENU */
-/* NO JavaScript */
-.no-js .menu__hamburguer-icon {
-    display: none;
+.menu {
+    background-color: var(--menu-background);
 }
 
-    .no-js .navigation-menu__link {
-        display: block;
+.menu {
+    background-color: transparent;
 
-        padding: 1.5rem 1rem;
-
-        color: black;
-        text-align: center;
-    }
-
-/* With JavaScript */
-.js .menu {
     position: fixed;
     top: 0;
     right: 0;
@@ -41,7 +32,7 @@ hr {
     border-bottom-left-radius: 2px;
 }
 
-    .js .menu__hamburguer-icon {
+    .menu__hamburguer-icon {
         width: 40px;
         height: 40px;
 
@@ -50,7 +41,7 @@ hr {
         margin: 1rem;
     }
 
-    .js .navigation-menu {
+    .navigation-menu {
         height: 0;
 
         text-align: center;
@@ -58,7 +49,7 @@ hr {
         overflow: hidden;
     }
 
-        .js .navigation-menu__link {
+        .navigation-menu__link {
             display: block;
             
             padding: 1.5rem 2rem;
@@ -96,7 +87,7 @@ hr {
     }
 
 /* COURSES */
-.no-js .courses {
+.courses {
     text-align: center;
 }
 
@@ -106,31 +97,32 @@ hr {
         text-align: center;
     }
 
-    .no-js .courses__cards {
-        background-image: url("../../images/Sheet\ Music.svg");
-        background-repeat: no-repeat;
+    .courses__acess-course {
+        display: inline-block;
 
-        /* Block height is increased from window width */
-        min-height: calc(200px + 15vw);
-
-        display: flex;
-
-        overflow: auto;
+        margin-top: .5rem;
     }
 
-        .no-js .course {
+/* SWIPER */
+.swiper {
+    background-image: url("../../images/Sheet\ Music.svg");
+    background-repeat: no-repeat;
+
+    /* Block height is increased from window width */
+    height: calc(200px + 25vw);
+}
+
+    .swiper-wrapper {
+        height: 50%;
+    }
+
+        .swiper-slide {
             display: flex;
             justify-content: center;
             align-items: center;
-
-            border-radius: 5px;
-            
-            color: white;
-            
-            flex: 1 0 100%;
         }
-        
-            .no-js .course__background {
+
+            .swiper-slide__background {
                 background-repeat: no-repeat;
                 background-size: cover;
                 
@@ -139,38 +131,37 @@ hr {
                 
                 display: flex;
                 flex-direction: column;
-                justify-content: space-between;
-                
+                justify-content: space-around;
+
                 border-radius: 10px;
                 padding: 2rem;
                 box-sizing: border-box;
+
+                color: white;
+                text-align: center;
             }
-            
-                .no-js .course:nth-child(1) .course__background {
+        
+                .swiper-slide__background--sing {
                     background-image: url("../../images/Singing\ Course.png");
-                    background-position: center;
+                    background-position: 50%;
                 }
-                
-                .no-js .course:nth-child(2) .course__background {
+
+                .swiper-slide__background--keyboard {
                     background-image: url("../../images/Keyboard\ Course.png");
                 }
                 
-                .no-js .course:nth-child(3) .course__background {
+                .swiper-slide__background--piano {
                     background-image: url("../../images/Piano\ Course.png");
                 }
                 
-                .no-js .course:nth-child(4) .course__background {
+                .swiper-slide__background--children {
                     background-image: url("../../images/Children\'s\ Musicalization\ Course.png");
                 }
                 
-                .no-js .course:nth-child(5) .course__background {
+                .swiper-slide__background--choir {
                     background-image: url("../../images/Choir\ Conductor\ Course.png");
                     background-position: 75%;
                 }
-
-    .courses__acess-course {
-        margin-top: .5rem;
-    }
 
 /* CONTACT */
 .contact__title {
@@ -344,18 +335,6 @@ hr {
         width: 75px;
         height: 75px;
     }
-
-    /* COURSES */
-    .no-js .courses__cards {
-        min-height: calc(200px + 25vw);
-    }
-
-        .no-js .course__background {
-            width: 50%;
-            height: 60%;
-
-            justify-content: space-around;
-        }
 
     /* CONTACT */
     .contact__input {
