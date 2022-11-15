@@ -30,6 +30,8 @@ hr {
     flex-direction: column;
 
     border-bottom-left-radius: 2px;
+
+    z-index: 2;
 }
 
     .menu__hamburguer-icon {
@@ -110,8 +112,6 @@ hr {
 
     /* Block height is increased from window width */
     height: calc(200px + 25vw);
-
-    z-index: -1 !important;
 }
 
     .swiper-wrapper {
