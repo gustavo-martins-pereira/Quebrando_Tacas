@@ -198,7 +198,7 @@ hr {
         box-sizing: border-box;
 
         border: 1px solid var(--input-border);
-        border-radius: 2px;
+        border-radius: 5px;
         padding: .5rem;
 
         font-size: .75rem;
@@ -311,21 +311,41 @@ hr {
 /* 64rem * 16px = 1024px */
 @media screen and (min-width: 64rem) {
     /*============================== Page - Top to Bottom ==============================*/
-    /* NAVIGATION MENU */
-    .navigation-menu {
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        gap: 2rem;
-
-        text-align: center;
+    /* HEADER */
+    .header {
+        margin-top: 150px;
     }
 
-        .navigation-menu__link {
-            display: inline-block;
+        /* NAVIGATION MENU */
+        .menu {
+            background-color: var(--menu-background);
 
-            padding: 1rem;
+            width: 100%;
+            height: auto;
+
+            box-shadow: -2px 2px 4px rgba(0, 0, 0, .5);
         }
+
+            .menu__hamburguer-icon {
+                display: none;
+            }
+
+            .navigation-menu {
+                height: auto;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 2rem;
+
+                text-align: center;
+            }
+
+                .navigation-menu__link {
+                    display: inline-block;
+
+                    padding: 1rem;
+                }
 
     /* INTRODUCTION */
     .introduction__description {
@@ -336,6 +356,11 @@ hr {
     .course-information__icon {
         width: 75px;
         height: 75px;
+    }
+
+    /* COURSES */
+    .swiper-slide__title {
+        font-size: 4rem;
     }
 
     /* CONTACT */
