@@ -41,6 +41,8 @@ hr {
         align-self: flex-end;
 
         margin: 1rem;
+
+        cursor: pointer;
     }
 
     .navigation-menu {

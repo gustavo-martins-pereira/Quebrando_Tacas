@@ -33,6 +33,21 @@
                 $navigationMenu.style.height = 0;
             }
         });
+
+        // Fix the bug when screen changes size with icon open or closed
+        document.body.onresize = function() {
+            let $menu = document.querySelector(".menu");
+            let $navigationMenu = document.querySelector(".navigation-menu");
+
+            let clientWindowTarget = 1024;
+            if(document.body.clientWidth >= clientWindowTarget - 17) {
+                $menu.removeAttribute("style");
+                $menuHamburguerButton.src = "assets/images/icons/Menu.svg";
+                $navigationMenu.removeAttribute("style");
+
+                menuIsActive = false;
+            }
+        }
     }
 
     /* ACCESS COURSE BUTTON *
