@@ -13,53 +13,7 @@
 /********** LAYOUT **********/
 @import "layout/global-layout";
 
-// REFACTOR:
 /*============================== Page - Top to Bottom ==============================*/
-/* NAVIGATION MENU */
-.menu {
-    background-color: $menu-background;
-}
-
-.menu {
-    background-color: transparent;
-
-    position: fixed;
-    top: 0;
-    right: 0;
-
-    display: flex;
-    flex-direction: column;
-
-    border-bottom-left-radius: 2px;
-
-    z-index: 2;
-}
-
-    .menu__hamburguer-icon {
-        width: 40px;
-        height: 40px;
-
-        align-self: flex-end;
-
-        margin: 1rem;
-
-        cursor: pointer;
-    }
-
-    .navigation-menu {
-        height: 0;
-
-        text-align: center;
-
-        overflow: hidden;
-    }
-
-        .navigation-menu__link {
-            display: block;
-            
-            padding: 1.5rem 2rem;
-        }
-
 /* INTRODUCTION */
 .header__introduction {
     @include standard--width();
@@ -321,21 +275,6 @@
         .contact__message-field {
             grid-column: 1 / -1;
         }
-
-    /* FOOTER */
-    .footer__nav {
-        margin-top: 1.2rem;
-    }
-    
-        .footer__list {
-            display: flex;
-            justify-content: space-evenly;
-        }
-
-            .footer__link__icon {
-                width: 40px;
-                height: 40px;
-            }
 }
 
 /* DESKTOP */
@@ -345,37 +284,6 @@
     .header {
         margin-top: 9.5rem;
     }
-
-        /* NAVIGATION MENU */
-        .menu {
-            background-color: $menu-background;
-
-            width: 100%;
-            height: auto;
-
-            box-shadow: $menu-box-shadow;
-        }
-
-            .menu__hamburguer-icon {
-                display: none;
-            }
-
-            .navigation-menu {
-                height: auto;
-
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                gap: 2rem;
-
-                text-align: center;
-            }
-
-                .navigation-menu__link {
-                    display: inline-block;
-
-                    padding: 1rem;
-                }
 
     /* INTRODUCTION */
     .introduction__description {

@@ -460,6 +460,58 @@ body {
 }
 /********** COMPONENTS **********/
 /********** LAYOUT **********/
+.menu {
+  background-color: transparent;
+  position: fixed;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  border-bottom-left-radius: 2px;
+  z-index: 2;
+}
+.menu__hamburguer-icon {
+  width: 40px;
+  height: 40px;
+  align-self: flex-end;
+  margin: 1rem;
+  cursor: pointer;
+}
+.menu__navigation-menu {
+  height: 0;
+  text-align: center;
+  overflow: hidden;
+}
+.menu__navigation-menu__link {
+  display: block;
+  padding: 1.5rem 2rem;
+}
+
+/* DESKTOP */
+/* 1024px */
+@media screen and (min-width: 1024px) {
+  .menu {
+    background-color: hsl(202deg, 100%, 71%);
+    width: 100%;
+    height: auto;
+    box-shadow: -2px 2px 4px hsla(0deg, 0%, 0%, 0.8);
+  }
+  .menu__hamburguer-icon {
+    display: none;
+  }
+  .menu__navigation-menu {
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    text-align: center;
+  }
+  .menu__navigation-menu__link {
+    display: inline-block;
+    padding: 1rem;
+  }
+}
 .footer {
   width: 80%;
   margin: auto;
@@ -511,41 +563,6 @@ body {
   }
 }
 /*============================== Page - Top to Bottom ==============================*/
-/* NAVIGATION MENU */
-.menu {
-  background-color: hsl(202deg, 100%, 71%);
-}
-
-.menu {
-  background-color: transparent;
-  position: fixed;
-  top: 0;
-  right: 0;
-  display: flex;
-  flex-direction: column;
-  border-bottom-left-radius: 2px;
-  z-index: 2;
-}
-
-.menu__hamburguer-icon {
-  width: 40px;
-  height: 40px;
-  align-self: flex-end;
-  margin: 1rem;
-  cursor: pointer;
-}
-
-.navigation-menu {
-  height: 0;
-  text-align: center;
-  overflow: hidden;
-}
-
-.navigation-menu__link {
-  display: block;
-  padding: 1.5rem 2rem;
-}
-
 /* INTRODUCTION */
 .header__introduction {
   width: 80%;
@@ -823,18 +840,6 @@ body {
   .contact__message-field {
     grid-column: 1/-1;
   }
-  /* FOOTER */
-  .footer__nav {
-    margin-top: 1.2rem;
-  }
-  .footer__list {
-    display: flex;
-    justify-content: space-evenly;
-  }
-  .footer__link__icon {
-    width: 40px;
-    height: 40px;
-  }
 }
 /* DESKTOP */
 /* 1024px */
@@ -842,28 +847,6 @@ body {
   /* HEADER */
   .header {
     margin-top: 9.5rem;
-  }
-  /* NAVIGATION MENU */
-  .menu {
-    background-color: hsl(202deg, 100%, 71%);
-    width: 100%;
-    height: auto;
-    box-shadow: -2px 2px 4px hsla(0deg, 0%, 0%, 0.8);
-  }
-  .menu__hamburguer-icon {
-    display: none;
-  }
-  .navigation-menu {
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-    text-align: center;
-  }
-  .navigation-menu__link {
-    display: inline-block;
-    padding: 1rem;
   }
   /* INTRODUCTION */
   .introduction__description {

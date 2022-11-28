@@ -15,7 +15,7 @@
             menuIsActive = !menuIsActive;
 
             let $menu = document.querySelector(".menu");
-            let $navigationMenu = document.querySelector(".navigation-menu");
+            let $navigationMenu = document.querySelector(".menu__navigation-menu");
             // Change the CSS according the "menuIsActive"
             if(menuIsActive) {
                 $menu.style.backgroundColor = "hsl(202, 100%, 71%)";
@@ -37,7 +37,7 @@
         // Fix the bug when screen changes size with icon open or closed
         document.body.onresize = function() {
             let $menu = document.querySelector(".menu");
-            let $navigationMenu = document.querySelector(".navigation-menu");
+            let $navigationMenu = document.querySelector(".menu__navigation-menu");
 
             let clientWindowTarget = 1024;
             if(document.body.clientWidth >= clientWindowTarget - 17) {
