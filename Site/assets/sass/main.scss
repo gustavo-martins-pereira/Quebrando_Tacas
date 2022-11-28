@@ -1,3 +1,154 @@
+/********** VENDORS **********/
+@import "vendors/global-vendors";
+
+// REFACTOR:
+/*============================== Configurations ==============================*/
+:root {
+    /* COLORS */
+
+
+    /* BACKGROUNDS */
+    --page-background: linear-gradient(#ffd776, #ffb500);
+    --menu-background: #6ac9ff;
+    --field-opened-background: #afd9ff;
+
+    --button-background: #67b6ff;
+
+    /* BORDERS */
+    --input-border: #4468eb;
+
+    /* TEXTS */
+    --mobile-font-size: 16px;
+    --tablet-font-size: 20px;
+    --desktop-font-size: 24px;
+
+    /* FONTS */
+    --tittle-font: 'Dancing Script', Arial, Helvetica, cursive;
+    --default-font: 'Inter', Arial, Helvetica, sans-serif;
+}
+
+/*============================== Generic Elements ==============================*/
+html,
+body {
+    font-size: var(--mobile-font-size);
+}
+
+body {
+    background-image: var(--page-background);
+
+    font-family: var(--default-font);
+}
+
+/* TITLES */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--tittle-font);
+}
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+    }
+
+    h3 {
+        font-size: 2rem;
+    }
+
+/* FORMS */
+fieldset {
+    padding: 0;
+}
+
+/*============================== Generic Classes ==============================*/
+/* STANDARD  CONTENT WIDTH */
+.standard--width-mobile {
+    width: 80%;
+
+    margin: auto;
+}
+
+/* STANDARD BOTTOM MARGIN OF SEPARATION */
+.standard--margin-bottom {
+    margin-bottom: 3rem;
+}
+
+/* BUTTONS */
+.button {
+    background-color: var(--button-background);
+
+    border: none;
+    border-radius: 5px;
+    padding: 1rem 1.5rem;
+
+    color: white;
+}
+
+/* ACESSIBILITY */
+.acessibility--hidden-text {
+    width: 1px;
+    height: 1px;
+    
+    position: absolute;
+
+    color: transparent;
+
+    overflow: hidden;
+}
+
+/*============================== Page - Top to Bottom ==============================*/
+
+
+/* RESPONSIVE LAYOUTS */
+/* TABLET */
+/* 48rem * 16px = 768px */
+@media screen and (min-width: 48rem) {
+    /*============================== Generic Classes ==============================*/
+    /* STANDARD  CONTENT WIDTH */
+    /* Reset other widths */
+    .standard--width-mobile {
+        width: auto;
+    }
+
+    .standard--width--tablet {
+        width: 60%;
+    }
+
+    /*============================== Generic Elements ==============================*/
+    html,
+    body {
+        font-size: var(--tablet-font-size);
+    }
+}
+
+/* DESKTOP */
+/* 64rem * 16px = 1024px */
+@media screen and (min-width: 64rem) {
+    /*============================== Generic Classes ==============================*/
+    /* STANDARD  CONTENT WIDTH */
+    /* Reset other widths */
+    .standard--width-mobile {
+        width: auto;
+    }
+
+    .standard--width--tablet {
+        width: auto;
+    }
+
+    .standard--width--desktop {
+        width: 50%;
+    }
+
+    /*============================== Generic Elements ==============================*/
+    html,
+    body {
+        font-size: var(--desktop-font-size);
+    }
+}
+
+// OTHER
+
 /*============================== Imports ==================================== */
 @import url("../style.css");
 
@@ -109,7 +260,7 @@ hr {
 
 /* SWIPER */
 .swiper {
-    background-image: url("../../images/Sheet\ Music.svg");
+    background-image: url("../images/Sheet\ Music.svg");
     background-repeat: no-repeat;
 
     /* Block height is increased from window width */
@@ -146,24 +297,24 @@ hr {
             }
         
                 .swiper-slide__background--sing {
-                    background-image: url("../../images/Singing\ Course.png");
+                    background-image: url("../images/Singing\ Course.png");
                     background-position: 50%;
                 }
 
                 .swiper-slide__background--keyboard {
-                    background-image: url("../../images/Keyboard\ Course.png");
+                    background-image: url("../images/Keyboard\ Course.png");
                 }
                 
                 .swiper-slide__background--piano {
-                    background-image: url("../../images/Piano\ Course.png");
+                    background-image: url("../images/Piano\ Course.png");
                 }
                 
                 .swiper-slide__background--children {
-                    background-image: url("../../images/Children\'s\ Musicalization\ Course.png");
+                    background-image: url("../images/Children\'s\ Musicalization\ Course.png");
                 }
                 
                 .swiper-slide__background--choir {
-                    background-image: url("../../images/Choir\ Conductor\ Course.png");
+                    background-image: url("../images/Choir\ Conductor\ Course.png");
                     background-position: 75%;
                 }
 
@@ -187,11 +338,11 @@ hr {
         }
 
     .swiper-button-prev::after {
-        content: url("../../images/icons/Arrow\ Left.svg") !important;
+        content: url("../images/icons/Arrow\ Left.svg") !important;
     }
 
     .swiper-button-next::after {
-        content: url("../../images/icons/Arrow\ Right.svg") !important;
+        content: url("../images/icons/Arrow\ Right.svg") !important;
     }
 
 /* CONTACT */
