@@ -1,5 +1,5 @@
 /* STANDARD  CONTENT WIDTH */
-@mixin standard--width-mobile {
+@mixin standard--width {
     width: 80%;
 
     margin: auto;
@@ -18,17 +18,6 @@
     margin-bottom: 3rem;
 }
 
-/* BUTTONS */
-@mixin button {
-    background-color: $button-background;
-
-    border: none;
-    border-radius: 5px;
-    padding: 1rem 1.5rem;
-
-    color: $white;
-}
-
 /* ACESSIBILITY */
 @mixin acessibility--hidden-text {
     width: 1px;
@@ -39,27 +28,4 @@
     color: transparent;
 
     overflow: hidden;
-}
-
-///////////////////////////////////////////////////////////////
-
-/* RESPONSIVE LAYOUTS */
-/* TABLET */
-/* 768px */
-@media screen and (min-width: map-get($map: $breakpoints, $key: "medium")) {
-    /*============================== Generic Elements ==============================*/
-    html,
-    body {
-        font-size: map-get($map: $font-sizes, $key: "tablet");
-    }
-}
-
-/* DESKTOP */
-/* 1024px */
-@media screen and (min-width: map-get($map: $breakpoints, $key: "large")) {
-    /*============================== Generic Elements ==============================*/
-    html,
-    body {
-        font-size: map-get($map: $font-sizes, $key: "desktop");
-    }
 }

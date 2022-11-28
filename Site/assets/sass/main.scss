@@ -4,51 +4,16 @@
 /********** ABSTRACTS **********/
 @import "abstracts/global-abstracts";
 
+/********** BASE **********/
+@import "base/global-base";
+
+/********** COMPONENTS **********/
+@import "components/global-components";
+
+/********** LAYOUT **********/
+@import "layout/global-layout";
+
 // REFACTOR:
-/*============================== Generic Elements ==============================*/
-html,
-body {
-    font-size: map-get($map: $font-sizes, $key: "mobile");
-}
-
-body {
-    background-image: $page-background;
-
-    font-family: $default-font-stack;
-}
-
-/* TITLES */
-h1, h2, h3, h4, h5, h6 {
-    font-family: $tittle-font-stack;
-}
-
-    h1 {
-        font-size: 3rem;
-    }
-
-    h2 {
-        font-size: 2.5rem;
-    }
-
-    h3 {
-        font-size: 2rem;
-    }
-
-/* FORMS */
-fieldset {
-    padding: 0;
-}
-
-// OTHER
-/*============================== Generic Elements ==============================*/
-a {
-    text-decoration: none;
-}
-
-hr {
-    border-color: black;
-}
-
 /*============================== Page - Top to Bottom ==============================*/
 /* NAVIGATION MENU */
 .menu {
@@ -97,7 +62,7 @@ hr {
 
 /* INTRODUCTION */
 .header__introduction {
-    @include standard--width-mobile();
+    @include standard--width();
     @include standard--margin-bottom();
 }
 
@@ -111,7 +76,7 @@ hr {
 
 /* COURSE INFORMMATION */
 .course-information {
-    @include standard--width-mobile();
+    @include standard--width();
     @include standard--margin-bottom();
 
     margin-top: 2rem;
@@ -248,7 +213,7 @@ hr {
 
 /* CONTACT */
 .contact {
-    @include standard--width-mobile();
+    @include standard--width();
     @include standard--margin-bottom();
 }
 
@@ -309,41 +274,11 @@ hr {
 
             padding: 1rem 1.5rem;
         }
-
-/* FOOTER */
-.footer {
-    @include standard--width-mobile();
-}
-
-    .footer__title {
-        text-align: center;
-    }
-
-    .footer__list {
-        margin: .5rem auto 1rem;
-
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: .5rem;
-    }
-
-        .footer__item__link {
-            display: flex;
-            align-items: center;
-        }
-
-            .footer__link__icon {
-                width: 25px;
-                height: 25px;
-
-                margin-right: .5rem;
-            }
             
 /* RESPONSIVE LAYOUTS */
 /* TABLET */
 /* 768px */
 @media screen and (min-width: map-get($map: $breakpoints, $key: "medium")) {
-    /*============================== Page - Top to Bottom ==============================*/
     /* COURSE INFORMMATION */
     .course-information {
         display: flex;
@@ -406,7 +341,6 @@ hr {
 /* DESKTOP */
 /* 1024px */
 @media screen and (min-width: map-get($map: $breakpoints, $key: "large")) {
-    /*============================== Page - Top to Bottom ==============================*/
     /* HEADER */
     .header {
         margin-top: 9.5rem;
