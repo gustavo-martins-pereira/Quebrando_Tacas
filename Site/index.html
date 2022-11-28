@@ -9,12 +9,11 @@
     <title>Cursos de Música da Keila</title>
 
     <!-- CSS IMPORTS -->
-    <!-- INTERNAL -->
-    <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="assets/css/stylePages/index.css">
-
     <!-- EXTERNAL -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    
+    <!-- INTERNAL -->
+    <link rel="stylesheet" href="assets/css/main.css">
 </head>
 
 <body>
@@ -33,7 +32,7 @@
         </nav>
 
         <!-- INTRODUCTION -->
-        <section class="standard--width-mobile standard--width--tablet standard--width--desktop standard--margin-bottom">
+        <section class="header__introduction">
             <h1 class="introduction__title">Cursos da Keila</h1>
             <p class="introduction__description">Tenha aulas com uma professora com mais de 30 anos de carreira</p>
 
@@ -41,7 +40,7 @@
         </section>
 
         <!-- COURSE INFORMMATION -->
-        <section class="course-information standard--width-mobile standard--width--tablet standard--width--desktop standard--margin-bottom">
+        <section class="course-information">
             <div class="course-information__item">
                 <img class="course-information__icon" src="assets/images/icons/Book.svg" alt="Livro">
                 <p class="course-information__description">Acesso a todos os materiais para acessar as aulas</p>
@@ -61,7 +60,7 @@
 
     <main>
         <!-- COURSES -->
-        <article class="courses standard--margin-bottom">
+        <article class="courses">
             <h2 class="courses__title">Veja os Cursos</h2>
 
             <!-- Slider main container -->
@@ -113,17 +112,17 @@
                 <div class="swiper-button-next swiper-button"></div>
             </div>
 
-            <a href="#" class="courses__acess-course button">Acessar Curso</a>
+            <a href="#" class="courses__acess-course">Acessar Curso</a>
         </article>
 
         <!-- CONTACT -->
-        <section class="contact standard--width-mobile standard--width--tablet standard--width--desktop standard--margin-bottom">
+        <section class="contact">
             <h2 class="contact__title">Contato</h2>
             <p class="contact__description">Entre em contato nos enviando uma mensagem por e-mail</p>
 
             <form>
                 <fieldset>
-                    <legend class="acessibility--hidden-text">Envio de E-mail</legend>
+                    <legend class="contact__legend">Envio de E-mail</legend>
 
                     <div class="contact__fields">
                         <div>
@@ -142,7 +141,7 @@
                         </div>
                     </div>
 
-                    <div class="contact--align-send-button"> <input class="contact__send-button button" type="submit" value="Enviar E-mail"> </div>
+                    <div class="contact--align-send-button"> <input class="contact__send-button" type="submit" value="Enviar E-mail"> </div>
                 </fieldset>
             </form>
         </section>
@@ -151,7 +150,7 @@
     <hr class="hr--black">
 
     <!-- FOOTER -->
-    <footer class="standard--width-mobile">
+    <footer class="footer">
         <h2 class="footer__title">Visite os Conteúdos Relacionados</h2>
 
         <nav class="footer__nav">

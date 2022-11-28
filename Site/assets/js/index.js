@@ -18,8 +18,8 @@
             let $navigationMenu = document.querySelector(".navigation-menu");
             // Change the CSS according the "menuIsActive"
             if(menuIsActive) {
-                $menu.style.backgroundColor = "var(--menu-background)";
-                $menu.style.boxShadow = "-2px 2px 4px rgba(0, 0, 0, .5)";
+                $menu.style.backgroundColor = "hsl(202, 100%, 71%)";
+                $menu.style.boxShadow = "-2px 2px 4px hsla(0, 0%, 0%, 0.8)";
                 
                 $menuHamburguerButton.src = "assets/images/icons/Close.svg";
                 

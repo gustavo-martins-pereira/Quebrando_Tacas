@@ -1,47 +1,25 @@
 /********** VENDORS **********/
 @import "vendors/global-vendors";
 
+/********** ABSTRACTS **********/
+@import "abstracts/global-abstracts";
+
 // REFACTOR:
-/*============================== Configurations ==============================*/
-:root {
-    /* COLORS */
-
-
-    /* BACKGROUNDS */
-    --page-background: linear-gradient(#ffd776, #ffb500);
-    --menu-background: #6ac9ff;
-    --field-opened-background: #afd9ff;
-
-    --button-background: #67b6ff;
-
-    /* BORDERS */
-    --input-border: #4468eb;
-
-    /* TEXTS */
-    --mobile-font-size: 16px;
-    --tablet-font-size: 20px;
-    --desktop-font-size: 24px;
-
-    /* FONTS */
-    --tittle-font: 'Dancing Script', Arial, Helvetica, cursive;
-    --default-font: 'Inter', Arial, Helvetica, sans-serif;
-}
-
 /*============================== Generic Elements ==============================*/
 html,
 body {
-    font-size: var(--mobile-font-size);
+    font-size: map-get($map: $font-sizes, $key: "mobile");
 }
 
 body {
-    background-image: var(--page-background);
+    background-image: $page-background;
 
-    font-family: var(--default-font);
+    font-family: $default-font-stack;
 }
 
 /* TITLES */
 h1, h2, h3, h4, h5, h6 {
-    font-family: var(--tittle-font);
+    font-family: $tittle-font-stack;
 }
 
     h1 {
@@ -61,97 +39,7 @@ fieldset {
     padding: 0;
 }
 
-/*============================== Generic Classes ==============================*/
-/* STANDARD  CONTENT WIDTH */
-.standard--width-mobile {
-    width: 80%;
-
-    margin: auto;
-}
-
-/* STANDARD BOTTOM MARGIN OF SEPARATION */
-.standard--margin-bottom {
-    margin-bottom: 3rem;
-}
-
-/* BUTTONS */
-.button {
-    background-color: var(--button-background);
-
-    border: none;
-    border-radius: 5px;
-    padding: 1rem 1.5rem;
-
-    color: white;
-}
-
-/* ACESSIBILITY */
-.acessibility--hidden-text {
-    width: 1px;
-    height: 1px;
-    
-    position: absolute;
-
-    color: transparent;
-
-    overflow: hidden;
-}
-
-/*============================== Page - Top to Bottom ==============================*/
-
-
-/* RESPONSIVE LAYOUTS */
-/* TABLET */
-/* 48rem * 16px = 768px */
-@media screen and (min-width: 48rem) {
-    /*============================== Generic Classes ==============================*/
-    /* STANDARD  CONTENT WIDTH */
-    /* Reset other widths */
-    .standard--width-mobile {
-        width: auto;
-    }
-
-    .standard--width--tablet {
-        width: 60%;
-    }
-
-    /*============================== Generic Elements ==============================*/
-    html,
-    body {
-        font-size: var(--tablet-font-size);
-    }
-}
-
-/* DESKTOP */
-/* 64rem * 16px = 1024px */
-@media screen and (min-width: 64rem) {
-    /*============================== Generic Classes ==============================*/
-    /* STANDARD  CONTENT WIDTH */
-    /* Reset other widths */
-    .standard--width-mobile {
-        width: auto;
-    }
-
-    .standard--width--tablet {
-        width: auto;
-    }
-
-    .standard--width--desktop {
-        width: 50%;
-    }
-
-    /*============================== Generic Elements ==============================*/
-    html,
-    body {
-        font-size: var(--desktop-font-size);
-    }
-}
-
 // OTHER
-
-/*============================== Imports ==================================== */
-@import url("../style.css");
-
 /*============================== Generic Elements ==============================*/
 a {
     text-decoration: none;
@@ -161,13 +49,10 @@ hr {
     border-color: black;
 }
 
-/*============================== Generic Classes ==============================*/
-
-
 /*============================== Page - Top to Bottom ==============================*/
 /* NAVIGATION MENU */
 .menu {
-    background-color: var(--menu-background);
+    background-color: $menu-background;
 }
 
 .menu {
@@ -211,38 +96,52 @@ hr {
         }
 
 /* INTRODUCTION */
-.introduction__title {
-    text-align: center;
+.header__introduction {
+    @include standard--width-mobile();
+    @include standard--margin-bottom();
 }
 
-.introduction__description {
-    text-align: justify;
-}
-
-/* COURSE INFORMMATION */
-.course-information__item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-    .course-information__item:not(:last-child) {
-        margin-bottom: 1rem;
+    .introduction__title {
+        text-align: center;
     }
 
-    .course-information__icon {
-        width: 30px;
-        height: 30px;
-    }
-
-    .course-information__description {
-        margin-left: 1rem;
-
+    .introduction__description {
         text-align: justify;
     }
 
+/* COURSE INFORMMATION */
+.course-information {
+    @include standard--width-mobile();
+    @include standard--margin-bottom();
+
+    margin-top: 2rem;
+}
+
+    .course-information__item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+        .course-information__item:not(:last-child) {
+            margin-bottom: 1rem;
+        }
+
+        .course-information__icon {
+            width: 30px;
+            height: 30px;
+        }
+
+        .course-information__description {
+            margin-left: 1rem;
+
+            text-align: justify;
+        }
+
 /* COURSES */
 .courses {
+    @include standard--margin-bottom();
+
     text-align: center;
 }
 
@@ -253,6 +152,8 @@ hr {
     }
 
     .courses__acess-course {
+        @include button();
+
         display: inline-block;
 
         margin-top: .5rem;
@@ -268,7 +169,7 @@ hr {
 }
 
     .swiper-wrapper {
-        height: 50%;
+        height: 100%;
     }
 
         .swiper-slide {
@@ -292,7 +193,7 @@ hr {
                 padding: 2rem;
                 box-sizing: border-box;
 
-                color: white;
+                color: $white;
                 text-align: center;
             }
         
@@ -319,7 +220,7 @@ hr {
                 }
 
     .swiper-button {
-        background-color: white;
+        background-color: $white;
 
         width: 3rem !important;
         height: 3rem !important;
@@ -346,87 +247,102 @@ hr {
     }
 
 /* CONTACT */
-.contact__title {
-    margin-bottom: 1rem;
-
-    text-align: center;
+.contact {
+    @include standard--width-mobile();
+    @include standard--margin-bottom();
 }
 
-.contact__description {
-    margin-bottom: 1rem;
+    .contact__title {
+        margin-bottom: 1rem;
 
-    text-align: justify;
-}
-
-.contact__fields {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-    .contact__label {
-        display: block;
-
-        margin-bottom: .5rem;
-
-        font-size: .875rem;
+        text-align: center;
     }
 
-    .contact__input {
-        width: 100%;
+    .contact__description {
+        margin-bottom: 1rem;
 
-        box-sizing: border-box;
-
-        border: 1px solid var(--input-border);
-        border-radius: 5px;
-        padding: .5rem;
-
-        font-size: .75rem;
+        text-align: justify;
     }
 
-        .contact__message-input {
-            resize: vertical;
+    .contact__legend {
+        @include acessibility--hidden-text();
+    }
+
+    .contact__fields {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+        .contact__label {
+            display: block;
+
+            margin-bottom: .5rem;
+
+            font-size: .875rem;
         }
 
-.contact--align-send-button {
-    text-align: center;
-}
+        .contact__input {
+            width: 100%;
 
-    .contact__send-button {
-        margin-top: .5rem;
+            box-sizing: border-box;
 
-        padding: 1rem 1.5rem;
+            border: 1px solid $input-border-color;
+            border-radius: 5px;
+            padding: .5rem;
+
+            font-size: .75rem;
+        }
+
+            .contact__message-input {
+                resize: vertical;
+            }
+
+    .contact--align-send-button {
+        text-align: center;
     }
+
+        .contact__send-button {
+            @include button();
+
+            margin-top: .5rem;
+
+            padding: 1rem 1.5rem;
+        }
 
 /* FOOTER */
-.footer__title {
-    text-align: center;
+.footer {
+    @include standard--width-mobile();
 }
 
-.footer__list {
-    margin: .5rem auto 1rem;
-
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: .5rem;
-}
-
-    .footer__item__link {
-        display: flex;
-        align-items: center;
+    .footer__title {
+        text-align: center;
     }
 
-        .footer__link__icon {
-            width: 25px;
-            height: 25px;
+    .footer__list {
+        margin: .5rem auto 1rem;
 
-            margin-right: .5rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: .5rem;
+    }
+
+        .footer__item__link {
+            display: flex;
+            align-items: center;
         }
+
+            .footer__link__icon {
+                width: 25px;
+                height: 25px;
+
+                margin-right: .5rem;
+            }
             
 /* RESPONSIVE LAYOUTS */
 /* TABLET */
-/* 48rem * 16px = 768px */
-@media screen and (min-width: 48rem) {
+/* 768px */
+@media screen and (min-width: map-get($map: $breakpoints, $key: "medium")) {
     /*============================== Page - Top to Bottom ==============================*/
     /* COURSE INFORMMATION */
     .course-information {
@@ -488,8 +404,8 @@ hr {
 }
 
 /* DESKTOP */
-/* 64rem * 16px = 1024px */
-@media screen and (min-width: 64rem) {
+/* 1024px */
+@media screen and (min-width: map-get($map: $breakpoints, $key: "large")) {
     /*============================== Page - Top to Bottom ==============================*/
     /* HEADER */
     .header {
@@ -498,12 +414,12 @@ hr {
 
         /* NAVIGATION MENU */
         .menu {
-            background-color: var(--menu-background);
+            background-color: $menu-background;
 
             width: 100%;
             height: auto;
 
-            box-shadow: -2px 2px 4px rgba(0, 0, 0, .5);
+            box-shadow: $menu-box-shadow;
         }
 
             .menu__hamburguer-icon {

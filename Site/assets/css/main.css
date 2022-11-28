@@ -4,7 +4,6 @@
 */
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
-@import url("../style.css");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -380,39 +379,50 @@ template {
     Weigths:
         * 400 - Regular;
 */
-/*============================== Configurations ==============================*/
-:root {
-  /* COLORS */
-  /* BACKGROUNDS */
-  --page-background: linear-gradient(#ffd776, #ffb500);
-  --menu-background: #6ac9ff;
-  --field-opened-background: #afd9ff;
-  --button-background: #67b6ff;
-  /* BORDERS */
-  --input-border: #4468eb;
-  /* TEXTS */
-  --mobile-font-size: 16px;
-  --tablet-font-size: 20px;
-  --desktop-font-size: 24px;
-  /* FONTS */
-  --tittle-font: "Dancing Script", Arial, Helvetica, cursive;
-  --default-font: "Inter", Arial, Helvetica, sans-serif;
+/********** ABSTRACTS **********/
+/********** PAGE CONFIGURATIONS **********/
+/********** COLORS **********/
+/********** BACKGROUNDS **********/
+/********** BORDERS **********/
+/********** TEXTS **********/
+/********** FONTS **********/
+/* STANDARD  CONTENT WIDTH */
+/* STANDARD BOTTOM MARGIN OF SEPARATION */
+/* BUTTONS */
+/* ACESSIBILITY */
+/* RESPONSIVE LAYOUTS */
+/* TABLET */
+/* 768px */
+@media screen and (min-width: 768px) {
+  /*============================== Generic Elements ==============================*/
+  html,
+body {
+    font-size: 20px;
+  }
 }
-
+/* DESKTOP */
+/* 1024px */
+@media screen and (min-width: 1024px) {
+  /*============================== Generic Elements ==============================*/
+  html,
+body {
+    font-size: 24px;
+  }
+}
 /*============================== Generic Elements ==============================*/
 html,
 body {
-  font-size: var(--mobile-font-size);
+  font-size: 16px;
 }
 
 body {
-  background-image: var(--page-background);
-  font-family: var(--default-font);
+  background-image: linear-gradient(hsl(42deg, 100%, 73%), hsl(43deg, 100%, 50%));
+  font-family: "Inter", Arial, Helvetica, sans-serif;
 }
 
 /* TITLES */
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--tittle-font);
+  font-family: "Dancing Script", Arial, Helvetica, cursive;
 }
 
 h1 {
@@ -432,78 +442,6 @@ fieldset {
   padding: 0;
 }
 
-/*============================== Generic Classes ==============================*/
-/* STANDARD  CONTENT WIDTH */
-.standard--width-mobile {
-  width: 80%;
-  margin: auto;
-}
-
-/* STANDARD BOTTOM MARGIN OF SEPARATION */
-.standard--margin-bottom {
-  margin-bottom: 3rem;
-}
-
-/* BUTTONS */
-.button {
-  background-color: var(--button-background);
-  border: none;
-  border-radius: 5px;
-  padding: 1rem 1.5rem;
-  color: white;
-}
-
-/* ACESSIBILITY */
-.acessibility--hidden-text {
-  width: 1px;
-  height: 1px;
-  position: absolute;
-  color: transparent;
-  overflow: hidden;
-}
-
-/*============================== Page - Top to Bottom ==============================*/
-/* RESPONSIVE LAYOUTS */
-/* TABLET */
-/* 48rem * 16px = 768px */
-@media screen and (min-width: 48rem) {
-  /*============================== Generic Classes ==============================*/
-  /* STANDARD  CONTENT WIDTH */
-  /* Reset other widths */
-  .standard--width-mobile {
-    width: auto;
-  }
-  .standard--width--tablet {
-    width: 60%;
-  }
-  /*============================== Generic Elements ==============================*/
-  html,
-body {
-    font-size: var(--tablet-font-size);
-  }
-}
-/* DESKTOP */
-/* 64rem * 16px = 1024px */
-@media screen and (min-width: 64rem) {
-  /*============================== Generic Classes ==============================*/
-  /* STANDARD  CONTENT WIDTH */
-  /* Reset other widths */
-  .standard--width-mobile {
-    width: auto;
-  }
-  .standard--width--tablet {
-    width: auto;
-  }
-  .standard--width--desktop {
-    width: 50%;
-  }
-  /*============================== Generic Elements ==============================*/
-  html,
-body {
-    font-size: var(--desktop-font-size);
-  }
-}
-/*============================== Imports ==================================== */
 /*============================== Generic Elements ==============================*/
 a {
   text-decoration: none;
@@ -513,11 +451,10 @@ hr {
   border-color: black;
 }
 
-/*============================== Generic Classes ==============================*/
 /*============================== Page - Top to Bottom ==============================*/
 /* NAVIGATION MENU */
 .menu {
-  background-color: var(--menu-background);
+  background-color: hsl(202deg, 100%, 71%);
 }
 
 .menu {
@@ -551,6 +488,22 @@ hr {
 }
 
 /* INTRODUCTION */
+.header__introduction {
+  width: 80%;
+  margin: auto;
+  margin-bottom: 3rem;
+}
+@media screen and (min-width: 768px) {
+  .header__introduction {
+    width: 60%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .header__introduction {
+    width: 50%;
+  }
+}
+
 .introduction__title {
   text-align: center;
 }
@@ -560,6 +513,23 @@ hr {
 }
 
 /* COURSE INFORMMATION */
+.course-information {
+  width: 80%;
+  margin: auto;
+  margin-bottom: 3rem;
+  margin-top: 2rem;
+}
+@media screen and (min-width: 768px) {
+  .course-information {
+    width: 60%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .course-information {
+    width: 50%;
+  }
+}
+
 .course-information__item {
   display: flex;
   justify-content: center;
@@ -582,6 +552,7 @@ hr {
 
 /* COURSES */
 .courses {
+  margin-bottom: 3rem;
   text-align: center;
 }
 
@@ -591,6 +562,11 @@ hr {
 }
 
 .courses__acess-course {
+  background-color: hsl(209deg, 100%, 70%);
+  border: none;
+  border-radius: 5px;
+  padding: 1rem 1.5rem;
+  color: hsl(0deg, 0%, 100%);
   display: inline-block;
   margin-top: 0.5rem;
 }
@@ -604,7 +580,7 @@ hr {
 }
 
 .swiper-wrapper {
-  height: 50%;
+  height: 100%;
 }
 
 .swiper-slide {
@@ -624,7 +600,7 @@ hr {
   border-radius: 10px;
   padding: 2rem;
   box-sizing: border-box;
-  color: white;
+  color: hsl(0deg, 0%, 100%);
   text-align: center;
 }
 
@@ -651,7 +627,7 @@ hr {
 }
 
 .swiper-button {
-  background-color: white;
+  background-color: hsl(0deg, 0%, 100%);
   width: 3rem !important;
   height: 3rem !important;
   border-radius: 50%;
@@ -678,6 +654,22 @@ hr {
 }
 
 /* CONTACT */
+.contact {
+  width: 80%;
+  margin: auto;
+  margin-bottom: 3rem;
+}
+@media screen and (min-width: 768px) {
+  .contact {
+    width: 60%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .contact {
+    width: 50%;
+  }
+}
+
 .contact__title {
   margin-bottom: 1rem;
   text-align: center;
@@ -686,6 +678,14 @@ hr {
 .contact__description {
   margin-bottom: 1rem;
   text-align: justify;
+}
+
+.contact__legend {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  color: transparent;
+  overflow: hidden;
 }
 
 .contact__fields {
@@ -703,7 +703,7 @@ hr {
 .contact__input {
   width: 100%;
   box-sizing: border-box;
-  border: 1px solid var(--input-border);
+  border: 1px solid hsl(227deg, 81%, 59%);
   border-radius: 5px;
   padding: 0.5rem;
   font-size: 0.75rem;
@@ -718,11 +718,31 @@ hr {
 }
 
 .contact__send-button {
+  background-color: hsl(209deg, 100%, 70%);
+  border: none;
+  border-radius: 5px;
+  padding: 1rem 1.5rem;
+  color: hsl(0deg, 0%, 100%);
   margin-top: 0.5rem;
   padding: 1rem 1.5rem;
 }
 
 /* FOOTER */
+.footer {
+  width: 80%;
+  margin: auto;
+}
+@media screen and (min-width: 768px) {
+  .footer {
+    width: 60%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .footer {
+    width: 50%;
+  }
+}
+
 .footer__title {
   text-align: center;
 }
@@ -747,8 +767,8 @@ hr {
 
 /* RESPONSIVE LAYOUTS */
 /* TABLET */
-/* 48rem * 16px = 768px */
-@media screen and (min-width: 48rem) {
+/* 768px */
+@media screen and (min-width: 768px) {
   /*============================== Page - Top to Bottom ==============================*/
   /* COURSE INFORMMATION */
   .course-information {
@@ -797,8 +817,8 @@ hr {
   }
 }
 /* DESKTOP */
-/* 64rem * 16px = 1024px */
-@media screen and (min-width: 64rem) {
+/* 1024px */
+@media screen and (min-width: 1024px) {
   /*============================== Page - Top to Bottom ==============================*/
   /* HEADER */
   .header {
@@ -806,10 +826,10 @@ hr {
   }
   /* NAVIGATION MENU */
   .menu {
-    background-color: var(--menu-background);
+    background-color: hsl(202deg, 100%, 71%);
     width: 100%;
     height: auto;
-    box-shadow: -2px 2px 4px rgba(0, 0, 0, 0.5);
+    box-shadow: -2px 2px 4px hsla(0deg, 0%, 0%, 0.8);
   }
   .menu__hamburguer-icon {
     display: none;

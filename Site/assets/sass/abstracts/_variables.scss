@@ -1,0 +1,47 @@
+/********** PAGE CONFIGURATIONS **********/
+$breakpoints: (
+    "medium": 768px,
+    "large": 1024px,
+);
+
+/********** COLORS **********/
+$kournikova-color: hsl(42, 100%, 73%);
+$selective-yellow-color: hsl(43, 100%, 50%);
+$malibu-light-color: hsl(202, 100%, 71%);
+$anakiwa-color: hsl(209, 100%, 84%);
+$malibu-color: hsl(209, 100%, 70%);
+$royal-blue-color: hsl(227, 81%, 59%);
+$heavy-black: hsla(0, 0%, 0%, 0.8);
+$white: hsl(0, 0%, 100%);
+
+/********** BACKGROUNDS **********/
+$page-background: linear-gradient($kournikova-color, $selective-yellow-color);
+$menu-background: $malibu-light-color;
+$button-background: $malibu-color;
+
+/********** BORDERS **********/
+$input-border-color: $royal-blue-color;
+
+$menu-box-shadow: -2px 2px 4px $heavy-black;
+
+/********** TEXTS **********/
+$font-sizes: (
+    "mobile": 16px,
+    "tablet": 20px,
+    "desktop": 24px,
+);
+
+/********** FONTS **********/
+$tittle-font-stack: (
+    'Dancing Script',
+    Arial,
+    Helvetica,
+    cursive,
+);
+
+$default-font-stack: (
+    'Inter',
+    Arial,
+    Helvetica,
+    sans-serif,
+);
