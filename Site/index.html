@@ -18,11 +18,11 @@
 
 <body>
     <header class="header">
-        <nav class="menu">
-            <img class="menu__hamburguer-icon" src="assets/images/icons/Menu.svg" alt="ícone de Menu Hamburguer">
+        <nav class="menu" data-element-id="menu">
+            <img class="menu__hamburguer-icon" src="assets/images/icons/Menu.svg" alt="ícone de Menu Hamburguer" data-element-id="menuHamburguerIcon" data-assets-path="../assets">
 
             <!-- NAVIGATION MENU -->
-            <ul class="menu__navigation-menu">
+            <ul class="menu__navigation-menu" data-element-id="navigationMenu">
                 <li> <a class="menu__navigation-menu__link" href="#">Canto</a> </li>
                 <li> <a class="menu__navigation-menu__link" href="#">Teclado</a> </li>
                 <li> <a class="menu__navigation-menu__link" href="#">Piano</a> </li>
@@ -198,6 +198,7 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     
     <!-- INTERNAL -->
+    <script src="assets/js/hamburguerMenu.js"></script>
     <script src="assets/js/swaper.js"></script>
     <script src="assets/js/index.js"></script>
 </body>
