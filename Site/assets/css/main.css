@@ -913,8 +913,20 @@ body {
   margin-bottom: 0.5rem;
 }
 .materials__contents__content img {
-  width: 40px;
-  height: 40px;
+  width: 25px;
+  height: 25px;
+}
+@media screen and (min-width: 768px) {
+  .materials__contents__content img {
+    width: 40px;
+    height: 40px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .materials__contents__content img {
+    width: 50px;
+    height: 50px;
+  }
 }
 
 /* PRICE */
@@ -991,6 +1003,11 @@ body {
 .frequent-questions__question img {
   width: 20px;
 }
+@media screen and (min-width: 768px) {
+  .frequent-questions__question img {
+    width: 30px;
+  }
+}
 .frequent-questions__question:not(:last-child) {
   margin-bottom: 1rem;
 }
@@ -1022,6 +1039,11 @@ body {
 }
 .opinions__opinion img {
   width: 40px;
+}
+@media screen and (min-width: 768px) {
+  .opinions__opinion img {
+    width: 60px;
+  }
 }
 .opinions__opinion:not(:last-child) {
   margin-bottom: 2rem;
