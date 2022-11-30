@@ -11,11 +11,11 @@
     {
         //TODO: Add the URL courses
         let coursesLink = [
-            "Canto",
-            "Teclado",
-            "Piano",
-            "Musicalização Infantil",
-            "Regente Coral"
+            "sing",
+            "keyboard",
+            "piano",
+            "children-musicalization",
+            "choral-conductor"
         ];
 
         let $carouselBullets = document.querySelector(".swiper-pagination");
@@ -25,7 +25,7 @@
             $carouselBullets.childNodes.forEach((bullet, index) => {
                 if(bullet.classList.contains("swiper-pagination-bullet-active")) {
                     // Set the "href" of the "<a></a>" tag according the index of the "coursesLink"
-                    $accessCourseButton.href = coursesLink[index];
+                    $accessCourseButton.href = `./pages/${coursesLink[index]}-course.html`;
                 }
             });
         });
