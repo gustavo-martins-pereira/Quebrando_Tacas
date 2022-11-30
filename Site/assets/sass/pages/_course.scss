@@ -1,0 +1,160 @@
+/* WHAT YOU WILL LEARN */
+.learning {
+    @include standard--width();
+    @include standard--margin-bottom();
+
+    &__title {
+        margin-bottom: 1rem;
+        
+        text-align: center;
+    }
+
+    &__sections {
+        margin-bottom: 0.5rem;
+
+        &__section {
+            background-color: $section-background;
+
+            max-width: 350px;
+
+            display: flex;
+            justify-content: space-between;
+
+            margin: auto;
+            margin-bottom: 0.5rem;
+            padding: 0.75rem;
+        }
+    }
+
+    &__center-button {
+        text-align: center
+    }
+
+    &__loading-sections {
+        @include button();
+    }
+}
+
+/* COURSE MATERIALS */
+.materials {
+    @include standard--width();
+    @include standard--margin-bottom();
+
+    &__title {
+        margin-bottom: 1rem;
+
+        text-align: center;
+    }
+
+    &__contents {
+        text-align: center;
+
+        &__content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+
+            margin-bottom: 0.5rem;
+
+            & img {
+                width: 40px;
+                height: 40px;
+            }
+        }
+    }
+}
+
+/* PRICE */
+.price {
+    @include standard--width();
+    @include standard--margin-bottom();
+
+    &__title {
+        margin-bottom: 1rem;
+
+        text-align: center;
+    }
+
+    &__text {
+        width: 50%;
+
+        margin: auto;
+        margin-bottom: 0.5rem;
+
+        text-align: center;
+
+        &__value {
+            display: flex;
+            justify-content: center;
+
+            margin-bottom: 0.5rem;
+    
+            font-size: 2rem;
+            font-weight: bold;
+
+            white-space: nowrap;
+        }
+    }
+
+    &__center-button {
+        text-align: center
+    }
+
+    &__buy-button {
+        @include button();
+    }
+}
+
+/* FREQUENT QUESTIONS */
+.frequent-questions {
+    @include standard--width();
+    @include standard--margin-bottom();
+
+    &__title {
+        margin-bottom: 1rem;
+
+        text-align: center;
+    }
+
+    &__question {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+
+        & img {
+            width: 20px;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 1rem;
+        }
+    }
+}
+
+/* STUDENTS OPINIONS */
+.opinions {
+    @include standard--width();
+    @include standard--margin-bottom();
+
+    &__title {
+        margin-bottom: 1rem;
+
+        text-align: center;
+    }
+
+    &__opinion {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        & img {
+            width: 40px;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 2rem;
+        }
+    }
+}

@@ -838,4 +838,191 @@ body {
   .contact__message-input {
     height: 250px;
   }
+}
+/* WHAT YOU WILL LEARN */
+.learning {
+  width: 80%;
+  margin: auto;
+  margin-bottom: 3rem;
+}
+@media screen and (min-width: 768px) {
+  .learning {
+    width: 60%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .learning {
+    width: 50%;
+  }
+}
+.learning__title {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.learning__sections {
+  margin-bottom: 0.5rem;
+}
+.learning__sections__section {
+  background-color: hsl(209deg, 100%, 70%);
+  max-width: 350px;
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  margin-bottom: 0.5rem;
+  padding: 0.75rem;
+}
+.learning__center-button {
+  text-align: center;
+}
+.learning__loading-sections {
+  background-color: hsl(209deg, 100%, 70%);
+  border: none;
+  border-radius: 5px;
+  padding: 1rem 1.5rem;
+  color: hsl(0deg, 0%, 100%);
+}
+
+/* COURSE MATERIALS */
+.materials {
+  width: 80%;
+  margin: auto;
+  margin-bottom: 3rem;
+}
+@media screen and (min-width: 768px) {
+  .materials {
+    width: 60%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .materials {
+    width: 50%;
+  }
+}
+.materials__title {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.materials__contents {
+  text-align: center;
+}
+.materials__contents__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+.materials__contents__content img {
+  width: 40px;
+  height: 40px;
+}
+
+/* PRICE */
+.price {
+  width: 80%;
+  margin: auto;
+  margin-bottom: 3rem;
+}
+@media screen and (min-width: 768px) {
+  .price {
+    width: 60%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .price {
+    width: 50%;
+  }
+}
+.price__title {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.price__text {
+  width: 50%;
+  margin: auto;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+.price__text__value {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+  font-weight: bold;
+  white-space: nowrap;
+}
+.price__center-button {
+  text-align: center;
+}
+.price__buy-button {
+  background-color: hsl(209deg, 100%, 70%);
+  border: none;
+  border-radius: 5px;
+  padding: 1rem 1.5rem;
+  color: hsl(0deg, 0%, 100%);
+}
+
+/* FREQUENT QUESTIONS */
+.frequent-questions {
+  width: 80%;
+  margin: auto;
+  margin-bottom: 3rem;
+}
+@media screen and (min-width: 768px) {
+  .frequent-questions {
+    width: 60%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .frequent-questions {
+    width: 50%;
+  }
+}
+.frequent-questions__title {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.frequent-questions__question {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.frequent-questions__question img {
+  width: 20px;
+}
+.frequent-questions__question:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+/* STUDENTS OPINIONS */
+.opinions {
+  width: 80%;
+  margin: auto;
+  margin-bottom: 3rem;
+}
+@media screen and (min-width: 768px) {
+  .opinions {
+    width: 60%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .opinions {
+    width: 50%;
+  }
+}
+.opinions__title {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.opinions__opinion {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.opinions__opinion img {
+  width: 40px;
+}
+.opinions__opinion:not(:last-child) {
+  margin-bottom: 2rem;
 }/*# sourceMappingURL=main.css.map */
