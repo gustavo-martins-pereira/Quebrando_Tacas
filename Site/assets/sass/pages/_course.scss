@@ -13,16 +13,29 @@
         margin-bottom: 0.5rem;
 
         &__section {
-            background-color: $section-background;
-
             max-width: 350px;
-
-            display: flex;
-            justify-content: space-between;
 
             margin: auto;
             margin-bottom: 0.5rem;
-            padding: 0.75rem;
+            
+            &__header {
+                background-color: $section-background;
+
+                display: flex;
+                justify-content: space-between;
+
+                padding: 0.75rem;
+
+                cursor: pointer;
+            }
+            
+            &__content {
+                background-color: $content-dropdown-background;
+
+                height: 0;
+                
+                overflow: hidden;
+            }
         }
     }
 

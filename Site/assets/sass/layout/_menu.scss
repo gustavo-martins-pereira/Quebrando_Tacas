@@ -30,10 +30,22 @@
 
         overflow: hidden;
 
+        & li:not(:last-child) {
+            border-bottom: 1px solid hsla(0, 0%, 100%, 0.082);
+        }
+
         &__link {
             display: block;
             
             padding: 1.5rem 2rem;
+
+            color: #ffffff;
+
+            &:hover {
+                background-color: hsl(214, 56%, 58%);
+
+                transition: all 0.5s;
+            }
         }
     }
 }  
@@ -57,16 +69,30 @@
             height: auto;
 
             display: flex;
-            justify-content: center;
+            justify-content: flex-end; // TODO: NO FINAL OU NO MEIO?
             align-items: center;
             gap: 2rem;
 
             text-align: center;
 
+            & li {
+                height: 100%;
+
+                &:not(:last-child) {
+                    border-bottom: none;
+                }
+            }
+
             &__link {
                 display: inline-block;
 
                 padding: 1rem;
+
+                &:hover {
+                    background-color: hsl(214, 56%, 58%);
+    
+                    border-radius: 5px;
+                }
             }
         }
     }

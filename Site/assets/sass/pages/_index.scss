@@ -195,6 +195,12 @@
             padding: .5rem;
 
             font-size: .75rem;
+
+            &:focus {
+                border: 1px solid #27b0ff;
+
+                outline: none;
+            }
         }
 
         &__message-field__input {

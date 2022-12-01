@@ -17,7 +17,8 @@
     <header class="header">
         <nav class="menu" data-element-id="menu">
             <img class="menu__hamburguer-icon" src="../assets/images/icons/Menu.svg" alt="ícone de Menu Hamburguer" data-element-id="menuHamburguerIcon" data-assets-path="../assets">
-
+            
+            <!-- FIXME: Fix the height when the screen breaks a word of the link and the mouse is over her, to size 100% of the ul height -->
             <!-- NAVIGATION MENU -->
             <ul class="menu__navigation-menu" data-element-id="navigationMenu">
                 <li> <a class="menu__navigation-menu__link" href="../index.html">Cursos</a> </li>
@@ -44,30 +45,50 @@
             <h2 class="learning__title">O que você vai aprender</h2>
 
             <div class="learning__sections">
-                <section class="learning__sections__section">
-                    <p>Seção 1</p>
-                    <img src="../assets/images/icons/Simple Arrow Down.svg" alt="Seta para baixo">
-                </section>
+                <div class="learning__sections__section">
+                    <section class="learning__sections__section__header" data-element-id="sectionHeader">
+                        <p>Seção 1</p>
+                        <img src="../assets/images/icons/Simple Arrow Down.svg" alt="Seta para baixo">
+                    </section>
 
-                <section class="learning__sections__section">
-                    <p>Seção 2</p>
-                    <img src="../assets/images/icons/Simple Arrow Down.svg" alt="Seta para baixo">
-                </section>
+                    <p class="learning__sections__section__content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam praesentium officia aspernatur aperiam, rem dolorum deleniti. Eum distinctio doloremque nulla eveniet qui alias, eligendi beatae accusamus fugit pariatur cumque perferendis?</p>
+                </div>
 
-                <section class="learning__sections__section">
-                    <p>Seção 3</p>
-                    <img src="../assets/images/icons/Simple Arrow Down.svg" alt="Seta para baixo">
-                </section>
+                <div class="learning__sections__section">
+                    <section class="learning__sections__section__header" data-element-id="sectionHeader">
+                        <p>Seção 2</p>
+                        <img src="../assets/images/icons/Simple Arrow Down.svg" alt="Seta para baixo">
+                    </section>
 
-                <section class="learning__sections__section">
-                    <p>Seção 4</p>
-                    <img src="../assets/images/icons/Simple Arrow Down.svg" alt="Seta para baixo">
-                </section>
+                    <p class="learning__sections__section__content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam praesentium officia aspernatur aperiam, rem dolorum deleniti. Eum distinctio doloremque nulla eveniet qui alias, eligendi beatae accusamus fugit pariatur cumque perferendis?</p>
+                </div>
 
-                <section class="learning__sections__section">
-                    <p>Seção 5</p>
-                    <img src="../assets/images/icons/Simple Arrow Down.svg" alt="Seta para baixo">
-                </section>
+                <div class="learning__sections__section">
+                    <section class="learning__sections__section__header" data-element-id="sectionHeader">
+                        <p>Seção 3</p>
+                        <img src="../assets/images/icons/Simple Arrow Down.svg" alt="Seta para baixo">
+                    </section>
+
+                    <p class="learning__sections__section__content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam praesentium officia aspernatur aperiam, rem dolorum deleniti. Eum distinctio doloremque nulla eveniet qui alias, eligendi beatae accusamus fugit pariatur cumque perferendis?</p>
+                </div>
+
+                <div class="learning__sections__section">
+                    <section class="learning__sections__section__header" data-element-id="sectionHeader">
+                        <p>Seção 4</p>
+                        <img src="../assets/images/icons/Simple Arrow Down.svg" alt="Seta para baixo">
+                    </section>
+
+                    <p class="learning__sections__section__content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam praesentium officia aspernatur aperiam, rem dolorum deleniti. Eum distinctio doloremque nulla eveniet qui alias, eligendi beatae accusamus fugit pariatur cumque perferendis?</p>
+                </div>
+
+                <div class="learning__sections__section">
+                    <section class="learning__sections__section__header" data-element-id="sectionHeader">
+                        <p>Seção 5</p>
+                        <img src="../assets/images/icons/Simple Arrow Down.svg" alt="Seta para baixo">
+                    </section>
+
+                    <p class="learning__sections__section__content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam praesentium officia aspernatur aperiam, rem dolorum deleniti. Eum distinctio doloremque nulla eveniet qui alias, eligendi beatae accusamus fugit pariatur cumque perferendis?</p>
+                </div>
             </div>
 
             <div class="learning__center-button">
@@ -217,6 +238,7 @@
 
     <!-- JAVASCRIPT IMPORTS -->    
     <!-- INTERNAL -->
+    <script src="../assets/js/dropDown.js"></script>
     <script src="../assets/js/hamburguerMenu.js"></script>
 </body>
 
