@@ -28,13 +28,13 @@
 
 /* RESPONSIVE LAYOUTS */
 /* TABLET */
-/* 768px */
 @media screen and (min-width: map-get($map: $breakpoints, $key: "medium")) {
     .footer__nav {
         margin-top: 1.2rem;
 
         &__list {
             display: flex;
+            flex-wrap: wrap;
             justify-content: space-evenly;
             gap: 20px;
 

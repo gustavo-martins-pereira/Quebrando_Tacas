@@ -58,7 +58,6 @@ hr {
 
 /* RESPONSIVE LAYOUTS */
 /* TABLET */
-/* 768px */
 @media screen and (min-width: map-get($map: $breakpoints, $key: "medium")) {
     html,
     body {
@@ -67,7 +66,6 @@ hr {
 }
 
 /* DESKTOP */
-/* 1024px */
 @media screen and (min-width: map-get($map: $breakpoints, $key: "large")) {
     html,
     body {

@@ -50,8 +50,8 @@
     }
 }  
 
+/* RESPONSIVE LAYOUTS */
 /* DESKTOP */
-/* 1024px */
 @media screen and (min-width: map-get($map: $breakpoints, $key: "large")) {
     .menu {
         background-color: $menu-background;
@@ -65,21 +65,24 @@
             display: none;
         }
 
+        // FIXME: Create a dropdown with the courses to avoid a cut of the content with much itens in the menu
         &__navigation-menu {
             height: auto;
 
             display: flex;
-            justify-content: flex-end; // TODO: NO FINAL OU NO MEIO?
+            justify-content: flex-end;
             align-items: center;
-            gap: 2rem;
+            gap: 1rem;
 
             text-align: center;
 
             & li {
-                height: 100%;
-
                 &:not(:last-child) {
                     border-bottom: none;
+                }
+
+                &:last-child {
+                    margin-right: 1rem;
                 }
             }
 
@@ -89,7 +92,7 @@
                 padding: 1rem;
 
                 &:hover {
-                    background-color: hsl(214, 56%, 58%);
+                    background-color: $link--hover-background;
     
                     border-radius: 5px;
                 }

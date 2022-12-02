@@ -9,7 +9,6 @@
      * To do this, the MutationObserver is used to listening the changes in the "swiper-pagination" element
      */
     {
-        //TODO: Add the URL courses
         let coursesLink = [
             "sing",
             "keyboard",

@@ -8,6 +8,7 @@
      * Set a boolean value for each section and change the value on every user click
     */
     {
+        // TODO: Refactor this js file to get a generic element with a identifier like "data-dropdown"
         let $sectionHeaders = document.querySelectorAll("[data-element-id='sectionHeader']");
         $sectionHeaders.forEach(sectionHeader => {
             let sectionActive = false;

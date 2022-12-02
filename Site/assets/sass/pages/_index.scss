@@ -223,7 +223,6 @@
 
 /* RESPONSIVE LAYOUTS */
 /* TABLET */
-/* 768px */
 @media screen and (min-width: map-get($map: $breakpoints, $key: "medium")) {
     /* COURSE INFORMMATION */
     .course-information {
@@ -270,11 +269,10 @@
 }
 
 /* DESKTOP */
-/* 1024px */
 @media screen and (min-width: map-get($map: $breakpoints, $key: "large")) {
     /* HEADER */
     .header {
-        margin-top: 9.5rem;
+        margin-top: 6rem;
 
         /* INTRODUCTION */
         &__introduction__description {

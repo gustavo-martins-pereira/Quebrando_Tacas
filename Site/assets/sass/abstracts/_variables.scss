@@ -1,6 +1,6 @@
 /********** PAGE CONFIGURATIONS **********/
 $breakpoints: (
-    "medium": 768px,
+    "medium": 540px,
     "large": 1024px,
 );
 
@@ -13,13 +13,18 @@ $malibu-color: hsl(209, 100%, 70%);
 $royal-blue-color: hsl(227, 81%, 59%);
 $heavy-black: hsla(0, 0%, 0%, 0.8);
 $white: hsl(0, 0%, 100%);
+$danube: hsl(214, 56%, 58%);
 
 /********** BACKGROUNDS **********/
 $page-background: linear-gradient($kournikova-color, $selective-yellow-color);
 $menu-background: $malibu-light-color;
+$link--hover-background: $danube;
+
 $section-background: $malibu-color;
 $content-dropdown-background: $anakiwa-color;
+
 $button-background: $malibu-color;
+$button--hover-background: $danube;
 
 /********** BORDERS **********/
 $input-border-color: $royal-blue-color;

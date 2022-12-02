@@ -447,15 +447,13 @@ hr {
 
 /* RESPONSIVE LAYOUTS */
 /* TABLET */
-/* 768px */
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 540px) {
   html,
 body {
     font-size: 20px;
   }
 }
 /* DESKTOP */
-/* 1024px */
 @media screen and (min-width: 1024px) {
   html,
 body {
@@ -499,8 +497,8 @@ body {
   transition: all 0.5s;
 }
 
+/* RESPONSIVE LAYOUTS */
 /* DESKTOP */
-/* 1024px */
 @media screen and (min-width: 1024px) {
   .menu {
     background-color: hsl(202deg, 100%, 71%);
@@ -516,14 +514,14 @@ body {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    gap: 2rem;
+    gap: 1rem;
     text-align: center;
-  }
-  .menu__navigation-menu li {
-    height: 100%;
   }
   .menu__navigation-menu li:not(:last-child) {
     border-bottom: none;
+  }
+  .menu__navigation-menu li:last-child {
+    margin-right: 1rem;
   }
   .menu__navigation-menu__link {
     display: inline-block;
@@ -538,7 +536,7 @@ body {
   width: 80%;
   margin: auto;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 540px) {
   .footer {
     width: 60%;
   }
@@ -569,13 +567,13 @@ body {
 
 /* RESPONSIVE LAYOUTS */
 /* TABLET */
-/* 768px */
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 540px) {
   .footer__nav {
     margin-top: 1.2rem;
   }
   .footer__nav__list {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
     gap: 20px;
   }
@@ -591,7 +589,7 @@ body {
   margin: auto;
   margin-bottom: 3rem;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 540px) {
   .header__introduction {
     width: 60%;
   }
@@ -615,7 +613,7 @@ body {
   margin-bottom: 3rem;
   margin-top: 2rem;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 540px) {
   .course-information {
     width: 60%;
   }
@@ -730,6 +728,9 @@ body {
   display: inline-block;
   margin-top: 0.5rem;
 }
+.courses__acess-course:hover {
+  background-color: hsl(214deg, 56%, 58%);
+}
 
 /* CONTACT */
 .contact {
@@ -737,7 +738,7 @@ body {
   margin: auto;
   margin-bottom: 3rem;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 540px) {
   .contact {
     width: 60%;
   }
@@ -800,11 +801,13 @@ body {
   margin-top: 0.5rem;
   padding: 1rem 1.5rem;
 }
+.contact--align-send-button .contact__send-button:hover {
+  background-color: hsl(214deg, 56%, 58%);
+}
 
 /* RESPONSIVE LAYOUTS */
 /* TABLET */
-/* 768px */
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 540px) {
   /* COURSE INFORMMATION */
   .course-information {
     display: flex;
@@ -840,11 +843,10 @@ body {
   }
 }
 /* DESKTOP */
-/* 1024px */
 @media screen and (min-width: 1024px) {
   /* HEADER */
   .header {
-    margin-top: 9.5rem;
+    margin-top: 6rem;
     /* INTRODUCTION */
   }
   .header__introduction__description {
@@ -873,7 +875,7 @@ body {
   margin: auto;
   margin-bottom: 3rem;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 540px) {
   .learning {
     width: 60%;
   }
@@ -918,6 +920,9 @@ body {
   color: hsl(0deg, 0%, 100%);
   cursor: pointer;
 }
+.learning__loading-sections:hover {
+  background-color: hsl(214deg, 56%, 58%);
+}
 
 /* COURSE MATERIALS */
 .materials {
@@ -925,7 +930,7 @@ body {
   margin: auto;
   margin-bottom: 3rem;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 540px) {
   .materials {
     width: 60%;
   }
@@ -953,7 +958,7 @@ body {
   width: 25px;
   height: 25px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 540px) {
   .materials__contents__content img {
     width: 40px;
     height: 40px;
@@ -972,7 +977,7 @@ body {
   margin: auto;
   margin-bottom: 3rem;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 540px) {
   .price {
     width: 60%;
   }
@@ -1011,6 +1016,9 @@ body {
   color: hsl(0deg, 0%, 100%);
   cursor: pointer;
 }
+.price__buy-button:hover {
+  background-color: hsl(214deg, 56%, 58%);
+}
 
 /* FREQUENT QUESTIONS */
 .frequent-questions {
@@ -1018,7 +1026,7 @@ body {
   margin: auto;
   margin-bottom: 3rem;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 540px) {
   .frequent-questions {
     width: 60%;
   }
@@ -1041,7 +1049,7 @@ body {
 .frequent-questions__question img {
   width: 20px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 540px) {
   .frequent-questions__question img {
     width: 30px;
   }
@@ -1056,7 +1064,7 @@ body {
   margin: auto;
   margin-bottom: 3rem;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 540px) {
   .opinions {
     width: 60%;
   }
@@ -1078,7 +1086,7 @@ body {
 .opinions__opinion img {
   width: 40px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 540px) {
   .opinions__opinion img {
     width: 60px;
   }
