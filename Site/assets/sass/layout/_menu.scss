@@ -31,7 +31,7 @@
         overflow: hidden;
 
         & li:not(:last-child) {
-            border-bottom: 1px solid hsla(0, 0%, 100%, 0.082);
+            border-bottom: 1px solid $menu-bottom-border-color;
         }
 
         &__link {
@@ -39,10 +39,10 @@
             
             padding: 1.5rem 2rem;
 
-            color: #ffffff;
+            color: $white-color;
 
             &:hover {
-                background-color: hsl(214, 56%, 58%);
+                background-color: $link--hover-background;
 
                 transition: all 0.5s;
             }

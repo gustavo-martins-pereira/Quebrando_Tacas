@@ -11,25 +11,27 @@ $malibu-light-color: hsl(202, 100%, 71%);
 $anakiwa-color: hsl(209, 100%, 84%);
 $malibu-color: hsl(209, 100%, 70%);
 $royal-blue-color: hsl(227, 81%, 59%);
-$heavy-black: hsla(0, 0%, 0%, 0.8);
-$white: hsl(0, 0%, 100%);
-$danube: hsl(214, 56%, 58%);
+$heavy-black-color: hsla(0, 0%, 0%, 0.8);
+$white-color: hsl(0, 0%, 100%);
+$danube-color: hsl(214, 56%, 58%);
+$transparent-white-color: hsla(0, 0%, 100%, 0.082);
 
 /********** BACKGROUNDS **********/
 $page-background: linear-gradient($kournikova-color, $selective-yellow-color);
 $menu-background: $malibu-light-color;
-$link--hover-background: $danube;
+$link--hover-background: $danube-color;
 
 $section-background: $malibu-color;
 $content-dropdown-background: $anakiwa-color;
 
 $button-background: $malibu-color;
-$button--hover-background: $danube;
+$button--hover-background: $danube-color;
 
 /********** BORDERS **********/
 $input-border-color: $royal-blue-color;
+$menu-bottom-border-color: $transparent-white-color;
 
-$menu-box-shadow: -2px 2px 4px $heavy-black;
+$menu-box-shadow: -2px 2px 4px $heavy-black-color;
 
 /********** TEXTS **********/
 $font-sizes: (

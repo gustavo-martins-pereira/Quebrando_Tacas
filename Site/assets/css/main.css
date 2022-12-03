@@ -490,7 +490,7 @@ body {
 .menu__navigation-menu__link {
   display: block;
   padding: 1.5rem 2rem;
-  color: #ffffff;
+  color: hsl(0deg, 0%, 100%);
 }
 .menu__navigation-menu__link:hover {
   background-color: hsl(214deg, 56%, 58%);
