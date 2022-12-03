@@ -896,18 +896,34 @@ body {
   max-width: 350px;
   margin: auto;
   margin-bottom: 0.5rem;
+  /* JAVASCRIPT LOGIC LAYOUT */
 }
-.learning__sections__section__header {
+.learning__sections__section__title {
   background-color: hsl(209deg, 100%, 70%);
   display: flex;
+  align-items: center;
   justify-content: space-between;
   padding: 0.75rem;
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+  font-size: 1rem;
   cursor: pointer;
+}
+.learning__sections__section__title::after {
+  content: url("../images/icons/Simple Arrow Down.svg");
+  transition: transform 0.5s;
 }
 .learning__sections__section__content {
   background-color: hsl(209deg, 100%, 84%);
-  height: 0;
+  max-height: 0;
   overflow: hidden;
+  transition: max-height 0.5s;
+}
+.learning__sections__section.active .learning__sections__section__title::after {
+  transform: rotateZ(180deg);
+}
+.learning__sections__section.active .learning__sections__section__content {
+  height: auto;
+  max-height: 1000px;
 }
 .learning__center-button {
   text-align: center;

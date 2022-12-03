@@ -17,24 +17,48 @@
 
             margin: auto;
             margin-bottom: 0.5rem;
-            
-            &__header {
+
+            &__title {
                 background-color: $section-background;
 
                 display: flex;
+                align-items: center;
                 justify-content: space-between;
 
                 padding: 0.75rem;
 
+                font-family: $default-font-stack;
+                font-size: 1rem;
+
                 cursor: pointer;
+
+                &::after {
+                    content: url("../images/icons/Simple\ Arrow\ Down.svg");
+
+                    transition: transform 0.5s;
+                }
             }
-            
+
             &__content {
                 background-color: $content-dropdown-background;
 
-                height: 0;
-                
+                max-height: 0;
+
                 overflow: hidden;
+                transition: max-height 0.5s;
+            }
+
+            /* JAVASCRIPT LOGIC LAYOUT */
+            // FIXME: Remove the cowdown with the dropdown is closed
+            &.active {
+                .learning__sections__section__title::after {
+                    transform: rotateZ(180deg);
+                }
+                
+                .learning__sections__section__content  {
+                    height: auto;
+                    max-height: 1000px;
+                }
             }
         }
     }

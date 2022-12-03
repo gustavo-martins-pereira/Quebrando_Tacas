@@ -1,32 +1,23 @@
 (function() {
     /* DROP DOWN THE CONTENT BOX *
-     * 
+     * TODO: Refactor the documentation
      * GOAL:
      * Drop down a content's box when there is clicked
      * 
      * STRATEGY:
-     * Set a boolean value for each section and change the value on every user click
+     * Get the elements with "data-dropdown-trigger" attribute and get the brothers with a "data-dropdown-content" attribute and show it
     */
     {
-        // TODO: Refactor this js file to get a generic element with a identifier like "data-dropdown"
-        let $sectionHeaders = document.querySelectorAll("[data-element-id='sectionHeader']");
-        $sectionHeaders.forEach(sectionHeader => {
-            let sectionActive = false;
+        let $dropdownTriggers = document.querySelectorAll("[data-dropdown-trigger]");
 
-            sectionHeader.addEventListener("click", () => {
-                sectionActive = !sectionActive;
+        $dropdownTriggers.forEach(dropdownTrigger => {
+            dropdownTrigger.addEventListener("click", () => {
+                let parentNode = dropdownTrigger.parentElement;
 
-                if(sectionActive) {
-                    sectionHeader.children[1].style.transform = "rotateZ(180deg)";
-                    
-                    sectionHeader.nextElementSibling.style.height = "auto";
-                    sectionHeader.nextElementSibling.style.padding = "0.75rem";
-                } else {
-                    // FIXME: Fix the height to a fixed value to allow the transition
-                    sectionHeader.children[1].style.transform = "rotateZ(0deg)";
-                    
-                    sectionHeader.nextElementSibling.style.height = "0";
-                    sectionHeader.nextElementSibling.style.padding = 0;
+                for (let child of parentNode.children) {                    
+                    if(child.hasAttribute("data-dropdown-content")) {
+                        parentNode.classList.toggle("active");
+                    }
                 }
             });
         });
