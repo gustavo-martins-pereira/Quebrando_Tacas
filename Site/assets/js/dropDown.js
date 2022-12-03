@@ -1,6 +1,5 @@
 (function() {
     /* DROP DOWN THE CONTENT BOX *
-     * TODO: Refactor the documentation
      * GOAL:
      * Drop down a content's box when there is clicked
      * 
@@ -14,7 +13,7 @@
             dropdownTrigger.addEventListener("click", () => {
                 let parentNode = dropdownTrigger.parentElement;
 
-                for (let child of parentNode.children) {                    
+                for (let child of parentNode.children) {
                     if(child.hasAttribute("data-dropdown-content")) {
                         parentNode.classList.toggle("active");
                     }

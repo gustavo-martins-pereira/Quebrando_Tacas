@@ -35,7 +35,7 @@
                 &::after {
                     content: url("../images/icons/Simple\ Arrow\ Down.svg");
 
-                    transition: transform 0.5s;
+                    transition: transform 0.25s;
                 }
             }
 
@@ -44,20 +44,23 @@
 
                 max-height: 0;
 
+                padding: 0 0.75rem;
+
                 overflow: hidden;
-                transition: max-height 0.5s;
+
+                transition: all 0.25s;
             }
 
             /* JAVASCRIPT LOGIC LAYOUT */
-            // FIXME: Remove the cowdown with the dropdown is closed
             &.active {
                 .learning__sections__section__title::after {
                     transform: rotateZ(180deg);
                 }
                 
                 .learning__sections__section__content  {
-                    height: auto;
                     max-height: 1000px;
+
+                    padding: 0.75rem;
                 }
             }
         }
