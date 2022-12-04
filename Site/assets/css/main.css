@@ -463,6 +463,7 @@ body {
 /********** COMPONENTS **********/
 /********** LAYOUT **********/
 .menu {
+  background-color: transparent;
   width: 75px;
   position: fixed;
   top: 0;
@@ -470,6 +471,7 @@ body {
   display: flex;
   flex-direction: column;
   border-bottom-left-radius: 2px;
+  box-shadow: none;
   z-index: 2;
 }
 .menu__hamburguer-icon {
@@ -478,6 +480,7 @@ body {
   align-self: flex-end;
   margin: 1rem;
   cursor: pointer;
+  content: url("../images/icons/Menu.svg");
 }
 .menu__navigation-menu {
   height: 0;
@@ -495,6 +498,17 @@ body {
 .menu__navigation-menu__link:hover {
   background-color: hsl(214deg, 56%, 58%);
   transition: all 0.5s;
+}
+.menu.menu-is-active {
+  background-color: hsl(202deg, 100%, 71%);
+  width: auto;
+  box-shadow: -2px 2px 4px hsla(0deg, 0%, 0%, 0.8);
+}
+.menu.menu-is-active .menu__hamburguer-icon {
+  content: url("../images/icons/Close.svg");
+}
+.menu.menu-is-active .menu__navigation-menu {
+  height: auto;
 }
 
 /* RESPONSIVE LAYOUTS */

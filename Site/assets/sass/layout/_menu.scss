@@ -1,5 +1,6 @@
-// FIXME: The width oh the menu is above the elements with interaction
 .menu {
+    background-color: transparent;
+
     width: 75px;
 
     position: fixed;
@@ -10,6 +11,7 @@
     flex-direction: column;
 
     border-bottom-left-radius: 2px;
+    box-shadow: none;
 
     z-index: 2;
 
@@ -22,6 +24,7 @@
         margin: 1rem;
 
         cursor: pointer;
+        content: url("../images/icons/Menu.svg");
     }
 
     &__navigation-menu {
@@ -47,6 +50,22 @@
 
                 transition: all 0.5s;
             }
+        }
+    }
+
+    &.menu-is-active {
+        background-color: hsl(202, 100%, 71%);
+
+        width: auto;
+
+        box-shadow: -2px 2px 4px hsla(0, 0%, 0%, 0.8);
+
+        .menu__hamburguer-icon {
+            content: url("../images/icons/Close.svg");
+        }
+
+        .menu__navigation-menu {
+            height: auto;
         }
     }
 }  
