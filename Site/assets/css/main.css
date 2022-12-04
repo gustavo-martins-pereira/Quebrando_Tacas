@@ -933,6 +933,18 @@ body {
   overflow: hidden;
   transition: all 0.25s;
 }
+.learning__sections__section__content__item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.learning__sections__section__content__item img {
+  width: 20px;
+  height: 20px;
+}
+.learning__sections__section__content__item:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
 .learning__sections__section.active .learning__sections__section__title::after {
   transform: rotateZ(180deg);
 }
@@ -1072,21 +1084,45 @@ body {
   text-align: center;
 }
 .frequent-questions__question {
+  /* JAVASCRIPT STYLE */
+}
+.frequent-questions__question:not(:last-child) {
+  margin-bottom: 1rem;
+}
+.frequent-questions__question__title {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 1rem;
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+  font-size: 1.25rem;
 }
-.frequent-questions__question img {
+.frequent-questions__question__title::before {
+  content: "";
+  background-image: url("../images/icons/Arrow Down.svg");
+  background-size: 100%;
   width: 20px;
+  height: 20px;
+  transition: transform 0.25s;
 }
-@media screen and (min-width: 540px) {
-  .frequent-questions__question img {
-    width: 30px;
-  }
+.frequent-questions__question__content {
+  background-color: hsl(209deg, 100%, 84%);
+  height: 0;
+  margin-top: 0.5rem;
+  border-radius: 5px;
+  padding: 0;
+  text-align: justify;
+  transition: all 0.25s;
+  overflow: hidden;
 }
-.frequent-questions__question:not(:last-child) {
-  margin-bottom: 1rem;
+.frequent-questions__question.active .frequent-questions__question__title::before {
+  transform: rotateZ(180deg);
+}
+.frequent-questions__question.active .frequent-questions__question__content {
+  height: auto;
+  max-height: 1000px;
+  border: 3px solid hsl(227deg, 81%, 59%);
+  padding: 1rem;
 }
 
 /* STUDENTS OPINIONS */

@@ -11,6 +11,7 @@
 
         $dropdownTriggers.forEach(dropdownTrigger => {
             dropdownTrigger.addEventListener("click", () => {
+                // TODO: Get the content by the full node of the children
                 let parentNode = dropdownTrigger.parentElement;
 
                 for (let child of parentNode.children) {
