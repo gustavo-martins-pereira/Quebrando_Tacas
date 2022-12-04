@@ -23,6 +23,7 @@
             if(menuIsActive) {
                 // TODO: Change the color to a variable name
                 $menu.style.backgroundColor = "hsl(202, 100%, 71%)";
+                $menu.style.width = "auto";
                 $menu.style.boxShadow = "-2px 2px 4px hsla(0, 0%, 0%, 0.8)";
                 
                 $menuHamburguerButton.src = `${assetsPath}/images/icons/Close.svg`;
@@ -30,6 +31,7 @@
                 $navigationMenu.style.height = "auto";
             } else {
                 $menu.style.backgroundColor = "transparent";
+                $menu.style.width = "75px";
                 $menu.style.boxShadow = "none";
                 
                 $menuHamburguerButton.src = `${assetsPath}/images/icons/Menu.svg`;
