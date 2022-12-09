@@ -9,6 +9,7 @@
         text-align: center;
     }
 
+    /* WITH SECTIONS */
     &__sections {
         margin-bottom: 0.5rem;
 
@@ -87,6 +88,16 @@
 
     &__loading-sections {
         @include button();
+    }
+
+    /* WITHOUT SECTIONS */
+    &__description {
+        margin-bottom: 1rem;
+    }
+
+    &__section-title {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
     }
 }
 

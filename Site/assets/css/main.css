@@ -889,6 +889,8 @@ body {
   width: 80%;
   margin: auto;
   margin-bottom: 3rem;
+  /* WITH SECTIONS */
+  /* WITHOUT SECTIONS */
 }
 @media screen and (min-width: 540px) {
   .learning {
@@ -966,6 +968,13 @@ body {
 }
 .learning__loading-sections:hover {
   background-color: hsl(214deg, 56%, 58%);
+}
+.learning__description {
+  margin-bottom: 1rem;
+}
+.learning__section-title {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 /* COURSE MATERIALS */
