@@ -11,10 +11,9 @@
     {
         let coursesLink = [
             "sing",
-            "keyboard",
-            "piano",
+            "choral",
             "children-musicalization",
-            "choral-conductor"
+            "presentations",
         ];
 
         let $carouselBullets = document.querySelector(".swiper-pagination");

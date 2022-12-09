@@ -47,3 +47,11 @@
         }
     }       
 }
+
+/* RESPONSIVE LAYOUTS */
+/* DESKTOP */
+@media screen and (min-width: map-get($map: $breakpoints, $key: "large")) {
+    .footer__nav__list {
+        flex-wrap: nowrap;
+    }
+}

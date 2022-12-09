@@ -596,6 +596,13 @@ body {
     height: 40px;
   }
 }
+/* RESPONSIVE LAYOUTS */
+/* DESKTOP */
+@media screen and (min-width: 1024px) {
+  .footer__nav__list {
+    flex-wrap: nowrap;
+  }
+}
 /********** PAGES **********/
 /* INTRODUCTION */
 .header__introduction {
@@ -697,12 +704,6 @@ body {
 .courses .swiper-wrapper .swiper-slide__background--sing {
   background-image: url("../images/Singing Course.png");
   background-position: 50%;
-}
-.courses .swiper-wrapper .swiper-slide__background--keyboard {
-  background-image: url("../images/Keyboard Course.png");
-}
-.courses .swiper-wrapper .swiper-slide__background--piano {
-  background-image: url("../images/Piano Course.png");
 }
 .courses .swiper-wrapper .swiper-slide__background--children {
   background-image: url("../images/Children's Musicalization Course.png");
