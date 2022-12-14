@@ -119,26 +119,32 @@
             <h2 class="contact__title">Contato</h2>
             <p class="contact__description">Entre em contato nos enviando uma mensagem por e-mail</p>
 
-            <form>
+            <form action="https://formsubmit.co/claushmartins@gmail.com" method="post">
                 <fieldset>
                     <legend class="contact__legend">Envio de E-mail</legend>
 
                     <div class="contact__fields">
                         <div>
                             <label class="contact__fields__label" for="contact__fullName">Nome Completo</label>
-                            <input class="contact__fields__input" id="contact__fullName" type="text" placeholder="Digite seu nome completo">
+                            <input class="contact__fields__input" id="contact__fullName" type="text" placeholder="Digite seu nome completo" required>
                         </div>
 
                         <div>
                             <label class="contact__fields__label" for="contact__email">E-mail</label>
-                            <input class="contact__fields__input" id="contact__email" type="email" placeholder="seuemail@gmail.com">
+                            <input class="contact__fields__input" id="contact__email" type="email" placeholder="seuemail@gmail.com" required>
                         </div>
 
                         <div class="contact__fields__message-field">
                             <label class="contact__fields__label" for="contact__message">Mensagem</label>
-                            <textarea class="contact__fields__input contact__message-input" id="contact__message" placeholder="Digite sua mensagem" rows="5"></textarea>
+                            <textarea class="contact__fields__input contact__message-input" id="contact__message" placeholder="Digite sua mensagem" rows="5" required></textarea>
                         </div>
                     </div>
+
+                    <!-- FORMSUBMIT CONFIGURATION -->
+                    <input type="hidden" name="_next" value="http://127.0.0.1:5500/thanks.html">
+                    <input type="hidden" name="_subject" value="Muitas Duvidas">
+                    <input type="hidden" name="_template" value="box">
+                    <input type="hidden" name="_captcha" value="false">
 
                     <div class="contact--align-send-button"> <input class="contact__send-button" type="submit" value="Enviar E-mail"> </div>
                 </fieldset>
