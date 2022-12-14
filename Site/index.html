@@ -119,36 +119,60 @@
             <h2 class="contact__title">Contato</h2>
             <p class="contact__description">Entre em contato nos enviando uma mensagem por e-mail</p>
 
-            <form action="https://formsubmit.co/claushmartins@gmail.com" method="post">
+            <form data-element-id="contact-form">
                 <fieldset>
                     <legend class="contact__legend">Envio de E-mail</legend>
 
                     <div class="contact__fields">
                         <div>
                             <label class="contact__fields__label" for="contact__fullName">Nome Completo</label>
-                            <input class="contact__fields__input" id="contact__fullName" type="text" placeholder="Digite seu nome completo" required>
+                            <input class="contact__fields__input" id="contact__fullName" type="text" name="name" placeholder="Digite seu nome completo" required>
                         </div>
 
                         <div>
                             <label class="contact__fields__label" for="contact__email">E-mail</label>
-                            <input class="contact__fields__input" id="contact__email" type="email" placeholder="seuemail@gmail.com" required>
+                            <input class="contact__fields__input" id="contact__email" type="email" name="email" placeholder="seuemail@gmail.com" required>
                         </div>
 
                         <div class="contact__fields__message-field">
                             <label class="contact__fields__label" for="contact__message">Mensagem</label>
-                            <textarea class="contact__fields__input contact__message-input" id="contact__message" placeholder="Digite sua mensagem" rows="5" required></textarea>
+                            <textarea class="contact__fields__input contact__message-input" id="contact__message" name="message" placeholder="Digite sua mensagem" rows="5" required></textarea>
                         </div>
                     </div>
 
                     <!-- FORMSUBMIT CONFIGURATION -->
-                    <input type="hidden" name="_next" value="http://127.0.0.1:5500/thanks.html">
-                    <input type="hidden" name="_subject" value="Muitas Duvidas">
+                    <input type="hidden" name="_subject" value="Outras">
                     <input type="hidden" name="_template" value="box">
                     <input type="hidden" name="_captcha" value="false">
 
                     <div class="contact--align-send-button"> <input class="contact__send-button" type="submit" value="Enviar E-mail"> </div>
                 </fieldset>
             </form>
+
+            <script>
+                let $contactForm = document.querySelector("[data-element-id='contact-form']");
+                $contactForm.addEventListener("submit", enviar);
+
+                function enviar(e) {
+                    e.preventDefault();
+
+                    fetch("https://formsubmit.co/ajax/claushmartins@gmail.com", {
+                        method: "POST",
+                        headers: { 
+                            'Content-Type': 'application/json',
+                            'Accept': 'application/json'
+                        },
+                        body: JSON.stringify({
+                            Nome: "FormSubmit",
+                            email: "guga@hotmail.com",
+                            message: "I'm from Devro LABS"
+                        })
+                    })
+                        .then(response => response.json())
+                        .then(data => console.log(data))
+                        .catch(error => console.log(error));
+                }
+            </script>
         </section>
     </main>
 
