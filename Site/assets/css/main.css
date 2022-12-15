@@ -819,6 +819,36 @@ body {
 .contact--align-send-button .contact__send-button:hover {
   background-color: hsl(214deg, 56%, 58%);
 }
+.contact__pop-ups {
+  background-color: #92f0b3;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  -moz-column-gap: 1rem;
+       column-gap: 1rem;
+  border-radius: 10px;
+  padding: 1rem;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+@media screen and (min-width: 400px) {
+  .contact__pop-ups {
+    right: 1rem;
+    left: initial;
+    transform: initial;
+  }
+}
+.contact__pop-ups .loader {
+  background-color: darkblue;
+  width: 100%;
+  height: 3px;
+}
 
 /* RESPONSIVE LAYOUTS */
 /* TABLET */

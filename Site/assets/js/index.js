@@ -33,4 +33,44 @@
             subtree: true
         });
     }
+
+    /* CONTACT FORM SUBMIT *
+     * 
+     * GOAL:
+     * Send a E-mail with the values of the field on the form and show a pop-up message to the use
+     * 
+     * STRATEGY:
+     * Make a fetch with a POST method and show a pop-up message based in the returned response promisse
+     */
+    {
+        let $contactForm = document.querySelector("[data-element-id='contact-form']");
+        $contactForm.addEventListener("submit", (event) => {
+            event.preventDefault();
+
+            let $nameInput = document.querySelector("[data-element-id='contactNameInput']");
+            let $emailInput = document.querySelector("[data-element-id='contactEmailInput']");
+            let $messageInput = document.querySelector("[data-element-id='contactMessageInput']");
+
+            fetch("https://formsubmit.co/ajax/claushmartins@gmail.com", {
+                method: "POST",
+                
+                headers: { 
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+
+                body: JSON.stringify({
+                    "Nome": $nameInput.value,
+                    "E-mail": $emailInput.value,
+                    "Menssagem": $messageInput.value
+                })
+            })
+                .then(response => {
+                    if(response.ok) {
+
+                    }
+                })
+                .catch(error => console.log(error));
+        });
+    }
 })();

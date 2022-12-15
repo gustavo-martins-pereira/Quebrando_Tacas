@@ -126,17 +126,17 @@
                     <div class="contact__fields">
                         <div>
                             <label class="contact__fields__label" for="contact__fullName">Nome Completo</label>
-                            <input class="contact__fields__input" id="contact__fullName" type="text" name="name" placeholder="Digite seu nome completo" required>
+                            <input class="contact__fields__input" id="contact__fullName" type="text" name="name" placeholder="Digite seu nome completo" required data-element-id="contactNameInput">
                         </div>
 
                         <div>
                             <label class="contact__fields__label" for="contact__email">E-mail</label>
-                            <input class="contact__fields__input" id="contact__email" type="email" name="email" placeholder="seuemail@gmail.com" required>
+                            <input class="contact__fields__input" id="contact__email" type="email" name="email" placeholder="seuemail@gmail.com" required data-element-id="contactEmailInput">
                         </div>
 
                         <div class="contact__fields__message-field">
                             <label class="contact__fields__label" for="contact__message">Mensagem</label>
-                            <textarea class="contact__fields__input contact__message-input" id="contact__message" name="message" placeholder="Digite sua mensagem" rows="5" required></textarea>
+                            <textarea class="contact__fields__input contact__message-input" id="contact__message" name="message" placeholder="Digite sua mensagem" rows="5" required data-element-id="contactMessageInput"></textarea>
                         </div>
                     </div>
 
@@ -149,30 +149,13 @@
                 </fieldset>
             </form>
 
-            <script>
-                let $contactForm = document.querySelector("[data-element-id='contact-form']");
-                $contactForm.addEventListener("submit", enviar);
+            <div class="contact__pop-ups">
+                <img src="assets/images/icons/Correct.svg" alt="">
 
-                function enviar(e) {
-                    e.preventDefault();
+                <p>E-mail enviado com sucesso!</p>
 
-                    fetch("https://formsubmit.co/ajax/claushmartins@gmail.com", {
-                        method: "POST",
-                        headers: { 
-                            'Content-Type': 'application/json',
-                            'Accept': 'application/json'
-                        },
-                        body: JSON.stringify({
-                            Nome: "FormSubmit",
-                            email: "guga@hotmail.com",
-                            message: "I'm from Devro LABS"
-                        })
-                    })
-                        .then(response => response.json())
-                        .then(data => console.log(data))
-                        .catch(error => console.log(error));
-                }
-            </script>
+                <div class="loader"></div>
+            </div>
         </section>
     </main>
 
