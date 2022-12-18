@@ -572,6 +572,7 @@ body {
 .footer__nav__list__link {
   display: flex;
   align-items: center;
+  color: hsl(0deg, 0%, 0%);
 }
 .footer__nav__list__link__icon {
   width: 25px;

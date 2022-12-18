@@ -1,6 +1,4 @@
 <svg viewBox="0 0 320 200" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-<circle cx="296" cy="126" r="3" fill="black"/>
-<circle cx="296" cy="75" r="3" fill="black"/>
 <line x1="307.5" y1="1" x2="307.5" y2="199" stroke="black"/>
 <line x1="317.5" y1="1" x2="317.5" y2="199.347" stroke="black" stroke-width="5"/>
 <line y1="199.5" x2="320" y2="199.5" stroke="black"/>

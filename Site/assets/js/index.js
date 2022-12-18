@@ -52,6 +52,8 @@
             let $emailInput = document.querySelector("[data-element-id='contactEmailInput']");
             let $messageInput = document.querySelector("[data-element-id='contactMessageInput']");
 
+            // keilagruviracerqueira9602@gmail.com
+            // claushmartins@gmail.com
             fetch("https://formsubmit.co/ajax/claushmartins@gmail.com", {
                 method: "POST",
                 
@@ -63,7 +65,11 @@
                 body: JSON.stringify({
                     "Nome": $nameInput.value,
                     "E-mail": $emailInput.value,
-                    "Menssagem": $messageInput.value
+                    "Mensagem": $messageInput.value,
+
+                    /* FORMSUBMIT CONFIGURATION */
+                    "_subject": "TITULO DO EMAIL",
+                    "_template": "table"
                 })
             })
                 // FIXME: Wait the element to be appended in the div first to apply the transition when the element is showing
