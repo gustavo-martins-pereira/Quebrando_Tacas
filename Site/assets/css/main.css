@@ -609,7 +609,7 @@ body {
 .header__introduction {
   width: 80%;
   margin: auto;
-  margin-bottom: 3rem;
+  margin-bottom: 7rem;
 }
 @media screen and (min-width: 540px) {
   .header__introduction {
@@ -632,7 +632,7 @@ body {
 .course-information {
   width: 80%;
   margin: auto;
-  margin-bottom: 3rem;
+  margin-bottom: 7rem;
   margin-top: 2rem;
 }
 @media screen and (min-width: 540px) {
@@ -664,7 +664,7 @@ body {
 
 /* COURSES */
 .courses {
-  margin-bottom: 3rem;
+  margin-bottom: 7rem;
   text-align: center;
   /* SWIPER */
 }
@@ -701,6 +701,7 @@ body {
   box-sizing: border-box;
   color: hsl(0deg, 0%, 100%);
   text-align: center;
+  box-shadow: 0px 0px 5px 3px black;
 }
 .courses .swiper-wrapper .swiper-slide__background--sing {
   background-image: url("../images/Singing Course.png");
@@ -752,7 +753,7 @@ body {
 .contact {
   width: 80%;
   margin: auto;
-  margin-bottom: 3rem;
+  margin-bottom: 7rem;
 }
 @media screen and (min-width: 540px) {
   .contact {
@@ -932,7 +933,7 @@ body {
 .learning {
   width: 80%;
   margin: auto;
-  margin-bottom: 3rem;
+  margin-bottom: 7rem;
   /* WITH SECTIONS */
   /* WITHOUT SECTIONS */
 }
@@ -1025,7 +1026,7 @@ body {
 .materials {
   width: 80%;
   margin: auto;
-  margin-bottom: 3rem;
+  margin-bottom: 7rem;
 }
 @media screen and (min-width: 540px) {
   .materials {
@@ -1072,7 +1073,7 @@ body {
 .price {
   width: 80%;
   margin: auto;
-  margin-bottom: 3rem;
+  margin-bottom: 7rem;
 }
 @media screen and (min-width: 540px) {
   .price {
@@ -1086,6 +1087,7 @@ body {
 }
 .price__title {
   margin-bottom: 1rem;
+  font-size: 4rem;
   text-align: center;
 }
 .price__text {
@@ -1098,7 +1100,7 @@ body {
   display: flex;
   justify-content: center;
   margin-bottom: 0.5rem;
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: bold;
   white-space: nowrap;
 }
@@ -1121,7 +1123,7 @@ body {
 .frequent-questions {
   width: 80%;
   margin: auto;
-  margin-bottom: 3rem;
+  margin-bottom: 7rem;
 }
 @media screen and (min-width: 540px) {
   .frequent-questions {
@@ -1150,6 +1152,7 @@ body {
   gap: 1rem;
   font-family: "Inter", Arial, Helvetica, sans-serif;
   font-size: 1.25rem;
+  cursor: pointer;
 }
 .frequent-questions__question__title::before {
   content: "";
@@ -1183,7 +1186,7 @@ body {
 .opinions {
   width: 80%;
   margin: auto;
-  margin-bottom: 3rem;
+  margin-bottom: 7rem;
 }
 @media screen and (min-width: 540px) {
   .opinions {
@@ -1214,4 +1217,10 @@ body {
 }
 .opinions__opinion:not(:last-child) {
   margin-bottom: 2rem;
+}
+
+/* WHAT YOU WILL LEARN */
+.learning__section-title {
+  margin-top: 3rem;
+  text-align: center;
 }/*# sourceMappingURL=main.css.map */
