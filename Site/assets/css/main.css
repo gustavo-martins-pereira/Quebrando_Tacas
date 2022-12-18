@@ -820,8 +820,8 @@ body {
   background-color: hsl(214deg, 56%, 58%);
 }
 .contact__pop-ups {
-  width: 70%;
-  max-width: 300px;
+  width: 50%;
+  max-width: 250px;
   position: fixed;
   top: 1rem;
   left: 50%;
@@ -838,13 +838,23 @@ body {
   -moz-column-gap: 1rem;
        column-gap: 1rem;
   border-radius: 10px;
-  padding: 1rem;
+  padding: 0.75rem;
+  font-size: 0.9rem;
+  transition: all 1s;
+  /* JAVASCRIPT STYLES */
 }
 .contact__pop-ups__pop-up--success {
-  background-color: #92f0b3;
+  background-color: #45ff86;
 }
 .contact__pop-ups__pop-up--fail {
-  background-color: red;
+  background-color: #ff0a0a;
+  color: white;
+}
+.contact__pop-ups__pop-up--invisible {
+  opacity: 0;
+}
+.contact__pop-ups__pop-up--visible {
+  opacity: 1;
 }
 
 /* RESPONSIVE LAYOUTS */

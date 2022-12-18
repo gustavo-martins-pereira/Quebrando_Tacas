@@ -47,6 +47,7 @@
         $contactForm.addEventListener("submit", (event) => {
             event.preventDefault();
 
+            // Inputs
             let $nameInput = document.querySelector("[data-element-id='contactNameInput']");
             let $emailInput = document.querySelector("[data-element-id='contactEmailInput']");
             let $messageInput = document.querySelector("[data-element-id='contactMessageInput']");
@@ -65,12 +66,54 @@
                     "Menssagem": $messageInput.value
                 })
             })
-                .then(response => {
-                    if(response.ok) {
+                // FIXME: Wait the element to be appended in the div first to apply the transition when the element is showing
+                .then(response => response.ok ? createPopUp(true) : createPopUp(false))
+                .then(popUp => {
+                    let pops = document.querySelector(".contact__pop-ups");
+                    pops.appendChild(popUp);
 
-                    }
+                    return popUp;
                 })
-                .catch(error => console.log(error));
+                .then(popUp => {
+                    popUp.classList.replace("contact__pop-ups__pop-up--invisible", "contact__pop-ups__pop-up--visible");
+
+                    return popUp;
+                })
+                .then(popUp => deletePopUp(popUp))
+                .catch((error) => console.log(error));
         });
+
+        function createPopUp(isSuccess) {
+            let popUp = document.createElement("div");
+            popUp.classList.add("contact__pop-ups__pop-up", "contact__pop-ups__pop-up--invisible");
+            
+            if(isSuccess) {
+                popUp.classList.add("contact__pop-ups__pop-up--success");
+                
+                popUp.innerHTML = `
+                    <img src="assets/images/icons/Correct.svg" alt="">
+                    <p>E-mail enviado com sucesso!</p>
+                `;
+            } else {
+                popUp.classList.add("contact__pop-ups__pop-up--fail");
+
+                popUp.innerHTML = `
+                    <img src="assets/images/icons/Incorrect.svg" alt="">
+                    <p>Ocorreu um erro ao enviar o E-mail</p>
+                `;
+            }
+
+            return popUp;
+        }
+
+        function deletePopUp(popUp) {
+            setTimeout(function() {
+                popUp.classList.replace("contact__pop-ups__pop-up--visible", "contact__pop-ups__pop-up--invisible");
+            }, 2000);
+
+            setTimeout(function() {
+                popUp.remove();
+            }, 4000);
+        }
     }
 })();
