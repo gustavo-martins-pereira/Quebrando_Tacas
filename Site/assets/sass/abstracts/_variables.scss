@@ -2,6 +2,7 @@
 $breakpoints: (
     "medium": 540px,
     "large": 1024px,
+    "extra-large": 1440px,
 );
 
 /********** COLORS **********/
@@ -41,6 +42,8 @@ $font-sizes: (
     "medium": 20px,
     "large": 24px,
 );
+
+$title-text-shadow: 1px 1px 2px $white-color;
 
 /********** FONTS **********/
 $tittle-font-stack: (

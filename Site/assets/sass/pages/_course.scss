@@ -49,7 +49,7 @@
 
                 overflow: hidden;
 
-                transition: all 0.25s;
+                transition: all 0.2s ease-in-out;
 
                 &__item {
                     display: flex;
@@ -185,6 +185,8 @@
 
     &__buy-button {
         @include button();
+
+        margin-top: 2rem;
     }
 }
 

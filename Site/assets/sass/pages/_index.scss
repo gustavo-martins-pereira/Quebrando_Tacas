@@ -91,6 +91,28 @@
                     box-shadow: 0px 0px 5px 3px black;
                 }
 
+                &__title {
+                    font-size: 2.5rem;
+
+                    text-shadow: $title-text-shadow;
+
+                    /* RESPONSIVE LAYOUTS */
+                    /* TABLET */
+                    @media screen and (min-width: map-get($map: $breakpoints, $key: "medium")) {
+                        font-size: 3.5rem;
+                    }
+                    
+                    /* DESKTOP */
+                    @media screen and (min-width: map-get($map: $breakpoints, $key: "large")) {
+                        font-size: 4rem;
+                    }
+                    
+                    /* DESKTOP */
+                    @media screen and (min-width: map-get($map: $breakpoints, $key: "extra-large")) {
+                        font-size: 4.5rem;
+                    }
+                }
+
                 /* IMAGE FOR EACH COURSE */
                 &__background--sing {
                     background-image: url("../images/Singing\ Course.png");
@@ -300,6 +322,14 @@
         }
     }
 
+    /* COURSES */
+    .swiper-pagination-bullet {
+        width: 12px;
+        height: 12px;
+
+        margin: auto 8px !important;
+    }
+
     /* CONTACT */
     .contact__fields {
         display: grid;
@@ -331,8 +361,11 @@
     }
 
     /* COURSES */
-    .swiper-slide__title {
-        font-size: 4rem;
+    .swiper-pagination-bullet {
+        width: 14px;
+        height: 14px;
+
+        margin: auto 10px !important;
     }
 
     /* CONTACT */
@@ -350,5 +383,16 @@
         right: 1rem;
 
         transform: unset;
+    }
+}
+
+/* DESKTOP */
+@media screen and (min-width: map-get($map: $breakpoints, $key: "extra-large")) {
+    /* COURSES */
+    .swiper-pagination-bullet {
+        width: 16px;
+        height: 16px;
+
+        margin: auto 12px !important;
     }
 }

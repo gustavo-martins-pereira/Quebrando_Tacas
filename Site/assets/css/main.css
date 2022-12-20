@@ -561,6 +561,7 @@ body {
   }
 }
 .footer__title {
+  margin-bottom: 1rem;
   text-align: center;
 }
 .footer__nav__list {
@@ -609,7 +610,7 @@ body {
 .header__introduction {
   width: 80%;
   margin: auto;
-  margin-bottom: 7rem;
+  margin-bottom: 6rem;
 }
 @media screen and (min-width: 540px) {
   .header__introduction {
@@ -632,7 +633,7 @@ body {
 .course-information {
   width: 80%;
   margin: auto;
-  margin-bottom: 7rem;
+  margin-bottom: 6rem;
   margin-top: 2rem;
 }
 @media screen and (min-width: 540px) {
@@ -664,7 +665,7 @@ body {
 
 /* COURSES */
 .courses {
-  margin-bottom: 7rem;
+  margin-bottom: 6rem;
   text-align: center;
   /* SWIPER */
 }
@@ -702,6 +703,29 @@ body {
   color: hsl(0deg, 0%, 100%);
   text-align: center;
   box-shadow: 0px 0px 5px 3px black;
+}
+.courses .swiper-wrapper .swiper-slide__title {
+  font-size: 2.5rem;
+  text-shadow: 1px 1px 2px hsl(0deg, 0%, 100%);
+  /* RESPONSIVE LAYOUTS */
+  /* TABLET */
+  /* DESKTOP */
+  /* DESKTOP */
+}
+@media screen and (min-width: 540px) {
+  .courses .swiper-wrapper .swiper-slide__title {
+    font-size: 3.5rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .courses .swiper-wrapper .swiper-slide__title {
+    font-size: 4rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .courses .swiper-wrapper .swiper-slide__title {
+    font-size: 4.5rem;
+  }
 }
 .courses .swiper-wrapper .swiper-slide__background--sing {
   background-image: url("../images/Singing Course.png");
@@ -742,6 +766,7 @@ body {
   padding: 1rem 1.5rem;
   color: hsl(0deg, 0%, 100%);
   cursor: pointer;
+  transition: background-color 0.1s;
   display: inline-block;
   margin-top: 0.5rem;
 }
@@ -753,7 +778,7 @@ body {
 .contact {
   width: 80%;
   margin: auto;
-  margin-bottom: 7rem;
+  margin-bottom: 6rem;
 }
 @media screen and (min-width: 540px) {
   .contact {
@@ -815,6 +840,7 @@ body {
   padding: 1rem 1.5rem;
   color: hsl(0deg, 0%, 100%);
   cursor: pointer;
+  transition: background-color 0.1s;
   margin-top: 0.5rem;
   padding: 1rem 1.5rem;
 }
@@ -886,6 +912,12 @@ body {
     margin-left: 0;
     text-align: center;
   }
+  /* COURSES */
+  .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    margin: auto 8px !important;
+  }
   /* CONTACT */
   .contact__fields {
     display: grid;
@@ -912,8 +944,10 @@ body {
     height: 75px;
   }
   /* COURSES */
-  .swiper-slide__title {
-    font-size: 4rem;
+  .swiper-pagination-bullet {
+    width: 14px;
+    height: 14px;
+    margin: auto 10px !important;
   }
   /* CONTACT */
   .contact__fields__input {
@@ -929,11 +963,20 @@ body {
     transform: unset;
   }
 }
+/* DESKTOP */
+@media screen and (min-width: 1440px) {
+  /* COURSES */
+  .swiper-pagination-bullet {
+    width: 16px;
+    height: 16px;
+    margin: auto 12px !important;
+  }
+}
 /* WHAT YOU WILL LEARN */
 .learning {
   width: 80%;
   margin: auto;
-  margin-bottom: 7rem;
+  margin-bottom: 6rem;
   /* WITH SECTIONS */
   /* WITHOUT SECTIONS */
 }
@@ -979,7 +1022,7 @@ body {
   max-height: 0;
   padding: 0 0.75rem;
   overflow: hidden;
-  transition: all 0.25s;
+  transition: all 0.2s ease-in-out;
 }
 .learning__sections__section__content__item {
   display: flex;
@@ -1010,6 +1053,7 @@ body {
   padding: 1rem 1.5rem;
   color: hsl(0deg, 0%, 100%);
   cursor: pointer;
+  transition: background-color 0.1s;
 }
 .learning__loading-sections:hover {
   background-color: hsl(214deg, 56%, 58%);
@@ -1026,7 +1070,7 @@ body {
 .materials {
   width: 80%;
   margin: auto;
-  margin-bottom: 7rem;
+  margin-bottom: 6rem;
 }
 @media screen and (min-width: 540px) {
   .materials {
@@ -1073,7 +1117,7 @@ body {
 .price {
   width: 80%;
   margin: auto;
-  margin-bottom: 7rem;
+  margin-bottom: 6rem;
 }
 @media screen and (min-width: 540px) {
   .price {
@@ -1114,6 +1158,8 @@ body {
   padding: 1rem 1.5rem;
   color: hsl(0deg, 0%, 100%);
   cursor: pointer;
+  transition: background-color 0.1s;
+  margin-top: 2rem;
 }
 .price__buy-button:hover {
   background-color: hsl(214deg, 56%, 58%);
@@ -1123,7 +1169,7 @@ body {
 .frequent-questions {
   width: 80%;
   margin: auto;
-  margin-bottom: 7rem;
+  margin-bottom: 6rem;
 }
 @media screen and (min-width: 540px) {
   .frequent-questions {
@@ -1186,7 +1232,7 @@ body {
 .opinions {
   width: 80%;
   margin: auto;
-  margin-bottom: 7rem;
+  margin-bottom: 6rem;
 }
 @media screen and (min-width: 540px) {
   .opinions {
