@@ -16,6 +16,10 @@
         &__section {
             max-width: 350px;
 
+            @media screen and (min-width: map-get($map: $breakpoints, $key: "large")) {
+                max-width: 600px;
+            }
+
             margin: auto;
             margin-bottom: 0.5rem;
 
@@ -49,7 +53,10 @@
 
                 overflow: hidden;
 
-                transition: all 0.2s ease-in-out;
+                /* JAVASCRIPT TRANSITION */
+                &--transition {
+                    transition: all 0.2s ease-in-out;
+                }
 
                 &__item {
                     display: flex;

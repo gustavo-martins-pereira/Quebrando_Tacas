@@ -18,6 +18,10 @@
             dropdownTrigger.addEventListener("click", () => {
                 let parentNode = dropdownTrigger.parentElement;
 
+                // Get the children and returns the element with the associated class and add or remove the class of the transiction
+                let $dropdownContent = ([...parentNode.children]).find(child => child.classList.contains("learning__sections__section__content"));
+                $dropdownContent.classList.toggle("learning__sections__section__content--transition");
+
                 activeDropdownContent(parentNode, parentNode.children);
             });
         });

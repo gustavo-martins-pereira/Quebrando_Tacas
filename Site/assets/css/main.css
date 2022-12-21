@@ -1008,6 +1008,11 @@ body {
   margin-bottom: 0.5rem;
   /* JAVASCRIPT LOGIC LAYOUT */
 }
+@media screen and (min-width: 1024px) {
+  .learning__sections__section {
+    max-width: 600px;
+  }
+}
 .learning__sections__section__title {
   background-color: hsl(209deg, 100%, 70%);
   display: flex;
@@ -1027,6 +1032,9 @@ body {
   max-height: 0;
   padding: 0 0.75rem;
   overflow: hidden;
+  /* JAVASCRIPT TRANSITION */
+}
+.learning__sections__section__content--transition {
   transition: all 0.2s ease-in-out;
 }
 .learning__sections__section__content__item {
