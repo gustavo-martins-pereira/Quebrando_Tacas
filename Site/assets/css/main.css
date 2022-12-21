@@ -1000,14 +1000,20 @@ body {
   text-align: center;
 }
 .learning__sections {
-  -webkit-mask-image: linear-gradient(#ffffff 70%, rgba(255, 255, 255, 0));
-          mask-image: linear-gradient(#ffffff 70%, rgba(255, 255, 255, 0));
-  height: 70%;
-  max-height: 300px;
   position: relative;
   margin-bottom: 0.5rem;
   overflow: hidden;
   z-index: 1;
+}
+.learning__sections--max-height {
+  -webkit-mask-image: linear-gradient(#ffffff 70%, rgba(255, 255, 255, 0));
+          mask-image: linear-gradient(#ffffff 70%, rgba(255, 255, 255, 0));
+  max-height: 300px;
+}
+@media screen and (min-width: 1024px) {
+  .learning__sections--max-height {
+    max-height: 700px;
+  }
 }
 .learning__sections__section {
   max-width: 350px;
