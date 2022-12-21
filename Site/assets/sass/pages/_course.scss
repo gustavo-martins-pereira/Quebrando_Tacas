@@ -11,7 +11,17 @@
 
     /* WITH SECTIONS */
     &__sections {
+        mask-image: linear-gradient(#ffffff 70%, rgba(255, 255, 255, 0));
+
+        height: 70%;
+        max-height: 300px;
+
+        position: relative;
+
         margin-bottom: 0.5rem;
+
+        overflow: hidden;
+        z-index: 1;
 
         &__section {
             max-width: 350px;
@@ -20,8 +30,12 @@
                 max-width: 600px;
             }
 
+            position: relative;
+
             margin: auto;
             margin-bottom: 0.5rem;
+
+            z-index: -10;
 
             &__title {
                 background-color: $section-background;
