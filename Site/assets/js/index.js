@@ -73,7 +73,7 @@
                 })
             })
                 // FIXME: Wait the element to be appended in the div first to apply the transition when the element is showing
-                .then(response => response.ok ? createPopUp(true) : createPopUp(false))
+                .then(response => response.ok ? createSuccessPopUp(true) : createSuccessPopUp(false))
                 .then(popUp => {
                     let pops = document.querySelector(".contact__pop-ups");
                     pops.appendChild(popUp);
@@ -89,7 +89,8 @@
                 .catch((error) => console.log(error));
         });
 
-        function createPopUp(isSuccess) {
+        // Create a Success Pop-Up or a Fail Pop-Up based in the argumment, and return the HTML element already done
+        function createSuccessPopUp(isSuccess) {
             let popUp = document.createElement("div");
             popUp.classList.add("contact__pop-ups__pop-up", "contact__pop-ups__pop-up--invisible");
             

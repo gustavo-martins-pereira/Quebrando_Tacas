@@ -396,7 +396,7 @@ body {
 }
 
 body {
-  background-image: linear-gradient(hsl(42deg, 100%, 73%), hsl(43deg, 100%, 50%));
+  background-image: linear-gradient(hsl(42deg, 100%, 67%), hsl(43deg, 100%, 50%));
   font-family: "Inter", Arial, Helvetica, sans-serif;
 }
 
@@ -435,14 +435,14 @@ fieldset {
 a {
   text-decoration: none;
 }
-a[href="#"] span {
+a[href="#"] {
   color: red;
   text-decoration: underline;
 }
 
 /* OTHERS */
 hr {
-  border-color: black;
+  border: 1px solid black;
 }
 
 /* RESPONSIVE LAYOUTS */
@@ -493,7 +493,7 @@ body {
 .menu__navigation-menu__link {
   display: block;
   padding: 1.5rem 2rem;
-  color: hsl(0deg, 0%, 100%);
+  color: hsl(0deg, 0%, 9%);
 }
 .menu__navigation-menu__link:hover {
   background-color: hsl(214deg, 56%, 58%);
@@ -573,7 +573,7 @@ body {
 .footer__nav__list__link {
   display: flex;
   align-items: center;
-  color: hsl(0deg, 0%, 0%);
+  color: black;
 }
 .footer__nav__list__link__icon {
   width: 25px;
@@ -676,6 +676,7 @@ body {
 .courses .swiper {
   background-image: url("../images/Sheet Music.svg");
   background-repeat: no-repeat;
+  background-size: 100% 100%;
   /* Block height is increased from window width */
   height: calc(200px + 25vw);
 }
@@ -752,12 +753,16 @@ body {
 }
 .courses .swiper-button-prev::after {
   content: url("../images/icons/Arrow Left.svg") !important;
+  width: 28px;
+  height: 31px;
 }
 .courses .swiper-button-next {
   right: 5% !important;
 }
 .courses .swiper-button-next::after {
   content: url("../images/icons/Arrow Right.svg") !important;
+  width: 28px;
+  height: 31px;
 }
 .courses__acess-course {
   background-color: hsl(209deg, 100%, 70%);

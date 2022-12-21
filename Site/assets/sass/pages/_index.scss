@@ -57,6 +57,7 @@
     .swiper {
         background-image: url("../images/Sheet\ Music.svg");
         background-repeat: no-repeat;
+        background-size: 100% 100%;
 
         /* Block height is increased from window width */
         height: calc(200px + 25vw);
@@ -147,6 +148,9 @@
 
             &::after {
                 content: url("../images/icons/Arrow\ Left.svg") !important;
+
+                width: 28px;
+                height: 31px;
             }
         }
         &-button-next {
@@ -154,6 +158,9 @@
 
             &::after {
                 content: url("../images/icons/Arrow\ Right.svg") !important;
+
+                width: 28px;
+                height: 31px;
             }
         }
     }

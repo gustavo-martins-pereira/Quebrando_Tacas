@@ -6,17 +6,18 @@ $breakpoints: (
 );
 
 /********** COLORS **********/
-$kournikova-color: hsl(42, 100%, 73%);
+$kournikova-color: hsl(42, 100%, 67%);
 $selective-yellow-color: hsl(43, 100%, 50%);
 $malibu-light-color: hsl(202, 100%, 71%);
 $anakiwa-color: hsl(209, 100%, 84%);
 $malibu-color: hsl(209, 100%, 70%);
 $royal-blue-color: hsl(227, 81%, 59%);
-$heavy-black-color: hsla(0, 0%, 0%, 0.8);
 $white-color: hsl(0, 0%, 100%);
 $danube-color: hsl(214, 56%, 58%);
 $transparent-white-color: hsla(0, 0%, 100%, 0.082);
-$black-color: hsl(0, 0%, 0%);
+$heavy-black-color: hsl(0, 0%, 9%);
+$heavy-black-little-transparent-color: hsla(0, 0%, 0%, 0.8);
+$black-color: black;
 
 /********** BACKGROUNDS **********/
 $page-background: linear-gradient($kournikova-color, $selective-yellow-color);
@@ -34,7 +35,7 @@ $input-border-color: $royal-blue-color;
 $question-border-color: $royal-blue-color;
 $menu-bottom-border-color: $transparent-white-color;
 
-$menu-box-shadow: -2px 2px 4px $heavy-black-color;
+$menu-box-shadow: -2px 2px 4px $heavy-black-little-transparent-color;
 
 /********** TEXTS **********/
 $font-sizes: (
