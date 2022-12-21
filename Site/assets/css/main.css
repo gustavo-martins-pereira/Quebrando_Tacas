@@ -832,7 +832,7 @@ body {
   border: 1px solid #27b0ff;
   outline: none;
 }
-.contact__fields__message-field__input {
+.contact__fields__message-input {
   resize: vertical;
 }
 .contact--align-send-button {
