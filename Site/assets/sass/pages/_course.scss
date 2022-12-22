@@ -36,12 +36,9 @@
                 max-width: 600px;
             }
 
-            position: relative;
-
-            margin: auto;
-            margin-bottom: 0.5rem;
-
-            z-index: -10;
+            margin: auto {
+                bottom: 0.5rem;
+            }
 
             &__title {
                 background-color: $section-background;
@@ -52,8 +49,10 @@
 
                 padding: 0.75rem;
 
-                font-family: $default-font-stack;
-                font-size: 1rem;
+                font: {
+                    family: $default-font-stack;
+                    size: 1rem;
+                }
 
                 cursor: pointer;
 
@@ -123,8 +122,10 @@
     }
 
     &__section-title {
-        margin-top: 1rem;
-        margin-bottom: 1rem;
+        margin: {
+            top: 1rem;
+            bottom: 1rem;
+        }
     }
 }
 
@@ -188,8 +189,9 @@
     &__text {
         width: 50%;
 
-        margin: auto;
-        margin-bottom: 0.5rem;
+        margin: auto {
+            bottom: 0.5rem;
+        }
 
         text-align: center;
 
@@ -199,8 +201,10 @@
 
             margin-bottom: 0.5rem;
     
-            font-size: 3rem;
-            font-weight: bold;
+            font: {
+                size: 3rem;
+                weight: bold;
+            }
 
             white-space: nowrap;
         }
@@ -239,8 +243,10 @@
             align-items: center;
             gap: 1rem;
 
-            font-family: $default-font-stack;
-            font-size: 1.25rem;
+            font: {
+                family: $default-font-stack;
+                size: 1.25rem;
+            }
 
             cursor: pointer;
 

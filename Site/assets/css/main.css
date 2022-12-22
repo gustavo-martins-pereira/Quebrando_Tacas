@@ -1017,10 +1017,8 @@ body {
 }
 .learning__sections__section {
   max-width: 350px;
-  position: relative;
   margin: auto;
   margin-bottom: 0.5rem;
-  z-index: -10;
   /* JAVASCRIPT LOGIC LAYOUT */
 }
 @media screen and (min-width: 1024px) {
