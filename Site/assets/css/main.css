@@ -1234,6 +1234,10 @@ body {
   color: rgb(89, 89, 110);
   text-decoration: underline;
 }
+.price__payment--hidden {
+  height: 0;
+  overflow: hidden;
+}
 
 /* FREQUENT QUESTIONS */
 .frequent-questions {
