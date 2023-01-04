@@ -685,7 +685,7 @@ body {
   background-repeat: no-repeat;
   background-size: 100% 100%;
   /* Block height is increased from window width */
-  height: calc(200px + 25vw);
+  height: calc(200px + 20vw);
 }
 .courses .swiper-wrapper {
   height: 100%;
@@ -700,7 +700,7 @@ body {
 .courses .swiper-wrapper .swiper-slide__background {
   background-repeat: no-repeat;
   background-size: cover;
-  width: 75%;
+  width: 60%;
   height: 75%;
   display: flex;
   flex-direction: column;
@@ -722,7 +722,7 @@ body {
 }
 @media screen and (min-width: 540px) {
   .courses .swiper-wrapper .swiper-slide__title {
-    font-size: 3.5rem;
+    font-size: 2.5rem;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -736,7 +736,7 @@ body {
   }
 }
 .courses .swiper-wrapper .swiper-slide__background--sing {
-  background-image: url("../images/Singing Course.png");
+  background-image: url("../images/Sing Course.png");
   background-position: 50%;
 }
 .courses .swiper-wrapper .swiper-slide__background--children {
@@ -745,6 +745,9 @@ body {
 .courses .swiper-wrapper .swiper-slide__background--choir {
   background-image: url("../images/Choir Conductor Course.png");
   background-position: 75%;
+}
+.courses .swiper-wrapper .swiper-slide__background--presentation {
+  background-image: url("../images/Presentations Course.png");
 }
 .courses .swiper-button {
   background-color: hsl(0deg, 0%, 100%);
