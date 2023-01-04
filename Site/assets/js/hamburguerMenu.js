@@ -22,5 +22,12 @@
                 $menu.classList.remove("menu-is-active");
             }
         }
+
+        // Close menu when click outside screen
+        window.addEventListener("click", event => {
+            if(!event.path.includes($menu)) {
+                $menu.classList.remove("menu-is-active");
+            }
+        });
     }
 })();
