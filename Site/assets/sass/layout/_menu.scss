@@ -45,8 +45,16 @@
 
             color: $heavy-black-color;
 
-            &:hover {
+            &--disabled {
+                opacity: 0.2;
+                cursor: default;
+                pointer-events: none;
+            }
+
+            &:not(.menu__navigation-menu__link--disabled):hover {
                 background-color: $link--hover-background;
+
+                color: $white-color;
 
                 transition: background-color 0.5s;
             }

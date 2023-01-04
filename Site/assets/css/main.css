@@ -495,8 +495,14 @@ body {
   padding: 1.5rem 2rem;
   color: hsl(0deg, 0%, 9%);
 }
-.menu__navigation-menu__link:hover {
+.menu__navigation-menu__link--disabled {
+  opacity: 0.2;
+  cursor: default;
+  pointer-events: none;
+}
+.menu__navigation-menu__link:not(.menu__navigation-menu__link--disabled):hover {
   background-color: hsl(214deg, 56%, 58%);
+  color: hsl(0deg, 0%, 100%);
   transition: background-color 0.5s;
 }
 .menu.menu-is-active {
