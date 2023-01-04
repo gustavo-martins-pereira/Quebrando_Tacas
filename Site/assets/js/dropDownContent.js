@@ -18,10 +18,6 @@
             dropdownTrigger.addEventListener("click", () => {
                 const parentNode = dropdownTrigger.parentElement;
 
-                // Get the children and returns the element with the associated class and add or remove the class of the transiction
-                const $dropdownContent = ([...parentNode.children]).find(child => child.classList.contains("learning__sections__section__content"));
-                $dropdownContent.classList.toggle("learning__sections__section__content--transition");
-
                 activeDropdownContent(parentNode, parentNode.children);
             });
         });
@@ -34,37 +30,12 @@
                     activeDropdownContent(mainParentNode, child.children);
                 } else {
                     if(hasDataDropdownContent) {
+                        child.classList.toggle("learning__sections__section__content--transition");
+
                         mainParentNode.classList.toggle("active");
                     }
                 }
             }
         }
-    }
-
-    /* DROP DOWN THE CONTENT BOX *
-     *
-     * GOAL:
-     * Drop down a content's box when there is clicked
-     * 
-     * STRATEGY:
-     * Toggle a class which set the max-height when the button is clicked
-    */
-    {
-        const $loadOtherSectionsButton = document.querySelector("[data-element-id='loadOtherSectionsButton']");
-
-        const allSectionsIsLoaded = false;
-        $loadOtherSectionsButton.addEventListener("click", () => {
-            const $sections = document.querySelector("[data-element-id='sections']");
-
-            $sections.classList.toggle("learning__sections--max-height");
-
-            allSectionsIsLoaded = !allSectionsIsLoaded;
-            
-            if(allSectionsIsLoaded) {
-                $loadOtherSectionsButton.innerText = "Esconder as outras seções";
-            } else {
-                $loadOtherSectionsButton.innerText = "Carregar as Outras Seções";
-            }
-        });
     }
 })();
