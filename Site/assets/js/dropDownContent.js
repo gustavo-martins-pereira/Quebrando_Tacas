@@ -30,8 +30,6 @@
                     activeDropdownContent(mainParentNode, child.children);
                 } else {
                     if(hasDataDropdownContent) {
-                        child.classList.toggle("learning__sections__section__content--transition");
-
                         mainParentNode.classList.toggle("active");
                     }
                 }

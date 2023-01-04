@@ -1052,13 +1052,9 @@ body {
 }
 .learning__sections__section__content {
   background-color: hsl(209deg, 100%, 84%);
-  max-height: 0;
+  height: 0;
   padding: 0 0.75rem;
   overflow: hidden;
-  /* JAVASCRIPT TRANSITION */
-}
-.learning__sections__section__content--transition {
-  transition: all 0.2s ease-in-out;
 }
 .learning__sections__section__content__item {
   display: flex;
@@ -1076,7 +1072,7 @@ body {
   transform: rotateZ(180deg);
 }
 .learning__sections__section.active .learning__sections__section__content {
-  max-height: 1000px;
+  height: auto;
   padding: 0.75rem;
 }
 .learning__center-button {
@@ -1284,12 +1280,11 @@ body {
 }
 .frequent-questions__question__content {
   background-color: hsl(209deg, 100%, 84%);
-  height: 0;
+  max-height: 0;
   margin-top: 0.5rem;
   border-radius: 5px;
   padding: 0;
   text-align: justify;
-  transition: all 0.25s;
   overflow: hidden;
 }
 .frequent-questions__question.active .frequent-questions__question__title::before {
@@ -1298,7 +1293,7 @@ body {
 .frequent-questions__question.active .frequent-questions__question__content {
   height: auto;
   max-height: 1000px;
-  border: 3px solid hsl(227deg, 81%, 59%);
+  border: 1px solid hsl(227deg, 81%, 59%);
   padding: 1rem;
 }
 
@@ -1343,4 +1338,7 @@ body {
 .learning__section-title {
   margin-top: 3rem;
   text-align: center;
+}
+.learning__section-description {
+  text-align: justify;
 }/*# sourceMappingURL=main.css.map */
