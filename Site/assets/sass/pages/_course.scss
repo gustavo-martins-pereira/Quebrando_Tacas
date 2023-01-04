@@ -219,6 +219,38 @@
 
         margin-top: 2rem;
     }
+
+    &__payment {
+        @include standard--width();
+        
+        margin: auto;
+        margin-top: 2rem;
+        
+        text-align: center;
+
+        &__qr-code {
+            width: 100%;
+
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        &__advice {
+            color: black;
+
+            &--atention {
+                display: block;
+
+                color: red;
+                font-size: 2rem;
+            }
+
+            &--phonenumber {
+                color: rgb(89, 89, 110);
+                text-decoration: underline;
+            }
+        }
+    }
 }
 
 /* FREQUENT QUESTIONS */

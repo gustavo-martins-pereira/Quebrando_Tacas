@@ -9,17 +9,17 @@
      * To do this, the MutationObserver is used to listening the changes in the "swiper-pagination" element
      */
     {
-        let coursesLink = [
+        const coursesLink = [
             "sing",
             "choral",
             "children-musicalization",
             "presentations",
         ];
 
-        let $carouselBullets = document.querySelector(".swiper-pagination");
+        const $carouselBullets = document.querySelector("[data-element-id='swiper-paginator']");
      
-        let $accessCourseButton = document.querySelector(".courses__acess-course");
-        let mutationObserver = new MutationObserver(() => {
+        const $accessCourseButton = document.querySelector("[data-element-id='acess-course-button']");
+        const mutationObserver = new MutationObserver(() => {
             $carouselBullets.childNodes.forEach((bullet, index) => {
                 if(bullet.classList.contains("swiper-pagination-bullet-active")) {
                     // Set the "href" of the "<a></a>" tag according the index of the "coursesLink"
@@ -43,14 +43,14 @@
      * Make a fetch with a POST method and show a pop-up message based in the returned response promisse
      */
     {
-        let $contactForm = document.querySelector("[data-element-id='contact-form']");
+        const $contactForm = document.querySelector("[data-element-id='contact-form']");
         $contactForm.addEventListener("submit", (event) => {
             event.preventDefault();
 
             // Inputs
-            let $nameInput = document.querySelector("[data-element-id='contactNameInput']");
-            let $emailInput = document.querySelector("[data-element-id='contactEmailInput']");
-            let $messageInput = document.querySelector("[data-element-id='contactMessageInput']");
+            const $nameInput = document.querySelector("[data-element-id='contactNameInput']");
+            const $emailInput = document.querySelector("[data-element-id='contactEmailInput']");
+            const $messageInput = document.querySelector("[data-element-id='contactMessageInput']");
 
             // keilagruviracerqueira9602@gmail.com
             // claushmartins@gmail.com
@@ -75,7 +75,7 @@
                 // FIXME: Wait the element to be appended in the div first to apply the transition when the element is showing
                 .then(response => response.ok ? createSuccessPopUp(true) : createSuccessPopUp(false))
                 .then(popUp => {
-                    let pops = document.querySelector(".contact__pop-ups");
+                    const pops = document.querySelector("[data-element-id='contact-pop-ups']");
                     pops.appendChild(popUp);
 
                     return popUp;
@@ -91,7 +91,7 @@
 
         // Create a Success Pop-Up or a Fail Pop-Up based in the argumment, and return the HTML element already done
         function createSuccessPopUp(isSuccess) {
-            let popUp = document.createElement("div");
+            const popUp = document.createElement("div");
             popUp.classList.add("contact__pop-ups__pop-up", "contact__pop-ups__pop-up--invisible");
             
             if(isSuccess) {
@@ -116,7 +116,7 @@
         function deletePopUp(popUp) {
             setTimeout(function() {
                 popUp.classList.replace("contact__pop-ups__pop-up--visible", "contact__pop-ups__pop-up--invisible");
-            }, 2000);
+            }, 3000);
 
             setTimeout(function() {
                 popUp.remove();

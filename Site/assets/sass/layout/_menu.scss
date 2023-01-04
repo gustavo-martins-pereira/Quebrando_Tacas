@@ -48,7 +48,7 @@
             &:hover {
                 background-color: $link--hover-background;
 
-                transition: all 0.5s;
+                transition: background-color 0.5s;
             }
         }
     }
@@ -114,6 +114,8 @@
                     background-color: $link--hover-background;
     
                     border-radius: 5px;
+
+                    color: $white-color;
                 }
             }
         }

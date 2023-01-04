@@ -497,7 +497,7 @@ body {
 }
 .menu__navigation-menu__link:hover {
   background-color: hsl(214deg, 56%, 58%);
-  transition: all 0.5s;
+  transition: background-color 0.5s;
 }
 .menu.menu-is-active {
   background-color: hsl(202deg, 100%, 71%);
@@ -544,6 +544,7 @@ body {
   .menu__navigation-menu__link:hover {
     background-color: hsl(214deg, 56%, 58%);
     border-radius: 5px;
+    color: hsl(0deg, 0%, 100%);
   }
 }
 .footer {
@@ -1189,6 +1190,40 @@ body {
 }
 .price__buy-button:hover {
   background-color: hsl(214deg, 56%, 58%);
+}
+.price__payment {
+  width: 80%;
+  margin: auto;
+  margin: auto;
+  margin-top: 2rem;
+  text-align: center;
+}
+@media screen and (min-width: 540px) {
+  .price__payment {
+    width: 60%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .price__payment {
+    width: 50%;
+  }
+}
+.price__payment__qr-code {
+  width: 100%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.price__payment__advice {
+  color: black;
+}
+.price__payment__advice--atention {
+  display: block;
+  color: red;
+  font-size: 2rem;
+}
+.price__payment__advice--phonenumber {
+  color: rgb(89, 89, 110);
+  text-decoration: underline;
 }
 
 /* FREQUENT QUESTIONS */

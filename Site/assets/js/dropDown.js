@@ -12,14 +12,14 @@
      * Define the style of the "active" class on the parent element of the element that contains the "data-dropdown-trigger" attribute
     */
     {
-        let $dropdownTriggers = document.querySelectorAll("[data-dropdown-trigger]");
+        const $dropdownTriggers = document.querySelectorAll("[data-dropdown-trigger]");
 
         $dropdownTriggers.forEach(dropdownTrigger => {
             dropdownTrigger.addEventListener("click", () => {
-                let parentNode = dropdownTrigger.parentElement;
+                const parentNode = dropdownTrigger.parentElement;
 
                 // Get the children and returns the element with the associated class and add or remove the class of the transiction
-                let $dropdownContent = ([...parentNode.children]).find(child => child.classList.contains("learning__sections__section__content"));
+                const $dropdownContent = ([...parentNode.children]).find(child => child.classList.contains("learning__sections__section__content"));
                 $dropdownContent.classList.toggle("learning__sections__section__content--transition");
 
                 activeDropdownContent(parentNode, parentNode.children);
@@ -28,7 +28,7 @@
 
         function activeDropdownContent(mainParentNode, children) {
             for (const child of children) {
-                let hasDataDropdownContent = child.hasAttribute("data-dropdown-content");
+                const hasDataDropdownContent = child.hasAttribute("data-dropdown-content");
 
                 if(child.children && !hasDataDropdownContent) {
                     activeDropdownContent(mainParentNode, child.children);
@@ -50,11 +50,11 @@
      * Toggle a class which set the max-height when the button is clicked
     */
     {
-        let $loadOtherSectionsButton = document.querySelector("[data-element-id='loadOtherSectionsButton']");
+        const $loadOtherSectionsButton = document.querySelector("[data-element-id='loadOtherSectionsButton']");
 
-        let allSectionsIsLoaded = false;
+        const allSectionsIsLoaded = false;
         $loadOtherSectionsButton.addEventListener("click", () => {
-            let $sections = document.querySelector("[data-element-id='sections']");
+            const $sections = document.querySelector("[data-element-id='sections']");
 
             $sections.classList.toggle("learning__sections--max-height");
 
