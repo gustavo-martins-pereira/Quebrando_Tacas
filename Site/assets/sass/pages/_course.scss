@@ -18,7 +18,7 @@
             max-height: 300px;
 
             @media screen and (min-width: map-get($map: $breakpoints, $key: "large")) {
-                max-height: 700px;
+                max-height: 500px;
             }
         }
 

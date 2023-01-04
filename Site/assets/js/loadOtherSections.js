@@ -24,5 +24,23 @@
                 $loadOtherSectionsButton.innerText = "Carregar as Outras Seções";
             }
         });
+
+        const $section = document.querySelector("[data-element-id='sections']");
+
+        $section.addEventListener("click", event => {
+            if(event.layerY > getComputedStyle($section).maxHeight.replace("px", "") / 2.5) {
+                let $sections = document.querySelector("[data-element-id='sections']");
+
+                $sections.classList.remove("learning__sections--max-height");
+
+                allSectionsIsLoaded = true;
+                
+                if(allSectionsIsLoaded) {
+                    $loadOtherSectionsButton.innerText = "Esconder as outras seções";
+                } else {
+                    $loadOtherSectionsButton.innerText = "Carregar as Outras Seções";
+                }
+            }
+        });
     }
 })();
