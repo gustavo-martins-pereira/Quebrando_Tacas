@@ -388,6 +388,7 @@ template {
 /********** FONTS **********/
 /* STANDARD  CONTENT WIDTH */
 /* STANDARD BOTTOM MARGIN OF SEPARATION */
+/* SECTION BOX */
 /* ACESSIBILITY */
 /********** BASE **********/
 html,
@@ -992,7 +993,6 @@ body {
   width: 80%;
   margin: auto;
   margin-bottom: 6rem;
-  /* WITH ONLY A LIST */
   /* WITH SECTIONS */
   /* WITHOUT SECTIONS */
 }
@@ -1010,14 +1010,11 @@ body {
   margin-bottom: 1rem;
   text-align: center;
 }
-.learning__list__item {
-  margin-top: 2rem;
-  font-size: 1.5rem;
-  font-family: "Dancing Script", Arial, Helvetica, cursive;
-  text-align: center;
-}
 .learning__sections {
-  position: relative;
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  margin: auto;
   margin-bottom: 0.5rem;
   overflow: hidden;
   z-index: 1;
@@ -1043,123 +1040,326 @@ body {
     max-width: 600px;
   }
 }
-.learning__sections__section:nth-child(1) .learning__sections__section__title--without-arrow::before {
+.learning__sections__section:nth-child(1) .learning__sections__section__title::before {
   content: "1.";
 }
-.learning__sections__section:nth-child(2) .learning__sections__section__title--without-arrow::before {
+.learning__sections__section:nth-child(2) .learning__sections__section__title::before {
   content: "2.";
 }
-.learning__sections__section:nth-child(3) .learning__sections__section__title--without-arrow::before {
+.learning__sections__section:nth-child(3) .learning__sections__section__title::before {
   content: "3.";
 }
-.learning__sections__section:nth-child(4) .learning__sections__section__title--without-arrow::before {
+.learning__sections__section:nth-child(4) .learning__sections__section__title::before {
   content: "4.";
 }
-.learning__sections__section:nth-child(5) .learning__sections__section__title--without-arrow::before {
+.learning__sections__section:nth-child(5) .learning__sections__section__title::before {
   content: "5.";
 }
-.learning__sections__section:nth-child(6) .learning__sections__section__title--without-arrow::before {
+.learning__sections__section:nth-child(6) .learning__sections__section__title::before {
   content: "6.";
 }
-.learning__sections__section:nth-child(7) .learning__sections__section__title--without-arrow::before {
+.learning__sections__section:nth-child(7) .learning__sections__section__title::before {
   content: "7.";
 }
-.learning__sections__section:nth-child(8) .learning__sections__section__title--without-arrow::before {
+.learning__sections__section:nth-child(8) .learning__sections__section__title::before {
   content: "8.";
 }
-.learning__sections__section:nth-child(9) .learning__sections__section__title--without-arrow::before {
+.learning__sections__section:nth-child(9) .learning__sections__section__title::before {
   content: "9.";
 }
-.learning__sections__section:nth-child(10) .learning__sections__section__title--without-arrow::before {
+.learning__sections__section:nth-child(10) .learning__sections__section__title::before {
   content: "10.";
 }
-.learning__sections__section:nth-child(11) .learning__sections__section__title--without-arrow::before {
+.learning__sections__section:nth-child(11) .learning__sections__section__title::before {
   content: "11.";
 }
-.learning__sections__section:nth-child(12) .learning__sections__section__title--without-arrow::before {
+.learning__sections__section:nth-child(12) .learning__sections__section__title::before {
   content: "12.";
 }
-.learning__sections__section:nth-child(13) .learning__sections__section__title--without-arrow::before {
+.learning__sections__section:nth-child(13) .learning__sections__section__title::before {
   content: "13.";
 }
-.learning__sections__section:nth-child(14) .learning__sections__section__title--without-arrow::before {
+.learning__sections__section:nth-child(14) .learning__sections__section__title::before {
   content: "14.";
 }
-.learning__sections__section:nth-child(15) .learning__sections__section__title--without-arrow::before {
+.learning__sections__section:nth-child(15) .learning__sections__section__title::before {
   content: "15.";
 }
-.learning__sections__section:nth-child(16) .learning__sections__section__title--without-arrow::before {
+.learning__sections__section:nth-child(16) .learning__sections__section__title::before {
   content: "16.";
 }
-.learning__sections__section:nth-child(17) .learning__sections__section__title--without-arrow::before {
+.learning__sections__section:nth-child(17) .learning__sections__section__title::before {
   content: "17.";
 }
-.learning__sections__section:nth-child(18) .learning__sections__section__title--without-arrow::before {
+.learning__sections__section:nth-child(18) .learning__sections__section__title::before {
   content: "18.";
 }
-.learning__sections__section:nth-child(19) .learning__sections__section__title--without-arrow::before {
+.learning__sections__section:nth-child(19) .learning__sections__section__title::before {
   content: "19.";
 }
-.learning__sections__section:nth-child(20) .learning__sections__section__title--without-arrow::before {
+.learning__sections__section:nth-child(20) .learning__sections__section__title::before {
   content: "20.";
 }
-.learning__sections__section:nth-child(21) .learning__sections__section__title--without-arrow::before {
+.learning__sections__section:nth-child(21) .learning__sections__section__title::before {
   content: "21.";
 }
-.learning__sections__section:nth-child(22) .learning__sections__section__title--without-arrow::before {
+.learning__sections__section:nth-child(22) .learning__sections__section__title::before {
   content: "22.";
 }
-.learning__sections__section:nth-child(23) .learning__sections__section__title--without-arrow::before {
+.learning__sections__section:nth-child(23) .learning__sections__section__title::before {
   content: "23.";
 }
-.learning__sections__section:nth-child(24) .learning__sections__section__title--without-arrow::before {
+.learning__sections__section:nth-child(24) .learning__sections__section__title::before {
   content: "24.";
 }
-.learning__sections__section:nth-child(25) .learning__sections__section__title--without-arrow::before {
+.learning__sections__section:nth-child(25) .learning__sections__section__title::before {
   content: "25.";
 }
-.learning__sections__section:nth-child(26) .learning__sections__section__title--without-arrow::before {
+.learning__sections__section:nth-child(26) .learning__sections__section__title::before {
   content: "26.";
 }
-.learning__sections__section:nth-child(27) .learning__sections__section__title--without-arrow::before {
+.learning__sections__section:nth-child(27) .learning__sections__section__title::before {
   content: "27.";
 }
-.learning__sections__section:nth-child(28) .learning__sections__section__title--without-arrow::before {
+.learning__sections__section:nth-child(28) .learning__sections__section__title::before {
   content: "28.";
 }
-.learning__sections__section:nth-child(29) .learning__sections__section__title--without-arrow::before {
+.learning__sections__section:nth-child(29) .learning__sections__section__title::before {
   content: "29.";
 }
-.learning__sections__section:nth-child(30) .learning__sections__section__title--without-arrow::before {
+.learning__sections__section:nth-child(30) .learning__sections__section__title::before {
   content: "30.";
+}
+.learning__sections__section:nth-child(31) .learning__sections__section__title::before {
+  content: "31.";
+}
+.learning__sections__section:nth-child(32) .learning__sections__section__title::before {
+  content: "32.";
+}
+.learning__sections__section:nth-child(33) .learning__sections__section__title::before {
+  content: "33.";
+}
+.learning__sections__section:nth-child(34) .learning__sections__section__title::before {
+  content: "34.";
+}
+.learning__sections__section:nth-child(35) .learning__sections__section__title::before {
+  content: "35.";
+}
+.learning__sections__section:nth-child(36) .learning__sections__section__title::before {
+  content: "36.";
+}
+.learning__sections__section:nth-child(37) .learning__sections__section__title::before {
+  content: "37.";
+}
+.learning__sections__section:nth-child(38) .learning__sections__section__title::before {
+  content: "38.";
+}
+.learning__sections__section:nth-child(39) .learning__sections__section__title::before {
+  content: "39.";
+}
+.learning__sections__section:nth-child(40) .learning__sections__section__title::before {
+  content: "40.";
+}
+.learning__sections__section:nth-child(41) .learning__sections__section__title::before {
+  content: "41.";
+}
+.learning__sections__section:nth-child(42) .learning__sections__section__title::before {
+  content: "42.";
+}
+.learning__sections__section:nth-child(43) .learning__sections__section__title::before {
+  content: "43.";
+}
+.learning__sections__section:nth-child(44) .learning__sections__section__title::before {
+  content: "44.";
+}
+.learning__sections__section:nth-child(45) .learning__sections__section__title::before {
+  content: "45.";
+}
+.learning__sections__section:nth-child(46) .learning__sections__section__title::before {
+  content: "46.";
+}
+.learning__sections__section:nth-child(47) .learning__sections__section__title::before {
+  content: "47.";
+}
+.learning__sections__section:nth-child(48) .learning__sections__section__title::before {
+  content: "48.";
+}
+.learning__sections__section:nth-child(49) .learning__sections__section__title::before {
+  content: "49.";
+}
+.learning__sections__section:nth-child(50) .learning__sections__section__title::before {
+  content: "50.";
+}
+.learning__sections__section:nth-child(51) .learning__sections__section__title::before {
+  content: "51.";
+}
+.learning__sections__section:nth-child(52) .learning__sections__section__title::before {
+  content: "52.";
+}
+.learning__sections__section:nth-child(53) .learning__sections__section__title::before {
+  content: "53.";
+}
+.learning__sections__section:nth-child(54) .learning__sections__section__title::before {
+  content: "54.";
+}
+.learning__sections__section:nth-child(55) .learning__sections__section__title::before {
+  content: "55.";
+}
+.learning__sections__section:nth-child(56) .learning__sections__section__title::before {
+  content: "56.";
+}
+.learning__sections__section:nth-child(57) .learning__sections__section__title::before {
+  content: "57.";
+}
+.learning__sections__section:nth-child(58) .learning__sections__section__title::before {
+  content: "58.";
+}
+.learning__sections__section:nth-child(59) .learning__sections__section__title::before {
+  content: "59.";
+}
+.learning__sections__section:nth-child(60) .learning__sections__section__title::before {
+  content: "60.";
+}
+.learning__sections__section:nth-child(61) .learning__sections__section__title::before {
+  content: "61.";
+}
+.learning__sections__section:nth-child(62) .learning__sections__section__title::before {
+  content: "62.";
+}
+.learning__sections__section:nth-child(63) .learning__sections__section__title::before {
+  content: "63.";
+}
+.learning__sections__section:nth-child(64) .learning__sections__section__title::before {
+  content: "64.";
+}
+.learning__sections__section:nth-child(65) .learning__sections__section__title::before {
+  content: "65.";
+}
+.learning__sections__section:nth-child(66) .learning__sections__section__title::before {
+  content: "66.";
+}
+.learning__sections__section:nth-child(67) .learning__sections__section__title::before {
+  content: "67.";
+}
+.learning__sections__section:nth-child(68) .learning__sections__section__title::before {
+  content: "68.";
+}
+.learning__sections__section:nth-child(69) .learning__sections__section__title::before {
+  content: "69.";
+}
+.learning__sections__section:nth-child(70) .learning__sections__section__title::before {
+  content: "70.";
+}
+.learning__sections__section:nth-child(71) .learning__sections__section__title::before {
+  content: "71.";
+}
+.learning__sections__section:nth-child(72) .learning__sections__section__title::before {
+  content: "72.";
+}
+.learning__sections__section:nth-child(73) .learning__sections__section__title::before {
+  content: "73.";
+}
+.learning__sections__section:nth-child(74) .learning__sections__section__title::before {
+  content: "74.";
+}
+.learning__sections__section:nth-child(75) .learning__sections__section__title::before {
+  content: "75.";
+}
+.learning__sections__section:nth-child(76) .learning__sections__section__title::before {
+  content: "76.";
+}
+.learning__sections__section:nth-child(77) .learning__sections__section__title::before {
+  content: "77.";
+}
+.learning__sections__section:nth-child(78) .learning__sections__section__title::before {
+  content: "78.";
+}
+.learning__sections__section:nth-child(79) .learning__sections__section__title::before {
+  content: "79.";
+}
+.learning__sections__section:nth-child(80) .learning__sections__section__title::before {
+  content: "80.";
+}
+.learning__sections__section:nth-child(81) .learning__sections__section__title::before {
+  content: "81.";
+}
+.learning__sections__section:nth-child(82) .learning__sections__section__title::before {
+  content: "82.";
+}
+.learning__sections__section:nth-child(83) .learning__sections__section__title::before {
+  content: "83.";
+}
+.learning__sections__section:nth-child(84) .learning__sections__section__title::before {
+  content: "84.";
+}
+.learning__sections__section:nth-child(85) .learning__sections__section__title::before {
+  content: "85.";
+}
+.learning__sections__section:nth-child(86) .learning__sections__section__title::before {
+  content: "86.";
+}
+.learning__sections__section:nth-child(87) .learning__sections__section__title::before {
+  content: "87.";
+}
+.learning__sections__section:nth-child(88) .learning__sections__section__title::before {
+  content: "88.";
+}
+.learning__sections__section:nth-child(89) .learning__sections__section__title::before {
+  content: "89.";
+}
+.learning__sections__section:nth-child(90) .learning__sections__section__title::before {
+  content: "90.";
+}
+.learning__sections__section:nth-child(91) .learning__sections__section__title::before {
+  content: "91.";
+}
+.learning__sections__section:nth-child(92) .learning__sections__section__title::before {
+  content: "92.";
+}
+.learning__sections__section:nth-child(93) .learning__sections__section__title::before {
+  content: "93.";
+}
+.learning__sections__section:nth-child(94) .learning__sections__section__title::before {
+  content: "94.";
+}
+.learning__sections__section:nth-child(95) .learning__sections__section__title::before {
+  content: "95.";
+}
+.learning__sections__section:nth-child(96) .learning__sections__section__title::before {
+  content: "96.";
+}
+.learning__sections__section:nth-child(97) .learning__sections__section__title::before {
+  content: "97.";
+}
+.learning__sections__section:nth-child(98) .learning__sections__section__title::before {
+  content: "98.";
+}
+.learning__sections__section:nth-child(99) .learning__sections__section__title::before {
+  content: "99.";
 }
 .learning__sections__section__title {
   background-color: hsl(209deg, 100%, 70%);
   display: flex;
   align-items: center;
-  justify-content: space-between;
   border-radius: 3px;
   padding: 0.75rem;
   font-family: "Inter", Arial, Helvetica, sans-serif;
   font-size: 1rem;
-  cursor: pointer;
-}
-.learning__sections__section__title--without-arrow {
-  background-color: hsl(209deg, 100%, 70%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 3px;
-  padding: 0.75rem;
-  font-family: "Inter", Arial, Helvetica, sans-serif;
-  font-size: 1rem;
-  cursor: default;
-  gap: 0.5rem;
   text-align: center;
 }
-.learning__sections__section__title::after {
+.learning__sections__section__title--with-arrow {
+  justify-content: space-between;
+  gap: 0;
+  cursor: pointer;
+}
+.learning__sections__section__title--with-arrow::after {
   content: url("../images/icons/Simple Arrow Down.svg");
   transition: transform 0.25s;
+}
+.learning__sections__section__title--without-arrow {
+  justify-content: center;
+  gap: 0.5rem;
+  cursor: default;
 }
 .learning__sections__section__content {
   background-color: hsl(209deg, 100%, 84%);

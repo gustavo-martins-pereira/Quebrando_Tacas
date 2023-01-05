@@ -9,18 +9,8 @@
         text-align: center;
     }
 
-    /* WITH ONLY A LIST */
-    &__list__item {
-        margin-top: 2rem;
-
-        font-size: 1.5rem;
-        font-family: $tittle-font-stack;
-        text-align: center;
-    }
-
     /* WITH SECTIONS */
     &__sections {
-
         &--max-height {
             mask-image: linear-gradient(#ffffff 70%, rgba(255, 255, 255, 0));
 
@@ -31,9 +21,11 @@
             }
         }
 
-        position: relative;
+        max-width: fit-content;
 
-        margin-bottom: 0.5rem;
+        margin: auto {
+            bottom: 0.5rem;
+        }
 
         overflow: hidden;
         z-index: 1;
@@ -41,35 +33,37 @@
         &__section {
             max-width: 350px;
 
-            @media screen and (min-width: map-get($map: $breakpoints, $key: "large")) {
-                max-width: 600px;
-            }
-
             margin: auto {
                 bottom: 0.5rem;
             }
 
-            @for $i from 1 through 30 {
-                &:nth-child(#{$i}) &__title--without-arrow::before {
+            @media screen and (min-width: map-get($map: $breakpoints, $key: "large")) {
+                max-width: 600px;
+            }
+
+            @for $i from 1 through 99 {
+                &:nth-child(#{$i}) &__title::before {
                     content: "#{$i}.";
                 }
             }
 
             &__title {
-                @include sections__section-box($justify-content: space-between, $cursor: pointer);
+                @include sections__section-box();
 
-                &--without-arrow {
-                    @include sections__section-box($justify-content: center);
+                text-align: center;
 
-                    gap: 0.5rem;
+                &--with-arrow {
+                    @include sections__section-box--spacements($justify-content: space-between, $cursor: pointer);
 
-                    text-align: center;
+                    &::after {
+                        content: url("../images/icons/Simple\ Arrow\ Down.svg");
+    
+                        transition: transform 0.25s;
+                    }
                 }
 
-                &::after {
-                    content: url("../images/icons/Simple\ Arrow\ Down.svg");
-
-                    transition: transform 0.25s;
+                &--without-arrow {
+                    @include sections__section-box--spacements($justify-content: center, $gap: 0.5rem, $cursor: default);
                 }
             }
 

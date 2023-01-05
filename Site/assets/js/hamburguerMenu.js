@@ -25,7 +25,7 @@
 
         // Close menu when click outside screen
         window.addEventListener("click", event => {
-            if(!event.path.includes($menu)) {
+            if(!event.composedPath().includes($menu)) {
                 $menu.classList.remove("menu-is-active");
             }
         });
