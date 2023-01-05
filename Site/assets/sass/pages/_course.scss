@@ -350,22 +350,6 @@
     }
 
     &__opinion {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-
-        & img {
-            width: 40px;
-
-            @media screen and (min-width: map-get($map: $breakpoints, $key: "medium")) {
-                & {
-                    width: 60px;
-                }
-            }
-        }
-
-        &:not(:last-child) {
-            margin-bottom: 2rem;
-        }
+        font-style: italic;
     }
 }

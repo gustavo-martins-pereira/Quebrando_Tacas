@@ -423,7 +423,8 @@ h3 {
   font-size: 2rem;
 }
 
-p {
+p,
+blockquote {
   line-height: 1.25;
 }
 
@@ -1634,20 +1635,7 @@ body {
   text-align: center;
 }
 .opinions__opinion {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-.opinions__opinion img {
-  width: 40px;
-}
-@media screen and (min-width: 540px) {
-  .opinions__opinion img {
-    width: 60px;
-  }
-}
-.opinions__opinion:not(:last-child) {
-  margin-bottom: 2rem;
+  font-style: italic;
 }
 
 /* WHAT YOU WILL LEARN */
