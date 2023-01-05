@@ -992,6 +992,7 @@ body {
   width: 80%;
   margin: auto;
   margin-bottom: 6rem;
+  /* WITH ONLY A LIST */
   /* WITH SECTIONS */
   /* WITHOUT SECTIONS */
 }
@@ -1007,6 +1008,12 @@ body {
 }
 .learning__title {
   margin-bottom: 1rem;
+  text-align: center;
+}
+.learning__list__item {
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  font-family: "Dancing Script", Arial, Helvetica, cursive;
   text-align: center;
 }
 .learning__sections {
@@ -1036,6 +1043,96 @@ body {
     max-width: 600px;
   }
 }
+.learning__sections__section:nth-child(1) .learning__sections__section__title--without-arrow::before {
+  content: "1.";
+}
+.learning__sections__section:nth-child(2) .learning__sections__section__title--without-arrow::before {
+  content: "2.";
+}
+.learning__sections__section:nth-child(3) .learning__sections__section__title--without-arrow::before {
+  content: "3.";
+}
+.learning__sections__section:nth-child(4) .learning__sections__section__title--without-arrow::before {
+  content: "4.";
+}
+.learning__sections__section:nth-child(5) .learning__sections__section__title--without-arrow::before {
+  content: "5.";
+}
+.learning__sections__section:nth-child(6) .learning__sections__section__title--without-arrow::before {
+  content: "6.";
+}
+.learning__sections__section:nth-child(7) .learning__sections__section__title--without-arrow::before {
+  content: "7.";
+}
+.learning__sections__section:nth-child(8) .learning__sections__section__title--without-arrow::before {
+  content: "8.";
+}
+.learning__sections__section:nth-child(9) .learning__sections__section__title--without-arrow::before {
+  content: "9.";
+}
+.learning__sections__section:nth-child(10) .learning__sections__section__title--without-arrow::before {
+  content: "10.";
+}
+.learning__sections__section:nth-child(11) .learning__sections__section__title--without-arrow::before {
+  content: "11.";
+}
+.learning__sections__section:nth-child(12) .learning__sections__section__title--without-arrow::before {
+  content: "12.";
+}
+.learning__sections__section:nth-child(13) .learning__sections__section__title--without-arrow::before {
+  content: "13.";
+}
+.learning__sections__section:nth-child(14) .learning__sections__section__title--without-arrow::before {
+  content: "14.";
+}
+.learning__sections__section:nth-child(15) .learning__sections__section__title--without-arrow::before {
+  content: "15.";
+}
+.learning__sections__section:nth-child(16) .learning__sections__section__title--without-arrow::before {
+  content: "16.";
+}
+.learning__sections__section:nth-child(17) .learning__sections__section__title--without-arrow::before {
+  content: "17.";
+}
+.learning__sections__section:nth-child(18) .learning__sections__section__title--without-arrow::before {
+  content: "18.";
+}
+.learning__sections__section:nth-child(19) .learning__sections__section__title--without-arrow::before {
+  content: "19.";
+}
+.learning__sections__section:nth-child(20) .learning__sections__section__title--without-arrow::before {
+  content: "20.";
+}
+.learning__sections__section:nth-child(21) .learning__sections__section__title--without-arrow::before {
+  content: "21.";
+}
+.learning__sections__section:nth-child(22) .learning__sections__section__title--without-arrow::before {
+  content: "22.";
+}
+.learning__sections__section:nth-child(23) .learning__sections__section__title--without-arrow::before {
+  content: "23.";
+}
+.learning__sections__section:nth-child(24) .learning__sections__section__title--without-arrow::before {
+  content: "24.";
+}
+.learning__sections__section:nth-child(25) .learning__sections__section__title--without-arrow::before {
+  content: "25.";
+}
+.learning__sections__section:nth-child(26) .learning__sections__section__title--without-arrow::before {
+  content: "26.";
+}
+.learning__sections__section:nth-child(27) .learning__sections__section__title--without-arrow::before {
+  content: "27.";
+}
+.learning__sections__section:nth-child(28) .learning__sections__section__title--without-arrow::before {
+  content: "28.";
+}
+.learning__sections__section:nth-child(29) .learning__sections__section__title--without-arrow::before {
+  content: "29.";
+}
+.learning__sections__section:nth-child(30) .learning__sections__section__title--without-arrow::before {
+  content: "30.";
+}
 .learning__sections__section__title {
   background-color: hsl(209deg, 100%, 70%);
   display: flex;
@@ -1046,6 +1143,19 @@ body {
   font-family: "Inter", Arial, Helvetica, sans-serif;
   font-size: 1rem;
   cursor: pointer;
+}
+.learning__sections__section__title--without-arrow {
+  background-color: hsl(209deg, 100%, 70%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+  padding: 0.75rem;
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  cursor: default;
+  gap: 0.5rem;
+  text-align: center;
 }
 .learning__sections__section__title::after {
   content: url("../images/icons/Simple Arrow Down.svg");
