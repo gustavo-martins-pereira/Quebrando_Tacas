@@ -1514,20 +1514,41 @@ body {
   background-color: hsl(214deg, 56%, 58%);
 }
 .price__payment {
-  width: 80%;
-  margin: auto;
-  margin: auto;
   margin-top: 2rem;
   text-align: center;
 }
+.price__payment__buttons {
+  display: flex;
+  justify-content: space-evenly;
+}
+.price__payment__buttons__button {
+  background-color: hsl(209deg, 100%, 70%);
+  border: none;
+  border-radius: 5px;
+  padding: 1rem 1.5rem;
+  color: hsl(0deg, 0%, 100%);
+  cursor: pointer;
+  transition: background-color 0.1s;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+.price__payment__buttons__button:hover {
+  background-color: hsl(214deg, 56%, 58%);
+}
+.price__payment__buttons__button__img {
+  width: 24px;
+  height: 24px;
+}
 @media screen and (min-width: 540px) {
-  .price__payment {
-    width: 60%;
+  .price__payment__buttons__button__img {
+    width: 30px;
+    height: 30px;
   }
 }
 @media screen and (min-width: 1024px) {
-  .price__payment {
-    width: 50%;
+  .price__payment__buttons__button__img {
+    width: 36px;
+    height: 36px;
   }
 }
 .price__payment__qr-code {

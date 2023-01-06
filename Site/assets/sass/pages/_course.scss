@@ -227,12 +227,37 @@
     }
 
     &__payment {
-        @include standard--width();
-        
-        margin: auto;
         margin-top: 2rem;
         
         text-align: center;
+
+        &__buttons {
+            display: flex;
+            justify-content: space-evenly;
+
+            &__button {
+                @include button();
+
+                padding: 1rem;
+
+                box-sizing: border-box;
+
+                &__img {
+                    width: map-get($map: $font-sizes, $key: "small") * 1.5;
+                    height: map-get($map: $font-sizes, $key: "small") * 1.5;
+
+                    @media screen and (min-width: map-get($map: $breakpoints, $key: "medium")) {
+                        width: map-get($map: $font-sizes, $key: "medium") * 1.5;
+                        height: map-get($map: $font-sizes, $key: "medium") * 1.5;
+                    }
+
+                    @media screen and (min-width: map-get($map: $breakpoints, $key: "large")) {
+                        width: map-get($map: $font-sizes, $key: "large") * 1.5;
+                        height: map-get($map: $font-sizes, $key: "large") * 1.5;
+                    }
+                }
+            }
+        }
 
         &__qr-code {
             width: 100%;
