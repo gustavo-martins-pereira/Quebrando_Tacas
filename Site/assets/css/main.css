@@ -1552,68 +1552,6 @@ body {
   overflow: hidden;
 }
 
-/* FREQUENT QUESTIONS */
-.frequent-questions {
-  width: 80%;
-  margin: auto;
-  margin-bottom: 6rem;
-}
-@media screen and (min-width: 540px) {
-  .frequent-questions {
-    width: 60%;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .frequent-questions {
-    width: 50%;
-  }
-}
-.frequent-questions__title {
-  margin-bottom: 1rem;
-  text-align: center;
-}
-.frequent-questions__question {
-  /* JAVASCRIPT STYLE */
-}
-.frequent-questions__question:not(:last-child) {
-  margin-bottom: 1rem;
-}
-.frequent-questions__question__title {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-  font-family: "Inter", Arial, Helvetica, sans-serif;
-  font-size: 1.25rem;
-  cursor: pointer;
-}
-.frequent-questions__question__title::before {
-  content: "";
-  background-image: url("../images/icons/Arrow Down.svg");
-  background-size: 100%;
-  width: 20px;
-  height: 20px;
-  transition: transform 0.25s;
-}
-.frequent-questions__question__content {
-  background-color: hsl(209deg, 100%, 84%);
-  max-height: 0;
-  margin-top: 0.5rem;
-  border-radius: 5px;
-  padding: 0;
-  text-align: justify;
-  overflow: hidden;
-}
-.frequent-questions__question.active .frequent-questions__question__title::before {
-  transform: rotateZ(180deg);
-}
-.frequent-questions__question.active .frequent-questions__question__content {
-  height: auto;
-  max-height: 1000px;
-  border: 1px solid hsl(227deg, 81%, 59%);
-  padding: 1rem;
-}
-
 /* STUDENTS OPINIONS */
 .opinions {
   width: 80%;
@@ -1635,7 +1573,16 @@ body {
   text-align: center;
 }
 .opinions__opinion {
+  background-color: rgba(255, 255, 255, 0.2392156863);
+  border-radius: 5px;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1215686275);
+  padding: 1.5rem;
+}
+.opinions__opinion__text {
   font-style: italic;
+}
+.opinions__opinion__author {
+  margin-top: 0.5rem;
 }
 
 /* WHAT YOU WILL LEARN */

@@ -10,7 +10,7 @@
     {
         const $loadOtherSectionsButton = document.querySelector("[data-element-id='loadOtherSectionsButton']");
 
-        const allSectionsIsLoaded = false;
+        let allSectionsIsLoaded = false;
         $loadOtherSectionsButton.addEventListener("click", () => {
             const $sections = document.querySelector("[data-element-id='sections']");
 
