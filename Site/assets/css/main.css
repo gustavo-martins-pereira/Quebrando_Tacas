@@ -1595,8 +1595,8 @@ body {
   margin-bottom: 1rem;
 }
 .price__payment__phone-number__number {
-  margin: 3rem;
-  font-size: 2rem;
+  margin: 2rem;
+  font-size: 1.5rem;
 }
 .price__payment__phone-number__number a {
   color: black;
