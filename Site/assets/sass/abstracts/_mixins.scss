@@ -18,6 +18,30 @@
     margin-bottom: 6rem;
 }
 
+/* SECTION BOX */
+@mixin sections__section-box() {
+    background-color: $section-background;
+
+    display: flex;
+    align-items: center;
+    
+
+    border-radius: 3px;
+    padding: 0.75rem;
+
+    font: {
+        family: $default-font-stack;
+        size: 1rem;
+    } 
+}
+
+@mixin sections__section-box--spacements($justify-content: normal, $gap: 0, $cursor: default) {
+    justify-content: $justify-content;
+    gap: $gap;
+
+    cursor: $cursor;
+}
+
 /* ACESSIBILITY */
 @mixin acessibility--hidden-text {
     width: 1px;
