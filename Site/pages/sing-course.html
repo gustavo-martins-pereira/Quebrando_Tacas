@@ -101,44 +101,57 @@
 
             <article class="price__payment" data-element-id="buy-course-content">
                 <div class="price__payment__buttons">
-                    <button class="price__payment__buttons__button"> <img class="price__payment__buttons__button__img" src="../assets/images/icons/QR Code.svg" alt=""> </button>
-                    <button class="price__payment__buttons__button"> <img class="price__payment__buttons__button__img" src="../assets/images/icons/Phone.svg" alt=""> </button>
-                    <button class="price__payment__buttons__button"> <img class="price__payment__buttons__button__img" src="../assets/images/icons/Bank.svg" alt=""> </button>
+                    <div class="price__payment__buttons__method">
+                        <button class="price__payment__buttons__method__button"> <img class="price__payment__buttons__method__button__img" src="../assets/images/icons/QR Code.svg" alt=""> </button>
+                        <p class="price__payment__buttons__method__description">QR Code (Pix)</p>
+                    </div>
+
+                    <div class="price__payment__buttons__method">
+                        <button class="price__payment__buttons__method__button"> <img class="price__payment__buttons__method__button__img" src="../assets/images/icons/Phone.svg" alt=""> </button>
+                        <p class="price__payment__buttons__method__description">Telefone (Pix)</p>
+                    </div>
+                    
+                    <div class="price__payment__buttons__method">
+                        <button class="price__payment__buttons__method__button"> <img class="price__payment__buttons__method__button__img" src="../assets/images/icons/Bank.svg" alt=""> </button>
+                        <p class="price__payment__buttons__method__description">TED</p>
+                    </div>
                 </div>
 
-                <section class="price__payment__qr-code">
-                    <h3>QR Code</h3>
+                <section class="price__payment__qr-code price__payment--hidden">
+                    <h3 class="price__payment__qr-code__title">QR Code</h3>
 
-                    <img class="price__payment__qr-code" src="../assets/images/Código Pix.jpg" alt="">
+                    <img class="price__payment__qr-code__inner-code" src="../assets/images/Código Pix.jpg" alt="">
                 </section>
 
                 <section class="price__payment__phone-number">
-                    <h3>Número de telefone</h3>
-                    <a href="">(21) 96878-2883</a>
+                    <h3 class="price__payment__phone-number__title">Número de telefone</h3>
+                    <p class="price__payment__phone-number__number"> <a href="">(21) 96878-2883</a> </p>
                 </section>
 
-                <section class="price__payment__ted">
-                    <h3>Transferência Bancária</h3>
+                <section class="price__payment__ted price__payment--hidden">
+                    <h3 class="price__payment__ted__title">Transferência Bancária</h3>
 
-                    <div class="price__payment__ted__agency">
-                        <h4>Agência</h4>
-                        <p>0001 C</p>
-                    </div>
-                    
-                    <div class="price__payment__ted__account">
-                        <h4>Conta</h4>
-                        <p>23489553-0</p>
-                    </div>
+                    <section class="price__payment__ted__infos">
+                        <div>
+                            <h4>Agência</h4>
+                            <p class="price__payment__ted__infos__inner-info">0001 C</p>
+                        </div>
+                        
+                        <div>
+                            <h4>Conta</h4>
+                            <p class="price__payment__ted__infos__inner-info">23489553-0</p>
+                        </div>
 
-                    <div class="price__payment__ted__bank-number">
-                        <h4>Número do Banco</h4>
-                        <p>260 (Nubank)</p>
-                    </div>
+                        <div>
+                            <h4>Número do Banco</h4>
+                            <p class="price__payment__ted__infos__inner-info">260 (Nubank)</p>
+                        </div>
+                    </section>
                 </section>
 
                 <p class="price__payment__advice">
                     <span class="price__payment__advice--atention">ATENÇÃO</span>
-                    Após efetuar o pagamento, entre em contato comigo através desse número <a class="price__payment__advice--phonenumber" href="https://wa.me/message/MB4K5IO6PD3MK1">(21) 96878-2883</a> enviando o comprovante do pagamento
+                    Após efetuar o pagamento, entre em contato através desse número <a class="price__payment__advice--phonenumber" href="https://wa.me/message/MB4K5IO6PD3MK1">(21) 96878-2883</a> enviando o comprovante do pagamento
                 </p>
             </article>
         </article>

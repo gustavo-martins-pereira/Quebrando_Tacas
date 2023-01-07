@@ -76,6 +76,8 @@
                 border-bottom-right-radius: 3px;
                 padding: 0 0.75rem;
 
+                text-align: justify;
+
                 overflow: hidden;
 
                 &__item {
@@ -235,35 +237,106 @@
             display: flex;
             justify-content: space-evenly;
 
-            &__button {
-                @include button();
+            &__method {
+                max-width: min-content;
 
-                padding: 1rem;
+                &__button {
+                    @include button();
 
-                box-sizing: border-box;
+                    width: 7.5vw;
+                    min-width: 75px;
+    
+                    padding: 1rem;
+    
+                    box-sizing: border-box;
 
-                &__img {
-                    width: map-get($map: $font-sizes, $key: "small") * 1.5;
-                    height: map-get($map: $font-sizes, $key: "small") * 1.5;
-
-                    @media screen and (min-width: map-get($map: $breakpoints, $key: "medium")) {
-                        width: map-get($map: $font-sizes, $key: "medium") * 1.5;
-                        height: map-get($map: $font-sizes, $key: "medium") * 1.5;
-                    }
-
-                    @media screen and (min-width: map-get($map: $breakpoints, $key: "large")) {
-                        width: map-get($map: $font-sizes, $key: "large") * 1.5;
-                        height: map-get($map: $font-sizes, $key: "large") * 1.5;
+                    &__img {
+                        width: 25px;
+                        
+                        @media screen and (min-width: map-get($map: $breakpoints, $key: "medium")) {
+                            width: 35px;
+                        }
                     }
                 }
+
+                &__description {
+                    margin-top: 0.25rem;
+                }
             }
+        }
+
+        &--hidden {
+            display: none;
         }
 
         &__qr-code {
             width: 100%;
 
-            margin-top: 1rem;
+            margin-top: 2rem;
             margin-bottom: 1rem;
+
+            &__title {
+                margin-bottom: 1rem;
+            }
+
+            &__inner-code {
+                width: 75%;
+
+                @media screen and (min-width: map-get($map: $breakpoints, $key: "medium")) {
+                    width: 60%;
+                }
+                
+                @media screen and (min-width: map-get($map: $breakpoints, $key: "large")) {
+                    width: 45%;
+                }
+            }
+        }
+
+        &__phone-number {
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+
+            &__number {
+                margin: 3rem;
+
+                font-size: 2rem;
+
+                & a {
+                    color: $black-color;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+
+        &__ted {
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            
+            &__title {
+                margin-bottom: 1rem;
+            }
+            
+            &__infos {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+
+                &__inner-info {
+                    background-color: $white-color;
+
+                    width: 50%;
+
+                    margin: auto {
+                        top: 0.5rem;
+                    }
+
+                    border-radius: 5px;
+                    padding: 1rem;
+                }
+            }
         }
 
         &__advice {
@@ -272,7 +345,7 @@
             &--atention {
                 display: block;
 
-                color: red;
+                color: $red-color;
                 font-size: 2rem;
             }
 
