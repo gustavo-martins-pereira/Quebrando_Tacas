@@ -2,7 +2,7 @@
     /* ACCESS COURSE BUTTON *
      * 
      * GOAL:
-     * Change the "src" attribute value according the active slide of the courses
+     * Change the "src" attribute value according the active slide of the pages
      * 
      * STRATEGY:
      * Get the Bullets Pagination, and get the bullet with class "swiper-pagination-bullet-active", and according the index, set the "href" of the link with the value of the array of courses
@@ -10,10 +10,10 @@
      */
     {
         const coursesLink = [
-            "sing",
-            "choral",
-            "children-musicalization",
-            "presentations",
+            "courses/sing-course",
+            "courses/choral-course",
+            "courses/children-musicalization-course",
+            "who-i-am",
         ];
 
         const $carouselBullets = document.querySelector("[data-element-id='swiper-paginator']");
@@ -23,7 +23,7 @@
             $carouselBullets.childNodes.forEach((bullet, index) => {
                 if(bullet.classList.contains("swiper-pagination-bullet-active")) {
                     // Set the "href" of the "<a></a>" tag according the index of the "coursesLink"
-                    $accessCourseButton.href = `./pages/${coursesLink[index]}-course.html`;
+                    $accessCourseButton.href = `./pages/${coursesLink[index]}.html`;
                 }
             });
         });
