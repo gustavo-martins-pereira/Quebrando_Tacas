@@ -1761,11 +1761,16 @@ body {
   margin-top: 2rem;
 }
 .latest-videos__youtube-profile__photo {
-  width: 125px;
+  max-width: 50%;
   border-radius: 50%;
 }
 .latest-videos__youtube-profile__texts {
   text-align: left;
+}
+@media screen and (max-width: 1024px) {
+  .latest-videos__youtube-profile__texts {
+    width: 50%;
+  }
 }
 .latest-videos__youtube-profile__texts__subscribe-button {
   background-color: hsl(0deg, 100%, 40%);

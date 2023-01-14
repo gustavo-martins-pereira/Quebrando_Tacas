@@ -74,12 +74,16 @@
         margin-top: 2rem;
 
         &__photo {
-            width: 125px;
+            max-width: 50%;
 
             border-radius: 50%;
         }
 
         &__texts {
+            @media screen and (max-width: map-get($map: $breakpoints, $key: "large")) {
+                width: 50%;
+            }
+            
             text-align: left;
 
             &__subscribe-button {
