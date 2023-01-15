@@ -860,6 +860,7 @@ body {
   resize: vertical;
 }
 .contact--align-send-button {
+  margin-top: 0.5rem;
   text-align: center;
 }
 .contact--align-send-button .contact__send-button {
@@ -870,7 +871,6 @@ body {
   color: hsl(0deg, 0%, 100%);
   cursor: pointer;
   transition: background-color 0.1s;
-  margin-top: 0.5rem;
   padding: 1rem 1.5rem;
 }
 .contact--align-send-button .contact__send-button:hover {
@@ -954,6 +954,9 @@ body {
     grid-template-columns: repeat(2, 1fr);
   }
   .contact__fields__message-field {
+    grid-column: 1/-1;
+  }
+  .contact__fields__proof-field {
     grid-column: 1/-1;
   }
 }
@@ -1529,6 +1532,7 @@ body {
 .price__payment {
   margin-top: 2rem;
   text-align: center;
+  /* CONTACT */
 }
 .price__payment__buttons {
   display: flex;
@@ -1623,6 +1627,36 @@ body {
   margin-top: 0.5rem;
   border-radius: 5px;
   padding: 1rem;
+}
+.price__payment .contact--payment {
+  width: 100%;
+  text-align: left;
+}
+.price__payment .contact--payment__send-button {
+  margin-top: 2rem;
+}
+.price__payment .contact__fields__proof-field {
+  margin: auto;
+}
+.price__payment .contact__fields__proof-field__label-button {
+  background-color: hsl(209deg, 100%, 70%);
+  border: none;
+  border-radius: 5px;
+  padding: 1rem 1.5rem;
+  color: hsl(0deg, 0%, 100%);
+  cursor: pointer;
+  transition: background-color 0.1s;
+  background-color: hsl(115deg, 70%, 42%);
+  display: inline-block;
+}
+.price__payment .contact__fields__proof-field__label-button:hover {
+  background-color: hsl(214deg, 56%, 58%);
+}
+.price__payment .contact__fields__proof-field__label-button:hover {
+  background-color: hsl(115deg, 69%, 26%);
+}
+.price__payment .contact__fields__proof-field__input {
+  display: none;
 }
 .price__payment__advice {
   color: black;

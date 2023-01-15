@@ -339,6 +339,39 @@
             }
         }
 
+        /* CONTACT */
+        .contact {
+            &--payment {
+                width: 100%;
+                
+                text-align: left;
+
+                &__send-button {
+                    margin-top: 2rem;
+                }
+            }
+
+            &__fields__proof-field {
+                margin: auto;
+
+                &__label-button {
+                    @include button();
+
+                    background-color: $forest-green-color;
+
+                    display: inline-block;
+
+                    &:hover {
+                        background-color: $bilbao-color;
+                    }
+                }
+                
+                &__input {
+                    display: none;
+                }
+            }
+        }
+
         &__advice {
             color: black;
 

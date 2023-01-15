@@ -250,12 +250,12 @@
     }
 
     &--align-send-button {
+        margin-top: .5rem;
+        
         text-align: center;
-
+        
         .contact__send-button {
             @include button();
-
-            margin-top: .5rem;
 
             padding: 1rem 1.5rem;
         }
@@ -365,6 +365,10 @@
         }
 
         &__message-field {
+            grid-column: 1 / -1;
+        }
+        
+        &__proof-field {
             grid-column: 1 / -1;
         }
     }

@@ -8,7 +8,7 @@
 
     <title>Curso de Canto</title>
 
-    <link rel="shortcut icon" href="../assets/images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../../assets/images/favicon.ico" type="image/x-icon">
 
     <!-- CSS IMPORTS -->
     <!-- INTERNAL -->
@@ -18,7 +18,7 @@
 <body>
     <header class="header">
         <nav class="menu" data-element-id="menu">
-            <img class="menu__hamburguer-icon" src="../assets/images/icons/Menu.svg" alt="ícone de Menu Hamburguer" data-element-id="menuHamburguerIcon">
+            <img class="menu__hamburguer-icon" src="../../assets/images/icons/Menu.svg" alt="ícone de Menu Hamburguer" data-element-id="menuHamburguerIcon">
             
             <!-- NAVIGATION MENU -->
             <ul class="menu__navigation-menu">
@@ -103,17 +103,17 @@
                 <!-- PAYMENT METHODS BUTTONS -->
                 <div class="price__payment__buttons">
                     <div class="price__payment__buttons__method" data-element-id="payment-method-button--qr-code">
-                        <button class="price__payment__buttons__method__button"> <img class="price__payment__buttons__method__button__img" src="../assets/images/icons/QR Code.svg" alt=""> </button>
+                        <button class="price__payment__buttons__method__button"> <img class="price__payment__buttons__method__button__img" src="../../assets/images/icons/QR Code.svg" alt=""> </button>
                         <p class="price__payment__buttons__method__description">QR Code (Pix)</p>
                     </div>
                     
                     <div class="price__payment__buttons__method" data-element-id="payment-method-button--phone">
-                        <button class="price__payment__buttons__method__button"> <img class="price__payment__buttons__method__button__img" src="../assets/images/icons/Phone.svg" alt=""> </button>
+                        <button class="price__payment__buttons__method__button"> <img class="price__payment__buttons__method__button__img" src="../../assets/images/icons/Phone.svg" alt=""> </button>
                         <p class="price__payment__buttons__method__description">Telefone (Pix)</p>
                     </div>
                     
                     <div class="price__payment__buttons__method" data-element-id="payment-method-button--ted">
-                        <button class="price__payment__buttons__method__button"> <img class="price__payment__buttons__method__button__img" src="../assets/images/icons/Bank.svg" alt=""> </button>
+                        <button class="price__payment__buttons__method__button"> <img class="price__payment__buttons__method__button__img" src="../../assets/images/icons/Bank.svg" alt=""> </button>
                         <p class="price__payment__buttons__method__description">TED</p>
                     </div>
                 </div>
@@ -123,7 +123,7 @@
                 <section class="price__payment__qr-code" data-element-id="payment-method-qr-code">
                     <h3 class="price__payment__qr-code__title">QR Code</h3>
                     
-                    <img class="price__payment__qr-code__inner-code" src="../assets/images/Código Pix.jpg" alt="">
+                    <img class="price__payment__qr-code__inner-code" src="../../assets/images/Código Pix.jpg" alt="">
                 </section>
 
                 <!-- PHONE NUMBER -->
@@ -152,6 +152,43 @@
                             <p class="price__payment__ted__infos__inner-info">260 (Nubank)</p>
                         </div>
                     </section>
+                </section>
+
+                <!-- SEND PROOF BY EMAIL -->
+                <section class="contact contact--payment">
+                    <p class="contact__description">Preencha os campos abaixo para receber o produto</p>
+        
+                    <form data-element-id="contact-form">
+                        <fieldset>
+                            <legend class="contact__legend">Envio de E-mail</legend>
+        
+                            <div class="contact__fields">
+                                <div>
+                                    <label class="contact__fields__label" for="contact__fullName">Nome Completo</label>
+                                    <input class="contact__fields__input" id="contact__fullName" type="text" name="name" placeholder="Digite seu nome completo" required data-element-id="contactNameInput">
+                                </div>
+        
+                                <div>
+                                    <label class="contact__fields__label" for="contact__email">E-mail</label>
+                                    <input class="contact__fields__input" id="contact__email" type="email" name="email" placeholder="seuemail@gmail.com" required data-element-id="contactEmailInput">
+                                </div>
+        
+                                <div class="contact__fields__message-field">
+                                    <label class="contact__fields__label" for="contact__message">Mensagem</label>
+                                    <textarea class="contact__fields__input contact__fields__message-input" id="contact__message" name="message" placeholder="Digite sua mensagem" rows="5" required data-element-id="contactMessageInput"></textarea>
+                                </div>
+
+                                <div class="contact__fields__proof-field">
+                                    <label class="contact__fields__label contact__fields__proof-field__label-button" for="contact__proof-input">Anexar Comprovante</label>
+                                    <input type="file" class="contact__fields__proof-field__input" id="contact__proof-input">
+                                </div>
+                            </div>
+        
+                            <div class="contact--align-send-button contact--payment__send-button"> <input class="contact__send-button" type="submit" value="Enviar E-mail"> </div>
+                        </fieldset>
+                    </form>
+        
+                    <div class="contact__pop-ups" data-element-id="contact-pop-ups"></div>
                 </section>
 
                 <!-- ATTENTION -->
@@ -184,28 +221,28 @@
             <ul class="footer__nav__list">
                 <li>
                     <a class="footer__nav__list__link" href="https://www.youtube.com/@keilagruvira2022"  target="_blank">
-                        <img class="footer__nav__list__link__icon" src="../assets/images/icons/YouTube.svg" alt="Logo do YouTube">
+                        <img class="footer__nav__list__link__icon" src="../../assets/images/icons/YouTube.svg" alt="Logo do YouTube">
                         <span>YouTube</span>
                     </a>
                 </li>
 
                 <li>
                     <a class="footer__nav__list__link" href="https://www.facebook.com/keilagruvira.gruvira/" target="_blank">
-                        <img class="footer__nav__list__link__icon" src="../assets/images/icons/Facebook.svg" alt="Logo do Facebook">
+                        <img class="footer__nav__list__link__icon" src="../../assets/images/icons/Facebook.svg" alt="Logo do Facebook">
                         <span>Facebook</span>
                     </a>
                 </li>
 
                 <li>
                     <a class="footer__nav__list__link" href="https://www.instagram.com/gruvirakeila/" target="_blank">
-                        <img class="footer__nav__list__link__icon" src="../assets/images/icons/Instagram.svg" alt="Logo do Instagram">
+                        <img class="footer__nav__list__link__icon" src="../../assets/images/icons/Instagram.svg" alt="Logo do Instagram">
                         <span>Instagram</span>
                     </a>
                 </li>
 
                 <li>
                     <a class="footer__nav__list__link" href="https://wa.me/message/MB4K5IO6PD3MK1" target="_blank">
-                        <img class="footer__nav__list__link__icon" src="../assets/images/icons/WhatsApp.svg" alt="Logo do WhatsApp">
+                        <img class="footer__nav__list__link__icon" src="../../assets/images/icons/WhatsApp.svg" alt="Logo do WhatsApp">
                         <span>WhatsApp</span>
                     </a>
                 </li>
@@ -215,9 +252,9 @@
 
     <!-- JAVASCRIPT IMPORTS -->    
     <!-- INTERNAL -->
-    <script src="../assets/js/dropDownContent.js"></script>
-    <script src="../assets/js/hamburguerMenu.js"></script>
-    <script src="../assets/js/course.js"></script>
+    <script src="../../assets/js/dropDownContent.js"></script>
+    <script src="../../assets/js/hamburguerMenu.js"></script>
+    <script src="../../assets/js/course.js"></script>
 </body>
 
 </html>
