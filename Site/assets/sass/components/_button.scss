@@ -1,6 +1,8 @@
 @mixin button {
     background-color: $button-background;
 
+    display: inline-block;
+
     border: none {
         radius: 5px;
     }

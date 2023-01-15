@@ -164,20 +164,15 @@
                 height: 25px;
 
                 @media screen and (min-width: map-get($map: $breakpoints, $key: "medium")) {
-                    & {
-                        width: 40px;
-                        height: 40px;
-                    }
+                    width: 40px;
+                    height: 40px;
                 }
 
                 @media screen and (min-width: map-get($map: $breakpoints, $key: "large")) {
-                    & {
-                        width: 50px;
-                        height: 50px;
-                    }
+                    width: 50px;
+                    height: 50px;
                 }
             }
-            
         }
     }
 }
@@ -195,27 +190,71 @@
     }
 
     &__text {
-        width: 50%;
-
-        margin: auto {
-            bottom: 0.5rem;
-        }
-
-        text-align: center;
+        @include prices__content-box();
 
         &__value {
-            display: flex;
-            justify-content: center;
+            @include prices__content-box__price();
+        }
+    }
 
-            margin-bottom: 0.5rem;
-    
-            font: {
-                size: 3rem;
-                weight: bold;
+    /* MORE THAN 1 PAYMENT */
+    &__prices--more-than-one {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 2rem;
+
+        @media screen and (min-width: map-get($map: $breakpoints, $key: "large")) {
+            flex-direction: row;
+            justify-content: center;
+        }
+        
+        &__payment-content {
+            text-align: center;
+
+            @media screen and (min-width: map-get($map: $breakpoints, $key: "large")) {
+                // TODO: Chose a more beaultiful color T-T
+                background-color: $white-color;
+
+                max-width: fit-content;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                gap: 3rem;
+
+                border-radius: 10px;
+                padding: 1rem;
+
+                &:nth-child(1) {
+                    order: 2;
+                }
+                &:nth-child(2) {
+                    order: 1;
+                }
+                &:nth-child(3) {
+                    order: 3;
+                }
             }
 
-            white-space: nowrap;
+            &__text {
+                @include prices__content-box__price();
+
+                @media screen and (min-width: map-get($map: $breakpoints, $key: "large")) {
+                    font-size: 2.5rem;
+                }
+
+                &--small-card {
+                    font-size: 1.5rem;
+                }
+            }
         }
+    }
+
+    &__note {
+        margin-top: 1rem;
+
+        text-align: center;
     }
 
     &__center-button {
@@ -237,6 +276,8 @@
             display: flex;
             justify-content: space-evenly;
 
+            margin-bottom: 2rem;
+
             &__method {
                 max-width: min-content;
 
@@ -254,7 +295,7 @@
                         width: 25px;
                         
                         @media screen and (min-width: map-get($map: $breakpoints, $key: "medium")) {
-                            width: 35px;
+                            width: 30px;
                         }
                     }
                 }
@@ -269,6 +310,63 @@
             display: none;
         }
 
+        &__material-choice {
+            display: flex;
+            justify-content: space-between;
+
+            margin-top: 1rem;
+
+            @media screen and (min-width: map-get($map: $breakpoints, $key: "large")) {
+                justify-content: center;
+            }
+
+            &__option {
+                flex: 1 1 0;
+
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 0.5rem;
+
+                text-align: center;
+
+                &__input {
+                    appearance: none;
+
+                    background-color: #ffffff;
+                    width: 36px;
+                    height: 36px;
+
+                    position: relative;
+
+                    border: 1px solid $malibu-color;
+                    border-radius: 50%;
+
+                    &:checked {
+                        background-color: $royal-blue-color;
+
+                        &::after {
+                            content: "";
+
+                            width: 10px;
+                            height: 4px;
+
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+
+                            border: {
+                                bottom: 4px solid $white-color;
+                                left: 4px solid $white-color;
+                            }
+
+                            transform: translate(-50%, -60%) rotateZ(-50deg);
+                        }
+                    }
+                }
+            }
+        }
+
         &__qr-code {
             width: 100%;
 
@@ -279,16 +377,10 @@
                 margin-bottom: 1rem;
             }
 
-            &__inner-code {
-                width: 75%;
+            &__link {
+                @include button();
 
-                @media screen and (min-width: map-get($map: $breakpoints, $key: "medium")) {
-                    width: 60%;
-                }
-                
-                @media screen and (min-width: map-get($map: $breakpoints, $key: "large")) {
-                    width: 45%;
-                }
+                margin-top: 1rem;
             }
         }
 

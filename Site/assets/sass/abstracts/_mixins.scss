@@ -7,10 +7,6 @@
     @media screen and (min-width: map-get($map: $breakpoints, $key: "medium")) {
         width: 60%;
     }
-
-    @media screen and (min-width: map-get($map: $breakpoints, $key: "large")) {
-        width: 50%;
-    }
 }
 
 /* STANDARD BOTTOM MARGIN OF SEPARATION */
@@ -40,6 +36,31 @@
     gap: $gap;
 
     cursor: $cursor;
+}
+
+/* PRICES */
+@mixin prices__content-box {
+    width: 50%;
+
+    margin: auto {
+        bottom: 0.5rem;
+    }
+
+    text-align: center;
+}
+
+@mixin prices__content-box__price {
+    display: flex;
+    justify-content: center;
+
+    margin-bottom: 0.5rem;
+
+    font: {
+        size: 3rem;
+        weight: bold;
+    }
+
+    white-space: nowrap;
 }
 
 /* ACESSIBILITY */
