@@ -431,6 +431,45 @@
             }
         }
 
+        /* CONTACT */
+        .contact {
+            &--payment {
+                width: 100%;
+
+                margin-top: 3rem;
+                
+                text-align: left;
+
+                &__send-button {
+                    margin-top: 2rem;
+                }
+            }
+
+            &__fields__proof-field__label-button {
+                background-color: #dfdfdf;
+                width: 100%;
+
+                display: block;
+
+                grid-column: 1 / -1;
+                
+                margin: auto;
+                border: 3px dashed black;
+                padding: 2rem;
+                box-sizing: border-box;
+
+                text-align: center;
+            }
+            
+            &__fields__proof-field__input {
+                display: none;
+
+                &--file-selected {
+                    background-color: #77ff6b;
+                }
+            }
+        }
+
         &__advice {
             color: black;
 

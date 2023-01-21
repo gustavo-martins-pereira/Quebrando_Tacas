@@ -1,0 +1,38 @@
+.thanks-page {
+    height: 100vh;
+}
+
+/* THANKS */
+.thanks {
+    width: 75%;
+    
+    margin: auto {
+        top: 10rem;
+    }
+
+    text-align: center;
+
+    &__title {
+        font-size: 5rem;
+    }
+
+    &__text {
+        font-size: 2rem;
+    }
+
+    &__advice {
+        margin-top: 1rem;
+
+        &__phonenumber {
+            font-style: italic;
+        }
+    }
+
+    &__back-button {
+        @include button();
+
+        display: inline-block;
+
+        margin-top: 1rem;
+    }
+}

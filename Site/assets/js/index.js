@@ -54,7 +54,7 @@
 
             // keilagruviracerqueira9602@gmail.com
             // claushmartins@gmail.com
-            fetch("https://formsubmit.co/ajax/keilagruviracerqueira9602@gmail.com", {
+            fetch("https://formsubmit.co/ajax/claushmartins@gmail.com", {
                 method: "POST",
                 
                 headers: { 

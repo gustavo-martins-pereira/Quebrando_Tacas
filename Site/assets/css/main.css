@@ -842,6 +842,7 @@ body {
   resize: vertical;
 }
 .contact--align-send-button {
+  margin-top: 0.5rem;
   text-align: center;
 }
 .contact--align-send-button .contact__send-button {
@@ -853,7 +854,6 @@ body {
   color: hsl(0deg, 0%, 100%);
   cursor: pointer;
   transition: background-color 0.1s;
-  margin-top: 0.5rem;
   padding: 1rem 1.5rem;
 }
 .contact--align-send-button .contact__send-button:hover {
@@ -937,6 +937,9 @@ body {
     grid-template-columns: repeat(2, 1fr);
   }
   .contact__fields__message-field {
+    grid-column: 1/-1;
+  }
+  .contact__fields__proof-field {
     grid-column: 1/-1;
   }
 }
@@ -1558,6 +1561,7 @@ body {
 .price__payment {
   margin-top: 2rem;
   text-align: center;
+  /* CONTACT */
 }
 .price__payment__buttons {
   display: flex;
@@ -1698,6 +1702,31 @@ body {
   margin-top: 0.5rem;
   border-radius: 5px;
   padding: 1rem;
+}
+.price__payment .contact--payment {
+  width: 100%;
+  margin-top: 3rem;
+  text-align: left;
+}
+.price__payment .contact--payment__send-button {
+  margin-top: 2rem;
+}
+.price__payment .contact__fields__proof-field__label-button {
+  background-color: #dfdfdf;
+  width: 100%;
+  display: block;
+  grid-column: 1/-1;
+  margin: auto;
+  border: 3px dashed black;
+  padding: 2rem;
+  box-sizing: border-box;
+  text-align: center;
+}
+.price__payment .contact__fields__proof-field__input {
+  display: none;
+}
+.price__payment .contact__fields__proof-field__input--file-selected {
+  background-color: #77ff6b;
 }
 .price__payment__advice {
   color: black;
@@ -1844,4 +1873,42 @@ body {
   border-radius: 3px;
   padding: 0.5rem 0.75rem;
   color: hsl(0deg, 0%, 100%);
+}
+
+.thanks-page {
+  height: 100vh;
+}
+
+/* THANKS */
+.thanks {
+  width: 75%;
+  margin: auto;
+  margin-top: 10rem;
+  text-align: center;
+}
+.thanks__title {
+  font-size: 5rem;
+}
+.thanks__text {
+  font-size: 2rem;
+}
+.thanks__advice {
+  margin-top: 1rem;
+}
+.thanks__advice__phonenumber {
+  font-style: italic;
+}
+.thanks__back-button {
+  background-color: hsl(209deg, 100%, 70%);
+  border: none;
+  border-radius: 5px;
+  padding: 1rem 1.5rem;
+  color: hsl(0deg, 0%, 100%);
+  cursor: pointer;
+  transition: background-color 0.1s;
+  display: inline-block;
+  margin-top: 1rem;
+}
+.thanks__back-button:hover {
+  background-color: hsl(214deg, 56%, 58%);
 }/*# sourceMappingURL=main.css.map */
