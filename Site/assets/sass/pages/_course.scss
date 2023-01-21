@@ -343,6 +343,8 @@
         .contact {
             &--payment {
                 width: 100%;
+
+                margin-top: 3rem;
                 
                 text-align: left;
 
@@ -351,23 +353,27 @@
                 }
             }
 
-            &__fields__proof-field {
-                margin: auto;
+            &__fields__proof-field__label-button {
+                background-color: #dfdfdf;
+                width: 100%;
 
-                &__label-button {
-                    @include button();
+                display: block;
 
-                    background-color: $forest-green-color;
-
-                    display: inline-block;
-
-                    &:hover {
-                        background-color: $bilbao-color;
-                    }
-                }
+                grid-column: 1 / -1;
                 
-                &__input {
-                    display: none;
+                margin: auto;
+                border: 3px dashed black;
+                padding: 2rem;
+                box-sizing: border-box;
+
+                text-align: center;
+            }
+            
+            &__fields__proof-field__input {
+                display: none;
+
+                &--file-selected {
+                    background-color: #77ff6b;
                 }
             }
         }
