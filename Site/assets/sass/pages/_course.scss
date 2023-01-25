@@ -201,12 +201,12 @@
     &__prices--more-than-one {
         display: flex;
         flex-direction: column;
-        align-items: flex-end;
         gap: 2rem;
-
+        
         @media screen and (min-width: map-get($map: $breakpoints, $key: "large")) {
             flex-direction: row;
             justify-content: center;
+            align-items: flex-end;
         }
         
         &__payment-content {
@@ -375,6 +375,10 @@
 
             &__title {
                 margin-bottom: 1rem;
+            }
+
+            &__inner-code {
+                width: 100%
             }
 
             &__link {

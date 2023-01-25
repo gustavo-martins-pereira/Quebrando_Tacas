@@ -1486,13 +1486,13 @@ body {
 .price__prices--more-than-one {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
   gap: 2rem;
 }
 @media screen and (min-width: 1024px) {
   .price__prices--more-than-one {
     flex-direction: row;
     justify-content: center;
+    align-items: flex-end;
   }
 }
 .price__prices--more-than-one__payment-content {
@@ -1654,6 +1654,9 @@ body {
 }
 .price__payment__qr-code__title {
   margin-bottom: 1rem;
+}
+.price__payment__qr-code__inner-code {
+  width: 100%;
 }
 .price__payment__qr-code__link {
   background-color: hsl(209deg, 100%, 70%);
@@ -1900,6 +1903,7 @@ body {
 }
 .thanks__back-button {
   background-color: hsl(209deg, 100%, 70%);
+  display: inline-block;
   border: none;
   border-radius: 5px;
   padding: 1rem 1.5rem;
