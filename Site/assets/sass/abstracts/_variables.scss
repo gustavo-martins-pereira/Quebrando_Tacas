@@ -18,6 +18,7 @@ $bilbao-color: hsl(115, 69%, 26%);
 $royal-blue-color: hsl(227, 81%, 59%);
 $white-color: hsl(0, 0%, 100%);
 $danube-color: hsl(214, 56%, 58%);
+$silver-chalice: hsl(0, 0%, 64%);
 $transparent-white-color: hsla(0, 0%, 100%, 0.082);
 $heavy-black-color: hsl(0, 0%, 9%);
 $heavy-black-little-transparent-color: hsla(0, 0%, 0%, 0.8);
@@ -33,11 +34,14 @@ $content-dropdown-background: $anakiwa-color;
 
 $button-background: $malibu-color;
 $button--hover-background: $danube-color;
+$button--disabled-background: $silver-chalice;
+$payment-card-background: $anakiwa-color;
 
 /********** BORDERS **********/
 $input-border-color: $royal-blue-color;
 $question-border-color: $royal-blue-color;
 $menu-bottom-border-color: $transparent-white-color;
+$payment-card-border-color: $malibu-color;
 
 $menu-box-shadow: -2px 2px 4px $heavy-black-little-transparent-color;
 

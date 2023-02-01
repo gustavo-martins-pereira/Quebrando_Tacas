@@ -101,12 +101,14 @@
 
                     text-shadow: $title-text-shadow;
 
-                    /* RESPONSIVE LAYOUTS */
-                    /* TABLET */
-                    @media screen and (min-width: map-get($map: $breakpoints, $key: "medium")) {
-                        font-size: 2.5rem;
+                    // Fix text overflowing the card
+                    @media screen and (max-width: 30rem) {
+                        & {
+                            font-size: 1.75rem;
+                        }
                     }
-                    
+
+                    /* RESPONSIVE LAYOUTS */
                     /* DESKTOP */
                     @media screen and (min-width: map-get($map: $breakpoints, $key: "large")) {
                         font-size: 4rem;
@@ -115,6 +117,15 @@
                     /* DESKTOP */
                     @media screen and (min-width: map-get($map: $breakpoints, $key: "extra-large")) {
                         font-size: 4.5rem;
+                    }
+
+                    
+                }
+
+                // Fix text overflowing the card
+                @media screen and (max-width: 30rem) {
+                    & {
+                        font-size: 1rem;
                     }
                 }
 
@@ -258,6 +269,16 @@
             @include button();
 
             padding: 1rem 1.5rem;
+
+            &--disabled {
+                background-color: $button--disabled-background;
+
+                cursor: not-allowed;
+
+                &:hover {
+                    background-color: $button--disabled-background;
+                }
+            }
         }
     }
 

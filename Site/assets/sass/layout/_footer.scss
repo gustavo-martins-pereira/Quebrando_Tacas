@@ -21,10 +21,14 @@
             color: $black-color;
 
             &__icon {
-                width: 25px;
-                height: 25px;
+                width: 35px;
+                height: 35px;
     
                 margin-right: .5rem;
+            }
+
+            &__text {
+                font-size: 1.2rem;
             }
         }
     }
@@ -36,26 +40,21 @@
     .footer__nav {
         margin-top: 1.2rem;
 
-        &__list {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-evenly;
-            gap: 20px;
-
-            &__link {
-                &__icon {
-                    width: 40px;
-                    height: 40px;
-                }
-            }
+        &__list__link__icon {
+            width: 40px;
+            height: 40px;
         }
     }       
 }
 
-/* RESPONSIVE LAYOUTS */
 /* DESKTOP */
 @media screen and (min-width: map-get($map: $breakpoints, $key: "large")) {
     .footer__nav__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        gap: 20px;
+
         flex-wrap: nowrap;
     }
 }

@@ -47,10 +47,15 @@
         $contactForm.addEventListener("submit", (event) => {
             event.preventDefault();
 
+            const $sendButton = document.querySelector("[data-element-id='contact-form__sendButton']");
+            $sendButton.classList.add("contact__send-button--disabled");
+            $sendButton.setAttribute("disabled", true);
+
             // Inputs
             const $nameInput = document.querySelector("[data-element-id='contactNameInput']");
             const $emailInput = document.querySelector("[data-element-id='contactEmailInput']");
             const $messageInput = document.querySelector("[data-element-id='contactMessageInput']");
+
 
             // keilagruviracerqueira9602@gmail.com
             // claushmartins@gmail.com
@@ -72,20 +77,19 @@
                     "_template": "table"
                 })
             })
-                // FIXME: Wait the element to be appended in the div first to apply the transition when the element is showing
-                .then(response => response.ok ? createSuccessPopUp(true) : createSuccessPopUp(false))
-                .then(popUp => {
-                    const pops = document.querySelector("[data-element-id='contact-pop-ups']");
-                    pops.appendChild(popUp);
+                .then(response => {
+                    const $popUp = response.ok ? createSuccessPopUp(true) : createSuccessPopUp(false);
 
-                    return popUp;
-                })
-                .then(popUp => {
-                    popUp.classList.replace("contact__pop-ups__pop-up--invisible", "contact__pop-ups__pop-up--visible");
+                    const $popups = document.querySelector("[data-element-id='contact-pop-ups']");
+                    $popups.appendChild($popUp);
+                    
+                    $sendButton.classList.remove("contact__send-button--disabled");
+                    $sendButton.removeAttribute("disabled");
 
-                    return popUp;
+                    $popUp.classList.replace("contact__pop-ups__pop-up--invisible", "contact__pop-ups__pop-up--visible");
+
+                    deletePopUp($popUp);
                 })
-                .then(popUp => deletePopUp(popUp))
                 .catch((error) => console.log(error));
         });
 

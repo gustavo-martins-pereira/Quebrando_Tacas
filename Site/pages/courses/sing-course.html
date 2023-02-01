@@ -162,7 +162,7 @@
                         <fieldset>
                             <legend class="contact__legend">Envio de E-mail</legend>
         
-                            <div class="contact__fields">
+                            <div class="contact__fields contact--payment__fields">
                                 <div>
                                     <label class="contact__fields__label" for="contact__fullName">Nome Completo</label>
                                     <input class="contact__fields__input" id="contact__fullName" type="text" name="Nome Completo" placeholder="Digite seu nome completo" required>
@@ -179,7 +179,7 @@
                                 </div>
 
                                 <label class="contact__fields__label contact__fields__proof-field__label-button" for="contact__proof-input" data-element-id="inputFileLabel">Clique para Anexar o Comprovante</label>
-                                <input type="file" name="Comprovante" class="contact__fields__proof-field__input" id="contact__proof-input" data-element-id="fileInput">
+                                <input type="file" name="Comprovante" class="contact__fields__proof-field__input" id="contact__proof-input" data-element-id="fileInput" required>
 
                                 <!-- FORM CONFIGURATIONS -->
                                 <input type="hidden" name="_captcha" value="false">
@@ -188,16 +188,10 @@
                                 <input type="hidden" name="_next" value="http://127.0.0.1:5500/pages/thanks.html">
                             </div>
         
-                            <div class="contact--align-send-button contact--payment__send-button"> <input class="contact__send-button" type="submit" value="Enviar E-mail"> </div>
+                            <div class="contact--align-send-button contact--payment__send-button"> <input class="contact__send-button" type="submit" value="Enviar E-mail" data-element-id="sendProofSubmit"> </div>
                         </fieldset>
                     </form>
                 </section>
-
-                <!-- ATTENTION -->
-                <p class="price__payment__advice">
-                    <span class="price__payment__advice--atention">ATENÇÃO</span>
-                    Após efetuar o pagamento, entre em contato através desse número <a class="price__payment__advice--phonenumber" href="https://wa.me/message/MB4K5IO6PD3MK1">(21) 96878-2883</a> enviando o comprovante do pagamento
-                </p>
             </article>
         </article>
     </main>
@@ -210,6 +204,18 @@
             <blockquote class="opinions__opinion__text">"Aprendi com a professora Keila a importância da respiração. Com apenas os exercícios iniciais pude perceber que posso cantar. Muito obrigada!"</blockquote>
 
             <figcaption class="opinions__opinion__author">-Giselle Marinho</figcaption>
+        </figure>
+
+        <figure class="opinions__opinion">
+            <blockquote class="opinions__opinion__text">"Vou falar sobre as aulas que estou fazendo. Amo cantar, mas eu não conseguia respirar. Estou me dedicando a cada dia, agora estou conseguindo segurar mais o meu fôlego,  coisa que não conseguia. Sei que é uma etapa de cada vez, pq música, o aprendizado e se não levarmos a sério, não conseguiremos chegar onde queremos chegar. Amo fazer aula com a professora Keila, além de ser ótima, obrigada por tudo!"</blockquote>
+
+            <figcaption class="opinions__opinion__author">-Maria Moura</figcaption>
+        </figure>
+
+        <figure class="opinions__opinion">
+            <blockquote class="opinions__opinion__text">"O Programa de Treino para Vozes Agudas, é um curso dinâmico, em que a Profª. MM. Keila Gruvira explica de uma forma didática, muita fácil de entendimento, que atende aos solistas  amantes do Canto. Tenho me aperfeiçoado a cada dia, me ajudando na impostação e firmeza da voz, eu super recomendo. Confira!!!"</blockquote>
+
+            <figcaption class="opinions__opinion__author">-Lucilene Mendes</figcaption>
         </figure>
     </section>
 

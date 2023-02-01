@@ -210,12 +210,13 @@
         }
         
         &__payment-content {
+            background-color: $payment-card-background;
+            
+            border: 2px solid $payment-card-border-color;
+
             text-align: center;
 
             @media screen and (min-width: map-get($map: $breakpoints, $key: "large")) {
-                // TODO: Chose a more beaultiful color T-T
-                background-color: $white-color;
-
                 max-width: fit-content;
 
                 display: flex;
@@ -378,7 +379,11 @@
             }
 
             &__inner-code {
-                width: 100%
+                width: 50%;
+                
+                @media screen and (min-width: map-get($map: $breakpoints, $key: "extra-large")) {
+                    width: 25%;
+                }
             }
 
             &__link {
@@ -444,8 +449,47 @@
                 
                 text-align: left;
 
+                @media screen and (min-width: map-get($map: $breakpoints, $key: "extra-large")) {
+                    &__fields {
+                        column-gap: 5rem;
+                    }
+                }
+
                 &__send-button {
                     margin-top: 2rem;
+                }
+
+                .contact--payment__advice {
+                    margin-top: 2rem;
+                    
+                    color: black;
+                    text-align: center;
+        
+                    &__atention {
+                        display: block;
+        
+                        color: $red-color;
+                        font-size: 2rem;
+                    }
+
+                    &__text {
+                        text-align: center;
+
+                        &__phonenumber {
+                            color: rgb(89, 89, 110);
+                            text-decoration: underline;
+                        }
+                    }
+                }
+
+                &__proof-error {
+                    grid-column: 1 / -1;
+
+                    margin-top: -0.75rem;
+
+                    color: red;
+                    font-size: 0.75rem;
+                    text-align: justify;
                 }
             }
 
@@ -474,22 +518,6 @@
             }
         }
 
-        &__advice {
-            color: black;
-
-            &--atention {
-                display: block;
-
-                color: $red-color;
-                font-size: 2rem;
-            }
-
-            &--phonenumber {
-                color: rgb(89, 89, 110);
-                text-decoration: underline;
-            }
-        }
-
         &--hidden {
             height: 0;
 
@@ -515,6 +543,10 @@
         border-radius: 5px;
         box-shadow: 0 0 3px #0000001f;
         padding: 1.5rem;
+
+        &:not(:first-child) {
+            margin-bottom: 2rem;
+        }
 
         &__text {
             font-style: italic;
