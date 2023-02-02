@@ -11,14 +11,14 @@ $red-color: hsl(0, 100%, 46%);
 $youtube-red-color: hsl(0, 100%, 40%);
 $kournikova-color: hsl(42, 100%, 67%);
 $selective-yellow-color: hsl(43, 100%, 50%);
-$malibu-light-color: hsl(202, 100%, 71%);
-$anakiwa-color: hsl(209, 100%, 84%);
-$malibu-color: hsl(209, 100%, 70%);
 $forest-green-color: hsl(115, 70%, 42%);
 $bilbao-color: hsl(115, 69%, 26%);
+$anakiwa-color: hsl(209, 100%, 84%);
+$malibu-light-color: hsl(202, 100%, 71%);
+$malibu-color: hsl(209, 100%, 70%);
+$danube-color: hsl(214, 56%, 58%);
 $royal-blue-color: hsl(227, 81%, 59%);
 $white-color: hsl(0, 0%, 100%);
-$danube-color: hsl(214, 56%, 58%);
 $silver-chalice: hsl(0, 0%, 64%);
 $transparent-white-color: hsla(0, 0%, 100%, 0.082);
 $heavy-black-color: hsl(0, 0%, 9%);
@@ -27,22 +27,39 @@ $black-transparent-color: hsla(0, 0%, 100%, 0);
 $black-color: hsl(0, 0%, 0%);
 
 /********** BACKGROUNDS **********/
+// PAGE
 $page-background: linear-gradient($kournikova-color, $selective-yellow-color);
+
+// MENU
 $menu-background: $malibu-light-color;
 $link--hover-background: $danube-color;
 
+// COURSE CONTENT DROPDOWNS
 $section-background: $malibu-color;
 $content-dropdown-background: $anakiwa-color;
 
+// PAYMENT CARDS
+$payment-card-background: $anakiwa-color;
+
+// BUTTONS
 $button-background: $malibu-color;
 $button--hover-background: $danube-color;
 $button--disabled-background: $silver-chalice;
-$payment-card-background: $anakiwa-color;
+
+// POP-UP
+$ok-popup-background: $forest-green-color;
+$fail-popup-background: $red-color;
 
 /********** BORDERS **********/
-$input-border-color: $royal-blue-color;
-$question-border-color: $royal-blue-color;
+// MENU
 $menu-bottom-border-color: $transparent-white-color;
+
+// INPUTS
+$input-border-color: $royal-blue-color;
+$input-focus-border-color: $malibu-light-color;
+
+// OTHERS
+$question-border-color: $royal-blue-color;
 $payment-card-border-color: $malibu-color;
 
 /********** SHADOWS **********/
