@@ -155,31 +155,31 @@
                 </section>
 
                 <!-- SEND PROOF BY EMAIL -->
-                <section class="contact contact--payment">
-                    <p class="contact__description">Preencha os campos abaixo para receber o produto</p>
+                <section class="basic-contact">
+                    <p class="basic-contact__description">Preencha os campos abaixo para receber o produto</p>
         
                     <form method="POST" action="https://formsubmit.co/claushmartins@gmail.com" enctype="multipart/form-data">
                         <fieldset>
-                            <legend class="contact__legend">Envio de E-mail</legend>
+                            <legend class="basic-contact__legend">Envio de E-mail</legend>
         
-                            <div class="contact__fields contact--payment__fields">
+                            <div class="basic-contact__fields">
                                 <div>
-                                    <label class="contact__fields__label" for="contact__fullName">Nome Completo</label>
-                                    <input class="contact__fields__input" id="contact__fullName" type="text" name="Nome Completo" placeholder="Digite seu nome completo" required>
+                                    <label class="basic-contact__fields__label" for="basic-contact__fullName">Nome Completo</label>
+                                    <input class="basic-contact__fields__input" id="basic-contact__fullName" type="text" name="Nome Completo" placeholder="Digite seu nome completo" required>
                                 </div>
         
                                 <div>
-                                    <label class="contact__fields__label" for="contact__email">E-mail</label>
-                                    <input class="contact__fields__input" id="contact__email" type="email" name="E-mail" placeholder="seuemail@gmail.com" required>
+                                    <label class="basic-contact__fields__label" for="basic-contact__email">E-mail</label>
+                                    <input class="basic-contact__fields__input" id="basic-contact__email" type="email" name="E-mail" placeholder="seuemail@gmail.com" required>
                                 </div>
         
-                                <div class="contact__fields__message-field">
-                                    <label class="contact__fields__label" for="contact__message">Mensagem</label>
-                                    <textarea class="contact__fields__input contact__fields__message-input" id="contact__message" name="Mensagem" placeholder="Digite sua mensagem" rows="5" required></textarea>
+                                <div class="basic-contact__fields__message-field">
+                                    <label class="basic-contact__fields__label" for="basic-contact__message">Mensagem</label>
+                                    <textarea class="basic-contact__fields__input basic-contact__fields__message-input" id="basic-contact__message" name="Mensagem" placeholder="Digite sua mensagem" rows="5" required></textarea>
                                 </div>
 
-                                <label class="contact__fields__label contact__fields__proof-field__label-button" for="contact__proof-input" data-element-id="inputFileLabel">Clique para Anexar o Comprovante</label>
-                                <input type="file" name="Comprovante" class="contact__fields__proof-field__input" id="contact__proof-input" data-element-id="fileInput" required>
+                                <label class="basic-contact__fields__label basic-contact__fields__proof-field__label-button" for="basic-contact__proof-input" data-element-id="inputFileLabel">Clique para Anexar o Comprovante</label>
+                                <input type="file" name="Comprovante" class="basic-contact__fields__proof-field__input" id="basic-contact__proof-input" data-element-id="fileInput" required>
 
                                 <!-- FORM CONFIGURATIONS -->
                                 <input type="hidden" name="_captcha" value="false">
@@ -188,7 +188,7 @@
                                 <input type="hidden" name="_next" value="http://127.0.0.1:5500/pages/thanks.html">
                             </div>
         
-                            <div class="contact--align-send-button contact--payment__send-button"> <input class="contact__send-button" type="submit" value="Enviar E-mail" data-element-id="sendProofSubmit"> </div>
+                            <div class="basic-contact--align-send-button"> <input class="basic-contact__send-button" type="submit" value="Enviar E-mail" data-element-id="sendProofSubmit"> </div>
                         </fieldset>
                     </form>
                 </section>

@@ -440,90 +440,21 @@
             }
         }
 
-        /* CONTACT */
-        /*.contact {
-            &--payment {
-                width: 100%;
-
-                margin-top: 3rem;
-                
-                text-align: left;
-
-                @media screen and (min-width: map-get($map: $breakpoints, $key: "extra-large")) {
-                    &__fields {
-                        column-gap: 5rem;
-                    }
-                }
-
-                &__send-button {
-                    margin-top: 2rem;
-                }
-
-                .contact--payment__advice {
-                    margin-top: 2rem;
-                    
-                    color: black;
-                    text-align: center;
-        
-                    &__atention {
-                        display: block;
-        
-                        color: $red-color;
-                        font-size: 2rem;
-                    }
-
-                    &__text {
-                        text-align: center;
-
-                        &__phonenumber {
-                            color: rgb(89, 89, 110);
-                            text-decoration: underline;
-                        }
-                    }
-                }
-
-                &__proof-error {
-                    grid-column: 1 / -1;
-
-                    margin-top: -0.75rem;
-
-                    color: red;
-                    font-size: 0.75rem;
-                    text-align: justify;
-                }
-            }
-
-            &__fields__proof-field__label-button {
-                background-color: #dfdfdf;
-                width: 100%;
-
-                display: block;
-
-                grid-column: 1 / -1;
-                
-                margin: auto;
-                border: 3px dashed black;
-                padding: 2rem;
-                box-sizing: border-box;
-
-                text-align: center;
-            }
-            
-            &__fields__proof-field__input {
-                display: none;
-
-                &--file-selected {
-                    background-color: #77ff6b;
-                }
-            }
-        }
-
         &--hidden {
             height: 0;
 
             overflow: hidden;
-        }*/
+        }
     }
+}
+
+/* SEND PROOF BY EMAIL */
+.basic-contact {
+    width: 100%;
+
+    margin-top: 4rem;
+
+    text-align: left;
 }
 
 /* STUDENTS OPINIONS */

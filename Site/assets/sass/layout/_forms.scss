@@ -1,5 +1,4 @@
 /* BASIC CONTACT WITH: (NAME, EMAIL, MESSAGE) */
-
 /* HTML TEMPLATE *
 <section class="basic-contact">
     <h2 class="basic-contact__title">FORM_TITLE</h2>
@@ -78,7 +77,7 @@
             font-size: .75rem;
 
             &:focus {
-                border: 3px solid $input-focus-border-color;
+                border: 1px solid $input-focus-border-color;
 
                 outline: none;
             }
@@ -144,5 +143,34 @@
 
     .basic-contact__fields__message-input {
         height: 250px;
+    }
+}
+
+/* ADDITIONAL / VARIATIONS */
+/* PROOF INPUT */
+.basic-contact__fields {
+    &__proof-field__label-button {
+        background-color: $input-file-background;
+        
+        grid-column: 1 / -1;
+
+        border: 2px dashed $input-border-color;
+        border-radius: 5px;
+        padding: 1rem 2rem;
+
+        text-align: center;
+    }
+    
+    &__proof-field__input {
+        display: none;
+    }
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/* RESPONSIVE LAYOUTS */
+/* TABLET */
+@media screen and (min-width: map-get($map: $breakpoints, $key: "large")) {
+    .basic-contact__fields__proof-field__label-button {
+        padding: 2rem;
     }
 }

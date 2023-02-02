@@ -1,6 +1,8 @@
 .menu {
     background-color: transparent;
 
+    width: 75px;
+
     position: fixed;
     top: 0;
     right: 0;
@@ -60,6 +62,8 @@
 
     &.menu-is-active {
         background-color: $menu-background;
+
+        width: auto;
 
         box-shadow: $menu-box-shadow;
 

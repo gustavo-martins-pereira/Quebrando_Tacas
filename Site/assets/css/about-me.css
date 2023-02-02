@@ -486,6 +486,7 @@ body {
 /********** LAYOUT **********/
 .menu {
   background-color: transparent;
+  width: 75px;
   position: fixed;
   top: 0;
   right: 0;
@@ -527,6 +528,7 @@ body {
 }
 .menu.menu-is-active {
   background-color: hsl(202deg, 100%, 71%);
+  width: auto;
   box-shadow: -2px 2px 4px hsla(0deg, 0%, 0%, 0.8);
 }
 .menu.menu-is-active .menu__hamburguer-icon {
@@ -666,7 +668,7 @@ body {
   font-size: 0.75rem;
 }
 .basic-contact__fields__input:focus {
-  border: 3px solid hsl(202deg, 100%, 71%);
+  border: 1px solid hsl(202deg, 100%, 71%);
   outline: none;
 }
 .basic-contact__fields__message-input {
@@ -722,6 +724,27 @@ body {
   }
   .basic-contact__fields__message-input {
     height: 250px;
+  }
+}
+/* ADDITIONAL / VARIATIONS */
+/* PROOF INPUT */
+.basic-contact__fields__proof-field__label-button {
+  background-color: hsl(0deg, 0%, 100%);
+  grid-column: 1/-1;
+  border: 2px dashed hsl(227deg, 81%, 59%);
+  border-radius: 5px;
+  padding: 1rem 2rem;
+  text-align: center;
+}
+.basic-contact__fields__proof-field__input {
+  display: none;
+}
+
+/* RESPONSIVE LAYOUTS */
+/* TABLET */
+@media screen and (min-width: 1024px) {
+  .basic-contact__fields__proof-field__label-button {
+    padding: 2rem;
   }
 }
 .footer {
@@ -1354,89 +1377,6 @@ body {
 .price__payment {
   margin-top: 2rem;
   text-align: center;
-  /* CONTACT */
-  /*.contact {
-      &--payment {
-          width: 100%;
-
-          margin-top: 3rem;
-
-          text-align: left;
-
-          @media screen and (min-width: map-get($map: $breakpoints, $key: "extra-large")) {
-              &__fields {
-                  column-gap: 5rem;
-              }
-          }
-
-          &__send-button {
-              margin-top: 2rem;
-          }
-
-          .contact--payment__advice {
-              margin-top: 2rem;
-
-              color: black;
-              text-align: center;
-
-              &__atention {
-                  display: block;
-
-                  color: $red-color;
-                  font-size: 2rem;
-              }
-
-              &__text {
-                  text-align: center;
-
-                  &__phonenumber {
-                      color: rgb(89, 89, 110);
-                      text-decoration: underline;
-                  }
-              }
-          }
-
-          &__proof-error {
-              grid-column: 1 / -1;
-
-              margin-top: -0.75rem;
-
-              color: red;
-              font-size: 0.75rem;
-              text-align: justify;
-          }
-      }
-
-      &__fields__proof-field__label-button {
-          background-color: #dfdfdf;
-          width: 100%;
-
-          display: block;
-
-          grid-column: 1 / -1;
-
-          margin: auto;
-          border: 3px dashed black;
-          padding: 2rem;
-          box-sizing: border-box;
-
-          text-align: center;
-      }
-
-      &__fields__proof-field__input {
-          display: none;
-
-          &--file-selected {
-              background-color: #77ff6b;
-          }
-      }
-  }
-
-  &--hidden {
-      height: 0;
-
-      overflow: hidden;
-  }*/
 }
 .price__payment__buttons {
   display: flex;
@@ -1585,6 +1525,17 @@ body {
   margin-top: 0.5rem;
   border-radius: 5px;
   padding: 1rem;
+}
+.price__payment--hidden {
+  height: 0;
+  overflow: hidden;
+}
+
+/* SEND PROOF BY EMAIL */
+.basic-contact {
+  width: 100%;
+  margin-top: 4rem;
+  text-align: left;
 }
 
 /* STUDENTS OPINIONS */
