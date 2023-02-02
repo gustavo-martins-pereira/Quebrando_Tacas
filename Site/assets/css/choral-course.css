@@ -1,0 +1,1570 @@
+/********** VENDORS **********/ /* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+/* Document
+   ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+html {
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+/* Sections
+   ========================================================================== */
+/**
+ * Remove the margin in all browsers.
+ */
+body {
+  margin: 0;
+}
+
+/**
+ * Render the `main` element consistently in IE.
+ */
+main {
+  display: block;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+a {
+  background-color: transparent;
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  border-bottom: none; /* 1 */
+  text-decoration: underline; /* 2 */
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted; /* 2 */
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+img {
+  border-style: none;
+}
+
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input { /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select { /* 1 */
+  text-transform: none;
+}
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+  -webkit-appearance: button;
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Correct the padding in Firefox.
+ */
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+legend {
+  box-sizing: border-box; /* 1 */
+  color: inherit; /* 2 */
+  display: table; /* 1 */
+  max-width: 100%; /* 1 */
+  padding: 0; /* 3 */
+  white-space: normal; /* 1 */
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  vertical-align: baseline;
+}
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+[type=checkbox],
+[type=radio] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type=search] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/* Interactive
+   ========================================================================== */
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+details {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+  display: list-item;
+}
+
+/* Misc
+   ========================================================================== */
+/**
+ * Add the correct display in IE 10+.
+ */
+template {
+  display: none;
+}
+
+/**
+ * Add the correct display in IE 10.
+ */
+[hidden] {
+  display: none;
+}
+
+/********** IMPORTS **********/
+/**
+    Name: "Dancing Script";
+    URL: https://fonts.google.com/specimen/Dancing+Script;
+    Purpose: Titles;
+    Weigths:
+        * 700 - Bold;
+*/
+/**
+    Name: "Inter";
+    URL: https://fonts.google.com/specimen/Inter;
+    Purpose: Default texts;
+    Weigths:
+        * 400 - Regular;
+*/
+/********** ABSTRACTS **********/
+/********** PAGE CONFIGURATIONS **********/
+/********** COLORS **********/
+/********** BACKGROUNDS **********/
+/********** BORDERS **********/
+/********** SHADOWS **********/
+/********** TEXTS **********/
+/********** FONTS **********/
+/* ========== BASIC LAYOUTS ==========*/
+/* STANDARD  CONTENT WIDTH */
+/* STANDARD BOTTOM MARGIN OF SEPARATION */
+/* ========== PAGE SECTIONS ==========*/
+/* CONTENT BOX OF COURSE */
+/* PRICES */
+/* ========== BASIC COMPONENTS ==========*/
+/* ========== ACESSIBILITY LAYOUT ==========*/
+/* ACESSIBILITY */
+/*========== AUXILIARY CLASSES ==========*/
+/* VISIBILITY */
+.hidden {
+  visibility: hidden;
+}
+
+/********** BASE **********/
+html,
+body {
+  font-size: 16px;
+}
+
+body {
+  background-image: linear-gradient(hsl(42deg, 100%, 67%), hsl(43deg, 100%, 50%));
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+}
+
+/* TITLES */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Dancing Script", Arial, Helvetica, cursive;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+h5 {
+  font-size: 1rem;
+}
+
+h6 {
+  font-size: 0.5rem;
+}
+
+p,
+blockquote {
+  line-height: 1.25;
+}
+
+/* FORMS */
+fieldset {
+  padding: 0;
+}
+
+/* LINKS */
+a {
+  text-decoration: none;
+}
+
+/* OTHERS */
+hr {
+  border: 1px solid hsl(0deg, 0%, 0%);
+}
+
+/* RESPONSIVE LAYOUTS */
+/* TABLET */
+@media screen and (min-width: 540px) {
+  html,
+body {
+    font-size: 20px;
+  }
+}
+/* DESKTOP */
+@media screen and (min-width: 1024px) {
+  html,
+body {
+    font-size: 24px;
+  }
+}
+/********** COMPONENTS **********/
+/********** LAYOUT **********/
+.menu {
+  background-color: transparent;
+  width: 75px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  border-bottom-left-radius: 2px;
+  box-shadow: none;
+  z-index: 2;
+}
+.menu__hamburguer-icon {
+  width: 40px;
+  height: 40px;
+  align-self: flex-end;
+  margin: 1rem;
+  cursor: pointer;
+}
+.menu__navigation-menu {
+  height: 0;
+  text-align: center;
+  overflow: hidden;
+}
+.menu__navigation-menu__item:not(:last-child) {
+  border-bottom: 1px solid hsla(0deg, 0%, 100%, 0.082);
+}
+.menu__navigation-menu__item__link {
+  display: block;
+  padding: 1.5rem 2rem;
+  color: hsl(0deg, 0%, 9%);
+}
+.menu__navigation-menu__item__link--disabled {
+  cursor: default;
+  opacity: 0.2;
+  pointer-events: none;
+}
+.menu__navigation-menu__item__link:not(.menu__navigation-menu__link--disabled):hover {
+  background-color: hsl(214deg, 56%, 58%);
+  color: hsl(0deg, 0%, 100%);
+  transition: background-color 0.5s;
+}
+.menu.menu-is-active {
+  background-color: hsl(202deg, 100%, 71%);
+  width: auto;
+  box-shadow: -2px 2px 4px hsla(0deg, 0%, 0%, 0.8);
+}
+.menu.menu-is-active .menu__hamburguer-icon {
+  content: url("../images/icons/Close.svg");
+}
+.menu.menu-is-active .menu__navigation-menu {
+  height: auto;
+}
+
+/* RESPONSIVE LAYOUTS */
+/* DESKTOP */
+@media screen and (min-width: 1024px) {
+  .menu {
+    background-color: hsl(202deg, 100%, 71%);
+    width: 100%;
+    height: auto;
+    box-shadow: -2px 2px 4px hsla(0deg, 0%, 0%, 0.8);
+  }
+  .menu__hamburguer-icon {
+    display: none;
+  }
+  .menu__navigation-menu {
+    height: auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+  }
+  .menu__navigation-menu__item:not(:last-child) {
+    border-bottom: none;
+  }
+  .menu__navigation-menu__item:last-child {
+    margin-right: 1rem;
+  }
+  .menu__navigation-menu__item__link {
+    padding: 1rem;
+  }
+  .menu__navigation-menu__item__link:hover {
+    background-color: hsl(214deg, 56%, 58%);
+    border-radius: 5px;
+    color: hsl(0deg, 0%, 100%);
+  }
+}
+/* INTRODUCTION */
+.header__introduction {
+  width: 80%;
+  margin: auto;
+  margin-bottom: 6rem;
+  margin-top: 5rem;
+}
+@media screen and (min-width: 540px) {
+  .header__introduction {
+    width: 60%;
+  }
+}
+.header__introduction__title {
+  text-align: center;
+}
+.header__introduction__description {
+  text-align: justify;
+}
+
+/* BASIC CONTACT WITH: (NAME, EMAIL, MESSAGE) */
+/* HTML TEMPLATE *
+<section class="basic-contact">
+    <h2 class="basic-contact__title">FORM_TITLE</h2>
+    <p class="basic-contact__description">FORM_DESCRIPTION</p>
+
+    <form>
+        <fieldset>
+            <legend class="basic-contact__legend">FORM_LEGEND</legend>
+
+            <div class="basic-contact__fields">
+                <div>
+                    <label class="basic-contact__fields__label" for="basic-contact__fullName">Nome Completo</label>
+                    <input class="basic-contact__fields__input" id="basic-contact__fullName" type="text" name="name" placeholder="Digite seu nome completo" required>
+                </div>
+
+                <div>
+                    <label class="basic-contact__fields__label" for="basic-contact__email">E-mail</label>
+                    <input class="basic-contact__fields__input" id="basic-contact__email" type="email" name="email" placeholder="seuemail@gmail.com" required>
+                </div>
+
+                <div class="basic-contact__fields__message-field">
+                    <label class="basic-contact__fields__label" for="basic-contact__message">Mensagem</label>
+                    <textarea class="basic-contact__fields__input basic-contact__fields__message-input" id="basic-contact__message" name="message" placeholder="Digite sua mensagem" rows="5" required></textarea>
+                </div>
+            </div>
+
+            <div class="basic-contact--align-send-button"> <input class="basic-contact__send-button" type="submit" value="Enviar E-mail"> </div>
+        </fieldset>
+    </form>
+</section>
+*/
+.basic-contact {
+  width: 80%;
+  margin: auto;
+  margin-bottom: 6rem;
+}
+@media screen and (min-width: 540px) {
+  .basic-contact {
+    width: 60%;
+  }
+}
+.basic-contact__title {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.basic-contact__description {
+  margin-bottom: 1rem;
+  text-align: justify;
+}
+.basic-contact__legend {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  color: transparent;
+  overflow: hidden;
+}
+.basic-contact__fields {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.basic-contact__fields__label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+}
+.basic-contact__fields__input {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid hsl(227deg, 81%, 59%);
+  border-radius: 5px;
+  padding: 0.5rem;
+  font-size: 0.75rem;
+}
+.basic-contact__fields__input:focus {
+  border: 1px solid hsl(202deg, 100%, 71%);
+  outline: none;
+}
+.basic-contact__fields__message-input {
+  resize: vertical;
+}
+.basic-contact--align-send-button {
+  margin-top: 0.5rem;
+  text-align: center;
+}
+.basic-contact__send-button {
+  background-color: hsl(209deg, 100%, 70%);
+  display: inline-block;
+  border: none;
+  border-radius: 5px;
+  padding: 1rem 1.5rem;
+  color: hsl(0deg, 0%, 100%);
+  cursor: pointer;
+  transition: background-color 0.1s;
+  padding: 1rem 1.5rem;
+}
+.basic-contact__send-button:hover {
+  background-color: hsl(214deg, 56%, 58%);
+}
+.basic-contact__send-button--disabled {
+  background-color: hsl(0deg, 0%, 64%);
+  cursor: not-allowed;
+}
+.basic-contact__send-button--disabled:hover {
+  background-color: hsl(0deg, 0%, 64%);
+}
+
+/* RESPONSIVE LAYOUTS */
+/* TABLET */
+@media screen and (min-width: 540px) {
+  /* CONTACT */
+  .basic-contact__fields {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .basic-contact__fields__message-field {
+    grid-column: 1/-1;
+  }
+  .basic-contact__fields__proof-field {
+    grid-column: 1/-1;
+  }
+}
+/* DESKTOP */
+@media screen and (min-width: 1024px) {
+  /* CONTACT */
+  .basic-contact__fields__input {
+    padding: 0.75rem;
+  }
+  .basic-contact__fields__message-input {
+    height: 250px;
+  }
+}
+/* ADDITIONAL / VARIATIONS */
+/* PROOF INPUT */
+.basic-contact__fields__proof-field__label-button {
+  background-color: hsl(0deg, 0%, 100%);
+  grid-column: 1/-1;
+  border: 2px dashed hsl(227deg, 81%, 59%);
+  border-radius: 5px;
+  padding: 1rem 2rem;
+  text-align: center;
+}
+.basic-contact__fields__proof-field__input {
+  display: none;
+}
+
+/* RESPONSIVE LAYOUTS */
+/* TABLET */
+@media screen and (min-width: 1024px) {
+  .basic-contact__fields__proof-field__label-button {
+    padding: 2rem;
+  }
+}
+.footer {
+  width: 80%;
+  margin: auto;
+}
+@media screen and (min-width: 540px) {
+  .footer {
+    width: 60%;
+  }
+}
+.footer__title {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.footer__nav__list {
+  margin: 0.5rem auto 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+}
+.footer__nav__list__link {
+  display: flex;
+  align-items: center;
+  color: hsl(0deg, 0%, 0%);
+}
+.footer__nav__list__link__icon {
+  width: calc(35px - 1%);
+  height: calc(35px - 1%);
+  margin-right: 0.5rem;
+}
+.footer__nav__list__link__text {
+  font-size: 1.2rem;
+}
+
+/* RESPONSIVE LAYOUTS */
+/* TABLET */
+@media screen and (min-width: 540px) {
+  .footer__nav {
+    margin-top: 1.2rem;
+  }
+  .footer__nav__list__link__icon {
+    width: 40px;
+    height: 40px;
+  }
+}
+/* DESKTOP */
+@media screen and (min-width: 1024px) {
+  .footer__nav__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 20px;
+    flex-wrap: nowrap;
+  }
+}
+/********** TEMPLATES **********/
+/* WHAT YOU WILL LEARN */
+.learning {
+  width: 80%;
+  margin: auto;
+  margin-bottom: 6rem;
+  /* WITH SECTIONS */
+  /* WITHOUT SECTIONS */
+}
+@media screen and (min-width: 540px) {
+  .learning {
+    width: 60%;
+  }
+}
+.learning__title {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.learning__sections {
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  margin: auto;
+  margin-bottom: 0.5rem;
+  overflow: hidden;
+  z-index: 1;
+}
+.learning__sections--max-height {
+  -webkit-mask-image: linear-gradient(hsl(0deg, 0%, 100%) 70%, hsla(0deg, 0%, 100%, 0));
+          mask-image: linear-gradient(hsl(0deg, 0%, 100%) 70%, hsla(0deg, 0%, 100%, 0));
+  max-height: 300px;
+}
+@media screen and (min-width: 1024px) {
+  .learning__sections--max-height {
+    max-height: 500px;
+  }
+}
+.learning__sections__section {
+  max-width: 350px;
+  margin: auto;
+  margin-bottom: 0.5rem;
+  /* JAVASCRIPT LOGIC LAYOUT */
+}
+@media screen and (min-width: 1024px) {
+  .learning__sections__section {
+    max-width: 600px;
+  }
+}
+.learning__sections__section:nth-child(1) .learning__sections__section__title::before {
+  content: "1.";
+}
+.learning__sections__section:nth-child(2) .learning__sections__section__title::before {
+  content: "2.";
+}
+.learning__sections__section:nth-child(3) .learning__sections__section__title::before {
+  content: "3.";
+}
+.learning__sections__section:nth-child(4) .learning__sections__section__title::before {
+  content: "4.";
+}
+.learning__sections__section:nth-child(5) .learning__sections__section__title::before {
+  content: "5.";
+}
+.learning__sections__section:nth-child(6) .learning__sections__section__title::before {
+  content: "6.";
+}
+.learning__sections__section:nth-child(7) .learning__sections__section__title::before {
+  content: "7.";
+}
+.learning__sections__section:nth-child(8) .learning__sections__section__title::before {
+  content: "8.";
+}
+.learning__sections__section:nth-child(9) .learning__sections__section__title::before {
+  content: "9.";
+}
+.learning__sections__section:nth-child(10) .learning__sections__section__title::before {
+  content: "10.";
+}
+.learning__sections__section:nth-child(11) .learning__sections__section__title::before {
+  content: "11.";
+}
+.learning__sections__section:nth-child(12) .learning__sections__section__title::before {
+  content: "12.";
+}
+.learning__sections__section:nth-child(13) .learning__sections__section__title::before {
+  content: "13.";
+}
+.learning__sections__section:nth-child(14) .learning__sections__section__title::before {
+  content: "14.";
+}
+.learning__sections__section:nth-child(15) .learning__sections__section__title::before {
+  content: "15.";
+}
+.learning__sections__section:nth-child(16) .learning__sections__section__title::before {
+  content: "16.";
+}
+.learning__sections__section:nth-child(17) .learning__sections__section__title::before {
+  content: "17.";
+}
+.learning__sections__section:nth-child(18) .learning__sections__section__title::before {
+  content: "18.";
+}
+.learning__sections__section:nth-child(19) .learning__sections__section__title::before {
+  content: "19.";
+}
+.learning__sections__section:nth-child(20) .learning__sections__section__title::before {
+  content: "20.";
+}
+.learning__sections__section:nth-child(21) .learning__sections__section__title::before {
+  content: "21.";
+}
+.learning__sections__section:nth-child(22) .learning__sections__section__title::before {
+  content: "22.";
+}
+.learning__sections__section:nth-child(23) .learning__sections__section__title::before {
+  content: "23.";
+}
+.learning__sections__section:nth-child(24) .learning__sections__section__title::before {
+  content: "24.";
+}
+.learning__sections__section:nth-child(25) .learning__sections__section__title::before {
+  content: "25.";
+}
+.learning__sections__section:nth-child(26) .learning__sections__section__title::before {
+  content: "26.";
+}
+.learning__sections__section:nth-child(27) .learning__sections__section__title::before {
+  content: "27.";
+}
+.learning__sections__section:nth-child(28) .learning__sections__section__title::before {
+  content: "28.";
+}
+.learning__sections__section:nth-child(29) .learning__sections__section__title::before {
+  content: "29.";
+}
+.learning__sections__section:nth-child(30) .learning__sections__section__title::before {
+  content: "30.";
+}
+.learning__sections__section:nth-child(31) .learning__sections__section__title::before {
+  content: "31.";
+}
+.learning__sections__section:nth-child(32) .learning__sections__section__title::before {
+  content: "32.";
+}
+.learning__sections__section:nth-child(33) .learning__sections__section__title::before {
+  content: "33.";
+}
+.learning__sections__section:nth-child(34) .learning__sections__section__title::before {
+  content: "34.";
+}
+.learning__sections__section:nth-child(35) .learning__sections__section__title::before {
+  content: "35.";
+}
+.learning__sections__section:nth-child(36) .learning__sections__section__title::before {
+  content: "36.";
+}
+.learning__sections__section:nth-child(37) .learning__sections__section__title::before {
+  content: "37.";
+}
+.learning__sections__section:nth-child(38) .learning__sections__section__title::before {
+  content: "38.";
+}
+.learning__sections__section:nth-child(39) .learning__sections__section__title::before {
+  content: "39.";
+}
+.learning__sections__section:nth-child(40) .learning__sections__section__title::before {
+  content: "40.";
+}
+.learning__sections__section:nth-child(41) .learning__sections__section__title::before {
+  content: "41.";
+}
+.learning__sections__section:nth-child(42) .learning__sections__section__title::before {
+  content: "42.";
+}
+.learning__sections__section:nth-child(43) .learning__sections__section__title::before {
+  content: "43.";
+}
+.learning__sections__section:nth-child(44) .learning__sections__section__title::before {
+  content: "44.";
+}
+.learning__sections__section:nth-child(45) .learning__sections__section__title::before {
+  content: "45.";
+}
+.learning__sections__section:nth-child(46) .learning__sections__section__title::before {
+  content: "46.";
+}
+.learning__sections__section:nth-child(47) .learning__sections__section__title::before {
+  content: "47.";
+}
+.learning__sections__section:nth-child(48) .learning__sections__section__title::before {
+  content: "48.";
+}
+.learning__sections__section:nth-child(49) .learning__sections__section__title::before {
+  content: "49.";
+}
+.learning__sections__section:nth-child(50) .learning__sections__section__title::before {
+  content: "50.";
+}
+.learning__sections__section:nth-child(51) .learning__sections__section__title::before {
+  content: "51.";
+}
+.learning__sections__section:nth-child(52) .learning__sections__section__title::before {
+  content: "52.";
+}
+.learning__sections__section:nth-child(53) .learning__sections__section__title::before {
+  content: "53.";
+}
+.learning__sections__section:nth-child(54) .learning__sections__section__title::before {
+  content: "54.";
+}
+.learning__sections__section:nth-child(55) .learning__sections__section__title::before {
+  content: "55.";
+}
+.learning__sections__section:nth-child(56) .learning__sections__section__title::before {
+  content: "56.";
+}
+.learning__sections__section:nth-child(57) .learning__sections__section__title::before {
+  content: "57.";
+}
+.learning__sections__section:nth-child(58) .learning__sections__section__title::before {
+  content: "58.";
+}
+.learning__sections__section:nth-child(59) .learning__sections__section__title::before {
+  content: "59.";
+}
+.learning__sections__section:nth-child(60) .learning__sections__section__title::before {
+  content: "60.";
+}
+.learning__sections__section:nth-child(61) .learning__sections__section__title::before {
+  content: "61.";
+}
+.learning__sections__section:nth-child(62) .learning__sections__section__title::before {
+  content: "62.";
+}
+.learning__sections__section:nth-child(63) .learning__sections__section__title::before {
+  content: "63.";
+}
+.learning__sections__section:nth-child(64) .learning__sections__section__title::before {
+  content: "64.";
+}
+.learning__sections__section:nth-child(65) .learning__sections__section__title::before {
+  content: "65.";
+}
+.learning__sections__section:nth-child(66) .learning__sections__section__title::before {
+  content: "66.";
+}
+.learning__sections__section:nth-child(67) .learning__sections__section__title::before {
+  content: "67.";
+}
+.learning__sections__section:nth-child(68) .learning__sections__section__title::before {
+  content: "68.";
+}
+.learning__sections__section:nth-child(69) .learning__sections__section__title::before {
+  content: "69.";
+}
+.learning__sections__section:nth-child(70) .learning__sections__section__title::before {
+  content: "70.";
+}
+.learning__sections__section:nth-child(71) .learning__sections__section__title::before {
+  content: "71.";
+}
+.learning__sections__section:nth-child(72) .learning__sections__section__title::before {
+  content: "72.";
+}
+.learning__sections__section:nth-child(73) .learning__sections__section__title::before {
+  content: "73.";
+}
+.learning__sections__section:nth-child(74) .learning__sections__section__title::before {
+  content: "74.";
+}
+.learning__sections__section:nth-child(75) .learning__sections__section__title::before {
+  content: "75.";
+}
+.learning__sections__section:nth-child(76) .learning__sections__section__title::before {
+  content: "76.";
+}
+.learning__sections__section:nth-child(77) .learning__sections__section__title::before {
+  content: "77.";
+}
+.learning__sections__section:nth-child(78) .learning__sections__section__title::before {
+  content: "78.";
+}
+.learning__sections__section:nth-child(79) .learning__sections__section__title::before {
+  content: "79.";
+}
+.learning__sections__section:nth-child(80) .learning__sections__section__title::before {
+  content: "80.";
+}
+.learning__sections__section:nth-child(81) .learning__sections__section__title::before {
+  content: "81.";
+}
+.learning__sections__section:nth-child(82) .learning__sections__section__title::before {
+  content: "82.";
+}
+.learning__sections__section:nth-child(83) .learning__sections__section__title::before {
+  content: "83.";
+}
+.learning__sections__section:nth-child(84) .learning__sections__section__title::before {
+  content: "84.";
+}
+.learning__sections__section:nth-child(85) .learning__sections__section__title::before {
+  content: "85.";
+}
+.learning__sections__section:nth-child(86) .learning__sections__section__title::before {
+  content: "86.";
+}
+.learning__sections__section:nth-child(87) .learning__sections__section__title::before {
+  content: "87.";
+}
+.learning__sections__section:nth-child(88) .learning__sections__section__title::before {
+  content: "88.";
+}
+.learning__sections__section:nth-child(89) .learning__sections__section__title::before {
+  content: "89.";
+}
+.learning__sections__section:nth-child(90) .learning__sections__section__title::before {
+  content: "90.";
+}
+.learning__sections__section:nth-child(91) .learning__sections__section__title::before {
+  content: "91.";
+}
+.learning__sections__section:nth-child(92) .learning__sections__section__title::before {
+  content: "92.";
+}
+.learning__sections__section:nth-child(93) .learning__sections__section__title::before {
+  content: "93.";
+}
+.learning__sections__section:nth-child(94) .learning__sections__section__title::before {
+  content: "94.";
+}
+.learning__sections__section:nth-child(95) .learning__sections__section__title::before {
+  content: "95.";
+}
+.learning__sections__section:nth-child(96) .learning__sections__section__title::before {
+  content: "96.";
+}
+.learning__sections__section:nth-child(97) .learning__sections__section__title::before {
+  content: "97.";
+}
+.learning__sections__section:nth-child(98) .learning__sections__section__title::before {
+  content: "98.";
+}
+.learning__sections__section:nth-child(99) .learning__sections__section__title::before {
+  content: "99.";
+}
+.learning__sections__section__title {
+  background-color: hsl(209deg, 100%, 70%);
+  display: flex;
+  align-items: center;
+  border-radius: 3px;
+  padding: 0.75rem;
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  text-align: center;
+}
+.learning__sections__section__title--with-arrow {
+  justify-content: space-between;
+  gap: 0;
+  cursor: pointer;
+}
+.learning__sections__section__title--with-arrow::after {
+  content: url("../images/icons/Simple Arrow Down.svg");
+  transition: transform 0.25s;
+}
+.learning__sections__section__title--without-arrow {
+  justify-content: center;
+  gap: 0.5rem;
+  cursor: default;
+}
+.learning__sections__section__content {
+  background-color: hsl(209deg, 100%, 84%);
+  height: 0;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  padding: 0 0.75rem;
+  text-align: justify;
+  overflow: hidden;
+}
+.learning__sections__section__content__item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.learning__sections__section__content__item img {
+  width: 20px;
+  height: 20px;
+}
+.learning__sections__section__content__item:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+.learning__sections__section.active .learning__sections__section__title {
+  border-radius: 3px 3px 0 0;
+}
+.learning__sections__section.active .learning__sections__section__title::after {
+  transform: rotateZ(180deg);
+}
+.learning__sections__section.active .learning__sections__section__content {
+  height: auto;
+  padding: 0.75rem;
+}
+.learning__center-button {
+  text-align: center;
+}
+.learning__loading-sections {
+  background-color: hsl(209deg, 100%, 70%);
+  display: inline-block;
+  border: none;
+  border-radius: 5px;
+  padding: 1rem 1.5rem;
+  color: hsl(0deg, 0%, 100%);
+  cursor: pointer;
+  transition: background-color 0.1s;
+}
+.learning__loading-sections:hover {
+  background-color: hsl(214deg, 56%, 58%);
+}
+.learning__description {
+  margin-bottom: 1rem;
+}
+.learning__section-title {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* COURSE MATERIALS */
+.materials {
+  width: 80%;
+  margin: auto;
+  margin-bottom: 6rem;
+}
+@media screen and (min-width: 540px) {
+  .materials {
+    width: 60%;
+  }
+}
+.materials__title {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.materials__contents {
+  text-align: center;
+}
+.materials__contents__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+.materials__contents__content img {
+  width: 25px;
+  height: 25px;
+}
+@media screen and (min-width: 540px) {
+  .materials__contents__content img {
+    width: 40px;
+    height: 40px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .materials__contents__content img {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+/* PRICE */
+.price {
+  width: 80%;
+  margin: auto;
+  margin-bottom: 6rem;
+  /* MORE THAN 1 PAYMENT */
+}
+@media screen and (min-width: 540px) {
+  .price {
+    width: 60%;
+  }
+}
+.price__title {
+  margin-bottom: 1rem;
+  font-size: 4rem;
+  text-align: center;
+}
+.price__text {
+  width: 50%;
+  margin: auto;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+.price__text__value {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+  font-size: 3rem;
+  font-weight: bold;
+  white-space: nowrap;
+}
+.price__prices--more-than-one {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+@media screen and (min-width: 1024px) {
+  .price__prices--more-than-one {
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+  }
+}
+.price__prices--more-than-one__payment-content {
+  background-color: hsl(209deg, 100%, 84%);
+  border: 2px solid hsl(209deg, 100%, 70%);
+  text-align: center;
+}
+@media screen and (min-width: 1024px) {
+  .price__prices--more-than-one__payment-content {
+    max-width: -webkit-fit-content;
+    max-width: -moz-fit-content;
+    max-width: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 3rem;
+    border-radius: 10px;
+    padding: 1rem;
+  }
+  .price__prices--more-than-one__payment-content:nth-child(1) {
+    order: 2;
+  }
+  .price__prices--more-than-one__payment-content:nth-child(2) {
+    order: 1;
+  }
+  .price__prices--more-than-one__payment-content:nth-child(3) {
+    order: 3;
+  }
+}
+.price__prices--more-than-one__payment-content__text {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+  font-size: 3rem;
+  font-weight: bold;
+  white-space: nowrap;
+}
+@media screen and (min-width: 1024px) {
+  .price__prices--more-than-one__payment-content__text {
+    font-size: 2.5rem;
+  }
+}
+.price__prices--more-than-one__payment-content__text--small-card {
+  font-size: 1.5rem;
+}
+.price__note {
+  margin-top: 1rem;
+  text-align: center;
+}
+.price__center-button {
+  text-align: center;
+}
+.price__buy-button {
+  background-color: hsl(209deg, 100%, 70%);
+  display: inline-block;
+  border: none;
+  border-radius: 5px;
+  padding: 1rem 1.5rem;
+  color: hsl(0deg, 0%, 100%);
+  cursor: pointer;
+  transition: background-color 0.1s;
+  margin-top: 2rem;
+}
+.price__buy-button:hover {
+  background-color: hsl(214deg, 56%, 58%);
+}
+.price__payment {
+  margin-top: 2rem;
+  text-align: center;
+}
+.price__payment__buttons {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 2rem;
+}
+.price__payment__buttons__method {
+  max-width: -webkit-min-content;
+  max-width: -moz-min-content;
+  max-width: min-content;
+}
+.price__payment__buttons__method__button {
+  background-color: hsl(209deg, 100%, 70%);
+  display: inline-block;
+  border: none;
+  border-radius: 5px;
+  padding: 1rem 1.5rem;
+  color: hsl(0deg, 0%, 100%);
+  cursor: pointer;
+  transition: background-color 0.1s;
+  width: 7.5vw;
+  min-width: 75px;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+.price__payment__buttons__method__button:hover {
+  background-color: hsl(214deg, 56%, 58%);
+}
+.price__payment__buttons__method__button__img {
+  width: 25px;
+}
+@media screen and (min-width: 540px) {
+  .price__payment__buttons__method__button__img {
+    width: 30px;
+  }
+}
+.price__payment__buttons__method__description {
+  margin-top: 0.25rem;
+}
+.price__payment--hidden {
+  display: none;
+}
+.price__payment__material-choice {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+@media screen and (min-width: 1024px) {
+  .price__payment__material-choice {
+    justify-content: center;
+  }
+}
+.price__payment__material-choice__option {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  text-align: center;
+}
+.price__payment__material-choice__option__input {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: #ffffff;
+  width: 36px;
+  height: 36px;
+  position: relative;
+  border: 1px solid hsl(209deg, 100%, 70%);
+  border-radius: 50%;
+}
+.price__payment__material-choice__option__input:checked {
+  background-color: hsl(227deg, 81%, 59%);
+}
+.price__payment__material-choice__option__input:checked::after {
+  content: "";
+  width: 10px;
+  height: 4px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-bottom: 4px solid hsl(0deg, 0%, 100%);
+  border-left: 4px solid hsl(0deg, 0%, 100%);
+  transform: translate(-50%, -60%) rotateZ(-50deg);
+}
+.price__payment__qr-code {
+  width: 100%;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+.price__payment__qr-code__title {
+  margin-bottom: 1rem;
+}
+.price__payment__qr-code__inner-code {
+  width: 50%;
+}
+@media screen and (min-width: 1440px) {
+  .price__payment__qr-code__inner-code {
+    width: 25%;
+  }
+}
+.price__payment__qr-code__link {
+  background-color: hsl(209deg, 100%, 70%);
+  display: inline-block;
+  border: none;
+  border-radius: 5px;
+  padding: 1rem 1.5rem;
+  color: hsl(0deg, 0%, 100%);
+  cursor: pointer;
+  transition: background-color 0.1s;
+  margin-top: 1rem;
+}
+.price__payment__qr-code__link:hover {
+  background-color: hsl(214deg, 56%, 58%);
+}
+.price__payment__phone-number {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+.price__payment__phone-number__number {
+  margin: 2rem;
+  font-size: 1.5rem;
+}
+.price__payment__phone-number__number a {
+  color: hsl(0deg, 0%, 0%);
+}
+.price__payment__phone-number__number a:hover {
+  text-decoration: underline;
+}
+.price__payment__ted {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+.price__payment__ted__title {
+  margin-bottom: 1rem;
+}
+.price__payment__ted__infos {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.price__payment__ted__infos__inner-info {
+  background-color: hsl(0deg, 0%, 100%);
+  width: 50%;
+  margin: auto;
+  margin-top: 0.5rem;
+  border-radius: 5px;
+  padding: 1rem;
+}
+.price__payment--hidden {
+  height: 0;
+  overflow: hidden;
+}
+
+/* SEND PROOF BY EMAIL */
+.basic-contact {
+  width: 100%;
+  margin-top: 4rem;
+  text-align: left;
+}
+
+/* STUDENTS OPINIONS */
+.opinions {
+  width: 80%;
+  margin: auto;
+  margin-bottom: 6rem;
+}
+@media screen and (min-width: 540px) {
+  .opinions {
+    width: 60%;
+  }
+}
+.opinions__title {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.opinions__opinion {
+  background-color: rgba(255, 255, 255, 0.2392156863);
+  border-radius: 5px;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1215686275);
+  padding: 1.5rem;
+}
+.opinions__opinion:not(:first-child) {
+  margin-bottom: 2rem;
+}
+.opinions__opinion__text {
+  font-style: italic;
+}
+.opinions__opinion__author {
+  margin-top: 0.5rem;
+}/*# sourceMappingURL=choral-course.css.map */
