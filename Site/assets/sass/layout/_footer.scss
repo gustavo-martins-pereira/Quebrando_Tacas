@@ -21,8 +21,8 @@
             color: $black-color;
 
             &__icon {
-                width: 35px;
-                height: 35px;
+                width: calc(35px - 1%);
+                height: calc(35px - 1%);
     
                 margin-right: .5rem;
             }
