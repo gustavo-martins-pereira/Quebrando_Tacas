@@ -1,21 +1,5 @@
 @import "../main";
 
-/* INTRODUCTION */
-.header__introduction {
-    @include standard--width();
-    @include standard--margin-bottom();
-
-    margin-top: 5rem;
-
-    &__title {
-        text-align: center;
-    }
-
-    &__description {
-        text-align: justify;
-    }
-}
-
 /* LATEST VIDEOS */
 .latest-videos {
     @include standard--width();

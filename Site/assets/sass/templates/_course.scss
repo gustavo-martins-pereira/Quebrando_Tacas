@@ -12,7 +12,7 @@
     /* WITH SECTIONS */
     &__sections {
         &--max-height {
-            mask-image: linear-gradient(#ffffff 70%, rgba(255, 255, 255, 0));
+            mask-image: linear-gradient($white-color 70%, $black-transparent-color);
 
             max-height: 300px;
 
@@ -441,7 +441,7 @@
         }
 
         /* CONTACT */
-        .contact {
+        /*.contact {
             &--payment {
                 width: 100%;
 
@@ -522,7 +522,7 @@
             height: 0;
 
             overflow: hidden;
-        }
+        }*/
     }
 }
 
