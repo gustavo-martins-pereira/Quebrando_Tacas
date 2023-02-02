@@ -384,11 +384,12 @@ template {
 /********** COLORS **********/
 /********** BACKGROUNDS **********/
 /********** BORDERS **********/
+/********** SHADOWS **********/
 /********** TEXTS **********/
 /********** FONTS **********/
 /* STANDARD  CONTENT WIDTH */
 /* STANDARD BOTTOM MARGIN OF SEPARATION */
-/* SECTION BOX */
+/* CONTENT BOX OF COURSE */
 /* PRICES */
 /* ACESSIBILITY */
 /* VISIBILITY */
@@ -455,14 +456,10 @@ fieldset {
 a {
   text-decoration: none;
 }
-a[href="#"] {
-  color: red;
-  text-decoration: underline;
-}
 
 /* OTHERS */
 hr {
-  border: 1px solid black;
+  border: 1px solid hsl(0deg, 0%, 0%);
 }
 
 /* RESPONSIVE LAYOUTS */
@@ -484,7 +481,6 @@ body {
 /********** LAYOUT **********/
 .menu {
   background-color: transparent;
-  width: 75px;
   position: fixed;
   top: 0;
   right: 0;
@@ -500,34 +496,32 @@ body {
   align-self: flex-end;
   margin: 1rem;
   cursor: pointer;
-  content: url("../images/icons/Menu.svg");
 }
 .menu__navigation-menu {
   height: 0;
   text-align: center;
   overflow: hidden;
 }
-.menu__navigation-menu li:not(:last-child) {
+.menu__navigation-menu__item:not(:last-child) {
   border-bottom: 1px solid hsla(0deg, 0%, 100%, 0.082);
 }
-.menu__navigation-menu__link {
+.menu__navigation-menu__item__link {
   display: block;
   padding: 1.5rem 2rem;
   color: hsl(0deg, 0%, 9%);
 }
-.menu__navigation-menu__link--disabled {
-  opacity: 0.2;
+.menu__navigation-menu__item__link--disabled {
   cursor: default;
+  opacity: 0.2;
   pointer-events: none;
 }
-.menu__navigation-menu__link:not(.menu__navigation-menu__link--disabled):hover {
+.menu__navigation-menu__item__link:not(.menu__navigation-menu__link--disabled):hover {
   background-color: hsl(214deg, 56%, 58%);
   color: hsl(0deg, 0%, 100%);
   transition: background-color 0.5s;
 }
 .menu.menu-is-active {
   background-color: hsl(202deg, 100%, 71%);
-  width: auto;
   box-shadow: -2px 2px 4px hsla(0deg, 0%, 0%, 0.8);
 }
 .menu.menu-is-active .menu__hamburguer-icon {
@@ -557,17 +551,16 @@ body {
     gap: 1rem;
     text-align: center;
   }
-  .menu__navigation-menu li:not(:last-child) {
+  .menu__navigation-menu__item:not(:last-child) {
     border-bottom: none;
   }
-  .menu__navigation-menu li:last-child {
+  .menu__navigation-menu__item:last-child {
     margin-right: 1rem;
   }
-  .menu__navigation-menu__link {
-    display: inline-block;
+  .menu__navigation-menu__item__link {
     padding: 1rem;
   }
-  .menu__navigation-menu__link:hover {
+  .menu__navigation-menu__item__link:hover {
     background-color: hsl(214deg, 56%, 58%);
     border-radius: 5px;
     color: hsl(0deg, 0%, 100%);
@@ -595,7 +588,7 @@ body {
 .footer__nav__list__link {
   display: flex;
   align-items: center;
-  color: black;
+  color: hsl(0deg, 0%, 0%);
 }
 .footer__nav__list__link__icon {
   width: 35px;
@@ -685,24 +678,22 @@ body {
   margin-bottom: 1rem;
   text-align: center;
 }
-.courses .swiper {
+.courses__swiper {
   background-image: url("../images/Sheet Music.svg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
-  /* Block height is increased from window width */
-  height: calc(200px + 20vw);
+  height: calc(20vw + 200px);
 }
-.courses .swiper-wrapper {
+.courses__swiper__wrapper {
   height: 100%;
   /* SLIDE */
 }
-.courses .swiper-wrapper .swiper-slide {
+.courses__swiper__wrapper__slide {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* IMAGE FOR EACH COURSE */
 }
-.courses .swiper-wrapper .swiper-slide__background {
+.courses__swiper__wrapper__slide__background {
   background-repeat: no-repeat;
   background-size: cover;
   width: 60%;
@@ -715,71 +706,55 @@ body {
   box-sizing: border-box;
   color: hsl(0deg, 0%, 100%);
   text-align: center;
-  box-shadow: 0px 0px 5px 3px black;
+  box-shadow: 0px 0px 5px 3px hsl(0deg, 0%, 0%);
+  /* IMAGE FOR EACH COURSE */
+  /* TITLE CARD */
 }
-.courses .swiper-wrapper .swiper-slide__title {
-  font-size: 2.5rem;
-  text-shadow: 1px 1px 2px hsl(0deg, 0%, 100%);
-  /* RESPONSIVE LAYOUTS */
-  /* DESKTOP */
-  /* DESKTOP */
-}
-@media screen and (max-width: 30rem) {
-  .courses .swiper-wrapper .swiper-slide__title {
-    font-size: 1.75rem;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .courses .swiper-wrapper .swiper-slide__title {
-    font-size: 4rem;
-  }
-}
-@media screen and (min-width: 1440px) {
-  .courses .swiper-wrapper .swiper-slide__title {
-    font-size: 4.5rem;
-  }
-}
-@media screen and (max-width: 30rem) {
-  .courses .swiper-wrapper .swiper-slide {
-    font-size: 1rem;
-  }
-}
-.courses .swiper-wrapper .swiper-slide__background--sing {
+.courses__swiper__wrapper__slide__background--sing {
   background-image: url("../images/Sing Course.png");
   background-position: 50%;
 }
-.courses .swiper-wrapper .swiper-slide__background--children {
+.courses__swiper__wrapper__slide__background--children {
   background-image: url("../images/Children's Musicalization Course.png");
 }
-.courses .swiper-wrapper .swiper-slide__background--choir {
+.courses__swiper__wrapper__slide__background--choir {
   background-image: url("../images/Choir Conductor Course.png");
   background-position: 75%;
 }
-.courses .swiper-wrapper .swiper-slide__background--presentation {
+.courses__swiper__wrapper__slide__background--presentation {
   background-image: url("../images/Presentations Course.png");
 }
-.courses .swiper-button {
+.courses__swiper__wrapper__slide__background__title {
+  display: flex;
+  justify-content: center;
+  font-size: 2.5rem;
+  text-shadow: 1px 1px 2px hsl(0deg, 0%, 100%);
+}
+.courses__swiper__wrapper__slide__background__description {
+  font-size: 1rem;
+}
+.courses__swiper__button {
   background-color: hsl(0deg, 0%, 100%);
-  width: 3rem !important;
-  height: 3rem !important;
+  width: 3rem;
+  height: 3rem;
   border-radius: 50%;
 }
-.courses .swiper-button::after {
-  font-size: 1rem !important;
+.courses__swiper__button::after {
+  font-size: 1rem;
 }
-.courses .swiper-button-prev {
-  left: 5% !important;
+.courses__swiper__button--prev {
+  left: 5%;
 }
-.courses .swiper-button-prev::after {
-  content: url("../images/icons/Arrow Left.svg") !important;
+.courses__swiper__button--prev::after {
+  content: url("../images/icons/Arrow Left.svg");
   width: 28px;
   height: 31px;
 }
-.courses .swiper-button-next {
-  right: 5% !important;
+.courses__swiper__button--next {
+  right: 5%;
 }
-.courses .swiper-button-next::after {
-  content: url("../images/icons/Arrow Right.svg") !important;
+.courses__swiper__button--next::after {
+  content: url("../images/icons/Arrow Right.svg");
   width: 28px;
   height: 31px;
 }
@@ -793,12 +768,13 @@ body {
   cursor: pointer;
   transition: background-color 0.1s;
   display: inline-block;
-  margin-top: 0.5rem;
+  margin-top: 1rem;
 }
 .courses__acess-course:hover {
   background-color: hsl(214deg, 56%, 58%);
 }
 
+/* TODO: Place the contact classes into the "_classes.scss" file */
 /* CONTACT */
 .contact {
   width: 80%;
@@ -914,6 +890,16 @@ body {
 }
 
 /* RESPONSIVE LAYOUTS */
+/* SMALL CELLPHONES */
+@media screen and (max-width: 340px) {
+  /* COURSES */
+  .courses__swiper__wrapper__slide__background__title {
+    font-size: 2rem;
+  }
+  .courses__swiper__wrapper__slide__background__description {
+    font-size: 0.75rem;
+  }
+}
 /* TABLET */
 @media screen and (min-width: 540px) {
   /* COURSE INFORMMATION */
@@ -970,6 +956,9 @@ body {
     text-align: center;
   }
   /* COURSE INFORMMATION */
+  .course-information__item {
+    width: 25%;
+  }
   .course-information__item__icon {
     width: 75px;
     height: 75px;
@@ -994,9 +983,12 @@ body {
     transform: unset;
   }
 }
-/* DESKTOP */
+/* EXTRA DESKTOP */
 @media screen and (min-width: 1440px) {
   /* COURSES */
+  .courses__swiper__wrapper__slide__background__title {
+    font-size: 4.5rem;
+  }
   .swiper-pagination-bullet {
     width: 16px;
     height: 16px;
@@ -1703,7 +1695,7 @@ body {
   font-size: 1.5rem;
 }
 .price__payment__phone-number__number a {
-  color: black;
+  color: hsl(0deg, 0%, 0%);
 }
 .price__payment__phone-number__number a:hover {
   text-decoration: underline;
@@ -1817,15 +1809,6 @@ body {
 }
 .opinions__opinion__author {
   margin-top: 0.5rem;
-}
-
-/* WHAT YOU WILL LEARN */
-.learning__section-title {
-  margin-top: 3rem;
-  text-align: center;
-}
-.learning__section-description {
-  text-align: justify;
 }
 
 /* LATEST VIDEOS */

@@ -1,8 +1,6 @@
 .menu {
     background-color: transparent;
 
-    width: 75px;
-
     position: fixed;
     top: 0;
     right: 0;
@@ -24,7 +22,6 @@
         margin: 1rem;
 
         cursor: pointer;
-        content: url("../images/icons/Menu.svg");
     }
 
     &__navigation-menu {
@@ -34,11 +31,11 @@
 
         overflow: hidden;
 
-        & li:not(:last-child) {
+        &__item:not(:last-child) {
             border-bottom: 1px solid $menu-bottom-border-color;
         }
 
-        &__link {
+        &__item__link {
             display: block;
             
             padding: 1.5rem 2rem;
@@ -46,8 +43,8 @@
             color: $heavy-black-color;
 
             &--disabled {
-                opacity: 0.2;
                 cursor: default;
+                opacity: 0.2;
                 pointer-events: none;
             }
 
@@ -62,11 +59,9 @@
     }
 
     &.menu-is-active {
-        background-color: hsl(202, 100%, 71%);
+        background-color: $menu-background;
 
-        width: auto;
-
-        box-shadow: -2px 2px 4px hsla(0, 0%, 0%, 0.8);
+        box-shadow: $menu-box-shadow;
 
         .menu__hamburguer-icon {
             content: url("../images/icons/Close.svg");
@@ -103,7 +98,7 @@
 
             text-align: center;
 
-            & li {
+            &__item {
                 &:not(:last-child) {
                     border-bottom: none;
                 }
@@ -111,19 +106,17 @@
                 &:last-child {
                     margin-right: 1rem;
                 }
-            }
 
-            &__link {
-                display: inline-block;
-
-                padding: 1rem;
-
-                &:hover {
-                    background-color: $link--hover-background;
+                &__link {
+                    padding: 1rem;
     
-                    border-radius: 5px;
-
-                    color: $white-color;
+                    &:hover {
+                        background-color: $link--hover-background;
+        
+                        border-radius: 5px;
+    
+                        color: $white-color;
+                    }
                 }
             }
         }

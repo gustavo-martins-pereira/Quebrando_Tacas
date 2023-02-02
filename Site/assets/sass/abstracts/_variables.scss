@@ -1,5 +1,6 @@
 /********** PAGE CONFIGURATIONS **********/
 $breakpoints: (
+    "small": 340px,
     "medium": 540px,
     "large": 1024px,
     "extra-large": 1440px,
@@ -21,8 +22,8 @@ $danube-color: hsl(214, 56%, 58%);
 $silver-chalice: hsl(0, 0%, 64%);
 $transparent-white-color: hsla(0, 0%, 100%, 0.082);
 $heavy-black-color: hsl(0, 0%, 9%);
-$heavy-black-little-transparent-color: hsla(0, 0%, 0%, 0.8);
-$black-color: black;
+$black-little-transparent-color: hsla(0, 0%, 0%, 0.8);
+$black-color: hsl(0, 0%, 0%);
 
 /********** BACKGROUNDS **********/
 $page-background: linear-gradient($kournikova-color, $selective-yellow-color);
@@ -43,7 +44,9 @@ $question-border-color: $royal-blue-color;
 $menu-bottom-border-color: $transparent-white-color;
 $payment-card-border-color: $malibu-color;
 
-$menu-box-shadow: -2px 2px 4px $heavy-black-little-transparent-color;
+/********** SHADOWS **********/
+$menu-box-shadow: -2px 2px 4px $black-little-transparent-color;
+$carousel-card-box-shadow: 0px 0px 5px 3px $black-color;
 
 /********** TEXTS **********/
 $font-sizes: (

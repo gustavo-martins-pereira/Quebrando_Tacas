@@ -25,11 +25,11 @@
 
             <!-- NAVIGATION MENU -->
             <ul class="menu__navigation-menu">
-                <li> <a class="menu__navigation-menu__link menu__navigation-menu__link--disabled" href="">Cursos</a> </li>
-                <li> <a class="menu__navigation-menu__link" href="./pages/courses/sing-course.html">Canto</a> </li>
-                <li> <a class="menu__navigation-menu__link" href="./pages/courses/choral-course.html">Coral</a> </li>
-                <li> <a class="menu__navigation-menu__link" href="./pages/courses/children-musicalization-course.html">Musicalização Infantil</a> </li>
-                <li> <a class="menu__navigation-menu__link" href="./pages/who-i-am.html">Apresentações</a> </li>
+                <li class="menu__navigation-menu__item"> <a class="menu__navigation-menu__item__link menu__navigation-menu__item__link--disabled" href="">Cursos</a> </li>
+                <li class="menu__navigation-menu__item"> <a class="menu__navigation-menu__item__link" href="./pages/courses/sing-course.html">Canto</a> </li>
+                <li class="menu__navigation-menu__item"> <a class="menu__navigation-menu__item__link" href="./pages/courses/choral-course.html">Coral</a> </li>
+                <li class="menu__navigation-menu__item"> <a class="menu__navigation-menu__item__link" href="./pages/courses/children-musicalization-course.html">Musicalização Infantil</a> </li>
+                <li class="menu__navigation-menu__item"> <a class="menu__navigation-menu__item__link" href="./pages/who-i-am.html">Apresentações</a> </li>
             </ul>
         </nav>
 
@@ -68,35 +68,35 @@
             <h2 class="courses__title">Veja os Cursos</h2>
 
             <!-- Slider main container -->
-            <div class="swiper">
+            <div class="swiper courses__swiper">
                 <!-- Additional required wrapper -->
-                <div class="swiper-wrapper">
+                <div class="swiper-wrapper courses__swiper__wrapper">
                     <!-- Slides -->
-                    <section class="swiper-slide">
-                        <div class="swiper-slide__background swiper-slide__background--sing">
-                            <h3 class="swiper-slide__title">Canto</h3>
-                            <p>Aperfeiçoe sua voz melhorando a sua performance</p>
+                    <section class="swiper-slide courses__swiper__wrapper__slide">
+                        <div class="courses__swiper__wrapper__slide__background courses__swiper__wrapper__slide__background--sing">
+                            <h3 class="courses__swiper__wrapper__slide__background__title">Canto</h3>
+                            <p class="courses__swiper__wrapper__slide__background__description">Aperfeiçoe sua voz melhorando a sua performance</p>
                         </div>
                     </section>
 
-                    <section class="swiper-slide">
-                        <div class="swiper-slide__background swiper-slide__background--choir">
-                            <h3 class="swiper-slide__title">Regência Coral</h3>
-                            <p>Aprenda Técnicas inovadoras e melhore o Som do seu Coral</p>
+                    <section class="swiper-slide courses__swiper__wrapper__slide">
+                        <div class="courses__swiper__wrapper__slide__background courses__swiper__wrapper__slide__background--choir">
+                            <h3 class="courses__swiper__wrapper__slide__background__title">Regência Coral</h3>
+                            <p class="courses__swiper__wrapper__slide__background__description">Aprenda Técnicas inovadoras e melhore o Som do seu Coral</p>
                         </div>
                     </section>
                     
-                    <section class="swiper-slide">
-                        <div class="swiper-slide__background swiper-slide__background--children">
-                            <h3 class="swiper-slide__title">Musicalização Infantil</h3>
-                            <p class="swiper-slide__text">Aprenda música brincando</p>
+                    <section class="swiper-slide courses__swiper__wrapper__slide">
+                        <div class="courses__swiper__wrapper__slide__background courses__swiper__wrapper__slide__background--children">
+                            <h3 class="courses__swiper__wrapper__slide__background__title courses__swiper__wrapper__slide__background__title--small">Musicalização Infantil</h3>
+                            <p class="courses__swiper__wrapper__slide__background__description">Aprenda música brincando</p>
                         </div>
                     </section>
                     
-                    <section class="swiper-slide">
-                        <div class="swiper-slide__background swiper-slide__background--presentation">
-                            <h3 class="swiper-slide__title">Apresentações</h3>
-                            <p class="swiper-slide__text">Apresentações Musicais com Keila Gruvira</p>
+                    <section class="swiper-slide courses__swiper__wrapper__slide">
+                        <div class="courses__swiper__wrapper__slide__background courses__swiper__wrapper__slide__background--presentation">
+                            <h3 class="courses__swiper__wrapper__slide__background__title">Apresentações</h3>
+                            <p class="courses__swiper__wrapper__slide__background__description">Apresentações Musicais com Keila Gruvira</p>
                         </div>
                     </section>
                 </div>
@@ -105,8 +105,8 @@
                 <div class="swiper-pagination" data-element-id="swiper-paginator"></div>
 
                 <!-- If we need navigation buttons -->
-                <div class="swiper-button-prev swiper-button"></div>
-                <div class="swiper-button-next swiper-button"></div>
+                <div class="swiper-button-prev courses__swiper__button courses__swiper__button--prev"></div>
+                <div class="swiper-button-next courses__swiper__button courses__swiper__button--next"></div>
             </div>
 
             <a href="./pages/sing-course.html" class="courses__acess-course" data-element-id="acess-course-button">Acessar Curso</a>

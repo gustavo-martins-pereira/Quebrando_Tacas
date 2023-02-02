@@ -54,21 +54,20 @@
     }
 
     /* SWIPER */
-    .swiper {
+    &__swiper {
         background: {
             image: url("../images/Sheet\ Music.svg");
             repeat: no-repeat;
             size: 100% 100%;
         }
 
-        /* Block height is increased from window width */
-        height: calc(200px + 20vw);
+        height: calc(20vw + 200px);
 
-        &-wrapper {
+        &__wrapper {
             height: 100%;
 
             /* SLIDE */
-            .swiper-slide {
+            &__slide {
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -93,103 +92,86 @@
                     color: $white-color;
                     text-align: center;
 
-                    box-shadow: 0px 0px 5px 3px black;
-                }
+                    box-shadow: $carousel-card-box-shadow;
 
-                &__title {
-                    font-size: 2.5rem;
-
-                    text-shadow: $title-text-shadow;
-
-                    // Fix text overflowing the card
-                    @media screen and (max-width: 30rem) {
-                        & {
-                            font-size: 1.75rem;
+                    /* IMAGE FOR EACH COURSE */
+                    &--sing {
+                        background: {
+                            image: url("../images/Sing\ Course.png");
+                            position: 50%;
+                        }
+                    }
+                    
+                    &--children {
+                        background: {
+                            image: url("../images/Children\'s\ Musicalization\ Course.png");
+                        }
+                    }
+                    
+                    &--choir {
+                        background: {
+                            image: url("../images/Choir\ Conductor\ Course.png");
+                            position: 75%;
                         }
                     }
 
-                    /* RESPONSIVE LAYOUTS */
-                    /* DESKTOP */
-                    @media screen and (min-width: map-get($map: $breakpoints, $key: "large")) {
-                        font-size: 4rem;
-                    }
-                    
-                    /* DESKTOP */
-                    @media screen and (min-width: map-get($map: $breakpoints, $key: "extra-large")) {
-                        font-size: 4.5rem;
+                    &--presentation {
+                        background: {
+                            image: url("../images/Presentations\ Course.png");
+                        }
                     }
 
-                    
-                }
+                    /* TITLE CARD */
+                    &__title {
+                        display: flex;
+                        justify-content: center;
 
-                // Fix text overflowing the card
-                @media screen and (max-width: 30rem) {
-                    & {
+                        font-size: 2.5rem;
+    
+                        text-shadow: $title-text-shadow;
+                    }
+
+                    &__description {
                         font-size: 1rem;
-                    }
-                }
-
-                /* IMAGE FOR EACH COURSE */
-                &__background--sing {
-                    background: {
-                        image: url("../images/Sing\ Course.png");
-                        position: 50%;
-                    }
-                }
-                
-                &__background--children {
-                    background: {
-                        image: url("../images/Children\'s\ Musicalization\ Course.png");
-                    }
-                }
-                
-                &__background--choir {
-                    background: {
-                        image: url("../images/Choir\ Conductor\ Course.png");
-                        position: 75%;
-                    }
-                }
-
-                &__background--presentation {
-                    background: {
-                        image: url("../images/Presentations\ Course.png");
                     }
                 }
             }
         }
 
-        &-button {
+        &__button {
             background-color: $white-color;
 
-            width: 3rem !important;
-            height: 3rem !important;
+            width: 3rem;
+            height: 3rem;
 
             border-radius: 50%;
 
             &::after {
-                font-size: 1rem !important;
+                font-size: 1rem;
+            }
+
+            &--prev {
+                left: 5%;
+    
+                &::after {
+                    content: url("../images/icons/Arrow\ Left.svg");
+    
+                    width: 28px;
+                    height: 31px;
+                }
+            }
+            &--next {
+                right: 5%;
+    
+                &::after {
+                    content: url("../images/icons/Arrow\ Right.svg");
+    
+                    width: 28px;
+                    height: 31px;
+                }
             }
         }
-        &-button-prev {
-            left: 5% !important;
-
-            &::after {
-                content: url("../images/icons/Arrow\ Left.svg") !important;
-
-                width: 28px;
-                height: 31px;
-            }
-        }
-        &-button-next {
-            right: 5% !important;
-
-            &::after {
-                content: url("../images/icons/Arrow\ Right.svg") !important;
-
-                width: 28px;
-                height: 31px;
-            }
-        }
+        
     }
 
     &__acess-course {
@@ -197,10 +179,11 @@
 
         display: inline-block;
 
-        margin-top: .5rem;
+        margin-top: 1rem;
     }
 }
 
+/* TODO: Place the contact classes into the "_classes.scss" file */
 /* CONTACT */
 .contact {
     @include standard--width();
@@ -333,7 +316,25 @@
     }
 }
 
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /* RESPONSIVE LAYOUTS */
+/* SMALL CELLPHONES */
+@media screen and (max-width: map-get($map: $breakpoints, $key: "small")) {
+    /* COURSES */
+    // Fits the title inside the box when screen it's too small
+    .courses__swiper__wrapper__slide__background {
+        &__title {
+            font-size: 2rem;
+        }
+
+        &__description {
+            font-size: 0.75rem;
+        }
+    }
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
 /* TABLET */
 @media screen and (min-width: map-get($map: $breakpoints, $key: "medium")) {
     /* COURSE INFORMMATION */
@@ -395,6 +396,7 @@
     }
 }
 
+////////////////////////////////////////////////////////////////////////////////////////////////////
 /* DESKTOP */
 @media screen and (min-width: map-get($map: $breakpoints, $key: "large")) {
     /* HEADER */
@@ -408,9 +410,13 @@
     }
 
     /* COURSE INFORMMATION */
-    .course-information__item__icon {
-        width: 75px;
-        height: 75px;
+    .course-information__item {
+        width: calc(100% / 4);
+
+        &__icon {
+            width: 75px;
+            height: 75px;
+        }
     }
 
     /* COURSES */
@@ -439,9 +445,14 @@
     }
 }
 
-/* DESKTOP */
+////////////////////////////////////////////////////////////////////////////////////////////////////
+/* EXTRA DESKTOP */
 @media screen and (min-width: map-get($map: $breakpoints, $key: "extra-large")) {
     /* COURSES */
+    .courses__swiper__wrapper__slide__background__title {
+        font-size: 4.5rem;
+    }
+
     .swiper-pagination-bullet {
         width: 16px;
         height: 16px;

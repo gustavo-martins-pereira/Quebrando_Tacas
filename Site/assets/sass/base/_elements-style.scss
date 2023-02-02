@@ -56,12 +56,6 @@ fieldset {
 /* LINKS */
 a {
     text-decoration: none;
-
-    // Identify the link without a URL
-    &[href="#"] {
-        color: red;
-        text-decoration: underline;
-    }
 }
 
 /* OTHERS */

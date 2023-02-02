@@ -53,7 +53,7 @@
                 text-align: center;
 
                 &--with-arrow {
-                    @include sections__section-box--spacements($justify-content: space-between, $cursor: pointer);
+                    @include course-content-box--spacements($justify-content: space-between, $cursor: pointer);
 
                     &::after {
                         content: url("../images/icons/Simple\ Arrow\ Down.svg");
@@ -63,7 +63,7 @@
                 }
 
                 &--without-arrow {
-                    @include sections__section-box--spacements($justify-content: center, $gap: 0.5rem, $cursor: default);
+                    @include course-content-box--spacements($justify-content: center, $gap: 0.5rem, $cursor: default);
                 }
             }
 

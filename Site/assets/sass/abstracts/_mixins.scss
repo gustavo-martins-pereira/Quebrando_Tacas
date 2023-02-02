@@ -14,13 +14,12 @@
     margin-bottom: 6rem;
 }
 
-/* SECTION BOX */
+/* CONTENT BOX OF COURSE */
 @mixin sections__section-box() {
     background-color: $section-background;
 
     display: flex;
     align-items: center;
-    
 
     border-radius: 3px;
     padding: 0.75rem;
@@ -31,7 +30,7 @@
     } 
 }
 
-@mixin sections__section-box--spacements($justify-content: normal, $gap: 0, $cursor: default) {
+@mixin course-content-box--spacements($justify-content: normal, $gap: 0, $cursor: default) {
     justify-content: $justify-content;
     gap: $gap;
 
@@ -73,9 +72,4 @@
     color: transparent;
 
     overflow: hidden;
-}
-
-/* VISIBILITY */
-.hidden {
-    visibility: hidden;
 }
