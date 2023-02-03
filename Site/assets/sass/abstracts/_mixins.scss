@@ -17,51 +17,11 @@
 
 /* ========== PAGE SECTIONS ==========*/
 /* CONTENT BOX OF COURSE */
-@mixin sections__section-box() {
-    background-color: $section-background;
-    
-    display: flex;
-    align-items: center;
-    
-    border-radius: 3px;
-    padding: 0.75rem;
-
-    font: {
-        family: $default-font-stack;
-        size: 1rem;
-    } 
-}
-
 @mixin course-content-box--spacements($justify-content: normal, $gap: 0, $cursor: default) {
     justify-content: $justify-content;
     gap: $gap;
     
     cursor: $cursor;
-}
-
-/* PRICES */
-@mixin prices__content-box {
-    width: 50%;
-    
-    margin: auto {
-        bottom: 0.5rem;
-    }
-    
-    text-align: center;
-}
-
-@mixin prices__content-box__price {
-    display: flex;
-    justify-content: center;
-
-    margin-bottom: 0.5rem;
-
-    font: {
-        size: 3rem;
-        weight: bold;
-    }
-    
-    white-space: nowrap;
 }
 
 /* ========== BASIC COMPONENTS ==========*/

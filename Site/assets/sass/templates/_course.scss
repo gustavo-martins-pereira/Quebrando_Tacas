@@ -9,16 +9,24 @@
         text-align: center;
     }
 
+    /* WITHOUT SECTIONS */
+    &__description {
+        margin-bottom: 1rem;
+    }
+
+    &__section-title {
+        margin: {
+            top: 1rem;
+            bottom: 1rem;
+        }
+    }
+
     /* WITH SECTIONS */
     &__sections {
         &--max-height {
             mask-image: linear-gradient($white-color 70%, $black-transparent-color);
 
             max-height: 300px;
-
-            @media screen and (min-width: map-get($map: $breakpoints, $key: "large")) {
-                max-height: 500px;
-            }
         }
 
         max-width: fit-content;
@@ -37,10 +45,7 @@
                 bottom: 0.5rem;
             }
 
-            @media screen and (min-width: map-get($map: $breakpoints, $key: "large")) {
-                max-width: 600px;
-            }
-
+            // Plase the order number before the dropdown title like: 1. TITLE, 2. TITLE, etc
             @for $i from 1 through 99 {
                 &:nth-child(#{$i}) &__title::before {
                     content: "#{$i}.";
@@ -48,7 +53,18 @@
             }
 
             &__title {
-                @include sections__section-box();
+                background-color: $section-background;
+    
+                display: flex;
+                align-items: center;
+                
+                border-radius: 3px;
+                padding: 0.75rem;
+
+                font: {
+                    family: $default-font-stack;
+                    size: 1rem;
+                } 
 
                 text-align: center;
 
@@ -79,38 +95,25 @@
                 text-align: justify;
 
                 overflow: hidden;
-
-                &__item {
-                    display: flex;
-                    align-items: center;
-                    gap: 1rem;
-
-                    & img {
-                        width: 20px;
-                        height: 20px;
-                    }
-
-                    &:not(:last-child) {
-                        margin-bottom: 1.5rem;
-                    }
-                }
             }
 
             /* JAVASCRIPT LOGIC LAYOUT */
             &.active {
-                .learning__sections__section__title {
-                    border-radius: 3px 3px 0 0;
-
-                    &::after {
-                        transform: rotateZ(180deg);
+                .learning__sections__section {
+                    &__title {
+                        border-radius: 3px 3px 0 0;
+    
+                        &::after {
+                            transform: rotateZ(180deg);
+                        }
                     }
-                }
-
-                
-                .learning__sections__section__content  {
-                    height: auto;
-
-                    padding: 0.75rem;
+    
+                    
+                    &__content  {
+                        height: auto;
+    
+                        padding: 0.75rem;
+                    }
                 }
             }
         }
@@ -122,18 +125,6 @@
 
     &__loading-sections {
         @include button();
-    }
-
-    /* WITHOUT SECTIONS */
-    &__description {
-        margin-bottom: 1rem;
-    }
-
-    &__section-title {
-        margin: {
-            top: 1rem;
-            bottom: 1rem;
-        }
     }
 }
 
@@ -148,31 +139,17 @@
         text-align: center;
     }
 
-    &__contents {
-        text-align: center;
+    &__contents__content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
 
-        &__content {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 1rem;
+        margin-bottom: 0.5rem;
 
-            margin-bottom: 0.5rem;
-
-            & img {
-                width: 25px;
-                height: 25px;
-
-                @media screen and (min-width: map-get($map: $breakpoints, $key: "medium")) {
-                    width: 40px;
-                    height: 40px;
-                }
-
-                @media screen and (min-width: map-get($map: $breakpoints, $key: "large")) {
-                    width: 50px;
-                    height: 50px;
-                }
-            }
+        &__img {
+            width: 25px;
+            height: 25px;
         }
     }
 }
@@ -181,19 +158,34 @@
 .price {
     @include standard--width();
     @include standard--margin-bottom();
+    
+    text-align: center;
 
     &__title {
         margin-bottom: 1rem;
 
         font-size: 4rem;
-        text-align: center;
     }
 
     &__text {
-        @include prices__content-box();
+        width: 50%;
+    
+        margin: auto {
+            bottom: 0.5rem;
+        }
 
         &__value {
-            @include prices__content-box__price();
+            display: flex;
+            justify-content: center;
+
+            margin-bottom: 0.5rem;
+
+            font: {
+                size: 3rem;
+                weight: bold;
+            }
+            
+            white-space: nowrap;
         }
     }
 
@@ -203,12 +195,6 @@
         flex-direction: column;
         gap: 2rem;
         
-        @media screen and (min-width: map-get($map: $breakpoints, $key: "large")) {
-            flex-direction: row;
-            justify-content: center;
-            align-items: flex-end;
-        }
-        
         &__payment-content {
             background-color: $payment-card-background;
             
@@ -216,33 +202,15 @@
 
             text-align: center;
 
-            @media screen and (min-width: map-get($map: $breakpoints, $key: "large")) {
-                max-width: fit-content;
-
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-                gap: 3rem;
-
-                border-radius: 10px;
-                padding: 1rem;
-
-                &:nth-child(1) {
-                    order: 2;
-                }
-                &:nth-child(2) {
-                    order: 1;
-                }
-                &:nth-child(3) {
-                    order: 3;
-                }
-            }
-
             &__text {
-                @include prices__content-box__price();
+                display: flex;
+                justify-content: center;
 
-                @media screen and (min-width: map-get($map: $breakpoints, $key: "large")) {
-                    font-size: 2.5rem;
+                margin-bottom: 0.5rem;
+
+                font: {
+                    size: 3rem;
+                    weight: bold;
                 }
 
                 &--small-card {
@@ -254,12 +222,6 @@
 
     &__note {
         margin-top: 1rem;
-
-        text-align: center;
-    }
-
-    &__center-button {
-        text-align: center
     }
 
     &__buy-button {
@@ -284,9 +246,6 @@
 
                 &__button {
                     @include button();
-
-                    width: 7.5vw;
-                    min-width: 75px;
     
                     padding: 1rem;
     
@@ -294,10 +253,6 @@
 
                     &__img {
                         width: 25px;
-                        
-                        @media screen and (min-width: map-get($map: $breakpoints, $key: "medium")) {
-                            width: 30px;
-                        }
                     }
                 }
 
@@ -317,10 +272,6 @@
 
             margin-top: 1rem;
 
-            @media screen and (min-width: map-get($map: $breakpoints, $key: "large")) {
-                justify-content: center;
-            }
-
             &__option {
                 flex: 1 1 0;
 
@@ -334,18 +285,19 @@
                 &__input {
                     appearance: none;
 
-                    background-color: #ffffff;
+                    background-color: $input-background;
                     width: 36px;
                     height: 36px;
 
                     position: relative;
 
-                    border: 1px solid $malibu-color;
+                    border: 1px solid $input-border-color;
                     border-radius: 50%;
 
                     &:checked {
-                        background-color: $royal-blue-color;
+                        background-color: $input-check-checked-background;
 
+                        // Checkmark Style
                         &::after {
                             content: "";
 
@@ -368,6 +320,7 @@
             }
         }
 
+        /* QR CODE */
         &__qr-code {
             width: 100%;
 
@@ -380,10 +333,7 @@
 
             &__inner-code {
                 width: 50%;
-                
-                @media screen and (min-width: map-get($map: $breakpoints, $key: "extra-large")) {
-                    width: 25%;
-                }
+                min-width: 150px;
             }
 
             &__link {
@@ -393,16 +343,22 @@
             }
         }
 
+        /* PHONE NUMBER */
         &__phone-number {
             margin-top: 2rem;
             margin-bottom: 1rem;
 
             &__number {
+                display: flex;
+                justify-content: center;
+
                 margin: 2rem;
 
                 font-size: 1.5rem;
 
-                & a {
+                white-space: nowrap;
+                
+                &__link {
                     color: $black-color;
 
                     &:hover {
@@ -412,6 +368,7 @@
             }
         }
 
+        /* TED */
         &__ted {
             margin-top: 2rem;
             margin-bottom: 1rem;
@@ -469,10 +426,10 @@
     }
 
     &__opinion {
-        background-color: #ffffff3d;
+        background-color: $opinion-background;
 
         border-radius: 5px;
-        box-shadow: 0 0 3px #0000001f;
+        box-shadow: $opinion-box-shadow;
         padding: 1.5rem;
 
         &:not(:first-child) {
@@ -485,6 +442,105 @@
 
         &__author {
             margin-top: 0.5rem;
+        }
+    }
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/* RESPONSIVE LAYOUTS */
+/* TABLET */
+@media screen and (min-width: map-get($map: $breakpoints, $key: "medium")) {
+    /* COURSE MATERIALS */
+    .materials__contents__content__img {
+        width: 40px;
+        height: 40px;
+    }
+
+    /* PRICE */
+    /* MORE THAN 1 PAYMENT */
+    .price__payment__buttons__method__button__img {
+        width: 30px;
+    }
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+/* DESKTOP */
+@media screen and (min-width: map-get($map: $breakpoints, $key: "large")) {
+    /* WHAT YOU WILL LEARN */
+    /* WITH SECTIONS */
+    .learning__sections {
+        &--max-height {
+            max-height: 500px;
+        }
+    
+        &__section {
+            max-width: 600px;
+        }
+    }
+
+    /* COURSE MATERIALS */
+    .materials__contents__content__img {
+        width: 50px;
+        height: 50px;
+    }
+
+    /* PRICE */
+    /* MORE THAN 1 PAYMENT */
+    .price {
+        &__prices--more-than-one {
+            flex-direction: row;
+            justify-content: center;
+            align-items: flex-end;
+    
+            &__payment-content {
+                max-width: fit-content;
+    
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                gap: 3rem;
+    
+                border-radius: 10px;
+                padding: 1rem;
+    
+                &:nth-child(1) {
+                    order: 2;
+                }
+                &:nth-child(2) {
+                    order: 1;
+                }
+    
+                &__text {
+                    font-size: 2.5rem;
+                }
+            }
+        }
+
+        &__payment {
+            &__material-choice {
+                justify-content: center;
+            }
+
+            &__qr-code__inner-code {
+                max-width: 350px;
+            }
+        }
+    }
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+/* EXTRA DESKTOP */
+@media screen and (min-width: map-get($map: $breakpoints, $key: "extra-large")) {
+    /* PRICE */
+    /* MORE THAN 1 PAYMENT */
+    .price__payment {
+        &__qr-code__inner-code {
+            width: 25%;
+            min-width: 350px;
+        }
+    
+        &__buttons__method__button {
+            min-width: 100px;
         }
     }
 }

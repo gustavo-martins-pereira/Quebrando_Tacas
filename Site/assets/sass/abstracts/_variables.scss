@@ -18,12 +18,14 @@ $malibu-light-color: hsl(202, 100%, 71%);
 $malibu-color: hsl(209, 100%, 70%);
 $danube-color: hsl(214, 56%, 58%);
 $royal-blue-color: hsl(227, 81%, 59%);
+$litle-transparent-white-color: hsla(0, 0%, 100%, 0.082);
+$heavy-transparent-white-color: hsla(0, 0%, 100%, 0.239);
 $white-color: hsl(0, 0%, 100%);
 $silver-chalice: hsl(0, 0%, 64%);
-$transparent-white-color: hsla(0, 0%, 100%, 0.082);
 $heavy-black-color: hsl(0, 0%, 9%);
-$black-little-transparent-color: hsla(0, 0%, 0%, 0.8);
 $black-transparent-color: hsla(0, 0%, 100%, 0);
+$black-heavy-transparent-color: hsla(0, 0%, 0%, 0.122);
+$black-little-transparent-color: hsla(0, 0%, 0%, 0.8);
 $black-color: hsl(0, 0%, 0%);
 
 /********** BACKGROUNDS **********/
@@ -41,6 +43,9 @@ $content-dropdown-background: $anakiwa-color;
 // PAYMENT CARDS
 $payment-card-background: $anakiwa-color;
 
+// OPINION
+$opinion-background: $heavy-transparent-white-color;
+
 // BUTTONS
 $button-background: $malibu-color;
 $button--hover-background: $danube-color;
@@ -51,11 +56,13 @@ $ok-popup-background: $forest-green-color;
 $fail-popup-background: $red-color;
 
 // INPUTS
+$input-background: $white-color;
 $input-file-background: $white-color;
+$input-check-checked-background: $royal-blue-color;
 
 /********** BORDERS **********/
 // MENU
-$menu-bottom-border-color: $transparent-white-color;
+$menu-bottom-border-color: $heavy-transparent-white-color;
 
 // INPUTS
 $input-border-color: $royal-blue-color;
@@ -68,6 +75,7 @@ $payment-card-border-color: $malibu-color;
 /********** SHADOWS **********/
 $menu-box-shadow: -2px 2px 4px $black-little-transparent-color;
 $carousel-card-box-shadow: 0px 0px 5px 3px $black-color;
+$opinion-box-shadow: 0 0 3px $black-heavy-transparent-color;
 
 /********** TEXTS **********/
 $font-sizes: (

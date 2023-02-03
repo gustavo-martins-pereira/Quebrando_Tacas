@@ -392,7 +392,6 @@ template {
 /* STANDARD BOTTOM MARGIN OF SEPARATION */
 /* ========== PAGE SECTIONS ==========*/
 /* CONTENT BOX OF COURSE */
-/* PRICES */
 /* ========== BASIC COMPONENTS ==========*/
 /* ========== ACESSIBILITY LAYOUT ==========*/
 /* ACESSIBILITY */
@@ -509,7 +508,7 @@ body {
   overflow: hidden;
 }
 .menu__navigation-menu__item:not(:last-child) {
-  border-bottom: 1px solid hsla(0deg, 0%, 100%, 0.082);
+  border-bottom: 1px solid hsla(0deg, 0%, 100%, 0.239);
 }
 .menu__navigation-menu__item__link {
   display: block;
@@ -801,14 +800,13 @@ body {
     flex-wrap: nowrap;
   }
 }
-/********** TEMPLATES **********/
 /* WHAT YOU WILL LEARN */
 .learning {
   width: 80%;
   margin: auto;
   margin-bottom: 6rem;
-  /* WITH SECTIONS */
   /* WITHOUT SECTIONS */
+  /* WITH SECTIONS */
 }
 @media screen and (min-width: 540px) {
   .learning {
@@ -818,6 +816,13 @@ body {
 .learning__title {
   margin-bottom: 1rem;
   text-align: center;
+}
+.learning__description {
+  margin-bottom: 1rem;
+}
+.learning__section-title {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 .learning__sections {
   max-width: -webkit-fit-content;
@@ -833,21 +838,11 @@ body {
           mask-image: linear-gradient(hsl(0deg, 0%, 100%) 70%, hsla(0deg, 0%, 100%, 0));
   max-height: 300px;
 }
-@media screen and (min-width: 1024px) {
-  .learning__sections--max-height {
-    max-height: 500px;
-  }
-}
 .learning__sections__section {
   max-width: 350px;
   margin: auto;
   margin-bottom: 0.5rem;
   /* JAVASCRIPT LOGIC LAYOUT */
-}
-@media screen and (min-width: 1024px) {
-  .learning__sections__section {
-    max-width: 600px;
-  }
 }
 .learning__sections__section:nth-child(1) .learning__sections__section__title::before {
   content: "1.";
@@ -1179,18 +1174,6 @@ body {
   text-align: justify;
   overflow: hidden;
 }
-.learning__sections__section__content__item {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-.learning__sections__section__content__item img {
-  width: 20px;
-  height: 20px;
-}
-.learning__sections__section__content__item:not(:last-child) {
-  margin-bottom: 1.5rem;
-}
 .learning__sections__section.active .learning__sections__section__title {
   border-radius: 3px 3px 0 0;
 }
@@ -1217,13 +1200,6 @@ body {
 .learning__loading-sections:hover {
   background-color: hsl(214deg, 56%, 58%);
 }
-.learning__description {
-  margin-bottom: 1rem;
-}
-.learning__section-title {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
 
 /* COURSE MATERIALS */
 .materials {
@@ -1240,9 +1216,6 @@ body {
   margin-bottom: 1rem;
   text-align: center;
 }
-.materials__contents {
-  text-align: center;
-}
 .materials__contents__content {
   display: flex;
   justify-content: center;
@@ -1250,21 +1223,9 @@ body {
   gap: 1rem;
   margin-bottom: 0.5rem;
 }
-.materials__contents__content img {
+.materials__contents__content__img {
   width: 25px;
   height: 25px;
-}
-@media screen and (min-width: 540px) {
-  .materials__contents__content img {
-    width: 40px;
-    height: 40px;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .materials__contents__content img {
-    width: 50px;
-    height: 50px;
-  }
 }
 
 /* PRICE */
@@ -1272,6 +1233,7 @@ body {
   width: 80%;
   margin: auto;
   margin-bottom: 6rem;
+  text-align: center;
   /* MORE THAN 1 PAYMENT */
 }
 @media screen and (min-width: 540px) {
@@ -1282,13 +1244,11 @@ body {
 .price__title {
   margin-bottom: 1rem;
   font-size: 4rem;
-  text-align: center;
 }
 .price__text {
   width: 50%;
   margin: auto;
   margin-bottom: 0.5rem;
-  text-align: center;
 }
 .price__text__value {
   display: flex;
@@ -1303,39 +1263,10 @@ body {
   flex-direction: column;
   gap: 2rem;
 }
-@media screen and (min-width: 1024px) {
-  .price__prices--more-than-one {
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-end;
-  }
-}
 .price__prices--more-than-one__payment-content {
   background-color: hsl(209deg, 100%, 84%);
   border: 2px solid hsl(209deg, 100%, 70%);
   text-align: center;
-}
-@media screen and (min-width: 1024px) {
-  .price__prices--more-than-one__payment-content {
-    max-width: -webkit-fit-content;
-    max-width: -moz-fit-content;
-    max-width: fit-content;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 3rem;
-    border-radius: 10px;
-    padding: 1rem;
-  }
-  .price__prices--more-than-one__payment-content:nth-child(1) {
-    order: 2;
-  }
-  .price__prices--more-than-one__payment-content:nth-child(2) {
-    order: 1;
-  }
-  .price__prices--more-than-one__payment-content:nth-child(3) {
-    order: 3;
-  }
 }
 .price__prices--more-than-one__payment-content__text {
   display: flex;
@@ -1343,22 +1274,12 @@ body {
   margin-bottom: 0.5rem;
   font-size: 3rem;
   font-weight: bold;
-  white-space: nowrap;
-}
-@media screen and (min-width: 1024px) {
-  .price__prices--more-than-one__payment-content__text {
-    font-size: 2.5rem;
-  }
 }
 .price__prices--more-than-one__payment-content__text--small-card {
   font-size: 1.5rem;
 }
 .price__note {
   margin-top: 1rem;
-  text-align: center;
-}
-.price__center-button {
-  text-align: center;
 }
 .price__buy-button {
   background-color: hsl(209deg, 100%, 70%);
@@ -1377,6 +1298,9 @@ body {
 .price__payment {
   margin-top: 2rem;
   text-align: center;
+  /* QR CODE */
+  /* PHONE NUMBER */
+  /* TED */
 }
 .price__payment__buttons {
   display: flex;
@@ -1397,8 +1321,6 @@ body {
   color: hsl(0deg, 0%, 100%);
   cursor: pointer;
   transition: background-color 0.1s;
-  width: 7.5vw;
-  min-width: 75px;
   padding: 1rem;
   box-sizing: border-box;
 }
@@ -1407,11 +1329,6 @@ body {
 }
 .price__payment__buttons__method__button__img {
   width: 25px;
-}
-@media screen and (min-width: 540px) {
-  .price__payment__buttons__method__button__img {
-    width: 30px;
-  }
 }
 .price__payment__buttons__method__description {
   margin-top: 0.25rem;
@@ -1423,11 +1340,6 @@ body {
   display: flex;
   justify-content: space-between;
   margin-top: 1rem;
-}
-@media screen and (min-width: 1024px) {
-  .price__payment__material-choice {
-    justify-content: center;
-  }
 }
 .price__payment__material-choice__option {
   flex: 1 1 0;
@@ -1441,11 +1353,11 @@ body {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-  background-color: #ffffff;
+  background-color: hsl(0deg, 0%, 100%);
   width: 36px;
   height: 36px;
   position: relative;
-  border: 1px solid hsl(209deg, 100%, 70%);
+  border: 1px solid hsl(227deg, 81%, 59%);
   border-radius: 50%;
 }
 .price__payment__material-choice__option__input:checked {
@@ -1472,11 +1384,7 @@ body {
 }
 .price__payment__qr-code__inner-code {
   width: 50%;
-}
-@media screen and (min-width: 1440px) {
-  .price__payment__qr-code__inner-code {
-    width: 25%;
-  }
+  min-width: 150px;
 }
 .price__payment__qr-code__link {
   background-color: hsl(209deg, 100%, 70%);
@@ -1497,13 +1405,16 @@ body {
   margin-bottom: 1rem;
 }
 .price__payment__phone-number__number {
+  display: flex;
+  justify-content: center;
   margin: 2rem;
   font-size: 1.5rem;
+  white-space: nowrap;
 }
-.price__payment__phone-number__number a {
+.price__payment__phone-number__number__link {
   color: hsl(0deg, 0%, 0%);
 }
-.price__payment__phone-number__number a:hover {
+.price__payment__phone-number__number__link:hover {
   text-decoration: underline;
 }
 .price__payment__ted {
@@ -1554,9 +1465,9 @@ body {
   text-align: center;
 }
 .opinions__opinion {
-  background-color: rgba(255, 255, 255, 0.2392156863);
+  background-color: hsla(0deg, 0%, 100%, 0.239);
   border-radius: 5px;
-  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1215686275);
+  box-shadow: 0 0 3px hsla(0deg, 0%, 0%, 0.122);
   padding: 1.5rem;
 }
 .opinions__opinion:not(:first-child) {
@@ -1567,4 +1478,80 @@ body {
 }
 .opinions__opinion__author {
   margin-top: 0.5rem;
+}
+
+/* RESPONSIVE LAYOUTS */
+/* TABLET */
+@media screen and (min-width: 540px) {
+  /* COURSE MATERIALS */
+  .materials__contents__content__img {
+    width: 40px;
+    height: 40px;
+  }
+  /* PRICE */
+  /* MORE THAN 1 PAYMENT */
+  .price__payment__buttons__method__button__img {
+    width: 30px;
+  }
+}
+/* DESKTOP */
+@media screen and (min-width: 1024px) {
+  /* WHAT YOU WILL LEARN */
+  /* WITH SECTIONS */
+  .learning__sections--max-height {
+    max-height: 500px;
+  }
+  .learning__sections__section {
+    max-width: 600px;
+  }
+  /* COURSE MATERIALS */
+  .materials__contents__content__img {
+    width: 50px;
+    height: 50px;
+  }
+  /* PRICE */
+  /* MORE THAN 1 PAYMENT */
+  .price__prices--more-than-one {
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+  }
+  .price__prices--more-than-one__payment-content {
+    max-width: -webkit-fit-content;
+    max-width: -moz-fit-content;
+    max-width: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 3rem;
+    border-radius: 10px;
+    padding: 1rem;
+  }
+  .price__prices--more-than-one__payment-content:nth-child(1) {
+    order: 2;
+  }
+  .price__prices--more-than-one__payment-content:nth-child(2) {
+    order: 1;
+  }
+  .price__prices--more-than-one__payment-content__text {
+    font-size: 2.5rem;
+  }
+  .price__payment__material-choice {
+    justify-content: center;
+  }
+  .price__payment__qr-code__inner-code {
+    max-width: 350px;
+  }
+}
+/* EXTRA DESKTOP */
+@media screen and (min-width: 1440px) {
+  /* PRICE */
+  /* MORE THAN 1 PAYMENT */
+  .price__payment__qr-code__inner-code {
+    width: 25%;
+    min-width: 350px;
+  }
+  .price__payment__buttons__method__button {
+    min-width: 100px;
+  }
 }/*# sourceMappingURL=children-musicalization-course.css.map */
