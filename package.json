@@ -11,5 +11,9 @@
   "bugs": {
     "url": "https://github.com/Volaxy/Keila-WebSite/issues"
   },
-  "homepage": "https://github.com/Volaxy/Keila-WebSite#readme"
+  "homepage": "https://github.com/Volaxy/Keila-WebSite#readme",
+  "devDependencies": {
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1"
+  }
 }
