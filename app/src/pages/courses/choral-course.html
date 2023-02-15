@@ -13,6 +13,10 @@
     <!-- CSS IMPORTS -->    
     <!-- INTERNAL -->
     <link rel="stylesheet" href="../../assets/css/choral-course.css">
+
+    <!-- JAVASCRIPT IMPORTS -->    
+    <!-- INTERNAL -->
+    <script src="../../assets/js/pages/pages/courses/choral-course.js" type="module" defer></script>
 </head>
 
 <body>
@@ -180,14 +184,14 @@
                                     <textarea class="basic-contact__fields__input basic-contact__fields__message-input" id="basic-contact__message" name="Mensagem" placeholder="Digite sua mensagem" rows="5" required></textarea>
                                 </div>
 
-                                <label class="basic-contact__fields__label basic-contact__fields__proof-field__label-button" for="basic-contact__proof-input" data-element-id="inputFileLabel">Clique para Anexar o Comprovante</label>
-                                <input type="file" name="Comprovante" class="basic-contact__fields__proof-field__input" id="basic-contact__proof-input" data-element-id="fileInput" required>
+                                <label class="contact__fields__label contact__fields__proof-field__label-button" for="basic-contact__proof-input" data-element-id="inputFileLabel">Clique para Anexar o Comprovante</label>
+                                <input type="file" name="Comprovante" class="contact__fields__proof-field__input" id="basic-contact__proof-input" data-element-id="fileInput" required>
 
                                 <!-- FORM CONFIGURATIONS -->
                                 <input type="hidden" name="_captcha" value="false">
                                 <input type="hidden" name="_subject" value="New submission!">
                                 <input type="hidden" name="_template" value="table">
-                                <input type="hidden" name="_next" value="http://127.0.0.1:5500/pages/thanks.html">
+                                <input type="hidden" name="_next" value="http://127.0.0.1:5500/app/src/pages/thanks.html">
                             </div>
         
                             <div class="basic-contact--align-send-button"> <input class="basic-contact__send-button" type="submit" value="Enviar E-mail" data-element-id="sendProofSubmit"> </div>
@@ -236,13 +240,6 @@
             </ul>
         </nav>
     </footer>
-
-    <!-- JAVASCRIPT IMPORTS -->
-    <!-- INTERNAL -->
-    <script src="../../assets/js/dropDownContent.js"></script>
-    <script src="../../assets/js/hamburguerMenu.js"></script>
-    <script src="../../assets/js/course.js"></script>
-    <script src="../../assets/js/inputFile.js"></script>
 </body>
 
 </html>

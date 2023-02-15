@@ -470,14 +470,14 @@ hr {
 /* TABLET */
 @media screen and (min-width: 540px) {
   html,
-body {
+  body {
     font-size: 20px;
   }
 }
 /* DESKTOP */
 @media screen and (min-width: 1024px) {
   html,
-body {
+  body {
     font-size: 24px;
   }
 }
@@ -711,9 +711,6 @@ body {
   .basic-contact__fields__message-field {
     grid-column: 1/-1;
   }
-  .basic-contact__fields__proof-field {
-    grid-column: 1/-1;
-  }
 }
 /* DESKTOP */
 @media screen and (min-width: 1024px) {
@@ -723,27 +720,6 @@ body {
   }
   .basic-contact__fields__message-input {
     height: 250px;
-  }
-}
-/* ADDITIONAL / VARIATIONS */
-/* PROOF INPUT */
-.basic-contact__fields__proof-field__label-button {
-  background-color: hsl(0deg, 0%, 100%);
-  grid-column: 1/-1;
-  border: 2px dashed hsl(227deg, 81%, 59%);
-  border-radius: 5px;
-  padding: 1rem 2rem;
-  text-align: center;
-}
-.basic-contact__fields__proof-field__input {
-  display: none;
-}
-
-/* RESPONSIVE LAYOUTS */
-/* TABLET */
-@media screen and (min-width: 1024px) {
-  .basic-contact__fields__proof-field__label-button {
-    padding: 2rem;
   }
 }
 .footer {
@@ -825,7 +801,6 @@ body {
   margin-bottom: 1rem;
 }
 .learning__sections {
-  max-width: -webkit-fit-content;
   max-width: -moz-fit-content;
   max-width: fit-content;
   margin: auto;
@@ -1261,18 +1236,25 @@ body {
 .price__prices--more-than-one {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 2rem;
 }
 .price__prices--more-than-one__payment-content {
   background-color: hsl(209deg, 100%, 84%);
+  max-width: -moz-max-content;
+  max-width: max-content;
   border: 2px solid hsl(209deg, 100%, 70%);
+  border-radius: 10px;
+  padding: 1rem 2rem;
+  font-size: 2.5rem;
   text-align: center;
+  white-space: nowrap;
 }
 .price__prices--more-than-one__payment-content__text {
   display: flex;
   justify-content: center;
+  margin-top: 1rem;
   margin-bottom: 0.5rem;
-  font-size: 3rem;
   font-weight: bold;
 }
 .price__prices--more-than-one__payment-content__text--small-card {
@@ -1308,7 +1290,6 @@ body {
   margin-bottom: 2rem;
 }
 .price__payment__buttons__method {
-  max-width: -webkit-min-content;
   max-width: -moz-min-content;
   max-width: min-content;
 }
@@ -1449,6 +1430,26 @@ body {
   text-align: left;
 }
 
+.contact__fields__proof-field {
+  /* ADDITIONAL / VARIATIONS */
+  /* PROOF INPUT */
+}
+.contact__fields__proof-field__label-button {
+  background-color: hsl(0deg, 0%, 100%);
+  grid-column: 1/-1;
+  border: 2px dashed hsl(227deg, 81%, 59%);
+  border-radius: 5px;
+  padding: 1rem 2rem;
+  text-align: center;
+  cursor: pointer;
+}
+.contact__fields__proof-field__input {
+  display: none;
+}
+.contact__fields__proof-field__input--file-selected {
+  background-color: hsl(118deg, 100%, 40%);
+}
+
 /* STUDENTS OPINIONS */
 .opinions {
   width: 80%;
@@ -1517,7 +1518,6 @@ body {
     align-items: flex-end;
   }
   .price__prices--more-than-one__payment-content {
-    max-width: -webkit-fit-content;
     max-width: -moz-fit-content;
     max-width: fit-content;
     display: flex;
@@ -1527,12 +1527,6 @@ body {
     border-radius: 10px;
     padding: 1rem;
   }
-  .price__prices--more-than-one__payment-content:nth-child(1) {
-    order: 2;
-  }
-  .price__prices--more-than-one__payment-content:nth-child(2) {
-    order: 1;
-  }
   .price__prices--more-than-one__payment-content__text {
     font-size: 2.5rem;
   }
@@ -1541,6 +1535,11 @@ body {
   }
   .price__payment__qr-code__inner-code {
     max-width: 350px;
+  }
+  /* FORM */
+  /* PROOF INPUT */
+  .contact__fields__proof-field__label-button {
+    padding: 2rem;
   }
 }
 /* EXTRA DESKTOP */

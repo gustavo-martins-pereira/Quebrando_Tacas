@@ -11,6 +11,7 @@ $red-color: hsl(0, 100%, 46%);
 $youtube-red-color: hsl(0, 100%, 40%);
 $kournikova-color: hsl(42, 100%, 67%);
 $selective-yellow-color: hsl(43, 100%, 50%);
+$green: hsl(118, 100%, 40%);
 $forest-green-color: hsl(115, 70%, 42%);
 $bilbao-color: hsl(115, 69%, 26%);
 $anakiwa-color: hsl(209, 100%, 84%);
@@ -58,6 +59,7 @@ $fail-popup-background: $red-color;
 // INPUTS
 $input-background: $white-color;
 $input-file-background: $white-color;
+$input-file-selected-background: $green;
 $input-check-checked-background: $royal-blue-color;
 
 /********** BORDERS **********/

@@ -193,23 +193,32 @@
     &__prices--more-than-one {
         display: flex;
         flex-direction: column;
+        align-items: center;
         gap: 2rem;
         
         &__payment-content {
             background-color: $payment-card-background;
+
+            max-width: max-content;
             
             border: 2px solid $payment-card-border-color;
+            border-radius: 10px;
+            padding: 1rem 2rem;
 
+            font-size: 2.5rem;
             text-align: center;
+            white-space: nowrap;
 
             &__text {
                 display: flex;
                 justify-content: center;
 
-                margin-bottom: 0.5rem;
+                margin: {
+                    top: 1rem;
+                    bottom: 0.5rem;
+                }
 
                 font: {
-                    size: 3rem;
                     weight: bold;
                 }
 
@@ -414,6 +423,33 @@
     text-align: left;
 }
 
+.contact__fields__proof-field {
+    /* ADDITIONAL / VARIATIONS */
+    /* PROOF INPUT */
+    &__label-button {
+        background-color: $input-file-background;
+        
+        grid-column: 1 / -1;
+    
+        border: 2px dashed $input-border-color;
+        border-radius: 5px;
+        padding: 1rem 2rem;
+    
+        text-align: center;
+
+        cursor: pointer;
+    }
+    
+    &__input {
+        display: none;
+
+        &--file-selected {
+            background-color: $input-file-selected-background;
+        }
+    }
+}
+
+
 /* STUDENTS OPINIONS */
 .opinions {
     @include standard--width();
@@ -503,13 +539,6 @@
                 border-radius: 10px;
                 padding: 1rem;
     
-                &:nth-child(1) {
-                    order: 2;
-                }
-                &:nth-child(2) {
-                    order: 1;
-                }
-    
                 &__text {
                     font-size: 2.5rem;
                 }
@@ -525,6 +554,12 @@
                 max-width: 350px;
             }
         }
+    }
+
+    /* FORM */
+    /* PROOF INPUT */
+    .contact__fields__proof-field__label-button {
+        padding: 2rem;
     }
 }
 

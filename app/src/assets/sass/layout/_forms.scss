@@ -127,10 +127,6 @@
         &__message-field {
             grid-column: 1 / -1;
         }
-        
-        &__proof-field {
-            grid-column: 1 / -1;
-        }
     }
 }
 
@@ -143,34 +139,5 @@
 
     .basic-contact__fields__message-input {
         height: 250px;
-    }
-}
-
-/* ADDITIONAL / VARIATIONS */
-/* PROOF INPUT */
-.basic-contact__fields {
-    &__proof-field__label-button {
-        background-color: $input-file-background;
-        
-        grid-column: 1 / -1;
-
-        border: 2px dashed $input-border-color;
-        border-radius: 5px;
-        padding: 1rem 2rem;
-
-        text-align: center;
-    }
-    
-    &__proof-field__input {
-        display: none;
-    }
-}
-
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-/* RESPONSIVE LAYOUTS */
-/* TABLET */
-@media screen and (min-width: map-get($map: $breakpoints, $key: "large")) {
-    .basic-contact__fields__proof-field__label-button {
-        padding: 2rem;
     }
 }

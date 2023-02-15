@@ -12,10 +12,10 @@ import { } from "../main.js";
      */
     {
         const coursesLink = [
-            "courses/sing-course",
-            "courses/choral-course",
-            "courses/children-musicalization-course",
-            "who-i-am",
+            "./pages/courses/sing-course",
+            "./pages/courses/choral-course",
+            "./pages/courses/children-musicalization-course",
+            "./pages/who-i-am",
         ];
 
         const $carouselBullets = document.querySelector("[data-element-id='swiper-paginator']");
