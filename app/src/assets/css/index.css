@@ -470,14 +470,14 @@ hr {
 /* TABLET */
 @media screen and (min-width: 540px) {
   html,
-body {
+  body {
     font-size: 20px;
   }
 }
 /* DESKTOP */
 @media screen and (min-width: 1024px) {
   html,
-body {
+  body {
     font-size: 24px;
   }
 }
@@ -946,7 +946,7 @@ body {
   flex-direction: column;
   row-gap: 1rem;
   transform: translateX(-50%);
-  z-index: 1;
+  z-index: 2;
 }
 .basic-contact__pop-ups__pop-up {
   display: flex;
@@ -1043,7 +1043,7 @@ body {
     margin: auto 10px !important;
   }
   /* CONTACT */
-  .contact__pop-ups {
+  .basic-contact__pop-ups {
     top: 4rem;
     left: unset;
     right: 1rem;

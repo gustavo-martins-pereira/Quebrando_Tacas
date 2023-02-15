@@ -3,7 +3,7 @@
         {
             "format": "expanded",
             "extensionName": ".css",
-            "savePath": "/assets/css",
+            "savePath": "/app/src/assets/css",
             "savePathReplacementPairs": null,
         }
     ]

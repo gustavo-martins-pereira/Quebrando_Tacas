@@ -1,3 +1,5 @@
+import { } from "../main.js";
+
 (function() {
     /* ACCESS COURSE BUTTON *
      * 
@@ -22,8 +24,7 @@
         const mutationObserver = new MutationObserver(() => {
             $carouselBullets.childNodes.forEach((bullet, index) => {
                 if(bullet.classList.contains("swiper-pagination-bullet-active")) {
-                    // Set the "href" of the "<a></a>" tag according the index of the "coursesLink"
-                    $accessCourseButton.href = `./pages/${coursesLink[index]}.html`;
+                    $accessCourseButton.href = `${coursesLink[index]}.html`;
                 }
             });
         });
@@ -34,6 +35,29 @@
         });
     }
 
+    // SWIPER CONFIGURATIONS
+    const swiper = new Swiper('.swiper', {
+        // Optional parameters
+        direction: 'horizontal',
+        loop: true,
+    
+        // If we need pagination
+        pagination: {
+            el: '.swiper-pagination',
+        },
+    
+        // Navigation arrows
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    
+        // And if we need scrollbar
+        scrollbar: {
+            el: '.swiper-scrollbar',
+        },
+    });
+
     /* CONTACT FORM SUBMIT *
      * 
      * GOAL:
@@ -43,26 +67,25 @@
      * Make a fetch with a POST method and show a pop-up message based in the returned response promisse
      */
     {
-        const $contactForm = document.querySelector("[data-element-id='contact-form']");
+        const $contactForm = document.querySelector("[data-element-id='basic-contact-form']");
         $contactForm.addEventListener("submit", (event) => {
             event.preventDefault();
 
-            const $sendButton = document.querySelector("[data-element-id='contact-form__sendButton']");
-            $sendButton.classList.add("contact__send-button--disabled");
+            const $sendButton = document.querySelector("[data-element-id='basic-contact-form__sendButton']");
+            $sendButton.classList.add("basic-contact__send-button--disabled");
             $sendButton.setAttribute("disabled", true);
 
             // Inputs
-            const $nameInput = document.querySelector("[data-element-id='contactNameInput']");
-            const $emailInput = document.querySelector("[data-element-id='contactEmailInput']");
-            const $messageInput = document.querySelector("[data-element-id='contactMessageInput']");
-
+            const $nameInput = document.querySelector("[data-element-id='basic-contactNameInput']");
+            const $emailInput = document.querySelector("[data-element-id='basic-contactEmailInput']");
+            const $messageInput = document.querySelector("[data-element-id='basic-contactMessageInput']");
 
             // keilagruviracerqueira9602@gmail.com
             // claushmartins@gmail.com
             fetch("https://formsubmit.co/ajax/claushmartins@gmail.com", {
                 method: "POST",
                 
-                headers: { 
+                headers: {
                     'Content-Type': 'application/json',
                     'Accept': 'application/json'
                 },
@@ -80,33 +103,32 @@
                 .then(response => {
                     const $popUp = response.ok ? createSuccessPopUp(true) : createSuccessPopUp(false);
 
-                    const $popups = document.querySelector("[data-element-id='contact-pop-ups']");
+                    const $popups = document.querySelector("[data-element-id='basic-contact-pop-ups']");
                     $popups.appendChild($popUp);
                     
-                    $sendButton.classList.remove("contact__send-button--disabled");
+                    $sendButton.classList.remove("basic-contact__send-button--disabled");
                     $sendButton.removeAttribute("disabled");
 
-                    $popUp.classList.replace("contact__pop-ups__pop-up--invisible", "contact__pop-ups__pop-up--visible");
+                    $popUp.classList.replace("basic-contact__pop-ups__pop-up--invisible", "basic-contact__pop-ups__pop-up--visible");
 
                     deletePopUp($popUp);
                 })
                 .catch((error) => console.log(error));
         });
 
-        // Create a Success Pop-Up or a Fail Pop-Up based in the argumment, and return the HTML element already done
         function createSuccessPopUp(isSuccess) {
             const popUp = document.createElement("div");
-            popUp.classList.add("contact__pop-ups__pop-up", "contact__pop-ups__pop-up--invisible");
+            popUp.classList.add("basic-contact__pop-ups__pop-up");
             
             if(isSuccess) {
-                popUp.classList.add("contact__pop-ups__pop-up--success");
+                popUp.classList.add("basic-contact__pop-ups__pop-up--success", "basic-contact__pop-ups__pop-up--invisible");
                 
                 popUp.innerHTML = `
                     <img src="assets/images/icons/Correct.svg" alt="">
                     <p>E-mail enviado com sucesso!</p>
                 `;
             } else {
-                popUp.classList.add("contact__pop-ups__pop-up--fail");
+                popUp.classList.add("basic-contact__pop-ups__pop-up--fail");
 
                 popUp.innerHTML = `
                     <img src="assets/images/icons/Incorrect.svg" alt="">
@@ -119,7 +141,7 @@
 
         function deletePopUp(popUp) {
             setTimeout(function() {
-                popUp.classList.replace("contact__pop-ups__pop-up--visible", "contact__pop-ups__pop-up--invisible");
+                popUp.classList.replace("basic-contact__pop-ups__pop-up--visible", "basic-contact__pop-ups__pop-up--invisible");
             }, 3000);
 
             setTimeout(function() {

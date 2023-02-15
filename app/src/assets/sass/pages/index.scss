@@ -185,7 +185,7 @@
     row-gap: 1rem;
     
     transform: translateX(-50%);
-    z-index: 1;
+    z-index: 2;
 
     &__pop-up {
         display: flex;
@@ -212,7 +212,6 @@
 
         /* JAVASCRIPT STYLES */
         &--invisible {
-             // Set the opacity with 0 to apply the transition effect when the element is crated
             opacity: 0;
         }
 
@@ -316,7 +315,7 @@
     }
 
     /* CONTACT */
-    .contact__pop-ups {
+    .basic-contact__pop-ups {
         top: 4rem;
         left: unset;
         right: 1rem;

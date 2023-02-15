@@ -2,6 +2,7 @@
   "name": "keila-website",
   "version": "0.1.0",
   "description": "Keila's course sales website",
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Volaxy/Keila-WebSite.git"
