@@ -1,4 +1,4 @@
-import { } from "../main.js";
+import "../main.js";
 
 (function() {
     /* ACCESS COURSE BUTTON *

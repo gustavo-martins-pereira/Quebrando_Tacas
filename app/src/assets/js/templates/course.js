@@ -8,6 +8,10 @@
      * Remove the class which hidde the payment method content
      */
     {
+        const $QRCodePayment = document.querySelector("[data-element-id='payment-method-qr-code']");
+        const $phonePayment = document.querySelector("[data-element-id='payment-method-phone']");
+        const $tedPayment = document.querySelector("[data-element-id='payment-method-ted']");
+        
         // BUY COURSE BUTTON
         const $buyCourseButton = document.querySelector("[data-element-id='buy-course-button']");
         $buyCourseButton.addEventListener("click", () => {
@@ -43,9 +47,5 @@
             $QRCodePayment.classList.add("price__payment--hidden");
             $phonePayment.classList.add("price__payment--hidden");
         });
-
-        const $QRCodePayment = document.querySelector("[data-element-id='payment-method-qr-code']");
-        const $phonePayment = document.querySelector("[data-element-id='payment-method-phone']");
-        const $tedPayment = document.querySelector("[data-element-id='payment-method-ted']");
     }
 })();

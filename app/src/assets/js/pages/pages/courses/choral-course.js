@@ -1,7 +1,7 @@
-import { } from "../../../main.js";
+import "../../../main.js";
 
-import {  } from "../../../templates/course.js";
+import "../../../templates/course.js";
 
-import {  } from "../../../components/dropDownContent.js";
-import {  } from "../../../components/inputFile.js";
-import {  } from "../../../components/dropDownContent.js";
+import "../../../components/dropDownContent.js";
+import "../../../components/inputFile.js";
+import "../../../components/dropDownContent.js";

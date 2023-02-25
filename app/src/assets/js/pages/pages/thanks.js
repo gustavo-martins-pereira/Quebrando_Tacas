@@ -1,1 +1,1 @@
-import { } from "../../main.js";
+import "../../main.js";
