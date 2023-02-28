@@ -5,6 +5,10 @@ module.exports = {
     mode: "development",
     devtool: 'inline-source-map',
 
+    devServer: {
+        static: './app/dist/assets/js',
+    },
+
     entry: './app/src/assets/js/pages/index.js',
 
     output: {
