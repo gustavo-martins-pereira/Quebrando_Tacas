@@ -1,28 +1,31 @@
 {
-  "name": "keila-website",
-  "version": "0.1.0",
-  "description": "Keila's course sales website",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Volaxy/Keila-WebSite.git"
-  },
-  "author": "Gustavo Martins Pereira",
-  "license": "GPL-3.0-or-later",
-  "bugs": {
-    "url": "https://github.com/Volaxy/Keila-WebSite/issues"
-  },
-  "homepage": "https://github.com/Volaxy/Keila-WebSite#readme",
-  "scripts": {
-    "build": "npx webpack --config webpack.config.js",
-    "build:watch": "npx webpack --config webpack.config.js --watch",
-    "build:serve": "npx webpack serve --open --config webpack.config.js"
-  },
-  "devDependencies": {
-    "css-loader": "^6.7.3",
-    "html-webpack-plugin": "^5.5.0",
-    "style-loader": "^3.3.1",
-    "webpack": "^5.75.0",
-    "webpack-cli": "^5.0.1",
-    "webpack-dev-server": "^4.11.1"
-  }
+    "name": "keila-website",
+    "version": "0.1.0",
+    "description": "Keila's course sales website",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Volaxy/Keila-WebSite.git"
+    },
+    "author": "Gustavo Martins Pereira",
+    "license": "GPL-3.0-or-later",
+    "bugs": {
+        "url": "https://github.com/Volaxy/Keila-WebSite/issues"
+    },
+    "homepage": "https://github.com/Volaxy/Keila-WebSite#readme",
+    "scripts": {
+        "build": "npx webpack --config webpack.config.js",
+        "build:watch": "npx webpack --config webpack.config.js --watch",
+        "build:serve": "npx webpack serve --open --config webpack.config.js"
+    },
+    "devDependencies": {
+        "css-loader": "^6.7.3",
+        "html-webpack-plugin": "^5.5.0",
+        "style-loader": "^3.3.1",
+        "webpack": "^5.75.0",
+        "webpack-cli": "^5.0.1",
+        "webpack-dev-server": "^4.11.1"
+    },
+    "dependencies": {
+        "swiper": "^9.1.0"
+    }
 }

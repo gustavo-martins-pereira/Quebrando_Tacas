@@ -1,8 +1,32 @@
+/* EXTERNAL LIBRARIES */
+/* SWIPER */
+import Swiper from 'swiper/bundle';
+import 'swiper/css/bundle';
+
+/* INTERNAL FILES */
 import "../../css/index.css";
 
 import "../main.js";
 
 (function() {
+    // SWIPER CONFIGURATIONS
+    const swiper = new Swiper('.swiper', {
+        // Optional parameters
+        direction: 'horizontal',
+        loop: true,
+    
+        // If we need pagination
+        pagination: {
+            el: '.swiper-pagination',
+        },
+    
+        // Navigation arrows
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+    
     /* ACCESS COURSE BUTTON *
      * 
      * GOAL:
@@ -21,7 +45,7 @@ import "../main.js";
         ];
 
         const $carouselBullets = document.querySelector("[data-element-id='swiper-paginator']");
-     
+
         const $accessCourseButton = document.querySelector("[data-element-id='acess-course-button']");
         const mutationObserver = new MutationObserver(() => {
             $carouselBullets.childNodes.forEach((bullet, index) => {
@@ -36,29 +60,6 @@ import "../main.js";
             subtree: true
         });
     }
-
-    // SWIPER CONFIGURATIONS
-    const swiper = new Swiper('.swiper', {
-        // Optional parameters
-        direction: 'horizontal',
-        loop: true,
-    
-        // If we need pagination
-        pagination: {
-            el: '.swiper-pagination',
-        },
-    
-        // Navigation arrows
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-    
-        // And if we need scrollbar
-        scrollbar: {
-            el: '.swiper-scrollbar',
-        },
-    });
 
     /* CONTACT FORM SUBMIT *
      * 
