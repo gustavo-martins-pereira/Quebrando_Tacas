@@ -7,141 +7,183 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Quebrando Taças</title>
+
+    <!-- CSS IMPORTS -->
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/normalize.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
+    <!-- TODO: MORE CONTRASTED IMAGES: Make the images with more shadows -->
     <!-- HEADER -->
-    <header>
-        <h1>Keila Gruvira Concertista</h1>
+    <header class="box header">
+        <div>
+            <h1 class="accessibility--hidden-text">Keila Gruvira Concertista</h1>
+            <img class="header__logo" src="assets/images/logo.png" alt="Logotipo do Quebrando Taças">
+            <p class="header__learn-to">Aprenda a</p>
+            <ul class="header__list">
+                <li class="header__item">Dar agudo como os profissionais</li>
+                <li class="header__item">Cantar como os seus ídolos da música</li>
+                <li class="header__item">Alcançar notas ainda mais altas sem dor</li>
+            </ul>
+        </div>
 
-        <!-- TODO: Logo -->
-
-        <p>Aprenda a</p>
-
-        <ul>
-            <li>Dar agudo como os profissionais</li>
-            <li>Cantar como os seus ídolos da música</li>
-            <li>Alcançar notas ainda mais altas sem dor</li>
-        </ul>
+        <img class="header__profile" src="https://picsum.photos/300/200" alt="Header background">
     </header>
 
     <main>
         <!-- WHAT DO YOU WILL LEARN -->
-        <section>
-            <h2>O que você aprenderá:</h2>
+        <section class="box learning">
+            <h2 class="learning__title">O que você aprenderá:</h2>
 
             <ul>
-                <li>Fisiologia da voz: como o som é produzido</li>
-                <li>Respiração: técnica para voz não quebrar</li>
-                <li>Pressão Subglótica: agudos sem esforço</li>
-                <li>Ressonância: agudos brilhantes</li>
-                <li>Verticalidade do som: registros vocais</li>
-                <li>Classificação Vocal: entenda seu tipo de voz</li>
-                <li>Dominando a língua: eliminando voz de taquara rachada</li>
+                <li class="learning__item"><img src="assets/images/icons/goblet-2.svg" alt=""> Fisiologia da voz: como o som é produzido</li>
+                <li class="learning__item"><img src="assets/images/icons/goblet-2.svg" alt=""> Respiração: técnica para voz não quebrar</li>
+                <li class="learning__item"><img src="assets/images/icons/goblet-2.svg" alt=""> Pressão Subglótica: agudos sem esforço</li>
+                <li class="learning__item"><img src="assets/images/icons/goblet-2.svg" alt=""> Ressonância: agudos brilhantes</li>
+                <li class="learning__item"><img src="assets/images/icons/goblet-2.svg" alt=""> Verticalidade do som: registros vocais</li>
+                <li class="learning__item"><img src="assets/images/icons/goblet-2.svg" alt=""> Classificação Vocal: entenda seu tipo de voz</li>
+                <li class="learning__item"><img src="assets/images/icons/goblet-2.svg" alt=""> Dominando a língua: eliminando voz de taquara rachada</li>
             </ul>
         </section>
 
         <!-- KNOW EVERY CLASS COURSE -->
-        <section>
-            <h2>Conheça cada aula do curso</h2>
+        <section class="box classes-course">
+            <div>
+                <h2 class="classes-course__title">Conheça cada aula do curso</h2>
+                
+                <p class="classes-course__text">Preparei um curso prático e rápido para resolver definitivamente os seus problemas com as notas agudas.</p>
+                <p class="classes-course__text">O curso possui 7 aulas com teoria e exercícios além de um material bônus com um verdadeiro passo a passo sobre treinos vocais num PDF esquematizado.</p>
+            </div>
 
-            <p>Preparei um curso prático e rápido para resolver definitivamente os seus problemas com as notas agudas.</p>
-            <p>O curso possui 7 aulas com teoria e exercícios além de um material bônus com um verdadeiro passo a passo sobre treinos vocais num PDF esquematizado.</p>
-
-            <ul>
-                <li>Aula 1</li>
-                <li>Aula 2</li>
-                <li>Aula 3</li>
-                <li>Aula 4</li>
-                <li>Aula 5</li>
-                <li>Aula 6</li>
-                <li>Aula 7</li>
+            <ul class="classes-course__list">
+                <li class="classes-course__item">Aula 1</li>
+                <li class="classes-course__item">Aula 2</li>
+                <li class="classes-course__item">Aula 3</li>
+                <li class="classes-course__item">Aula 4</li>
+                <li class="classes-course__item">Aula 5</li>
+                <li class="classes-course__item">Aula 6</li>
+                <li class="classes-course__item">Aula 7</li>
             </ul>
         </section>
 
-        <!-- DEPOIMENTS -->
-        <article>
+        <!-- DEPOSITIONS -->
+        <article class="box depositions">
             <h2>Conheça alguns depoimentos de quem conhece a professora</h2>
 
-            <section>
-                <article>
-                    <p>bla bla bla</p>
+            <section class="depositions__opinions">
+                <article class="depositons__opinion">
+                    <img class="depositions__opinion__quote" src="assets/images/icons/quotes.svg" alt="">
+
+                    <p class="depositons__opinion__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident iusto, expedita aut impedit mollitia veritatis recusandae quas repellat animi repudiandae amet quos illo possimus eveniet ipsam, consequuntur dignissimos corrupti voluptate.</p>
                 </article>
                 
-                <article>
-                    <p>bla bla bla</p>
+                <article class="depositons__opinion">
+                    <img class="depositions__opinion__quote" src="assets/images/icons/quotes.svg" alt="">
+
+                    <p class="depositons__opinion__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident iusto, expedita aut impedit mollitia veritatis recusandae quas repellat animi repudiandae amet quos illo possimus eveniet ipsam, consequuntur dignissimos corrupti voluptate.</p>
                 </article>
                 
-                <article>
-                    <p>bla bla bla</p>
+                <article class="depositons__opinion">
+                    <img class="depositions__opinion__quote" src="assets/images/icons/quotes.svg" alt="">
+
+                    <p class="depositons__opinion__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident iusto, expedita aut impedit mollitia veritatis recusandae quas repellat animi repudiandae amet quos illo possimus eveniet ipsam, consequuntur dignissimos corrupti voluptate.</p>
                 </article>
 
-                <article>
-                    <p>bla bla bla</p>
+                <article class="depositons__opinion">
+                    <img class="depositions__opinion__quote" src="assets/images/icons/quotes.svg" alt="">
+
+                    <p class="depositons__opinion__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident iusto, expedita aut impedit mollitia veritatis recusandae quas repellat animi repudiandae amet quos illo possimus eveniet ipsam, consequuntur dignissimos corrupti voluptate.</p>
                 </article>
             </section>
         </article>
 
         <!-- YOU DID ASK YOURSELF WHY -->
-        <section>
-            <h2>Você já se perguntou por que,</h2>
+        <section class="box ask-yourself">
+            <div>
+                <h2 class="ask-yourself__title">Você já se perguntou por que,</h2>
+                <p class="ask-yourself__text">Apesar de possuírem muito talento, vozes raras e timbres agudos as pessoas sentem dificuldade de cantar notas agudas?</p>
+                <p class="ask-yourself__text">A resposta para isso é que notas nesta região exigem técnicas vocais específicas muito difíceis para adquirir sozinho da maneira natural sem que alguém te ensine. Sorte sua que eu estou aqui, né! Sua professora de canto que vai te ensinar estas técnicas e impulsionar o seu canto e fazer você impressionar toda a sua família com seus agudos de rachar taças! Não importa o que já te disseram antes, você pode cantar, pois cantar não é dom, é treino!</p>
+                <p class="ask-yourself__text">O curso foi criado para trilharmos juntos o processo de amadurecimento da sua voz e te dar as ferramentas para cantar como os profissionais. Se você ama cantar e quer aprender mais, clica no botão ao lado e dá seus primeiros passos para se tornar um excelente cantor!</p>
+            </div>
 
-            <p>Apesar de possuírem muito talento, vozes raras e timbres agudos as pessoas sentem dificuldade de cantar notas agudas?</p>
-            <p>A resposta para isso é que notas nesta região exigem técnicas vocais específicas muito difíceis para adquirir sozinho da maneira natural sem que alguém te ensine. Sorte sua que eu estou aqui, né! Sua professora de canto que vai te ensinar estas técnicas e impulsionar o seu canto e fazer você impressionar toda a sua família com seus agudos de rachar taças! Não importa o que já te disseram antes, você pode cantar, pois cantar não é dom, é treino!</p>
-            <p>O curso foi criado para trilharmos juntos o processo de amadurecimento da sua voz e te dar as ferramentas para cantar como os profissionais. Se você ama cantar e quer aprender mais, clica no botão ao lado e dá seus primeiros passos para se tornar um excelente cantor!</p>
+            <div>
+                <img class="buy__image" src="https://picsum.photos/300/200" alt="">
 
-            <section>
-                <!-- TODO: Logo -->
+                <section class="ask-yourself__buy">
+                    <img class="ask-yourself__buy__logo" src="assets/images/logo.png" alt="">
 
-                <ul>
-                    <li>Curso completo e atualizações</li>
-                    <li>Bônus PDF</li>
-                    <li>Acesso vitalício</li>
-                    <li>Suporte para dúvidas</li>
-                </ul>
+                    <ul>
+                        <li class="ask-yourself__item"><img src="assets/images/icons/check.svg" alt=""> Curso completo e atualizações</li>
+                        <li class="ask-yourself__item"><img src="assets/images/icons/check.svg" alt=""> Bônus PDF</li>
+                        <li class="ask-yourself__item"><img src="assets/images/icons/check.svg" alt=""> Acesso vitalício</li>
+                        <li class="ask-yourself__item"><img src="assets/images/icons/check.svg" alt=""> Suporte para dúvidas</li>
+                    </ul>
 
-                <p>compre o curso por 10x de R$999,99 <span>ou XXX,xx à vista.</span></p>
-            </section>
+                    <p class="ask-yourself__buy__isolated-text">
+                        <span class="ask-yourself__buy__isolated-text--white ask-yourself__buy__isolated-text--margin-bottom">compre o curso por</span>
+                        10x de R$999,99
+                        <span class="ask-yourself__buy__isolated-text--white">ou XXX,xx à vista.</span>
+                    </p>
+                    
+                    <button class="button ask-yourself__buy__button">Compre agora</button>
+                </section>
+            </div>
         </section>
 
         <!-- BUY -->
-        <section>
-            <h2>Grande extensão vocal e um timbre agudo não asseguram agudos belos e potentes</h2>
-
-            <p>O que os profissionais não contam sobre sua habilidade vocal é que ela é fruto de muito aprendizado e um somatório de técnicas, as quais ensinarei a você.</p>
+        <section class="box buy">
+            <div>
+                <h2>Grande extensão vocal e um timbre agudo não asseguram agudos belos e potentes</h2>
+                <p class="buy__text">O que os profissionais não contam sobre sua habilidade vocal é que ela é fruto de muito aprendizado e um somatório de técnicas, as quais ensinarei a você.</p>
+            </div>
 
             <article>
-                <img src="" alt="">
+                <img class="buy__image" src="https://picsum.photos/300/200" alt="">
+                
                 <!-- TODO: A button or a Link -->
-                <button>Comprar</button>
+                <button class="button buy__button">Comprar</button>
             </article>
         </section>
 
         <!-- BONUS -->
-        <article>
-            <h2>Bônus</h2>
+        <article class="box bonus">
+            <img class="tablet" src="assets/images/books-background.png" alt="">
 
-            <p>Leve o bônus do PDF de vocalizes e exercícios (um manual prático com as principais técnicas de canto para executar notas agudas).</p>
+            <div>
+                <h2 class="bonus__title">Bônus</h2>
+                
+                <p class="bonus__text">Leve o bônus do PDF de vocalizes e exercícios (um manual prático com as principais técnicas de canto para executar notas agudas).</p>
+
+                <img class="bonus__image" src="https://picsum.photos/300/200" alt="">
+            </div>
         </article>
 
-        <article>
-            <h2>Quem é Keila Gruvira</h2>
+        <!-- WHO IS KEILA -->
+        <article class="box who-keila">
+            <div>
+                <h2>Quem é Keila Gruvira</h2>
 
-            <p>Olá! Sou Soprano Lírico especializada em canto clássico com curso em Santiago de Compostela, Espanha.</p>
-            <p>Já me apresentei em vários lugares do Brasil colaborando com a Camerata Orchestra, OSES Orchestra e também em projetos solo cantando trilhas sonoras de filmes, árias de óperas e muito mais em inglês, espanhol, italiano, latim, francês, alemão.</p>
-            <p>Há mais de 20 anos, porém, me dedico a lecionar canto ministrando Workshops e palestras.</p>
+                <p class="who-keila__text">Olá! Sou Soprano Lírico especializada em canto clássico com curso em Santiago de Compostela, Espanha.</p>
+                <p class="who-keila__text">Já me apresentei em vários lugares do Brasil colaborando com a Camerata Orchestra, OSES Orchestra e também em projetos solo cantando trilhas sonoras de filmes, árias de óperas e muito mais em inglês, espanhol, italiano, latim, francês, alemão.</p>
+                <p class="who-keila__text">Há mais de 20 anos, porém, me dedico a lecionar canto ministrando Workshops e palestras.</p>
+            </div>
+
+            <img class="bonus__image" src="https://picsum.photos/300/200" alt="">
         </article>
 
-        <section>
-            <h2>Perguntas Frequentes</h2>
+        <!-- FREQUENT QUESTIONS -->
+        <section class="box questions">
+            <h2 class="questions__title">Perguntas Frequentes</h2>
 
-            <ul>
-                <li>1</li>
-                <li>2</li>
-                <li>3</li>
-                <li>4</li>
-                <li>5</li>
-                <li>6</li>
+            <ul class="questions__list">
+                <li class="questions__item">1</li>
+                <li class="questions__item">2</li>
+                <li class="questions__item">3</li>
+                <li class="questions__item">4</li>
+                <li class="questions__item">5</li>
+                <li class="questions__item">6</li>
             </ul>
         </section>
     </main>

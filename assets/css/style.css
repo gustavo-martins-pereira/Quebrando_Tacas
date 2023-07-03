@@ -1,0 +1,530 @@
+/*============================== Imports ==================================== */
+/* FONTS */
+@font-face {
+    font-family: "Cooper Hewitt Bold";
+    src: url("../fonts/CooperHewitt-Bold/CooperHewitt-Bold.otf") format("opentype");
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Cooper Hewitt Medium";
+    src: url("../fonts/CooperHewitt-Bold/CooperHewitt-Medium.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*============================== Configurations ==============================*/
+:root {
+    /*=============== COLORS ===============*/
+    --black-color: hsl(0, 0%, 0%);
+    --black-50-color: hsla(0, 0%, 0%, 0.5);
+    --white-color: hsl(0, 0%, 100%);
+    --totem-pole-color: hsl(0, 88%, 34%);
+    --kilamanjaro-color: hsl(17, 94%, 7%);
+    --sandal-color: hsl(26, 26%, 52%);
+    --mai-tai-color: hsl(38, 90%, 36%);
+    --sunglow-color: hsl(51, 100%, 58%);
+
+    /*=============== BACKGROUNDS ===============*/
+    /* BLOCKS */
+    --default-section-background: var(--kilamanjaro-color);
+    --opinion--background: var(--mai-tai-color);
+    --learn-to-background: var(--sunglow-color);
+    --ask-yourself-buy-section--background: var(--kilamanjaro-color);
+    --buy-background: var(--kilamanjaro-color);
+    --bonus-background: var(--mai-tai-color);
+    --questions-background: var(--mai-tai-color);
+
+    /* COMPONENTS */
+    --class-content-background: var(--mai-tai-color);
+    --question-background: var(--kilamanjaro-color);
+    --button-background: var(--mai-tai-color);
+
+    /*=============== BORDERS ===============*/
+
+
+    /*=============== TEXT COLORS ===============*/
+    /* DEFAULT */
+    --title-color-text: var(--sunglow-color);
+    --default-color-text: var(--sandal-color);
+    --ask-yourself-color-text: var(--sunglow-color);
+    --list-item-color-text: var(--sunglow-color);
+
+    /* SPECIFIC */
+    --class-content-color-text: var(--black-color);
+    --bonus-title-color-text: var(--totem-pole-color);
+    --bonus-default-color-text: var(--black-color);
+    --question-color-text: var(--white-color);
+
+    /*=============== FONTS FAMILY ===============*/
+    --title-font: "Cooper Hewitt Bold";
+    --default-font: "Cooper Hewitt Medium";
+}
+
+/*============================== Generic Elements ==============================*/
+html,
+body {
+    font-family: var(--default-font);
+    font-size: 16px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--title-color-text);
+    font-family: var(--title-font);
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    text-shadow: -2px 0 0 var(--black-color);
+
+    line-height: 1.5;
+}
+
+img {
+    max-width: 100%;
+}
+
+/*============================== Generic Classes ==============================*/
+/*=============== DEFAULT CLASSES FOR THE CONTAINERS ===============*/
+.box {
+    padding: 1rem;
+}
+
+/*=============== COMPONENTS ===============*/
+/* BUTTONS */
+.button {
+    background-color: var(--button-background);
+
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+}
+
+/*=============== ACCESSIBILITY ===============*/
+.accessibility--hidden-text {
+    width: 1px;
+    height: 1px;
+
+    position: absolute;
+
+    color: transparent;
+
+    overflow: hidden;
+}
+
+/*=============== RESPONSIVE ===============*/
+.tablet {
+    display: none;
+}
+
+/*============================== Page - Top to Bottom ==============================*/
+/* HEADER */
+.header {
+    background-image: url("../images/opera-background.jpg");
+    background-color: #ddd;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+    .header__logo {
+        display: block;
+
+        margin: auto;
+    }
+
+    .header__learn-to {
+        background-color: var(--learn-to-background);
+
+        width: fit-content;
+
+        margin: auto;
+        margin-top: 1rem;
+        border-radius: 10px;
+        box-shadow: 5px 2px 1px var(--black-color);
+        padding: 0.25rem 0.5rem;
+
+        font-size: 1.75rem;
+        text-transform: uppercase;
+    }
+
+    .header__list {
+        margin-top: 1rem;
+        padding-left: 0.5rem;
+    }
+
+        .header__item {
+            font-size: 2rem;
+
+            display: flex;
+            align-items: flex-start;
+
+            color: var(--list-item-color-text);
+            font-size: 1.5rem;
+            text-indent: -0.5rem;
+        }
+
+            .header__item::before {
+                content: url("../images/icons/goblet.svg");
+
+                display: inline-block;
+            }
+            
+            .header__item:not(:last-child) {
+                margin-bottom: 1rem;
+            }
+
+    .header__profile {
+        display: block;
+
+        margin: auto;
+    }
+
+/* WHAT DO YOU WILL LEARN */
+.learning {
+    background-image: url("../images/opera-background.jpg");
+    background-size: cover;
+}
+
+    .learning__title {
+        margin-bottom: 1rem;
+    }
+
+    .learning__item {
+        color: var(--list-item-color-text);
+        font-size: 1.5rem;
+    }
+
+        .learning__item:not(:last-child) {
+            margin-bottom: 0.5rem;
+        }
+
+        .learning__item:nth-child(even) img {
+            transform: rotateZ(180deg);
+        }
+
+/* KNOW EVERY CLASS COURSE */
+.classes-course {
+    background-color: var(--default-section-background);
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+    .classes-course__title {
+        margin-bottom: 1rem;
+    }
+
+    .classes-course__text {
+        color: var(--default-color-text);
+        text-align: justify;
+        text-indent: 1rem;
+        line-height: 1.5;
+    }
+
+    .classes-course__list {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        gap: 1rem;
+    }
+
+        .classes-course__item {
+            background-color: var(--class-content-background);
+
+            border-radius: 10px;
+            padding: 0.5rem 1rem;
+
+            text-align: center;
+        }
+
+/* DEPOSITIONS */
+.depositions {
+    background-image: url("../images/opera-3-background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+    .depositions__opinions {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+        .depositons__opinion {
+            background-color: var(--opinion--background);
+
+            width: 60%;
+            max-width: 25rem;
+
+            margin-top: 3rem;
+            border-radius: 10px;
+            box-shadow: 2px 2px 2px var(--black-color);
+            padding: 0 2rem 3rem;
+        }
+
+            .depositions__opinion__quote {
+                position: relative;
+                top: -2rem;
+            }
+
+            .depositons__opinion__text {
+                line-height: 1.5;
+            }
+
+/* YOU DID ASK YOURSELF WHY */
+.ask-yourself {
+    background-image: url("../images/opera-background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+    .ask-yourself__text {
+        margin-top: 1rem;
+
+        color: var(--ask-yourself-color-text);
+        text-align: justify;
+        text-indent: 1rem;
+        line-height: 1.5;
+    }
+
+    .ask-yourself__buy {
+        background-color: var(--ask-yourself-buy-section--background);
+
+        width: fit-content;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+
+        margin: 2rem auto;
+        border-radius: 10px;
+        box-shadow: 1px 1px 5px var(--black-color);
+        padding: 1rem;
+        box-sizing: border-box;
+    }
+
+        .ask-yourself__buy__logo {
+            width: 180px;
+        }
+
+        .ask-yourself__item {
+            color: var(--list-item-color-text);
+        }
+
+            .ask-yourself__item:not(:last-child) {
+                margin-bottom: 0.5rem;
+            }
+
+        .ask-yourself__buy__isolated-text {
+            color: var(--sunglow-color);
+            font-size: 2rem;
+            text-align: center;
+        }
+
+            .ask-yourself__buy__isolated-text--white {
+                display: block;
+
+                color: var(--white-color);
+                font-size: 1rem;
+            }
+
+            .ask-yourself__buy__isolated-text--margin-bottom {
+                margin-bottom: 2rem;
+            }
+
+        .ask-yourself__buy__button {
+            padding: 1rem 2rem;
+
+            text-transform: uppercase;
+        }
+
+/* BUY */
+.buy {
+    background-color: var(--buy-background);
+}
+
+    .buy__text {
+        margin-top: 1rem;
+
+        color: var(--default-color-text);
+        line-height: 1.5;
+    }
+
+    .buy__image {
+        display: block;
+
+        margin: auto;
+    }
+
+    .buy__button {
+        display: block;
+        
+        margin: auto;
+        margin-top: 1rem;
+        padding: 1rem 2rem;
+
+        text-transform: uppercase;
+    }
+
+/* BONUS */
+.bonus {
+    background-color: var(--bonus-background);
+}
+
+    .bonus__title {
+        color: var(--bonus-title-color-text);
+        text-align: center;
+    }
+
+    .bonus__text {
+        margin-top: 1rem;
+
+        color: var(--bonus-default-color-text);
+        text-align: justify;
+        line-height: 1.5;
+    }
+
+    .bonus__image {
+        display: block;
+        
+        margin: auto;
+    }
+
+/* WHO IS KEILA */
+.who-keila {
+    background-image: url("../images/opera-2-background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+    .who-keila__text {
+        margin-top: 1rem;
+        
+        color: var(--sunglow-color);
+        line-height: 1.5;
+    }
+
+/* FREQUENT QUESTIONS */
+.questions {
+    background-color: var(--questions-background);
+}
+
+    .questions__title {
+        text-align: center;
+    }
+
+    .questions__list {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 1rem;
+
+        margin: auto;
+        margin-top: 1rem;
+    }
+
+        .questions__item {
+            background-color: var(--question-background);
+
+            border-radius: 50px;
+            padding: 0.25rem 0.5rem;
+
+            color: var(--question-color-text);
+            text-align: center;
+        }
+
+/* RESPONSIVE LAYOUTS */
+@media screen and (min-width: 48rem) {
+    /*============================== Generic Elements ==============================*/
+    html,
+    body {
+        font-size: 18px;
+    }
+
+    /*============================== Generic Classes ==============================*/
+    /*=============== RESPONSIVE ===============*/
+    .tablet {
+        display: initial;
+    }
+
+    /*============================== Page - Top to Bottom ==============================*/
+    /* RESPONSIVE LAYOUTS */
+    /* HEADER */
+    .header {
+        display: flex;
+        gap: 1rem;
+    }
+
+        .header__profile {
+            margin: initial;
+
+            object-fit: cover;
+        }
+
+    /* DEPOSITIONS */
+    .depositions__opinions {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 1rem;
+    }
+
+        .depositons__opinion {
+            max-width: 300px;
+        }
+
+    /* YOU DID ASK YOURSELF WHY */
+    .ask-yourself {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+        .ask-yourself__buy {
+            width: initial;
+            height: fit-content;
+
+            margin: initial;
+        }
+
+    /* BUY */
+    .buy {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* BONUS */
+    .bonus {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        /* gap: 1rem; */
+    }
+
+        .bonus__image {
+            margin-top: 1rem;
+        }
+
+    /* WHO IS KEILA */
+    .who-keila {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    /* FREQUENT QUESTIONS */
+    .questions__list {
+        max-width: 600px;
+    }
+
+        .questions__item {
+            padding: 1rem 2rem;
+        }
+}
