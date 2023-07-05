@@ -442,7 +442,8 @@ img {
         }
 
 /* RESPONSIVE LAYOUTS */
-@media screen and (min-width: 48rem) {
+/* TABLET */
+@media screen and (min-width: 48rem) /* 768px */ {
     /*============================== Generic Elements ==============================*/
     html,
     body {
@@ -456,7 +457,6 @@ img {
     }
 
     /*============================== Page - Top to Bottom ==============================*/
-    /* RESPONSIVE LAYOUTS */
     /* HEADER */
     .header {
         display: flex;
@@ -527,4 +527,116 @@ img {
         .questions__item {
             padding: 1rem 2rem;
         }
+}
+
+/* DESKTOP */
+@media screen and (min-width: 64rem) /* 1024px */ {
+    /*============================== Generic Elements ==============================*/
+    html,
+    body {
+        font-size: 20px;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-size: 2rem;
+    }
+
+    /*============================== Generic Classes ==============================*/
+    /*=============== RESPONSIVE ===============*/
+    .box {
+        padding: 5rem 10rem;
+        box-shadow: inset 0px 0px 20px 10px var(--black-50-color);
+    }
+
+    /*============================== Page - Top to Bottom ==============================*/
+    /* HEADER */
+    .header {
+        justify-content: center;
+        gap: 10rem;
+    }
+
+        /* TODO: LOGO GREATER: Make the logo greater equals of the prototype */
+        .header__logo {
+            margin-left: 0;
+        }
+
+    /* WHAT DO YOU WILL LEARN */
+    .learning__list {
+        margin-top: 2rem;
+    }
+
+        .learning__item:not(:last-child) {
+            margin-bottom: 1.5rem;
+        }
+
+    /* KNOW EVERY CLASS COURSE */
+    .classes-course {
+        grid-template-columns: 3fr 2fr;
+        gap: 5rem;
+    }
+
+        .classes-course__title {
+            margin-bottom: 2rem;
+        }
+
+            .classes-course__text {
+                text-indent: 2rem;
+                line-height: 2;
+            }
+
+                .classes-course__text:not(:nth-of-type(1)) {
+                    margin-top: 1rem;
+                }
+
+    /* DEPOSITIONS */
+    .depositons__opinion {
+        max-width: 250px;
+    }
+
+    /* YOU DID ASK YOURSELF WHY */
+    .ask-yourself {
+        gap: 5rem;
+    }
+
+        .ask-yourself__text {
+            text-indent: 2rem;
+
+            line-height: 1.75;
+        }
+
+        .ask-yourself__buy {
+            width: fit-content;
+
+            margin: auto;
+            padding: 2rem 3rem;
+        }
+
+    /* BUY */
+    .buy__text {
+        line-height: 1.75;
+    }
+
+    /* WHO IS KEILA */
+    .who-keila__text {
+        line-height: 1.75;
+    }
+
+    /* FREQUENT QUESTIONS */
+    .questions__list {
+        margin-top: 2rem;
+    }
+}
+
+/* DESKTOP */
+@media screen and (min-width: 100rem) /* 1600px */ {
+    /*============================== Generic Classes ==============================*/
+    /*=============== RESPONSIVE ===============*/
+    .box {
+        padding: 5rem 15rem;
+    }
 }
