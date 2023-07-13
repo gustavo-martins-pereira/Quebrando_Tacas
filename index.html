@@ -17,10 +17,16 @@
 <body>
     <!-- TODO: MORE CONTRASTED IMAGES: Make the images with more shadows -->
     <!-- HEADER -->
-    <header class="box header">
-        <div>
+    <header class="header">
+        <div class="header__introduction">
             <h1 class="accessibility--hidden-text">Keila Gruvira Concertista</h1>
-            <img class="header__logo" src="assets/images/logo.png" alt="Logotipo do Quebrando Taças">
+            
+            <picture>
+                <source class="header__logo" srcset="assets/images/logo-desktop.png" media="(min-width: 1024px)">
+                <source class="header__logo" srcset="assets/images/logo-tablet.png" media="(min-width: 768px)">
+                <img class="header__logo" src="assets/images/logo-mobile.png" alt="Logotipo do Quebrando Taças">
+            </picture>
+
             <p class="header__learn-to">Aprenda a</p>
             <ul class="header__list">
                 <li class="header__item">Dar agudo como os profissionais</li>
@@ -29,7 +35,7 @@
             </ul>
         </div>
 
-        <img class="header__profile" src="https://picsum.photos/300/200" alt="Header background">
+        <img class="header__profile" src="assets/images/keila-01.png" alt="Header background">
     </header>
 
     <main>
@@ -112,7 +118,7 @@
                 <img class="buy__image" src="https://picsum.photos/300/200" alt="">
 
                 <section class="ask-yourself__buy">
-                    <img class="ask-yourself__buy__logo" src="assets/images/logo.png" alt="">
+                    <img class="ask-yourself__buy__logo" src="assets/images/logo-mobile.png" alt="">
 
                     <ul>
                         <li class="ask-yourself__item"><img src="assets/images/icons/check.svg" alt=""> Curso completo e atualizações</li>
@@ -149,7 +155,7 @@
 
         <!-- BONUS -->
         <article class="box bonus">
-            <img class="tablet" src="assets/images/books-background.png" alt="">
+            <img class="tablet" src="assets/images/backgrounds/books-background.png" alt="">
 
             <div>
                 <h2 class="bonus__title">Bônus</h2>

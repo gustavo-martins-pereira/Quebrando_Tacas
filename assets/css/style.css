@@ -124,60 +124,72 @@ img {
 /*============================== Page - Top to Bottom ==============================*/
 /* HEADER */
 .header {
-    background-image: url("../images/opera-background.jpg");
+    background-image: url("../images/backgrounds/opera-background.jpg");
     background-color: #ddd;
     background-size: 100% 100%;
     background-repeat: no-repeat;
+
+    padding: 0;
 }
 
-    .header__logo {
-        display: block;
-
-        margin: auto;
+    .header__introduction {
+        padding: 1rem;
     }
 
-    .header__learn-to {
-        background-color: var(--learn-to-background);
+        .header__logo {
+            display: block;
 
-        width: fit-content;
-
-        margin: auto;
-        margin-top: 1rem;
-        border-radius: 10px;
-        box-shadow: 5px 2px 1px var(--black-color);
-        padding: 0.25rem 0.5rem;
-
-        font-size: 1.75rem;
-        text-transform: uppercase;
-    }
-
-    .header__list {
-        margin-top: 1rem;
-        padding-left: 0.5rem;
-    }
-
-        .header__item {
-            font-size: 2rem;
-
-            display: flex;
-            align-items: flex-start;
-
-            color: var(--list-item-color-text);
-            font-size: 1.5rem;
-            text-indent: -0.5rem;
+            margin: auto;
         }
 
-            .header__item::before {
-                content: url("../images/icons/goblet.svg");
+        .header__learn-to {
+            background-color: var(--learn-to-background);
 
-                display: inline-block;
+            width: fit-content;
+
+            margin: auto;
+            margin-top: 2rem;
+            border-radius: 10px;
+            box-shadow: 5px 2px 1px var(--black-color);
+            padding: 0.25rem 0.5rem;
+
+            font-size: 1.75rem;
+            text-transform: uppercase;
+        }
+
+        .header__list {
+            width: fit-content;
+
+            margin: auto;
+            margin-top: 1rem;
+            padding-left: 0.5rem;
+        }
+
+            .header__item {
+                font-size: 2rem;
+
+                display: flex;
+                align-items: flex-start;
+
+                color: var(--list-item-color-text);
+                font-size: 1.5rem;
+                text-indent: -0.5rem;
             }
-            
-            .header__item:not(:last-child) {
-                margin-bottom: 1rem;
-            }
+
+                .header__item::before {
+                    content: url("../images/icons/goblet.svg");
+
+                    display: inline-block;
+                }
+                
+                .header__item:not(:last-child) {
+                    margin-bottom: 1rem;
+                }
 
     .header__profile {
+        width: 100%;
+        max-width: 20rem;
+
         display: block;
 
         margin: auto;
@@ -185,7 +197,7 @@ img {
 
 /* WHAT DO YOU WILL LEARN */
 .learning {
-    background-image: url("../images/opera-background.jpg");
+    background-image: url("../images/backgrounds/opera-background.jpg");
     background-size: cover;
 }
 
@@ -244,7 +256,7 @@ img {
 
 /* DEPOSITIONS */
 .depositions {
-    background-image: url("../images/opera-3-background.jpg");
+    background-image: url("../images/backgrounds/opera-3-background.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -279,7 +291,7 @@ img {
 
 /* YOU DID ASK YOURSELF WHY */
 .ask-yourself {
-    background-image: url("../images/opera-background.jpg");
+    background-image: url("../images/backgrounds/opera-background.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -399,7 +411,7 @@ img {
 
 /* WHO IS KEILA */
 .who-keila {
-    background-image: url("../images/opera-2-background.jpg");
+    background-image: url("../images/backgrounds/opera-2-background.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -459,12 +471,21 @@ img {
     /*============================== Page - Top to Bottom ==============================*/
     /* HEADER */
     .header {
-        display: flex;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
         gap: 1rem;
     }
 
+        .header__introduction {
+            padding: 2rem;
+        }
+
         .header__profile {
+            max-width: initial;
+
             margin: initial;
+            margin-top: 2.5rem;
+            margin-left: auto;
 
             object-fit: cover;
         }
@@ -549,20 +570,25 @@ img {
     /*============================== Generic Classes ==============================*/
     /*=============== RESPONSIVE ===============*/
     .box {
-        padding: 5rem 10rem;
         box-shadow: inset 0px 0px 20px 10px var(--black-50-color);
     }
 
     /*============================== Page - Top to Bottom ==============================*/
     /* HEADER */
     .header {
-        justify-content: center;
-        gap: 10rem;
+        justify-content: space-around;
     }
 
-        /* TODO: LOGO GREATER: Make the logo greater equals of the prototype */
+        .header__learn-to {
+            margin-top: 4rem;
+        }
+
         .header__logo {
-            margin-left: 0;
+            margin: auto;
+        }
+
+        .header__profile {
+            max-width: 30rem;
         }
 
     /* WHAT DO YOU WILL LEARN */
@@ -639,4 +665,26 @@ img {
     .box {
         padding: 5rem 15rem;
     }
+
+    /*============================== Page - Top to Bottom ==============================*/
+    /* HEADER */
+    .header {
+        display: block;
+
+        position: relative;
+
+        padding: 3rem;
+    }
+
+        .header__introduction {
+            position: relative;
+
+            z-index: 1;
+        }
+
+        .header__profile {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
 }
