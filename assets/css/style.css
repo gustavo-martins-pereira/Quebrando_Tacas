@@ -91,7 +91,8 @@ img {
 /*============================== Generic Classes ==============================*/
 /*=============== DEFAULT CLASSES FOR THE CONTAINERS ===============*/
 .box {
-    padding: 1rem;
+    box-shadow: inset 0px 0px 20px 10px var(--black-50-color);
+    padding: 2rem 1rem;
 }
 
 /*=============== COMPONENTS ===============*/
@@ -102,6 +103,8 @@ img {
     border: none;
     border-radius: 5px;
     padding: 0.5rem 1rem;
+
+    cursor: pointer;
 }
 
 /*=============== ACCESSIBILITY ===============*/
@@ -305,57 +308,69 @@ img {
         line-height: 1.5;
     }
 
-    .ask-yourself__buy {
-        background-color: var(--ask-yourself-buy-section--background);
-
-        width: fit-content;
-
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 2rem;
-
-        margin: 2rem auto;
-        border-radius: 10px;
-        box-shadow: 1px 1px 5px var(--black-color);
-        padding: 1rem;
-        box-sizing: border-box;
+    .ask-yourself__buy-block {
+        margin-top: 2rem;
     }
 
-        .ask-yourself__buy__logo {
-            width: 180px;
+        .ask-yourself__buy__image {
+            max-width: 15rem;
+
+            display: block;
+
+            margin: auto;
         }
 
-        .ask-yourself__item {
-            color: var(--list-item-color-text);
+        .ask-yourself__buy {
+            background-color: var(--ask-yourself-buy-section--background);
+
+            width: fit-content;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+
+            margin: 0 auto 2rem;
+            border-radius: 10px;
+            box-shadow: 1px 1px 5px var(--black-color);
+            padding: 1rem;
+            box-sizing: border-box;
         }
 
-            .ask-yourself__item:not(:last-child) {
-                margin-bottom: 0.5rem;
+            .ask-yourself__buy__logo {
+                width: 180px;
             }
 
-        .ask-yourself__buy__isolated-text {
-            color: var(--sunglow-color);
-            font-size: 2rem;
-            text-align: center;
-        }
-
-            .ask-yourself__buy__isolated-text--white {
-                display: block;
-
-                color: var(--white-color);
-                font-size: 1rem;
+            .ask-yourself__item {
+                color: var(--list-item-color-text);
             }
 
-            .ask-yourself__buy__isolated-text--margin-bottom {
-                margin-bottom: 2rem;
+                .ask-yourself__item:not(:last-child) {
+                    margin-bottom: 0.5rem;
+                }
+
+            .ask-yourself__buy__isolated-text {
+                color: var(--sunglow-color);
+                font-size: 2rem;
+                text-align: center;
             }
 
-        .ask-yourself__buy__button {
-            padding: 1rem 2rem;
+                .ask-yourself__buy__isolated-text--white {
+                    display: block;
 
-            text-transform: uppercase;
-        }
+                    color: var(--white-color);
+                    font-size: 1rem;
+                }
+
+                .ask-yourself__buy__isolated-text--margin-bottom {
+                    margin-bottom: 2rem;
+                }
+
+            .ask-yourself__buy__button {
+                padding: 1rem 2rem;
+
+                text-transform: uppercase;
+            }
 
 /* BUY */
 .buy {
@@ -388,6 +403,8 @@ img {
 /* BONUS */
 .bonus {
     background-color: var(--bonus-background);
+
+    padding-bottom: 0;
 }
 
     .bonus__title {
@@ -403,7 +420,7 @@ img {
         line-height: 1.5;
     }
 
-    .bonus__image {
+    .bonus__content__image {
         display: block;
         
         margin: auto;
@@ -415,6 +432,8 @@ img {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+
+    padding-bottom: 0;
 }
 
     .who-keila__text {
@@ -422,6 +441,15 @@ img {
         
         color: var(--sunglow-color);
         line-height: 1.5;
+    }
+
+    .who-keila__image {
+        width: 100%;
+        max-width: 20rem;
+
+        display: block;
+
+        margin: auto;
     }
 
 /* FREQUENT QUESTIONS */
@@ -463,6 +491,11 @@ img {
     }
 
     /*============================== Generic Classes ==============================*/
+    /*=============== DEFAULT CLASSES FOR THE CONTAINERS ===============*/
+    .box {
+        padding: 2rem;
+    }
+
     /*=============== RESPONSIVE ===============*/
     .tablet {
         display: initial;
@@ -484,22 +517,27 @@ img {
             max-width: initial;
 
             margin: initial;
-            margin-top: 2.5rem;
+            margin-top: auto;
             margin-left: auto;
 
             object-fit: cover;
         }
 
+    /* KNOW EVERY CLASS COURSE */
+    .classes-course__text:not(:nth-of-type(1)) {
+        margin-top: 1rem;
+    }
+
     /* DEPOSITIONS */
     .depositions__opinions {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        gap: 1rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem 3rem;
     }
 
         .depositons__opinion {
-            max-width: 300px;
+            width: unset;
+            max-width: unset;
         }
 
     /* YOU DID ASK YOURSELF WHY */
@@ -509,12 +547,16 @@ img {
         gap: 2rem;
     }
 
-        .ask-yourself__buy {
-            width: initial;
-            height: fit-content;
-
-            margin: initial;
+        .ask-yourself__buy-block {
+            margin-top: 0;
         }
+
+            .ask-yourself__buy {
+                width: initial;
+                height: fit-content;
+
+                margin: initial;
+            }
 
     /* BUY */
     .buy {
@@ -526,12 +568,26 @@ img {
     .bonus {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        /* gap: 1rem; */
+        
+        padding-bottom: 0;
     }
 
         .bonus__image {
-            margin-top: 1rem;
+            margin: auto;
+            margin-bottom: 1rem;
         }
+    
+        .bonus__content {
+            position: relative;
+        }
+
+            .bonus__content__image {
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+
+                transform: translateX(-50%);
+            }
 
     /* WHO IS KEILA */
     .who-keila {
@@ -539,6 +595,12 @@ img {
         grid-template-columns: repeat(2, 1fr);
         gap: 1rem;
     }
+
+        .who-keila__image {
+            max-width: unset;
+
+            margin: auto -2rem -2rem auto;
+        }
 
     /* FREQUENT QUESTIONS */
     .questions__list {
@@ -565,12 +627,6 @@ img {
     h5,
     h6 {
         font-size: 2rem;
-    }
-
-    /*============================== Generic Classes ==============================*/
-    /*=============== RESPONSIVE ===============*/
-    .box {
-        box-shadow: inset 0px 0px 20px 10px var(--black-50-color);
     }
 
     /*============================== Page - Top to Bottom ==============================*/
@@ -615,13 +671,9 @@ img {
                 line-height: 2;
             }
 
-                .classes-course__text:not(:nth-of-type(1)) {
-                    margin-top: 1rem;
-                }
-
     /* DEPOSITIONS */
-    .depositons__opinion {
-        max-width: 250px;
+    .depositions__opinions {
+        grid-template-columns: repeat(3, 1fr);
     }
 
     /* YOU DID ASK YOURSELF WHY */
@@ -687,4 +739,27 @@ img {
             right: 0;
             bottom: 0;
         }
+
+    /* YOU DID ASK YOURSELF WHY */
+    .ask-yourself__buy__image {
+        max-width: 20rem;
+    }
+
+    /* BONUS */
+    .bonus {
+        position: relative;
+    }
+
+        .bonus__content {
+            position: unset;
+        }
+
+            .bonus__content__image {
+                left: 65%;
+            }
+
+    /* WHO IS KEILA */
+    .who-keila__image {
+        margin: auto -15rem -5rem auto;
+    }
 }
