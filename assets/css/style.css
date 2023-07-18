@@ -201,7 +201,7 @@ img {
 /* WHAT DO YOU WILL LEARN */
 .learning {
     background-image: url("../images/backgrounds/opera-background.jpg");
-    background-size: cover;
+    background-size: 100% 100%;
 }
 
     .learning__title {
@@ -259,7 +259,7 @@ img {
 
 /* DEPOSITIONS */
 .depositions {
-    background-image: url("../images/backgrounds/opera-3-background.jpg");
+    background-image: url("../images/backgrounds/opera-2-background.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -388,6 +388,8 @@ img {
         display: block;
 
         margin: auto;
+        margin-top: 1rem;
+        border-radius: 40px;
     }
 
     .buy__button {
@@ -413,12 +415,26 @@ img {
     }
 
     .bonus__text {
+        position: relative;
+
         margin-top: 1rem;
 
         color: var(--bonus-default-color-text);
         text-align: justify;
         line-height: 1.5;
+
+        z-index: 1;
     }
+
+        .bonus__text::before {
+            content: url("../images/icons/music-key-notes.svg");
+            
+            position: absolute;
+            top: -5rem;
+            right: 0;
+
+            z-index: -1;
+        }
 
     .bonus__content__image {
         display: block;
@@ -429,9 +445,9 @@ img {
 /* WHO IS KEILA */
 .who-keila {
     background-image: url("../images/backgrounds/opera-2-background.jpg");
+    background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
 
     padding-bottom: 0;
 }
@@ -753,6 +769,10 @@ img {
         .bonus__content {
             position: unset;
         }
+
+            .bonus__text::before {
+                right: -5rem;
+            }
 
             .bonus__content__image {
                 left: 65%;
