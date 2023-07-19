@@ -53,6 +53,7 @@
 
     /* SPECIFIC */
     --class-content-color-text: var(--black-color);
+    --deposition-author-color-text: var(--black-50-color);
     --bonus-title-color-text: var(--totem-pole-color);
     --bonus-default-color-text: var(--black-color);
     --question-color-text: var(--white-color);
@@ -241,6 +242,10 @@ img {
         line-height: 1.5;
     }
 
+        .classes-course__text:not(:nth-of-type(1)) {
+            margin-top: 1rem;
+        }
+
     .classes-course__list {
         display: flex;
         flex-direction: column;
@@ -280,7 +285,7 @@ img {
             margin-top: 3rem;
             border-radius: 10px;
             box-shadow: 2px 2px 2px var(--black-color);
-            padding: 0 2rem 3rem;
+            padding: 0 2rem 2rem;
         }
 
             .depositions__opinion__quote {
@@ -290,6 +295,13 @@ img {
 
             .depositons__opinion__text {
                 line-height: 1.5;
+            }
+
+            .depositions__opinion__author {
+                margin-top: 2rem;
+
+                color: var(--deposition-author-color-text);
+                font-style: italic;
             }
 
 /* YOU DID ASK YOURSELF WHY */
@@ -539,15 +551,11 @@ img {
             object-fit: cover;
         }
 
-    /* KNOW EVERY CLASS COURSE */
-    .classes-course__text:not(:nth-of-type(1)) {
-        margin-top: 1rem;
-    }
-
     /* DEPOSITIONS */
     .depositions__opinions {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
+        align-items: start;
         gap: 1rem 3rem;
     }
 
