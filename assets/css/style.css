@@ -728,6 +728,13 @@ img {
         line-height: 1.75;
     }
 
+    .who-keila__image {
+        width: fit-content;
+        max-height: 40rem;
+
+        object-fit: contain;
+    }
+
     /* FREQUENT QUESTIONS */
     .questions__list {
         margin-top: 2rem;
@@ -788,6 +795,8 @@ img {
 
     /* WHO IS KEILA */
     .who-keila__image {
+        max-height: unset;
+
         margin: auto -15rem -5rem auto;
     }
 }
