@@ -54,6 +54,7 @@
 
     /* SPECIFIC */
     --class-content-color-text: var(--black-color);
+    --class-content-itens-color-text: var(--kilamanjaro-color);
     --deposition-author-color-text: var(--black-50-color);
     --bonus-title-color-text: var(--totem-pole-color);
     --bonus-default-color-text: var(--black-color);
@@ -270,41 +271,14 @@ img {
         }
 
             .classes-course__item__title {
-                display: flex;
-                justify-content: space-between;
-                gap: 0.5rem;
-
-                font-family: var(--default-font);
-                font-size: 1.1rem;
+                color: var(--class-content-itens-color-text);
+                font-size: 1rem;
                 text-shadow: none;
-
-                cursor: pointer;
             }
 
-                .classes-course__item__title__icon {
-                    transition: 0.2s all;
+                .classes-course__item__title--normal-text {
+                    font-family: var(--default-font);
                 }
-
-            .classes-course__item__text {
-                display: none;
-                
-                margin-top: 1rem;
-
-                text-align: justify;
-                line-height: 1.25;
-
-                transition: 0.2s all;
-            }
-
-            .classes-course__item--active {
-                & .classes-course__item__title__icon {
-                    transform: rotateZ(180deg);
-                }
-
-                & .classes-course__item__text {
-                    display: block;
-                }
-            }
 
 /* DEPOSITIONS */
 .depositions {
@@ -534,6 +508,8 @@ img {
     }
 
     .questions__list {
+        max-width: 35rem;
+
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -546,12 +522,22 @@ img {
         .questions__item {
             background-color: var(--question-background);
 
-            border-radius: 50px;
+            border-radius: 10px;
             padding: 0.25rem 0.5rem;
 
             color: var(--question-color-text);
             text-align: center;
         }
+
+            .questions__item__title {
+                font-size: 1.25rem;
+            }
+
+            .questions__item__text {
+                margin-top: 0.5rem;
+
+                line-height: 1.25;
+            }
 
 /* RESPONSIVE LAYOUTS */
 /* TABLET */
@@ -683,7 +669,7 @@ img {
 
     /* FREQUENT QUESTIONS */
     .questions__list {
-        max-width: 600px;
+        max-width: unset;
     }
 
         .questions__item {
@@ -792,6 +778,10 @@ img {
 
     /* FREQUENT QUESTIONS */
     .questions__list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+
         margin-top: 2rem;
     }
 }
@@ -854,4 +844,14 @@ img {
 
         margin: auto -15rem -5rem auto;
     }
+
+    /* FREQUENT QUESTIONS */
+    .questions {
+        padding: 5rem;
+    }
+
+        .questions__list {
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem;
+        }
 }
