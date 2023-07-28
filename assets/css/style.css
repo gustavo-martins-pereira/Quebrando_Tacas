@@ -111,7 +111,8 @@ img {
     transition: 0.1s all;
 }
 
-    .button:hover {
+    .button:hover,
+    .button:focus {
         background-color: color-mix(in srgb, var(--button-background) 50%, transparent);
     }
 
