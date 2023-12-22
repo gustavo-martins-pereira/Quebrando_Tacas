@@ -399,7 +399,9 @@ img {
             .ask-yourself__buy__button {
                 padding: 1rem 2rem;
 
+                color: var(--black-color);
                 text-transform: uppercase;
+                text-decoration: none;
             }
 
 /* BUY */
@@ -414,23 +416,31 @@ img {
         line-height: 1.5;
     }
 
-    .buy__image {
-        display: block;
-
-        margin: auto;
-        margin-top: 1rem;
-        border-radius: 40px;
+    .buy article {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 
-    .buy__button {
-        display: block;
-        
-        margin: auto;
-        margin-top: 1rem;
-        padding: 1rem 2rem;
+        .buy__image {
+            display: block;
 
-        text-transform: uppercase;
-    }
+            margin: auto;
+            margin-top: 1rem;
+            border-radius: 40px;
+        }
+
+        .buy__button {
+            display: inline-block;
+            
+            margin: auto;
+            margin-top: 1rem;
+            padding: 1rem 2rem;
+
+            color: var(--black-color);
+            text-transform: uppercase;
+            text-decoration: none;
+        }
 
 /* BONUS */
 .bonus {
