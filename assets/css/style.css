@@ -135,7 +135,7 @@ img {
 /*============================== Page - Top to Bottom ==============================*/
 /* HEADER */
 .header {
-    background-image: url("../images/backgrounds/opera-background.jpg");
+    background-image: url("../images/backgrounds/opera.webp");
     background-color: #ddd;
     background-size: 100% 100%;
     background-repeat: no-repeat;
@@ -208,7 +208,7 @@ img {
 
 /* WHAT DO YOU WILL LEARN */
 .learning {
-    background-image: url("../images/backgrounds/opera-background.jpg");
+    background-image: url("../images/backgrounds/opera.webp");
     background-size: 100% 100%;
 }
 
@@ -282,7 +282,7 @@ img {
 
 /* DEPOSITIONS */
 .depositions {
-    background-image: url("../images/backgrounds/opera-2-background.jpg");
+    background-image: url("../images/backgrounds/opera-2.webp");
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -324,7 +324,7 @@ img {
 
 /* YOU DID ASK YOURSELF WHY */
 .ask-yourself {
-    background-image: url("../images/backgrounds/opera-background.jpg");
+    background-image: url("../images/backgrounds/opera.webp");
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -484,7 +484,7 @@ img {
 
 /* WHO IS KEILA */
 .who-keila {
-    background-image: url("../images/backgrounds/opera-2-background.jpg");
+    background-image: url("../images/backgrounds/opera-2.webp");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
