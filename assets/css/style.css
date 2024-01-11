@@ -637,6 +637,7 @@ img {
     .buy {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
     }
 
     /* BONUS */
@@ -770,9 +771,13 @@ img {
         }
 
     /* BUY */
-    .buy__text {
-        line-height: 1.75;
+    .buy {
+        gap: 5rem;
     }
+
+        .buy__text {
+            line-height: 1.75;
+        }
 
     /* WHO IS KEILA */
     .who-keila__text {
