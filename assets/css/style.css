@@ -20,6 +20,7 @@
     --black-color: hsl(0, 0%, 0%);
     --black-20-color: hsla(0, 0%, 0%, 0.2);
     --black-50-color: hsla(0, 0%, 0%, 0.5);
+    --black-85-color: hsla(0, 0%, 0%, 0.85);
     --white-color: hsl(0, 0%, 100%);
     --totem-pole-color: hsl(0, 88%, 34%);
     --kilamanjaro-color: hsl(17, 94%, 7%);
@@ -55,7 +56,7 @@
     /* SPECIFIC */
     --class-content-color-text: var(--black-color);
     --class-content-itens-color-text: var(--kilamanjaro-color);
-    --deposition-author-color-text: var(--black-50-color);
+    --deposition-author-color-text: var(--black-85-color);
     --bonus-title-color-text: var(--totem-pole-color);
     --bonus-default-color-text: var(--black-color);
     --question-color-text: var(--white-color);
